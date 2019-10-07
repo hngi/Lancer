@@ -11,10 +11,18 @@
                 background-color: white;
                
             }
+            section{
+                display: flex;
+            }
+            #main-body{
+                display: flex
+            }
             .side-panel{
                 background-color: black;
                 box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
                 color: #FFFFFF;
+            
+
             }
             li{
                 text-decoration: none;
@@ -114,20 +122,21 @@
                 <a href="#" class="active"> Tools & Resources</a>
             </nav>
         </header>
+        <section>
         <aside>
         <div class="side-panel">
             <ul>
                 <li><i class="fa fa-home"></i><a href="#">Dashboard</a></li>
-                <li><i class="fa fa-users"><a href="#"</i>Client</li>
-                <li><i class="fa fa-lightbulb-o"></i>Project</li>
-                <li><i class="fa fa-file-invoice"></i>Invoice</li>
-                <li><i class="fa fa-file-contract"></i>Contract</li>
-                <li><i class="fa fa-file-proposal"></i>Proposals</li>
+                <li><i class="fa fa-users"></i><a href="#">Client</a></li>
+                <li><i class="fa fa-lightbulb-o"></i><a href="#">Project</a></li>
+                <li><i class="fa fa-file-pdf-o"></i><a href="#">Invoice</a></li>
+                <li><i class="fa fa-file"></i><a href="#">Contract</a></li>
+                <li><i class="fa fa-proposal"></i><a href="#">Proposals</a></li>
             </ul>
         </div>
         </aside>
-        <section>
-            <div>
+        
+            <div id="main-body">
                 <p><i class="fa fa-file-text"></i><br> Generate an NDA</p>
                 <p><i class="fa fa-file-text"></i><br> Generate an Contract</p>
             </div>
