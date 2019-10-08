@@ -29,29 +29,26 @@
         .fa-check-circle {
             color: #091429;
             font-size: 58px;
+            margin-top: 25px;
         }
 
         .fa-remove {
             color: #C4C4C4;
             position: absolute;
-            top: 20.83%;
-            right: 20.83%;
-
-
+            top: 56px;
+            right: 56px;
         }
 
         .invBtn {
-            position: absolute;
+            position: relative;
             left: 400px;
+            top: 200px;
             background-color: #091429;
             color: #FFFFFF;
             border: 0;
             width: 332px;
             height: 98px;
             font-size: 28px;
-
-
-
         }
 
         h3 {
@@ -65,18 +62,24 @@
 </head>
 
 <body>
-    <div class="container-fluid">
-        <div class="rmain">
-            <i class="fa fa-check-circle"></i> <i class="fa fa-remove"></i>
-            <h3><strong>Invoice Sent</strong></h3>
-            <h5>You would receive a notification once payment has been made</p>
+    <div class="container-fluid main">
 
-        </div>
-
-        <div>
-            <button class="invBtn">VIEW INVOICES</button>
-        </div>
+        <i class="fa fa-check-circle"></i> 
+        <i class="fa fa-remove"></i>
+        <h3><strong>Invoice Sent</strong></h3>
+        <h5>You would receive a notification once payment has been made</p>
+        
     </div>
+
+    <section class="container">
+        <div class="row">
+            <div class="col align-self-center">
+                <button class="invBtn">VIEW INVOICES</button>
+            </div>
+
+        </div>
+        
+    </section>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
         crossorigin="anonymous"></script>
