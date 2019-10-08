@@ -90,12 +90,12 @@
                     <div class="form-group">
                         <label for="my-email">Email Address</label>
                         <input id="email" class="form-control" type="email" name="" placeholder="eg. johndoe@example.com">
-                        <span class="error" id="emessage"></span>
+                        <span  id="emessage"></span>
                     </div>
                     <div class="form-group">
                         <label for="my-password">Password</label>
-                        <input id="password" class="form-control" type="password" name="" placeholder=""> 
-                        <span id="pmessage" class="error"></span>
+                        <input id="password" class="form-control" type="password" name="my-password" placeholder=""> 
+                        <span id="pmessage" "></span>
                     </div>
                     <div class="clearfix">
                         <div class="float-left">
@@ -134,61 +134,53 @@
 
     login.addEventListener("submit", function(e) {
         e.preventDefault();
-        passReg = /(?=.*\d)(?=.*[a-z])(?=.*[A-Z])\w{6,}/;
+        // passReg = /(?=.*\d)(?=.*[a-z])(?=.*[A-Z])\w{6,}/;
         emailReg = /^(([^<>()\[\]\.,;:\s@\"]+(\.[^<>()\[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
         const passwordMessage = document.querySelector("#pmessage");
         const emailMessage = document.querySelector("#emessage");
 
+let validatePassword =function(){
 
 
+    
+    passwordMessage.textContent = null;
+            passwordMessage.textContent = null;
+    let p = document.createElement(`p`);
+    p.classList.add("alert", "alert-warning");
+    p.textContent = "Please enter valid password. Letters and digits Only";
+    passwordMessage.appendChild(p);
+    console.log(p);
 
-        login.addEventListener("submit", function (e) {
-            e.preventDefault();
-            passReg = /(?=.*\d)(?=.*[a-z])(?=.*[A-Z])\w{6,}/;
-            // const passwordMessage = document.querySelector("#pmessage");
+    setTimeout(function () {
+        passwordMessage.remove();
+    }, 4000);
+        } 
 
-            if (password === "" || password == null || password.length < 6) {
-                passwordMessage.textContent = null;
-                let p = document.createElement(`p`);
-                p.classList.add("alert", "alert-warning");
-                p.textContent = "Please enter password. Letters and digits Only";
-                passwordMessage.appendChild(p);
-                console.log(p);
+let validateEmail = function(){
+    emailMessage.textContent = null;
+    let p = document.createElement(`p`);
+    p.classList.add("alert", "alert-danger");
+    p.textContent = "Please enter a valid email";
+    emailMessage.appendChild(p);
+    console.log(p);
 
-                setTimeout(function () {
-                    passwordMessage.remove();
-                }, 4000);
-            } else {
-                console.log("welcome");
-            }
-        });
-        // if (email !=emailReg){
-        //     emailMessage.textContent = null;
-        //     let p = document.createElement(`p`);
-        //     p.classList.add("alert", "alert-danger");
-        //     p.textContent = "Please enter a valid email";
-        //     emailMessage.appendChild(p);
-        //     console.log(p);
-
-        //     setTimeout(function() {
-        //         emailMessage.innerHTML = "";
-        //     }, 4000);
-        // }
+    setTimeout(function () {
+        emailMessage.innerHTML = "";
+    }, 4000);
+}
 
 
-        // if (password != passReg && email !=emailReg ) {
-        //     passwordMessage.textContent = null;
-        //     let p = document.createElement(`p`);
-        //     p.classList.add("alert", "alert-danger");
-        //     p.textContent = "Please enter password. Letters or digits Only";
-        //     passwordMessage.appendChild(p);
-        //     console.log(p);
+        
+        if (email === ""){
+           validateEmail()
+        }
 
-        //     setTimeout(function() {
-        //         passwordMessage.innerHTML = "";
-        //     }, 4000);
-        // }
+         if (password === "" ) {
+            validatePassword()
+        }
+
+       
     });
-
+   
 </script>
 </html>
