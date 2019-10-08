@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,12 +12,12 @@
     <link rel="icon" type="image/x-icon" href="#">
 
     <style>
-        *{
+        * {
             margin: 0;
             padding: 0;
         }
 
-        .invoice{
+        .invoice {
             height: 100vh;
             width: 0 auto;
             display: grid;
@@ -24,63 +25,137 @@
             grid-template-columns: 20% 80%;
 
             grid-template-areas: {
-                "sideHeader" : "content" 
+                "sideHeader": "content"
             }
         }
-        
-        .sideHeader{
+
+        .sideHeader {
             background-color: #091429;
             justify-content: center;
             padding: 4em;
         }
 
-        .sideHeader .items p{
+        .sideHeader .items p {
             font-size: 1.4em;
             color: white;
         }
 
-        .sideHeader.img{
+        .sideHeader.img {
             width: 50px;
         }
 
-        .content{
+        .content {
             margin: 35px;
             display: grid;
             grid-template-rows: 20% 80%;
             grid-template-areas: {
-                "contentHeader" : "contentBody" 
+                "contentHeader": "contentBody"
             }
 
         }
-        .contentBody h3{margin-top: 50px; font-size: 1.0em; font-weight: bold;}
-        .createInvoice{text-decoration-line: none; color: white; margin-top: 20px; border: 1px solid grey; padding: 10px 30px; background-color: #00CC99; font-weight: bold; font-size: 1.3em;}
-        .all{margin-top: 20px;}
-        .all select option{padding-top: 10px;}
-        .allInvoiceList{width: 25%; padding: 5px;}
-        .table{width: 100%; margin-top: 20px; border-collapse: collapse;}
-        .thead{font-weight: bold; font-size: 1.0em; padding-bottom: 20px;}
-        tr.border {border: 1px solid grey;}
-        .border td{padding: 10px 0px;}
+
+        .contentBody h3 {
+            margin-top: 50px;
+            font-size: 1.0em;
+            font-weight: bold;
+        }
+
+        .createInvoice {
+            text-decoration-line: none;
+            color: white;
+            margin-top: 20px;
+            border: 1px solid grey;
+            padding: 10px 30px;
+            background-color: #00CC99;
+            font-weight: bold;
+            font-size: 1.3em;
+        }
+
+        .all {
+            margin-top: 20px;
+        }
+
+        .all select option {
+            padding-top: 10px;
+        }
+
+        .allInvoiceList {
+            width: 25%;
+            padding: 5px;
+        }
+
+        .table {
+            width: 100%;
+            margin-top: 20px;
+            border-collapse: collapse;
+        }
+
+        .thead {
+            font-weight: bold;
+            font-size: 1.0em;
+            padding-bottom: 20px;
+        }
+
+        .thead td {
+            position: 10px 5px;
+        }
+
+        tr.border {
+            border: 1px solid grey;
+        }
+
+        .border td {
+            padding: 10px 0px;
+        }
+
+        .statuspaid {
+            border: 1px solid white;
+            width: 30%;
+            padding: 4px 10px;
+            border-radius: 2px;
+            background-color: #CCFFE5;
+            color: #008000;
+            font-weight: bold;
+        }
+
+        .statussent {
+            border: 1px solid white;
+            width: 30%;
+            padding: 4px 10px;
+            border-radius: 2px;
+            background-color: #CCF2FF;
+            color: black;
+            font-weight: bold;
+        }
+
+        .one {
+            border: 1px;
+        }
     </style>
 
 </head>
+
 <body>
     <div class="invoice">
-        <section class="sideHeader"> <!--------Side Header---------->
+        <section class="sideHeader">
+            <!--------Side Header---------->
             <img src="img/Lancers.png" alt="brand-logo-for-lancers" class="logo">
             <div class=" headerlist">
                 <ul class="items">
                     <li>
-                        <p><i class="fa fa-home"></i>Dashboard</p>
+                        <p>
+                            <i class="fa fa-home"></i>Dashboard</p>
                     </li>
                     <li>
-                        <p><i class="fa fa-users"></i>Clients</p>
+                        <p>
+                            <i class="fa fa-users"></i>Clients</p>
                     </li>
                     <li>
                         <p>Estimates</p>
                     </li>
                     <li>
-                        <p><i class="fa fa-lightbulb-o"></i>Projects</p>
+                        <p>
+                            <i class="fa fa-lightbulb-o"></i>Projects</p>
                     </li>
                     <li>
                         <p>Invoices</p>
@@ -96,7 +171,8 @@
         </section>
 
         <section class="content">
-            <div class="contentHeader"> <!-------Body Header-------------->
+            <div class="contentHeader">
+                <!-------Body Header-------------->
                 <h2>Invoices</h2>
 
                 <ul>
@@ -116,7 +192,8 @@
             </div>
 
 
-            <div class="contentBody"> <!---------Body Content------------>
+            <div class="contentBody">
+                <!---------Body Content------------>
 
                 <a href="#" class="createInvoice">Create Invoice</a>
 
@@ -145,8 +222,7 @@
                     </tr>
                     <tr class="border">
                         <td>
-                            <i></i>
-                            <p><span>1</p>
+                            <p style="margin-left:10px;">1</p>
                         </td>
 
                         <td>
@@ -164,17 +240,20 @@
                         <td>
                             <p class="statuspaid">Paid</p>
                         </td>
-                        
+
                         <td>
                             <p>US$4,200.00</p>
-                            <i class="fas fa-ellipsis-v"></i>
+                        </td>
+                        <td>
+                            <a href="">
+                                <i class="fas fa-ellipsis-v"></i>
+                            </a>
                         </td>
                     </tr>
 
                     <tr class="border">
                         <td>
-                            <i></i>
-                            <p>2</p>
+                            <p style="margin-left:10px;">2</p>
                         </td>
 
                         <td>
@@ -192,19 +271,24 @@
                         <td>
                             <p class="statussent">Sent</p>
                         </td>
-                        
+
                         <td>
                             <p>US$8,800.00</p>
-                            <i class="fas fa-ellipsis-v"></i>
+                        </td>
+                        <td>
+                            <a href="">
+                                <i class="fas fa-ellipsis-v"></i>
+                            </a>
                         </td>
                     </tr>
-                    
-                    
-                    
+
+
+
                 </table>
 
             </div>
         </section>
     </div>
 </body>
+
 </html>
