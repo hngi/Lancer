@@ -1,0 +1,30 @@
+
+body { font-family: 'Ubuntu', sans-serif; font-weight: 200;
+    } 
+
+h1 { font-family: 'Ubuntu', sans-serif; font-weight: 300; font-size: 72px; 
+   }
+
+ h4 { font-family: 'Ubuntu', sans-serif; font-weight: 300; font-size: 32px; 
+}
+
+ .signinform { border: thin #c4c4c4 solid; border-radius: 1% 1% 1% 1%; 
+} 
+
+a { color: #000; 
+} 
+
+a:hover { text-decoration: none; color: #000; 
+} 
+
+.btn-success { background-color: #0ABAB5; border: thin #0ABAB5 solid; 
+}
+
+ .btn-success:hover { background-color: #0ABAB5; border: thin #0ABAB5 solid; 
+} 
+
+form#loginform button{ background:#0ABAB5; border:0px
+ } 
+
+div.floatright a, div.floatright p{ font-size: 16px;
+ } 
