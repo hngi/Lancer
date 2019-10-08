@@ -66,6 +66,34 @@ span{
     color: #FFFFFF !important;
     border-radius: 6px;
     height: 45px;
+
+    margin-bottom: 10px !important;
+}
+.enterprise{
+    background-color: #091429;
+    text-align: center;
+    color: #FFFFFF;
+    font-size:18px;
+    line-height: 25px;
+
+}
+.footer{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+ul{
+    list-style-type: none;
+    margin-top: 
+}
+.mailform li{
+ 
+font-style: normal;
+font-weight: normal;
+font-size: 18px;
+line-height: 25px;
+
+color: #000000;
+
 }
 #starter{
     margin-top: 50%;
@@ -78,4 +106,5 @@ span{
 }
 img{
     padding-right: 10px;
+
 }
