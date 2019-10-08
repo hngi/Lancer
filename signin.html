@@ -63,6 +63,10 @@
              font-size: 16px;
          }
 
+        .error{
+            background-color: red;
+        }
+
     </style>
 </head>
 
@@ -86,11 +90,12 @@
                     <div class="form-group">
                         <label for="my-email">Email Address</label>
                         <input id="email" class="form-control" type="email" name="" placeholder="eg. johndoe@example.com">
+                        <span  id="emessage"></span>
                     </div>
                     <div class="form-group">
                         <label for="my-password">Password</label>
-                        <input id="password" class="form-control" type="password" name="" placeholder=""> 
-                        <span id="pmessage"></span>
+                        <input id="password" class="form-control" type="password" name="my-password" placeholder=""> 
+                        <span id="pmessage" "></span>
                     </div>
                     <div class="clearfix">
                         <div class="float-left">
@@ -114,10 +119,68 @@
         </div>
     </div>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.slim.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.15.0/umd/popper.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
-    <script src="main.js"></script>
-</body>
 
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.15.0/umd/popper.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+
+<script>
+    const login = document.querySelector("#loginform");
+    const password = document.querySelector("#password").value;
+    const email = document.querySelector("#email").value;
+    // const passwordMessage = document.querySelector("#pmessage");
+
+    login.addEventListener("submit", function(e) {
+        e.preventDefault();
+        // passReg = /(?=.*\d)(?=.*[a-z])(?=.*[A-Z])\w{6,}/;
+        emailReg = /^(([^<>()\[\]\.,;:\s@\"]+(\.[^<>()\[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
+        const passwordMessage = document.querySelector("#pmessage");
+        const emailMessage = document.querySelector("#emessage");
+
+let validatePassword =function(){
+
+
+    
+    passwordMessage.textContent = null;
+            passwordMessage.textContent = null;
+    let p = document.createElement(`p`);
+    p.classList.add("alert", "alert-warning");
+    p.textContent = "Please enter valid password. Letters and digits Only";
+    passwordMessage.appendChild(p);
+    console.log(p);
+
+    setTimeout(function () {
+        passwordMessage.remove();
+    }, 4000);
+        } 
+
+let validateEmail = function(){
+    emailMessage.textContent = null;
+    let p = document.createElement(`p`);
+    p.classList.add("alert", "alert-danger");
+    p.textContent = "Please enter a valid email";
+    emailMessage.appendChild(p);
+    console.log(p);
+
+    setTimeout(function () {
+        emailMessage.innerHTML = "";
+    }, 4000);
+}
+
+
+        
+        if (email === ""){
+           validateEmail()
+        }
+
+         if (password === "" ) {
+            validatePassword()
+        }
+
+       
+    });
+   
+</script>
 </html>

@@ -11,6 +11,9 @@ body{
     line-height: 63px !important;
     padding-left: 4rem;
 }
+b{
+    color: #0ABAB5;
+}
 .container-fluid{
     width: 100% !important;
     margin: 0 auto;
@@ -40,12 +43,14 @@ h1{
 }
 h2{
     font-size: 48px !important;
+    font-weight: normal;
 }
 p{
     font-size: 1em !important;
+    color: #262626;
 }
 span{
-    display: inline;
+    font-family: Ubuntu,sans-serif;
 }
 .col-sm-3{
     width: 424px;
@@ -53,11 +58,15 @@ span{
     border: 1px solid #000000;
     border-radius: 6px;
 }
-.btn{
+.col-md-12{
+    position: relative;
+}
+.btn{    
     background-color:  #0ABAB5 !important;
     color: #FFFFFF !important;
     border-radius: 6px;
     height: 45px;
+
     margin-bottom: 10px !important;
 }
 .enterprise{
@@ -84,4 +93,18 @@ font-size: 18px;
 line-height: 25px;
 
 color: #000000;
+
+}
+#starter{
+    margin-top: 50%;
+}
+#pro{
+    margin-top: 40%;
+}
+#proplus{
+    margin-top: 26%;
+}
+img{
+    padding-right: 10px;
+
 }
