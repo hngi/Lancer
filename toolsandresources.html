@@ -9,7 +9,6 @@
         <style>
             body{
                 background-color: white;
-               
             }
             section{
                 display: flex;
@@ -40,8 +39,7 @@
                 font-weight: normal;
                 font-size: 36px;
                 line-height: 63px;
-                width: 19.7%;
-
+                width: 20%;
                 color: #FFFFFF;
             }
             nav{
@@ -92,7 +90,7 @@
                 color: #000000;
         
             }
-            a.active{
+            nav>a.active{
                 position: absolute;
                 font-family: Ubuntu;
                 font-style: normal;
@@ -115,14 +113,29 @@
             b{
                 color:#0ABAB5;
             }
-            p>i.fa{
+            h3>i.fa{
                 font-size: 300px;
             }
-            #main-body>p{
+            #main-body>h3{
                 padding-left: 15%;
             }
             ul>li>i{
                 margin-right: 10%;
+                margin-bottom: 20%;
+                
+            }
+            .side-panel>ul>li>a{
+                text-align: justify;
+            }
+            .side-panel>ul>li{
+                margin:5%;
+            }
+            .side-panel>ul>li>a{
+                color: white;
+            }
+            #homeLogo>i{
+                position: relative;
+                left: 21%;
             }
         </style>
     </head>
@@ -130,7 +143,7 @@
         <header>
                 
             <nav>
-                <div id="homeLogo"><i>Lan<b>c</b>er</i></div>
+                <div id="homeLogo"><i>Lan<b>c</b>ers</i></div>
                 <a href="#" class="pjinfo">Project Info</a>
                 <a href="#" class="clinfo"> Client Info</a>
                 <a href="#" class="setting">Settings</a>
@@ -143,7 +156,7 @@
             <ul>
                 <li><i class="fa fa-home"></i><a href="#">Dashboard</a></li>
                 <li><i class="fa fa-users"></i><a href="#">Client</a></li>
-                <li><i class="fa fa-lightbulb-o"></i><a href="#">Project</a></li>
+                <li><i class="fa fa-lightbulb-o"></i>Project <i class="fa fa-angle-down dropdown"></i> </li>
                 <li><i class="fa fa-file-pdf-o"></i><a href="#">Invoice</a></li>
                 <li><i class="fa fa-file"></i><a href="#">Contract</a></li>
                 <li><i class="fa fa-suitcase"></i><a href="#">Proposals</a></li>
@@ -152,8 +165,8 @@
         </aside>
         
             <div id="main-body">
-                <p><i class="fa fa-file-text"></i><br> Generate an NDA</p>
-                <p><i class="fa fa-file-text"></i><br> Generate an Contract</p>
+                <h3><i class="fa fa-file-text"></i><br><br />Generate an NDA</h3>
+                <h3><i class="fa fa-file-text"></i><br><br /> Generate an Contract</h3>
             </div>
         </section>
     </body>
