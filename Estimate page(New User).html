@@ -4,7 +4,7 @@
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Lancer - Estimate New User</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" >
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, maximum-scale=1" >
     <!-- bootstrap css -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <!--google-font-->
@@ -19,7 +19,6 @@
         .container-fluid.navigation{
             background: #FFFFFF;
             height: 98px;
-            width: 1366px;
             display: inline-flex;
             box-shadow: 0px 4px 2px rgba(0, 0, 0, 0.1);
         }
@@ -109,22 +108,41 @@
             color: #091429;
             padding-top: 37px;
         }
+
         /* responsiveness  */
-        @media (min-device-width: 769px) and (max-device-width: 1200px){
-           
-        }
-        @media (max-device-width: 768px) {
-           
-        }
+        
+        @media (max-width: 575.98px) and (min-width: 767.98px) { 
+            .container-fluid.navigation{
+                width: auto;
+            }
+            .container-fluid.navigation h4{
+                padding-left: 20px;
+            }
+            .loginlink{
+                margin-left: 43px;
+            }
+            button.signupbutton{
+                margin-right: 20px;
+            }
+            button.createestimatebutton{
+                margin-left: 30px;
+            }
+            .container-fluid h5{
+                padding-left: 30px;
+            }
+            .container-fluid h6{
+                padding-left: 30px;
+            }
+        }        
     </style>   
-     <!--<script src="main.js"></script>-->
+    
 </head>
 <body>
-    <div class="">
+    <div>
         <div class="container-fluid navigation">
-                    <h4> Estimates</h5>
-                    <a href="#" class="loginlink"> Login </a>
-                    <button class="signupbutton"><p>Signup</p></button>
+            <h4> Estimates</h5>
+            <a href="#" class="loginlink"> Login </a>
+            <button class="signupbutton"><p>Signup</p></button>
         </div>
 
         <div class="container-fluid">
@@ -133,9 +151,6 @@
             <h6>Create an estimate and easily convert it to an invoice and send to your client.</h6>
         </div>
     </div>
-
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    
 </body>
 </html>
