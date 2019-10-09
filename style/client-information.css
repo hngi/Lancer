@@ -7,6 +7,7 @@
 .container {
 	width: 96%;
 	margin: 0 auto;
+	
 }
 
 .header-container {
@@ -41,7 +42,7 @@
 	border: 0;
 }
 
-#create {
+#create, #bottom-create {
 	width: 8rem;
 	background-color: #0ABAB5;
 	color: #fff;
@@ -50,9 +51,35 @@
 .form {
 	position: relative;
 	top: 6vh;
+	width: 90%;
+	margin: 0 auto;
+	left: 1.2em;
+
 }
 
-.form h1 {
+h1, h3, h4 {
 	font-family: "Ubuntu";
+	padding-bottom: 0.3em;
 }
 
+h1 {
+	position: relative;
+
+}
+
+form {
+	border: 2px solid #919191;
+	width: 90%;
+	
+}
+
+#bottom-create {
+	position: relative;
+	top: 4em;
+	height: 8vh;
+}
+
+footer {
+	width: 30%;
+	margin: 0 auto;
+}
