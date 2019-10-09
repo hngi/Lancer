@@ -35,21 +35,23 @@
             align-items: center;
             position: fixed;
             top: 0%;
-            left: 18%;
-            height: 12rem;
-            width: 82%;
+            margin-left: 18%;
+            height: 7vw;
+            width:;
             box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-            padding: 2.5rem 4.5rem 2.5rem 6.5rem;
+
         }
 
         .searchContainer {
-            margin-right: 15vw;
-            padding: 0.1rem 1.7rem;
+            margin-left: 20vw;
+            padding: 0.1rem 1.7;
             display: inline-flex;
             width: 25vw;
             border: 1px solid #B1B1B1;
             box-sizing: border-box;
-            border-radius: 4px;            
+            border-radius: 4px;
+            position: absolute;
+            left: 0%;
         }
 
         .searchIcon {
@@ -72,10 +74,11 @@
         }
 
         header .header-panel {
-            height: 100;
+
             position: absolute;
-            right:0%;
+            right: 0%;
             margin-right: 5rem;
+            height: 70;
         }
 
         header .header-panel_nav {
@@ -87,14 +90,17 @@
             height: 100%;
             margin: 0;
         }
-        .header_menu{
+
+        .header_menu {
             border-right: 1px solid #B1B1B1;
             display: flex;
             justify-content: center;
             align-items: center;
         }
+
         header .header-panel_nav-item {
-            height: 100%;
+            height: 5vw;
+            width: 4vw;
             display: flex;
             align-items: center;
         }
@@ -107,12 +113,13 @@
         }
 
         header .header-panel_nav-item a img {
-            width: 3rem;
-            height: 3rem;
-            margin-right: 4rem;
+            width: 2vw;
+            height: ;
+            margin-right: 2.5vw;
         }
 
         header .header-panel_nav-item a .user-image {
+            padding-top: 0.7vw;
             width: 4vw;
             height: 4vw;
             border-radius: 50%;
@@ -120,7 +127,9 @@
             justify-content: center;
             align-items: center;
             border: 2px solid #091429;
-        } 
+            font-size: 2vw;
+        }
+
 
         aside {
             display: flex;
@@ -133,6 +142,7 @@
             top: 0;
             left: 0;
             padding-top: 3rem;
+            z-index: 1000;
         }
 
         aside .logo {
@@ -175,8 +185,9 @@
         main {
             position: absolute;
             top: 10rem;
-            left: 18%;
-            padding: 5rem 6.5rem;
+            margin-left: 20%;
+            width: 80%;
+            padding: 4vw ;
             display: flex;
             flex-direction: column;
             font-family: Ubuntu;
@@ -184,23 +195,124 @@
             font-weight: normal;
             font-size: 18px;
             line-height: 21px;
+            padding-bottom: 10vw;
+        }
+
+        main .collaborators {
+            font-weight: bold;
+            font-size: 18px;
+            line-height: 25px;
+            color: #000000;
+        }
+
+        main .collaborators_submenu {
+            width: 95%;
+            padding-top: 1.5vw;
+            height: 3.3vw;
+            background-color: #091429;
+        }
+
+        main .collaborators_submenu a {
+            color: #fff;
+            padding: 30px;
+        }
+
+        main .collaborators_submenu a:nth-child(2) {
+            color: #0ABAB5;
+        }
+
+        .collaborate_table_head {
+            width: 95%;
+        }
+
+        .collaborate_table_head th {
+            width: 20%;
+            text-align: center;
+            padding: 2vw;
+            font-weight: bold;
+            font-size: 1.3vw;
+            line-height: 2vw;
+
+        }
+
+        .colaborate_table {
+
+            width: 95%;
+            border-collapse: separate;
+            border-spacing: 0 1vw;
+        }
+
+        .colaborate_table td {
+            width: 20%;
+            height: 4vw;
+            text-align: center;
+            padding: 5px;
+            font-weight: normal;
+            font-size: 1vw;
+            line-height: 1.2vw;
+            border-bottom: 1px solid #C4C4C4;
+            border-top: 1px solid #C4C4C4;
+        }
+
+        .more_action {
+            text-align: end !important;
+            border-right: 1px solid #C4C4C4;
+        }
+
+        .user_avatar_link {
+            text-align: start;
+        }
+
+        .user_avatar_box {
+            border-left: 1px solid #C4C4C4;
+            padding-left: 2vw !important;
+        }
+
+        .user_avatar {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 3vw;
+            height: 3vw;
+            border: 2px solid #091429;
+            border-radius: 50%;
+            font-size: 1.4vw;
+            color: #000;
+        }
+
+        .add_colaborator {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 2vw;
+            width: 4vw;
+            height: 4vw;
+            color: background: #FFFFFF;
+            border-radius: 50%;
+            opacity: 0.54;
+            position: fixed;
+            top: 85%;
+            
+
+            background: #0ABAB5;
+            box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.24), 0px 0px 8px rgba(0, 0, 0, 0.12);
         }
     </style>
     <title>Lancer - Active Projects</title>
 </head>
 
 <body>
-    <header class="navbar my-auto">
-       
+    <header class="navbar">
+
         <!--    Search bar starts here-->
-            <div class="searchContainer">
+        <div class="searchContainer">
             <i class="fa fa-search searchIcon"></i>
             <input class="searchBox" type="search" name="search" placeholder="Search">
         </div>
-               <!--     search bar ends here-->
-    
+        <!--     search bar ends here-->
+
         <div class="header-panel">
-           
+
             <ul class="header-panel_nav ">
                 <li class="header-panel_nav-item header_menu">
                     <a href=""><img src="images/svg/help.svg" alt="" /></a>
@@ -209,13 +321,13 @@
                     <a href=""><img src="images/svg/alarm_clock.svg" alt="" /></a>
                 </li>
                 <li class="header-panel_nav-item header_menu">
-                    <a href=""><img src="images/svg/notification.svg" alt=""  /></a>
+                    <a href=""><img src="images/svg/notification.svg" alt="" /></a>
                 </li>
                 <li class="header-panel_nav-item">
                     <a href="">
 
                         <div class="user-image">
-                            <h1>AU</h1>
+                            <p>AU</p>
                         </div>
                     </a>
                 </li>
@@ -235,6 +347,7 @@
             <li>
                 <a href=""><img src="images/svg/lightbulb.svg" alt="" srcset="" /> Project</a>
             </li>
+
             <li>
                 <a href=""><img src="images/svg/approve-invoice.svg" alt="" srcset="" />
                     Invoice</a>
@@ -249,8 +362,91 @@
     </aside>
 
     <main>
-        <div class="container w-100">
-            
+        <div>
+
+            <div class="collaborators">
+                <h1>COLLABRATORS</h1>
+            </div>
+            <div class="collaborators_submenu">
+                <a href="#">Over View</a>
+                <a href="#">Collabrators</a>
+                <a href="#">Task</a>
+                <a href="#">Documents</a>
+            </div>
+            <div>
+                <table class="collaborate_table_head">
+                    <tr>
+                        <th></th>
+                        <th>Name</th>
+                        <th>Role</th>
+                        <th>Progress</th>
+                        <th></th>
+                    </tr>
+                </table>
+                <table class="colaborate_table">
+                    <tr class="collaborator_row">
+                        <td class="user_avatar_box"><span class="user_avatar_link" href="">
+
+                                <div class="user_avatar">
+                                    FD
+                                </div>
+                            </span></td>
+                        <td>
+                            David Speedo
+                        </td>
+                        <td>Product Designer</td>
+                        <td>58%</td>
+                        <td class="more_action"><img src="images/svg/more_vert-24px.svg" alt=""></td>
+                    </tr>
+                    <tr>
+                        <td class="user_avatar_box"><span class="user_avatar_link" href="">
+
+                                <div class="user_avatar">
+                                    FD
+                                </div>
+                            </span></td>
+                        <td>
+                            David Speedo
+                        </td>
+                        <td>Product Designer</td>
+                        <td>58%</td>
+                        <td class="more_action"><img src="images/svg/more_vert-24px.svg" alt=""></td>
+                    </tr>
+                    <tr>
+                        <td class="user_avatar_box"><span class="user_avatar_link" href="">
+
+                                <div class="user_avatar">
+                                    FD
+                                </div>
+                            </span></td>
+                        <td>
+                            David Speedo
+                        </td>
+                        <td>Product Designer</td>
+                        <td>58%</td>
+                        <td class="more_action"><img src="images/svg/more_vert-24px.svg" alt=""></td>
+                    </tr>
+                    
+                    <tr>
+                        <td class="user_avatar_box"><span class="user_avatar_link" href="">
+
+                                <div class="user_avatar">
+                                    FD
+                                </div>
+                            </span></td>
+                        <td>
+                            David Speedo
+                        </td>
+                        <td>Product Designer</td>
+                        <td>58%</td>
+                        <td class="more_action"><img src="images/svg/more_vert-24px.svg" alt=""></td>
+                    </tr>
+                </table>
+            </div>
+
+        </div>
+        <div class="add_colaborator">
+            <span>+</span>
         </div>
     </main>
 </body></html>
