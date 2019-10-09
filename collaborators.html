@@ -31,27 +31,25 @@
 
         header {
             display: flex;
-            justify-content: ;
+            justify-content: center;
             align-items: center;
             position: fixed;
             top: 0%;
             left: 18%;
-            height: 10rem;
+            height: 12rem;
             width: 82%;
             box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
             padding: 2.5rem 4.5rem 2.5rem 6.5rem;
         }
 
         .searchContainer {
+            margin-right: 15vw;
             padding: 0.1rem 1.7rem;
             display: inline-flex;
-            flex: 1 1 300px;
-            position: relative;
-            width: 50rem;
+            width: 25vw;
             border: 1px solid #B1B1B1;
             box-sizing: border-box;
-            border-radius: 4px;
-            overflow: hidden;
+            border-radius: 4px;            
         }
 
         .searchIcon {
@@ -74,7 +72,10 @@
         }
 
         header .header-panel {
-            height: 100%;
+            height: 100;
+            position: absolute;
+            right:0%;
+            margin-right: 5rem;
         }
 
         header .header-panel_nav {
@@ -86,7 +87,12 @@
             height: 100%;
             margin: 0;
         }
-
+        .header_menu{
+            border-right: 1px solid #B1B1B1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
         header .header-panel_nav-item {
             height: 100%;
             display: flex;
@@ -103,18 +109,18 @@
         header .header-panel_nav-item a img {
             width: 3rem;
             height: 3rem;
-            margin-right: 1rem;
+            margin-right: 4rem;
         }
 
         header .header-panel_nav-item a .user-image {
-            width: 100px;
-            height: 100px;
+            width: 4vw;
+            height: 4vw;
             border-radius: 50%;
             display: flex;
             justify-content: center;
             align-items: center;
-            border: 3px solid #000;
-        }
+            border: 2px solid #091429;
+        } 
 
         aside {
             display: flex;
@@ -179,67 +185,31 @@
             font-size: 18px;
             line-height: 21px;
         }
-
-        main .container a.button {
-            background-color: #0abab5;
-            padding: 1.6rem 1rem;
-            font-family: Ubuntu;
-            font-style: normal;
-            font-weight: bold;
-            font-size: 28px;
-            line-height: 32px;
-            text-align: center;
-            color: white;
-        }
-
-        main .container a.button:hover {
-            text-decoration: none;
-        }
-
-        main .container h2 {
-            font-family: Ubuntu;
-            font-style: normal;
-            font-weight: 500;
-            font-size: 28px;
-            line-height: 32px;
-            margin-top: 5rem;
-            color: #262626;
-        }
-
-        main .container p {
-            margin-top: 3.5rem;
-            font-family: Ubuntu;
-            font-style: normal;
-            font-weight: normal;
-            font-size: 18px;
-            line-height: 21px;
-            color: #091429;
-        }
     </style>
     <title>Lancer - Active Projects</title>
 </head>
 
 <body>
-    <header>
+    <header class="navbar my-auto">
        
-       
-    
-        <div class="header-panel">
-            <!--    Search bar starts here-->
+        <!--    Search bar starts here-->
             <div class="searchContainer">
             <i class="fa fa-search searchIcon"></i>
             <input class="searchBox" type="search" name="search" placeholder="Search">
         </div>
                <!--     search bar ends here-->
-            <ul class="header-panel_nav">
-                <li class="header-panel_nav-item">
+    
+        <div class="header-panel">
+           
+            <ul class="header-panel_nav ">
+                <li class="header-panel_nav-item header_menu">
                     <a href=""><img src="images/svg/help.svg" alt="" /></a>
                 </li>
-                <li class="header-panel_nav-item">
+                <li class="header-panel_nav-item header_menu">
                     <a href=""><img src="images/svg/alarm_clock.svg" alt="" /></a>
                 </li>
-                <li class="header-panel_nav-item">
-                    <a href=""><img src="images/svg/notification.svg" alt="" srcset="" /></a>
+                <li class="header-panel_nav-item header_menu">
+                    <a href=""><img src="images/svg/notification.svg" alt=""  /></a>
                 </li>
                 <li class="header-panel_nav-item">
                     <a href="">
