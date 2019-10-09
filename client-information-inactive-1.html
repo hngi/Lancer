@@ -7,6 +7,7 @@
     <title>Client</title>
     <link href="https://fonts.googleapis.com/css?family=Ubuntu&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/64ab2a0281.js" crossorigin="anonymous"></script>
 
     <style>
 
@@ -49,7 +50,15 @@
             text-decoration: none;
             color: #fff;
             padding: 0.7rem 1.2rem;
+            transition: all 0.3s ease-in;
+            border-radius: 3px;
         }
+
+        .next-link:hover {
+            background-color: #323A43;
+            color: #fff;
+        }
+
         main {
             display: flex;
             align-items: center;
@@ -59,7 +68,7 @@
         }
         
         .client-font {
-            margin-left: -19rem;
+            margin-left: -15rem;
             font-size: 42px;
             margin-bottom: 2rem;
         }
@@ -82,7 +91,8 @@
             margin-right: 5rem;
         }
 
-        input[type=text] {
+        input[type=text],
+        input[type=email] {
             background: none;
             border: 1px solid #919191;
             padding: 0.6rem;
@@ -104,14 +114,94 @@
             margin-bottom: 1.5rem;
         }
 
+        .contact-label {
+            font-size: 18px;
+            line-height: 21px;
+            margin-right: 5.7rem;
+        }
+
+        .contact-email-label {
+            font-size: 18px;
+            line-height: 21px;
+            margin-right: 5.75rem;  
+        }
+
+        .email-box {
+            margin-top: 1rem;
+            position: relative;
+        }
+
+        .required-field {
+            font-size: 0.6rem;
+            position: absolute;
+            right: 1rem;
+            bottom: 0.4rem;
+            color:#00F9FF;
+        }
+
+        .required-div {
+            position: relative;
+        }
+
+        .first-required {
+            font-size: 0.6rem;
+            color: #00F9FF;
+            position: absolute;
+            right: 0.8rem;
+            bottom: 0.4rem;
+
+        }
+
+        .btn-link {
+            margin-top: 1rem;
+            text-decoration: none;
+            color: #fff;
+            padding: 1.2rem 3rem;
+            background-color: rgba(196, 196, 196, 0.4);
+            position: absolute;
+            bottom: 2rem;
+            left: 50%;
+            border-radius: 2px;
+            transition: all 0.3s ease-in;
+        }
+
+        .btn-link:hover {
+            background-color: #323A43;
+            color: #fff;
+        }
+
+
+        .fa-times {
+            font-size: 3rem;
+            color: #919191;
+            display: inline;
+            border-right: 2px solid #919191;
+            padding-right: 1.5rem;
+        }
+
+        .fa-less-than {
+            font-size: 3rem;
+            color: #919191;
+            padding: 1.5rem;
+        }
+
+        .times-link {
+            text-decoration: none;
+            color: #919191;
+            transition: all 0.3s ease-in-out;
+        }
+
+        .times-link:hover i {
+            color: #00F9FF;
+        }
     </style>
 </head>
 <body>
     <header>
         <!-- Icons -->
         <div>
-            <span> x </span>
-            <span> < </span>
+            <span> <a href="#" class="times-link"> <i class="fas fa-times"></i> </a> </span>
+            <span> <a href="#" class="times-link"> <i class="fas fa-less-than"></i> </a></span>
         </div>
         <h3 class="first-header">Client</h3>
         <a href="#" class="next-link">NEXT</a>
@@ -124,10 +214,10 @@
             
             <!-- BUSINESS INFORMATION -->
             <h3 class="font-info"><strong>Business Information</strong></h3>
-            <div>
+            <div class="required-div">
                 <label for="" class="company-label">Company name</label>
                 <input type="text" placeholder="e.g Sunshine Studio" required>
-                <span>Required</span>
+                <span class="first-required"><i> Required </i></span>
             </div>
 
             <h3 class="add-address">Add Address +</h3>
@@ -136,20 +226,20 @@
 
             <h3 class="font-contact"><strong>Contact Information</strong></h3>
             <div>
-                <label for="">Contact name</label>
+                <label for="" class="contact-label">Contact name</label>
                 <input type="text" placeholder="e.g Ben Davies">
             </div>
-            <div>
-                <label for="">Contact email</label>
+            <div class="email-box">
+                <label for="" class="contact-email-label">Contact email</label>
                 <input type="email" placeholder="e.g email@domain.com" required>
-                <span>Required</span>
+                <span class="required-field"><i>Required</i></span>
             </div>
 
-            <h3>Add other contacts +</h3>
+            <h3 class="add-address">Add other contacts +</h3>
 
         </form> 
     </main>
 
-    <a href="#">NEXT</a>
+    <a href="#" class="btn-link">NEXT</a>
 </body>
 </html>
