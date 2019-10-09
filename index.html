@@ -11,125 +11,170 @@
     <link rel="stylesheet" href="css/invoiceSignedIn.css">
     <link rel="icon" type="image/x-icon" href="#">
 
-    <style>
-        * {
+    <style>*{
             margin: 0;
             padding: 0;
         }
-
-        .invoice {
+        /*=========================Defined Grid Area ==================================*/
+        .invoice{
             height: 100vh;
             width: 0 auto;
             display: grid;
-
-            grid-template-columns: 20% 80%;
-
+            grid-template-columns: 15% 85%;
             grid-template-areas: {
-                "sideHeader": "content"
+                "sideHeader" : "content" 
             }
         }
-
-        .sideHeader {
+        
+        /*=========================Side Header ==================================*/
+        .sideHeader{
             background-color: #091429;
-            justify-content: center;
-            padding: 4em;
+            padding: 0 4em;
+            font-family: 'Ubuntu', sans-serif;
         }
-
-        .sideHeader .items p {
-            font-size: 1.4em;
+        .logo{
+            margin: 5em 0;
+            width: 8em;
+        }
+        .items li,
+        .contentHeader ul{
+            list-style-type: none;
+        }
+        .items li{
+            margin-bottom: 1.2em;
+        }
+        .items a{
+            font-size: 1em;
             color: white;
+            font-weight: bold;
+            line-height: 21px;
+            text-decoration: none;
         }
-
-        .sideHeader.img {
-            width: 50px;
+        .items a.active{
+            color: #333333;
         }
-
-        .content {
-            margin: 35px;
+        .itemslink img{
+            margin-bottom: -3px;
+            margin-right: 1em;
+        }
+        /*=========================Content Area ==================================*/
+        .content{
             display: grid;
-            grid-template-rows: 20% 80%;
+            grid-template-rows: 10% 90%;
+            /*Content grid*/
             grid-template-areas: {
-                "contentHeader": "contentBody"
-            }
-
+                "contentHeader" : "contentBody" 
+            } 
         }
-
-        .contentBody h3 {
-            margin-top: 50px;
-            font-size: 1.0em;
+        .contentHeader{
+            display: flex;
+            box-shadow: 0px 4px 2px rgba(0, 0, 0, 0.1);
+            font-family: 'Ubuntu', sans-serif;
+            align-items: center;
+            padding: 0 0 0 5em;
+        }
+        h2{
+            color: #262626;
             font-weight: bold;
+            font-size: 28px;
+            line-height: 32px;
         }
-
-        .createInvoice {
-            text-decoration-line: none;
+        .contentHeader ul{
+            margin-left: auto;
+            display: flex;
+            align-items: center;
+        }
+        .list li{
+            margin-right: 2em;
+        }
+        .list a{
+            color: #262626;
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 21px;
+            text-decoration: none;
+        }
+        .list img{
+            margin-bottom: -10px;
+            margin-right: .5em;
+        }
+        #user-drop{
+            margin-left: -2em
+        }
+        /*=========================Content Body Area ==================================*/
+        .contentBody{
+            padding: 5em;
+        }
+        .createInvoice{
+            background: #0ABAB5;
+            border: 1px solid #999999;
+            box-sizing: border-box;
+            font-size: 1.5em;
+            font-weight: bold;
+            font-family: 'Ubuntu', sans-serif;
+            text-decoration: none;
+            padding: 15px 15px;
             color: white;
-            margin-top: 20px;
-            border: 1px solid grey;
-            padding: 10px 30px;
-            background-color: #00CC99;
-            font-weight: bold;
-            font-size: 1.3em;
+            line-height: 32px;
         }
-
+        h3{
+            font-family: 'Open Sans', sans-serif;
+            font-weight: bold;
+            font-size: 1.2em;
+            line-height: 25px;
+            margin: 3em 0
+        }
         .all {
             margin-top: 20px;
         }
-
         .all select option {
             padding-top: 10px;
+            font-size: 14px;
+            line-height: 19px;
         }
-
         .allInvoiceList {
-            width: 25%;
-            padding: 5px;
+            width: 20%;
+            padding: 10px;
+            border: 1px solid #C4C4C4;
+            font-size: 14px;
+            line-height: 19px;
         }
-
-        .table {
+        .table{
             width: 100%;
-            margin-top: 20px;
+            margin-top: 2.5em;
             border-collapse: collapse;
+            font-family: 'Open Sans', sans-serif;
         }
-
         .thead {
             font-weight: bold;
-            font-size: 1.0em;
-            padding-bottom: 20px;
+            font-size: 1.1em;
+            line-height: 25px;
         }
-
-        .thead td {
-            position: 10px 5px;
-        }
-
         tr.border {
-            border: 1px solid grey;
+            border: 1px solid #C4C4C4
         }
-
         .border td {
             padding: 10px 0px;
+            font-size: 14px;
+            line-height: 16px;
         }
-
         .statuspaid {
-            border: 1px solid white;
             width: 30%;
-            padding: 4px 10px;
-            border-radius: 2px;
-            background-color: #CCFFE5;
-            color: #008000;
+            padding: 5px 5px;
+            border-radius: 4px;
+            background-color:rgba(23, 150, 21, 0.1);
+            color: #179615;
             font-weight: bold;
+            text-align: center;
         }
-
         .statussent {
-            border: 1px solid white;
             width: 30%;
-            padding: 4px 10px;
-            border-radius: 2px;
-            background-color: #CCF2FF;
-            color: black;
+            padding: 5px 5px;
+            background: rgba(0, 159, 255, 0.1);
+            border-radius: 4px;
+            color: #091429;
             font-weight: bold;
-        }
-
-        .one {
-            border: 1px;
+            text-align: center;
         }
     </style>
 
