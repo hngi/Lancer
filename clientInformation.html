@@ -4,6 +4,7 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <link href="https://fonts.googleapis.com/css?family=Ubuntu:400,700&display=swap" rel="stylesheet">
         <title>Client Information</title>
     </head>
     <style>
@@ -11,7 +12,7 @@
             box-sizing: border-box;
         }
         body {
-            font-family: Arial, Helvetica, sans-serif;
+            font-family: Ubuntu;
         }
         .container {
             margin: 0 auto;
@@ -84,6 +85,7 @@
             color: #dc3545;
         }
         label {
+            font-family: 'Ubuntu', sans-serif;
             font-size: 0.9rem;
         }
         @media (max-width: 575.98px) {
@@ -112,18 +114,18 @@
                 font-size: 0.8em;
             }
             img {
-            height: 10px;
-            width: 5px;
-        }
+                height: 10px;
+                width: 5px;
+            }
         }
         @media (min-width: 576px) and (max-width: 767px) {
             .col-1 {
                 width: 10%;
             }
             img {
-            height: 15px;
-            width: 10px;
-        }
+                height: 15px;
+                width: 10px;
+            }
         }
         @media (min-width: 768px) and (max-width: 991.98px) {
             .col-1 {
@@ -144,10 +146,12 @@
                 <a href="#" class="col-3">NEXT</a>
             </nav>
         </header>
-        <div class="container" style="padding: .5em">
-            <h2>Client Information</h2>
+        <div class="container" style="padding: .5em .5em 0 .5em">
+            <h2 style="font-weight: 700;">Client Information</h2>
             <form>
-                <fieldset style="border: 1px solid rgb(179, 176, 176);">
+                <fieldset
+                    style="border: 1px solid rgb(179, 176, 176);border-top: 2px solid rgb(179, 176, 176);border-bottom: 2px solid rgb(179, 176, 176);"
+                >
                     <h4>Business Information</h4>
                     <label for="companyName">
                         Company name
@@ -185,7 +189,7 @@
                             Contact email
                             <input
                                 type="text"
-                                placeholder="e.g email@domain.com"
+                                placeholder="e.g email@domain.com "
                                 id="contactEmail"
                                 class="input"
                                 required
@@ -195,7 +199,9 @@
                             </div>
                         </label>
                     </div>
-                    <p style="padding: 1em; font-weight: bold; font-size: .8em">
+                    <p
+                        style="padding: 1em; font-weight: bold; font-size: .8em;margin-bottom: 5em;"
+                    >
                         Add other contacts <img src="./icons/plus.svg" alt="" />
                     </p>
                 </fieldset>
