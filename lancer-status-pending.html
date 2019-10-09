@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Pacifico&display=swap"
+      rel="stylesheet"
+    />
+    <title>Lancer - pending</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+      }
+      .main {
+        width: 80%;
+        float: right;
+      }
+      .main header {
+        border-bottom: solid grey;
+        padding: 20px;
+      }
+      .main main {
+        padding: 20px;
+      }
+      .main header ul li {
+        display: inline;
+        padding: 20px;
+        border-right: 2px solid #b1b1b1;
+      }
+      .main header ul li #last-list {
+        border-right: 0;
+      }
+      .main header ul li #initial {
+        width: 100px;
+        height: 100px;
+        border: 2px solid;
+        border-radius: 50px;
+        font-weight: bold;
+        font-size: 18px;
+        padding: 5px;
+        position: relative;
+        bottom: 5px;
+      }
+      .main header div {
+        float: right;
+        position: relative;
+        bottom: 45px;
+      }
+      input#search {
+        background-image: url(https://res.cloudinary.com/kayode/image/upload/v1570641135/icons/search_ah4hi2.svg);
+        background-repeat: no-repeat;
+        text-indent: 20px;
+        width: 350px;
+        height: 30px;
+        font-size: 16px;
+        padding-left: 10px;
+        position: relative;
+        left: 200px;
+        border: 1px solid #b1b1b1;
+        box-sizing: border-box;
+        border-radius: 4px;
+      }
+
+      input#search:focus {
+        background-image: none;
+        padding: 0;
+      }
+      .main main h4 {
+        padding-bottom: 20px;
+      }
+      .main main form select {
+        padding-bottom: 5px;
+        width: 200px;
+      }
+      table {
+        width: 100%;
+        text-align: center;
+        border-collapse: collapse;
+      }
+      table .table-body {
+        border: 1px solid;
+      }
+      table .table-body td h5 {
+        background: rgba(219, 114, 16, 0.3);
+      }
+      table .table-body td h5 span {
+        color: #f77a06;
+        border-radius: 2px;
+      }
+      table .table-head {
+        padding-bottom: 5px;
+      }
+      .side-bar {
+        width: 20%;
+        background: #091429;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        float: left;
+        color: #fff;
+      }
+      .icon-text {
+        font: normal bold "Open Sans";
+      }
+      .side-bar a {
+        text-decoration: none;
+        color: white;
+      }
+      .side-bar ul li {
+        list-style-type: none;
+        padding: 30px;
+      }
+      .side-bar h1 {
+        text-align: center;
+        font: normal normal 36px/63px "Pacifico", cursive;
+      }
+      .side-bar h1 span {
+        color: lightskyblue;
+      }
+      #icon {
+        width: 20px;
+        height: 20px;
+        padding-right: 15px;
+      }
+      .dropbtn #shape {
+        padding-left: 10px;
+      }
+      .dropdown {
+        position: relative;
+        display: inline-block;
+      }
+      .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #f1f1f1;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+        z-index: 1;
+      }
+      .dropdown-content a {
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+      }
+      .dropdown-content a:hover {
+        background-color: #ddd;
+      }
+      .dropdown:hover .dropdown-content {
+        display: block;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="side-bar">
+      <h1>Lan<span>c</span>ers</h1>
+      <ul>
+        <li>
+          <!--YOU CAN USE SVG DOCUMENT OR FONT AWESOME IN IMG SRC-->
+          <a href="" class="icon-text"
+            ><span
+              ><img
+                id="icon"
+                src="https://res.cloudinary.com/kayode/image/upload/v1570633702/icons/home_agclfa.svg"
+            /></span>
+            Dashboard</a
+          >
+        </li>
+        <li>
+          <!--YOU CAN USE SVG DOCUMENT OR FONT AWESOME IN IMG SRC-->
+          <a href="" class="icon-text"
+            ><span
+              ><img
+                id="icon"
+                src="https://res.cloudinary.com/kayode/image/upload/v1570633702/icons/customer_rcfque.svg"
+            /></span>
+            Client</a
+          >
+        </li>
+        <!--DROPDOWN-->
+        <li>
+          <div class="dropdown">
+            <p class="dropbtn">
+              <span
+                ><img
+                  id="icon"
+                  src="https://res.cloudinary.com/kayode/image/upload/v1570633702/icons/Group_levt6m.svg"
+              /></span>
+              Project
+              <span id="shape"
+                ><img
+                  src="https://res.cloudinary.com/kayode/image/upload/v1570635462/icons/Shape_a5fc5v.svg"
+                  alt="v"
+              /></span>
+            </p>
+            <div class="dropdown-content">
+              <a href="#">Status</a>
+              <a href="#">Overview</a>
+              <a href="#">Collabrators</a>
+              <a href="#">Task</a>
+              <a href="#">Document</a>
+            </div>
+          </div>
+        </li>
+
+        <li>
+        
+          <a href=""
+            ><img
+              id="icon"
+              src="https://res.cloudinary.com/kayode/image/upload/v1570637803/icons/invoice_vwreax.svg"
+              alt=""
+              srcset=""
+            />
+            Invoice</a
+          >
+        </li>
+        <li>
+          <!--YOU CAN USE SVG DOCUMENT OR FONT AWESOME IN IMG SRC-->
+          <a href=""
+            ><img
+              id="icon"
+              src="https://res.cloudinary.com/kayode/image/upload/v1570637803/icons/policy_sebvah.svg"
+              alt=""
+              srcset=""
+            />
+            Contract</a
+          >
+        </li>
+        <li>
+          <!--YOU CAN USE SVG DOCUMENT OR FONT AWESOME IN IMG SRC-->
+          <a href=""
+            ><img
+              id="icon"
+              src="https://res.cloudinary.com/kayode/image/upload/v1570638152/icons/approval_blr1q3.png"
+              alt=""
+              srcset=""
+            />
+            Proposals</a
+          >
+        </li>
+      </ul>
+    </div>
+    <!--NAV-->
+    <div class="main">
+      <header>
+        <form action="#">
+          <input type="text" id="search" placeholder="Search" />
+        </form>
+        <div>
+          <ul>
+            <li>
+              <!--YOU CAN USE SVG DOCUMENT OR FONT AWESOME IN IMG SRC-->
+              <a href=""
+                ><img
+                  src="https://res.cloudinary.com/kayode/image/upload/v1570637803/icons/help_yctata.svg"
+                  alt=""
+              /></a>
+            </li>
+            <li>
+              <!--YOU CAN USE SVG DOCUMENT OR FONT AWESOME IN IMG SRC-->
+              <a href=""
+                ><img
+                  src="https://res.cloudinary.com/kayode/image/upload/v1570637803/icons/time_pj7b6m.svg"
+                  alt=""
+                  srcset=""
+              /></a>
+            </li>
+            <li>
+              <!--YOU CAN USE SVG DOCUMENT OR FONT AWESOME IN IMG SRC-->
+              <a href=""
+                ><img
+                  src="https://res.cloudinary.com/kayode/image/upload/v1570637803/icons/notification_xo9w7i.svg"
+                  alt=""
+                  srcset=""
+              /></a>
+            </li>
+            <li id="last-list">
+              <span id="initial">KG</span>
+            </li>
+          </ul>
+        </div>
+      </header>
+      <!--END OF NAV-->
+      <!--SIDE NAV -->
+      <!--END OF SIDE NAV-->
+      <!--MAIN WORK-->
+      <main>
+        <h4>PROJECTS</h4>
+        <form>
+          <select>
+            <option value="All">Pending</option>
+            <option value="All">All</option>
+            <option value="All">All</option>
+          </select>
+        </form>
+        <br />
+        <br />
+
+        <table>
+          <tr class="table-head">
+            <th>Date</th>
+            <th>Title</th>
+            <th>Start Date</th>
+            <th>Paid</th>
+            <th>Due</th>
+            <th>Status</th>
+          </tr>
+          <tr class="table-body">
+            <td>5/09/2019</td>
+            <td>Foodie</td>
+            <td>20/09/2019</td>
+            <td>#200,000</td>
+            <td>#200,000</td>
+            <td>
+              <h5><span>Pending</span></h5>
+            </td>
+          </tr>
+        </table>
+      </main>
+    </div>
+  </body>
+</html>
