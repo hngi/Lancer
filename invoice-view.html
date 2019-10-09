@@ -29,6 +29,20 @@
             padding: 10px;
             text-align: left;
         }
+        .invoice-container{
+            position: relative;
+            top: 10rem;
+            width: 50%;
+            margin-left: 21%;
+        }
+        .logo-img{
+            width: 9rem;
+            float: right;   
+        }
+        .table-date{
+            position: relative;
+            color: red;
+        }
     </style>
 <body>
     
@@ -37,81 +51,74 @@
 
     <section class="sidebar-section"></section>
 
-    <section class="invoice-main">
-
-        <section class="invoice-description"></section>
-        <divclass="container">
-                <section id="showcase">
+    <section class="invoice-main ">
+        <div class="container shadow invoice-container ">
+            <section id="showcase ">
+             <div class="row container pt-5 ">
+                 <div class="col-6 mb-4">
                     <h1> Invoice </h1>
-                    <address contenteditable="">
+                        <address contenteditable="">
                             <p> <b>Project:</b> branding and marketing</p>
                             <p> <b>Lancer:</b> Endurance dan-jumbo</p>
                             <p> <b>Email:</b> Edanjumbo@gmail.com</p>
                             <p> <b>Address:</b> Accra, Ghana</p>
-                    </address>
-                  <table>
-                      <thead>
-                          <tr>
-                              <th> Bill to</th>
-                              <th> Issue Date </th>
-                              <th> Hourly Rate</th>
-                          </tr>
-                      </thead>
-                      <tr>
-                          <br>
-                          <td><span contenteditable="">John Doe</span> </td>
-                          <td><span contenteditable=""> 18th September 2019</td>
-                          <td> N/A</td>
-                         
-                      </tr>
-                      <tr>
-                          <td><span contenteditable="">Johndoe@gmail.com</span></td>
-                          <td></td>
-                          <td></td>
-                      </tr>
-                      <tr>
-                          <td><span contenteditable="">Ghana</span> </td>
-                      </tr>
-                      <tr>
-                          <th></th>
-                          <th> Due Date</th>
-                          <th> Amount Due</th>
-                      </tr>
-                      <tr>
-                          <td></td>
-                          <td><span contenteditable="">28th September 2019</span> </td>
-                          <td><span contenteditable="">NGN 38,500</span> </td>
-                      </tr>
+                        </address>
+                  </div>
+
+                  <div class="col-6">
+                      <img src="images/invoice-view/My Logo - Black.png" class="img-fluid logo-img"> 
+                  </div>
+                </div>
+                <table class="table-responsive" style="width: 100%">
+                    <thead >
+                        <tr>
+                            <th> Bill to</th>
+                            <th> Issue Date </th>
+                            <th> Hourly Rate</th>
+                        </tr>
+                    </thead>
+                    <tr>
+                        <br>
+                        <td><span contenteditable="">John Doe</span> </td>
+                        <td><span contenteditable=""> 18th September 2019</td>
+                        <td> N/A</td>
+                        
+                    </tr>
+                    <tr>
+                        <td><span contenteditable="">Johndoe@gmail.com</span></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td><span contenteditable="">Ghana</span> </td>
+                    </tr>
                 
-                  </table>  
-                    
-    
-            </section>
-        </body>
-        <section class="invoice-table">
+                    <tr class="table-date">
+                        <th></th>
+                        <th> Due Date</th>
+                        <th> Amount Due</th>
+                    </tr>
+            
+                    <tr class="table-date">
+                        <td></td>
+                        <td><span contenteditable="">28th September 2019</span> </td>
+                        <td><span contenteditable="">NGN 38,500</span> </td>
+                    </tr>
+                
+                </table>  
+        </div>
+
+        <section class="invoice-description"></section>
+     
+            
+    </section>
+        <section class="invoice-table" style="position: relative; top: 30rem">
             <section class="note">
                 <h5> Note</h5>
                 <p> Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium dolor laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi.</p>
             </section>
         </section>
     </section>
-   
-
-    
-
-
-
-
-
-    <body>
-       
-
-
-
-
-
-
-
 
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
