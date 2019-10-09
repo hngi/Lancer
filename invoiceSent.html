@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Invoice Confirmation</title>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+        }
+        *{
+            box-sizing: border-box;
+        }
+        
+        .alert{
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: 0.3fr 1fr;
+            background: #F2F3F3;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        @media screen and (max-width: 300px), (max-height:400px){
+            .alertHeader{
+                margin-top: 0;
+            }
+            .alertHeader img{
+                width: 30px;
+                max-width: 100%;
+                height: auto;
+            }
+            .alertBody a{
+            text-decoration: none;
+            background: #0ABAB5;
+            padding: 5px 10px;
+            color: white;
+            font-weight: bold;
+         }
+     
+        }
+        @media screen and (min-width: 300px){
+            .alertHeader img{
+                max-width: 100%;
+                height: auto;
+            }
+            .alertBody a{
+            text-decoration: none;
+            background: #0ABAB5;
+            padding: 15px 20px;
+            color: white;
+            font-weight: bold;
+         }
+
+        }
+        .alertHeader{
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: 1fr;
+            background: white;
+        }
+        
+        .alertBody{
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: 1fr;
+            justify-items: center;
+            align-items: center;
+        }
+        h3, h5, img{
+            justify-self: center;
+        }
+        h3{
+            margin-bottom: 0;
+        }
+        h5{
+            text-align: justify;
+            margin: 0 auto 10px auto;
+        }
+        span{
+            justify-self: right;
+            position: relative;
+            top: 4vh;
+            right: 1vw;
+            font-size: 30px;
+            font-weight: bold;
+            color: #c4c4c4;
+        }
+        span:hover{
+            color: black;
+            cursor: pointer;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="alert" id="alert">
+        <div class="alertHeader">
+            <span onclick="closePop()">&times;</span>
+            <img src="https://res.cloudinary.com/friilancer/image/upload/v1570626193/f0xjdbzud3ri2tnwr5sx.png" alt="green-tick">
+            <h3>Invoice Sent</h3>
+            <h5>You would receive a notification once payment has been made</h5>
+        </div>
+        <div class="alertBody">
+            <a href="#">VIEW INVOICES</a>
+        </div>
+    </div>
+
+    <script>
+       var closePop = function(){
+           var pop = document.getElementById('alert')
+            pop.style.display = 'none';
+        }
+    </script>
+</body>
+</html>
