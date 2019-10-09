@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Client View Project</title>
+    <title>Client View Project Info</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css?family=Ubuntu&display=swap" rel="stylesheet">
 </head>
@@ -21,16 +21,22 @@
         font-family: 'Ubuntu', 'san-serif';
     }
     .invoice {
-        width: 70%;
+        width: 100%;
     }
     
     .main-lanclient {
         margin: 3em;
     }
+
     
     .lanclient-view {
         margin-top: 1em;
     }
+    .lanclient-view a{
+    	text-decoration: none;
+    	color: black;
+    }
+
     
     .lanclient-view>span {
         display: inline-block;
@@ -186,11 +192,9 @@
         text-align: start;
         padding: 10px;
     }
-
     #hourly-rateN {
         text-align: right;
     }
-
     .light-head {
         color: #a6a6a6;
     }
@@ -200,14 +204,119 @@
     .dbl-border {
         border-bottom: 2px solid #000;
     }
+    .Move{
+    	padding-left: 230px;
+    }
+    .sidenav{
+			width: 0;
+			height: 900px;
+			background-color: #091429;
+			overflow-x: hidden;
+			z-index: 1;
+			align-items: flex-start;
+			position: fixed;
+			align-items: left;
+			transition: 0.5s;
+			top: 0px;
+			left: 0px;
+
+		}
+		.sidenav{
+			width: 0;
+			height: 900px;
+			background-color: #091429;
+			overflow-x: hidden;
+			z-index: 1;
+			align-items: flex-start;
+			position: fixed;
+			align-items: left;
+			transition: 0.5s;
+			top: 0px;
+			left: 0px;
+
+		}
+		.sidenav a{
+			padding: 8px 8px 8px 32px;
+			color: white;
+			text-decoration: none;
+			display: block;
+			font-size: 18px;
+			float: left;
+			padding-left: 70px;
+			transition: 0.3s;
+		}
+		.sidenav a:hover{
+			 color: white;
+		}
+		.sidenav .closebtn{
+			position: absolute;
+			top: 0;
+			right:25px;
+			font-size: 20px;
+			margin-left: 50px;
+		}
+		.openbtn{
+			cursor: pointer;
+			font-size: 20px;
+			color: white;
+			background-color: #009fff;
+			padding: 10px 15px;
+			border: none;
+		}
+		
+		.openbtn:hover{
+			background-color: #444;
+		}
+		#main{
+			transition: margin-left 0.5s;
+			padding: 16px;
+		}
+		@media screen and (max-height: 450px) {
+  		.sidenav {padding-top: 15px;}
+  		.sidenav a {font-size: 18px;}
+		}
+		@media screen and (min-width:  600px) {
+  		.Move{
+  			padding-left: 0px;
+  		}
+		}
+
    </style>
 
 <body>
+	<div id="main">
+  			  <button class="openbtn" onclick="openNav()">☰</button>  
+	</div>
+
+	
+	<div id="mySidenav" class="sidenav" align="center">
+		<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+		<br><br><br>
+		<img align="center" class="Lancers" src="https://res.cloudinary.com/dcoqt2wpo/image/upload/v1570557507/Lancers_c8dpbb.png"><br><br><br><br><br><br>
+
+		<div class="Inner">
+			
+
+			<p><a href=""><img src="https://res.cloudinary.com/dcoqt2wpo/image/upload/v1570556428/home_lbx6eq.png" hspace="10" width="15" height="15" >Dashboard</a><br><br><br><br></p>
+
+			<p><a href=""><img src="https://res.cloudinary.com/dcoqt2wpo/image/upload/v1570556428/Vector_envenf.png" hspace="10" width="15" height="15"> Client</a><br><br><br><br></p>
+
+			<p><a href=""><img src="https://res.cloudinary.com/dcoqt2wpo/image/upload/v1570556428/lightbulb_wemwzq.png" hspace="10" width="15" height="15">Project</a><br><br><br><br></p>
+
+			<p><a href=""><img src="https://res.cloudinary.com/dcoqt2wpo/image/upload/v1570556428/approve-invoice_efuypp.png" hspace="10" width="15" height="15">Invoice</a><br><br><br><br></p>
+
+			<p><a href=""><img src="https://res.cloudinary.com/dcoqt2wpo/image/upload/v1570556428/policy_tc9q4f.png" hspace="10" width="15" height="15">Contract</a><br><br><br><br></p>
+
+			<p><a href=""><img src="https://res.cloudinary.com/dcoqt2wpo/image/upload/v1570556428/approval_xfiucq.png" hspace="10" width="15" height="15">Proposal</a><br><br><br><br></p>
+		</div>
+	</div>
+<div class="Move">
+
     <div class = "invoice">
     <div class="main-lanclient">
         <div class="lanclient-view">
-            <span class="active">Project Info</span>
-            <span>Documents</span>
+            <span class="active"><a href="">Project Info</a> </span>
+            <span ><a href="Client_ViewOfProject_DocumentView.html"> Documents</a></span>
         </div>
         <div class="lanclient-buttons">
             <div class="right-acti">
@@ -316,6 +425,17 @@
         </div>
     </div>
 </div>
+<script>
+		function openNav() {
+  		document.getElementById("mySidenav").style.width = "250px";
+  		document.getElementById("main").style.marginLeft = "250px";
+		}
+
+		function closeNav() {
+ 		document.getElementById("mySidenav").style.width = "0";
+  		document.getElementById("main").style.marginLeft= "0";
+		}
+</script>
 </body>
 
 </html>
