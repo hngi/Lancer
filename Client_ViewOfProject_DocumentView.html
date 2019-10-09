@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Document View</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href="https://fonts.googleapis.com/css?family=Ubuntu&display=swap" rel="stylesheet">
+	<style>
+		body{
+		background-color: white;
+		background-size: cover;
+		min-height: 900px;
+		
+		background-repeat: no-repeat;
+		position: relative;
+		background-attachment: fixed;
+		width: 100%;
+
+
+
+		}
+
+		.sidenav{
+			width: 0;
+			height: 900px;
+			background-color: #091429;
+			overflow-x: hidden;
+			z-index: 1;
+			align-items: flex-start;
+			position: fixed;
+			align-items: left;
+			transition: 0.5s;
+			top: 0px;
+			left: 0px;
+
+		}
+		.sidenav a{
+			padding: 8px 8px 8px 32px;
+			color: white;
+			text-decoration: none;
+			display: block;
+			font-size: 18px;
+			float: left;
+			padding-left: 70px;
+			transition: 0.3s;
+		}
+		.sidenav a:hover{
+			 color: white;
+		}
+		.sidenav .closebtn{
+			position: absolute;
+			top: 0;
+			right:25px;
+			font-size: 20px;
+			margin-left: 50px;
+		}
+		.openbtn{
+			cursor: pointer;
+			font-size: 20px;
+			color: white;
+			background-color: #091429;
+			padding: 10px 15px;
+			border: none;
+		}
+		
+		.openbtn:hover{
+			background-color: #444;
+		}
+		#main{
+			transition: margin-left 0.5s;
+			padding: 16px;
+		}
+		
+
+		.Inner{
+			text-align: center;
+		}
+		
+		
+		p{
+			color: white;
+		}
+
+		.topnav{
+			width: 1800px;
+			height: 80px;
+			padding-left: 60px;
+			
+		}
+		.topnav a{
+			color: black;
+			text-decoration: none;
+			font-family: 'Ubuntu', sans-serif;
+			font-weight: 600;
+			font-size: 18px;
+		}
+
+		.Project{
+			padding: 0px 50px;
+			padding-top: 50px;
+		}
+		.Document{
+			padding: 0px 30px;
+			border-style: solid;
+			padding-bottom: 20px;
+			border-radius: 5px;
+			
+			border-left-color: white; 
+			border-top-color: white;
+			border-right-color: white;
+			border-bottom-color: #A6A6A6;
+		}
+		.All{
+			padding-left: 0;
+			font-family: 'Ubuntu', sans-serif;
+			padding-left: 120px;
+
+		}
+
+		.aa{
+			padding-left: 4px;
+			font-family: 'Ubuntu', sans-serif;
+
+		}
+		.bb{
+			
+		}
+		.Nda{
+			padding-left: 80px;
+		}
+		.Nda a{
+			text-decoration: none;
+			color: black;
+		}
+		.last{
+			padding-left: 160px;
+			margin-top: 0;
+			align-content: top;
+		}
+				@media screen and (max-width:  780px ) {
+  		.last{
+  			padding-left: 140px;
+  		}
+  		.All{
+  			padding-left: 120px;
+  		}
+  		.All img{
+			width: 120px;
+			height: 120px;
+		}
+		.Nda{
+			padding-left: 45px;
+		}
+		.All h1{
+			font-size: 18px;
+		}
+		.topnav a{
+			font-size: 15px;
+		}
+		.Every{
+
+			margin: auto;
+		}
+		.topnav{
+			width: 500px;
+			height: 80px;
+			padding-left: 60px;
+			
+		}
+
+  		body{
+		background-color: white;
+		background-size: cover;
+		min-height: 700px;
+		
+		background-repeat: no-repeat;
+		position: relative;
+		background-attachment: fixed;
+		width: 0;
+
+
+
+		}
+			@media screen and (max-width: 480px){
+		.last{
+  			padding-left: 0px;
+  		}
+  		.topnav{
+			width: 400px;
+			height: 80px;
+			padding-left: 60px;
+			
+		}
+  		.All{
+  			padding-left: 120px;
+  		}
+  		.All img{
+			width: 150px;
+			height: 150px;
+		}
+		.Nda{
+			padding-left: 45px;
+		}
+		.All h1{
+			font-size: 25px;
+		}
+		.topnav a{
+			font-size: 20px;
+		}
+		.Every{
+			
+			padding: none;
+		}
+
+  		
+		
+
+	</style>
+
+</head>
+<body>
+<div class="Every">
+	<div id="main">
+  			  <button class="openbtn" onclick="openNav()">☰</button>  
+	</div>
+
+	
+	<div id="mySidenav" class="sidenav" align="center">
+		<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+		<br><br><br>
+		<img align="center" class="Lancers" src="https://res.cloudinary.com/dcoqt2wpo/image/upload/v1570557507/Lancers_c8dpbb.png"><br><br><br><br><br><br>
+
+		<div class="Inner">
+			
+
+			<p><a href=""><img src="https://res.cloudinary.com/dcoqt2wpo/image/upload/v1570556428/home_lbx6eq.png" hspace="10" width="15" height="15" >Dashboard</a><br><br><br><br></p>
+
+			<p><a href=""><img src="https://res.cloudinary.com/dcoqt2wpo/image/upload/v1570556428/Vector_envenf.png" hspace="10" width="15" height="15"> Client</a><br><br><br><br></p>
+
+			<p><a href=""><img src="https://res.cloudinary.com/dcoqt2wpo/image/upload/v1570556428/lightbulb_wemwzq.png" hspace="10" width="15" height="15">Project</a><br><br><br><br></p>
+
+			<p><a href=""><img src="https://res.cloudinary.com/dcoqt2wpo/image/upload/v1570556428/approve-invoice_efuypp.png" hspace="10" width="15" height="15">Invoice</a><br><br><br><br></p>
+
+			<p><a href=""><img src="https://res.cloudinary.com/dcoqt2wpo/image/upload/v1570556428/policy_tc9q4f.png" hspace="10" width="15" height="15">Contract</a><br><br><br><br></p>
+
+			<p><a href=""><img src="https://res.cloudinary.com/dcoqt2wpo/image/upload/v1570556428/approval_xfiucq.png" hspace="10" width="15" height="15">Proposal</a><br><br><br><br></p>
+		</div>
+	</div>
+
+	
+	<div class="last">
+		<div class="topnav" align="top">
+		
+				<a href="Client_ViewOfProject_ProjectInfoView.html" class="Project">Project Info</a>
+				<a href="" class="Document">Document</a>
+
+
+		</div>
+		<div class="All">
+			<h1>Signed</h1>
+		
+			<div class="aa" align="left">
+				<a href="" ><img src="https://res.cloudinary.com/dcoqt2wpo/image/upload/v1570556532/file_gg3vft.png" width="200" height="200"> <h5 class="Nda">NDA</a></h5>
+			</div>
+		
+		</div>
+
+		<div class="All">
+			<h1>Pending</h1>
+		
+			<div class="aa" align="left">
+				<a href="" ><img src="https://res.cloudinary.com/dcoqt2wpo/image/upload/v1570556532/file_gg3vft.png" width="200" height="200"> <h5 class="Nda">Contract</a></h5>
+			</div>
+		
+		</div>
+	</div>
+</div>
+<script>
+		function openNav() {
+  		document.getElementById("mySidenav").style.width = "250px";
+  		document.getElementById("main").style.marginLeft = "250px";
+		}
+
+		function closeNav() {
+ 		document.getElementById("mySidenav").style.width = "0";
+  		document.getElementById("main").style.marginLeft= "0";
+		}
+</script>
+</body>
+</html>
