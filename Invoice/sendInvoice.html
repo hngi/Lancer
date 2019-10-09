@@ -1,0 +1,173 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <title>Send Invoice</title>
+    
+    
+    <style>
+        .card {
+            border: 0px
+        }
+        
+        .mainContent {
+            margin: 50px;
+            
+            position: relative;
+
+            background: #FFFFFF;
+            /* Secondary blue */
+
+            border: 5px solid #0ABAB5;
+            box-sizing: border-box;
+        }
+        
+        .mainContentBelowLogo {
+            margin-left: 20px;
+            margin-right: 20px;
+        }
+        
+        .topMenu {
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 15px
+        }
+        
+        .clientLogo {
+/*            position: relative;*/
+            width: 221px;
+            height: 221px;
+            margin: auto;
+/*
+            left: 610px;
+            top: 390.5px;
+*/
+        }
+        
+        .addressAndPayment{
+            margin: auto
+        }
+        
+        .address {
+/*            position: absolute;*/
+            width: 99px;
+            height: 77px;
+            margin: auto;
+/*
+            left: 323px;
+            top: 645px;
+*/
+        }
+        
+        .payment {
+            max-width: 300px;
+        }
+        
+        .issueDate {
+            margin-right: 30px;
+        }
+        
+        .paymentButton {
+            font-family: Ubuntu;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 28px;
+            line-height: 32px;
+            text-align: center;
+            background-color: #0ABAB5;
+            color: #FFFFFF;
+            padding: 2px;
+        }
+        
+        .invoiceDetails {
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+    </style>
+    
+  </head>
+  <body>
+    <div class="pageBackground">
+        <main>
+            <div class=" container mainContent">
+                <section>
+                    <div class="row topMenu">
+                        <button type="button" class="btn btn-primary">EDIT INVOICE</button>
+                        <div class="invoiceSettings"></div>
+                    </div>
+                </section>
+
+                <section class="clientLogo row"><img src="./Mask%20Group.svg" alt="clientLogo"></section>
+
+                <section class="mainContentBelowLogo">
+                    <section>
+                    
+                    <div class="addressAndPayment row">
+                        <div class="card">
+                            <p>Glacier Inc,</p>
+                            <p>Abuja, FCT</p>
+                            <p>Nigeria</p>
+                        </div>
+
+                        <div class="card payment ml-auto">
+                            Amount Due
+
+                            <div class="Amount">US$8,800 <span>USD</span></div>
+
+                            <div>
+                                <div class="issueDate float-left">Issued <p>02/10/2019</p></div>
+
+                                <div class="dueDate float-left">Due<p>Upon completion</p></div>
+                            </div>
+
+                            <button type="button" class="btn btn-primary">Pay with Flutterwave</button>
+                        </div>
+                    </div>
+                    
+                </section>
+
+                <section class="invoiceDetails row">
+                    <div class="card">
+                        <div class="card-title">Invoice</div>
+                        <div class="card-body">
+                            <table class="table">
+                              <thead>
+                                <tr>
+                                  <th scope="col">Description</th>
+                                  <th scope="col">Qty</th>
+                                  <th scope="col">Price</th>
+                                  <th scope="col">Amount</th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                                <tr scope="row">
+                                  <td>Mobile App UI</td>
+                                  <td>1</td>
+                                  <td>US$8,800.00</td>
+                                  <td>US$8,800.00</td>
+                                </tr>
+                              </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="footer"></section>
+                </section>
+            </div>
+        </main>
+    </div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
+</html>
