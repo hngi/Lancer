@@ -22,7 +22,6 @@
         .main {
             background-color: #FFFFFF;
             text-align: center;
-            width: 100%;
             height: 206px;
         }
 
@@ -39,10 +38,14 @@
             right: 56px;
         }
 
+        .side {
+            height: auto;
+            text-align: center;
+            position: absolute;
+            top: 25rem;
+        }
+
         .invBtn {
-            position: relative;
-            left: 400px;
-            top: 200px;
             background-color: #091429;
             color: #FFFFFF;
             border: 0;
@@ -58,28 +61,39 @@
         p {
             font-size: 18px;
         }
+
+        @media (max-width: 767.98px) {
+            .invBtn {
+                width: 10em;
+                font-size: 20px;
+            }
+
+            .fa-remove {
+                top: 5%;
+                right: 2%;
+            }
+        }
     </style>
 </head>
 
 <body>
     <div class="container-fluid main">
-
-        <i class="fa fa-check-circle"></i> 
+        <i class="fa fa-check-circle"></i>
         <i class="fa fa-remove"></i>
         <h3><strong>Invoice Sent</strong></h3>
         <h5>You would receive a notification once payment has been made</p>
-        
+
     </div>
 
-    <section class="container">
+    <div class="container-fluid side">
         <div class="row">
-            <div class="col align-self-center">
+            <div class="col">
                 <button class="invBtn">VIEW INVOICES</button>
             </div>
 
         </div>
-        
-    </section>
+
+    </div>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
         crossorigin="anonymous"></script>
