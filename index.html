@@ -68,10 +68,7 @@
 			transition: margin-left 0.5s;
 			padding: 16px;
 		}
-		@media screen and (max-height: 450px) {
-  		.sidenav {padding-top: 15px;}
-  		.sidenav a {font-size: 18px;}
-		}
+		
 
 		.Inner{
 			text-align: center;
@@ -117,6 +114,7 @@
 			padding-left: 120px;
 
 		}
+		
 		.aa{
 			padding-left: 4px;
 			font-family: 'Ubuntu', sans-serif;
@@ -137,80 +135,89 @@
 			margin-top: 0;
 			align-content: top;
 		}
-		@media screen and (min-width:  500px) {
+				@media screen and (max-width:  780px ) {
   		.last{
-  			padding-left: 160px;
+  			padding-left: 140px;
   		}
-  		
+  		.All{
+  			padding-left: 120px;
+  		}
+  		.All img{
+			width: 120px;
+			height: 120px;
+		}
+		.Nda{
+			padding-left: 45px;
+		}
+		.All h1{
+			font-size: 18px;
+		}
+		.topnav a{
+			font-size: 15px;
+		}
+		.Every{
+
+			margin: auto;
+		}
+		.topnav{
+			width: 500px;
+			height: 80px;
+			padding-left: 60px;
+			
+		}
+
   		body{
 		background-color: white;
 		background-size: cover;
-		min-height: 900px;
+		min-height: 700px;
 		
 		background-repeat: no-repeat;
 		position: relative;
 		background-attachment: fixed;
-		width: 100%;
+		width: 0;
+
 
 
 		}
-		}
-		@media screen and (min-width:  300px) {
-  		.last{
+			@media screen and (max-width: 480px){
+		.last{
   			padding-left: 0px;
   		}
-  		body{
-		background-color: white;
-		background-size: cover;
-		min-height: 900px;
-		
-		background-repeat: no-repeat;
-		position: relative;
-		background-attachment: fixed;
-		width: 100%;
-
-
+  		.topnav{
+			width: 400px;
+			height: 80px;
+			padding-left: 60px;
+			
 		}
-		}
-		@media screen and (min-width:  1000px) {
-  		.last{
-  			padding-left: 160px;
+  		.All{
+  			padding-left: 120px;
   		}
-  		body{
-		background-color: white;
-		background-size: cover;
-		min-height: 900px;
+  		.All img{
+			width: 150px;
+			height: 150px;
+		}
+		.Nda{
+			padding-left: 45px;
+		}
+		.All h1{
+			font-size: 25px;
+		}
+		.topnav a{
+			font-size: 20px;
+		}
+		.Every{
+			
+			padding: none;
+		}
+
+  		
 		
-		background-repeat: no-repeat;
-		position: relative;
-		background-attachment: fixed;
-		width: 100%;
-
-
-		}
-		}
-		@media screen and (width:  960px) {
-  		.last{
-  			padding-left: 160px;
-  		}
-  		body{
-		background-color: white;
-		background-size: cover;
-		min-height: 900px;
-		
-		background-repeat: no-repeat;
-		position: relative;
-		background-attachment: fixed;
-		width: 100%;
-
-
-		}
-		}
 
 	</style>
 
 </head>
 <body>
+<div class="Every">
 	<div id="main">
   			  <button class="openbtn" onclick="openNav()">☰</button>  
 	</div>
@@ -265,6 +272,7 @@
 		
 		</div>
 	</div>
+</div>
 <script>
 		function openNav() {
   		document.getElementById("mySidenav").style.width = "250px";
