@@ -3,3 +3,6 @@ For both tasks in stage 5
 
 # contact-support page Lancer app
 # live code: magenta-war.surge.sh
+
+
+developed by Seun Fadeyi @slarin and Adebayo Oluwaseun @seunbayo
