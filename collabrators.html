@@ -148,40 +148,49 @@
         aside .logo {
             font-family: "Pacifico", cursive;
             color: white;
-            margin-bottom: 7.5rem;
+            margin-bottom: 3.5rem;
         }
-
         aside .logo span {
             color: #00f9ff;
         }
-
         aside ul {
-            list-style-type: none;
+            list-style-type: none;	
             display: flex;
             flex-direction: column;
         }
-
         aside ul li {
-            margin-bottom: 7.5rem;
+            margin-bottom: 3.5rem;
         }
-
         aside ul li a {
             text-decoration: none;
+            list-style-type: none;
             color: white;
             font-family: Open Sans;
             font-style: normal;
-            font-weight: bold;
+            font-weight: ;
             font-size: 1.8rem;
             display: flex;
             align-items: center;
         }
-
+        aside ul li a:hover	{
+        	color:#0ABAB5;
+        	text-decoration: none;
+        }
         aside ul li a img {
             width: 2.5rem;
             height: 2.5rem;
             margin-right: 1.5rem;
         }
 
+       .mainnavul ul{
+       		display: none;
+       }
+       .mainnavul li:hover ul{
+       		display:block;
+       }
+       .mainnavul ul li{
+       	margin-bottom: 10px;
+       }
         main {
             position: absolute;
             top: 10rem;
@@ -298,7 +307,7 @@
             box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.24), 0px 0px 8px rgba(0, 0, 0, 0.12);
         }
     </style>
-    <title>Lancer - Active Projects</title>
+    <title>Lancer - Collabrators</title>
 </head>
 
 <body>
@@ -335,28 +344,38 @@
         </div>
     </header>
 
-    <aside>
+     <aside>
         <h1 class="logo">Lan<span>c</span>ers</h1>
-        <ul>
+        <ul class="mainnavul">
             <li>
-                <a href=""><img src="images/svg/home.svg" alt="" srcset="" /> Dashboard</a>
-            </li>
-            <li>
-                <a href=""><img src="images/svg/customer.svg" alt="" srcset="" /> Client</a>
-            </li>
-            <li>
-                <a href=""><img src="images/svg/lightbulb.svg" alt="" srcset="" /> Project</a>
+                <a href=""><img src="./images/home.svg" alt="" /> Dashboard</a>
             </li>
 
             <li>
-                <a href=""><img src="images/svg/approve-invoice.svg" alt="" srcset="" />
-                    Invoice</a>
+                <a href=""><img src="./images/customer.svg" alt="" /> Clients</a>
             </li>
+
             <li>
-                <a href=""><img src="images/svg/policy.svg" alt="" srcset="" /> Contract</a>
+                <a href=""><img src="./images/lightbulb.svg" alt="" />Projects</a>
+                <ul>
+                	<li><a href="#"><li>Status</li></a></li>	
+                	<li><a href="#"><li>Overview</li></a></li>
+                	<li><a href="#"><li>Collabrators</li></a></li>
+                	<li><a href="#"><li>Task</li></a></li>
+                	<li><a href="#"><li>Documents</li></a></li>	
+                </ul>
             </li>
+
             <li>
-                <a href=""><img src="images/svg/approval.svg" alt="" srcset="" /> Proposals</a>
+                <a href=""><img src="./images/invoice.svg" alt="" /> Invoice</a>
+            </li>
+
+            <li>
+                <a href=""><img src="./images/contract.svg" alt="" /> Contract</a>
+            </li>
+
+            <li>
+                <a href=""><img src="./images/proposal.svg" alt="" /> Proposals</a>
             </li>
         </ul>
     </aside>
