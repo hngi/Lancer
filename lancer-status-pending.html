@@ -8,11 +8,13 @@
       href="https://fonts.googleapis.com/css?family=Pacifico&display=swap"
       rel="stylesheet"
     />
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu&display=swap" rel="stylesheet">
     <title>Lancer - pending</title>
     <style>
       body {
         margin: 0;
         padding: 0;
+        font-family: "Ubuntu", sans-serif;
       }
       .main {
         width: 80%;
@@ -123,32 +125,16 @@
         height: 20px;
         padding-right: 15px;
       }
+      .active {
+        text-decoration: underline;
+      text-decoration-thickness: 2em;
+      }
       .dropbtn #shape {
         padding-left: 10px;
-      }
-      .dropdown {
+      } 
+      .dropdown-content p {
         position: relative;
-        display: inline-block;
-      }
-      .dropdown-content {
-        display: none;
-        position: absolute;
-        background-color: #f1f1f1;
-        min-width: 160px;
-        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-        z-index: 1;
-      }
-      .dropdown-content a {
-        color: black;
-        padding: 12px 16px;
-        text-decoration: none;
-        display: block;
-      }
-      .dropdown-content a:hover {
-        background-color: #ddd;
-      }
-      .dropdown:hover .dropdown-content {
-        display: block;
+        left: 40px;
       }
     </style>
   </head>
@@ -196,11 +182,11 @@
               /></span>
             </p>
             <div class="dropdown-content">
-              <a href="#">Status</a>
-              <a href="#">Overview</a>
-              <a href="#">Collabrators</a>
-              <a href="#">Task</a>
-              <a href="#">Document</a>
+              <p class="active"><a href="#" >Status</a></p>
+            <p> <a href="#">Overview</a></p>
+            <p><a href="#">Collabrators</a></p>
+            <p><a href="#">Task</a></p>
+            <p><a href="#">Document</a></p>
             </div>
           </div>
         </li>
