@@ -129,7 +129,7 @@
             color: #00f9ff;
         }
         aside ul {
-            list-style-type: none;
+            list-style-type: none;	
             display: flex;
             flex-direction: column;
         }
@@ -138,6 +138,7 @@
         }
         aside ul li a {
             text-decoration: none;
+            list-style-type: none;
             color: white;
             font-family: Open Sans;
             font-style: normal;
@@ -146,13 +147,25 @@
             display: flex;
             align-items: center;
         }
-
+        aside ul li a:hover	{
+        	color:#0ABAB5;
+        	text-decoration: none;
+        }
         aside ul li a img {
             width: 2.5rem;
             height: 2.5rem;
             margin-right: 1.5rem;
         }
-       .hid ul
+
+       .mainnavul ul{
+       		display: none;
+       }
+       .mainnavul li:hover ul{
+       		display:block;
+       }
+       .mainnavul ul li{
+       	margin-bottom: 10px;
+       }
         main {
             position: absolute;
             top: 10rem;
@@ -206,9 +219,8 @@
     </header>
 
     <aside>
-    	<div class="sidebar">
         <h1 class="logo">Lan<span>c</span>ers</h1>
-        <ul>
+        <ul class="mainnavul">
             <li>
                 <a href=""><img src="https://res.cloudinary.com/christee/image/upload/v1570626688/home_1_eekxvp.png" alt="home" srcset="" /> Dashboard</a>
             </li>
@@ -217,12 +229,15 @@
                 <a href=""><img src="https://res.cloudinary.com/christee/image/upload/v1570626737/Vector_rpyzc8.png" alt="client" srcset="" /> Client</a>
             </li>
 
-            <li class="hidd">
-                <a href=""><img src="https://res.cloudinary.com/christee/image/upload/v1570627306/lightbulb_1_x2f5s0.png" alt="" srcset="project" /> Project</a>
-                <!-- <ul>
-                	<li><a href="	"><li>hello</li></a></li>	
-                	<li><a href="	"><li>hello</li></a></li>	
-                </ul> -->
+            <li>
+                <a href=""><img src="https://res.cloudinary.com/christee/image/upload/v1570633887/lightbulb_4_gpcw0d.png" alt="" srcset="project" /> Project</a>
+                <ul>
+                	<li><a href="#"><li>Status</li></a></li>	
+                	<li><a href="#"><li>Overview</li></a></li>
+                	<li><a href="#"><li>Collaborators</li></a></li>
+                	<li><a href="#"><li>Task</li></a></li>
+                	<li><a href="#"><li>Documents</li></a></li>	
+                </ul>
             </li>
 
             <li>
@@ -238,7 +253,6 @@
                 <a href=""><img src="https://res.cloudinary.com/christee/image/upload/v1570627421/approval_eqcf3k.png" alt="proposal" srcset="" /> Proposals</a>
             </li>
         </ul>
-        </div>
     </aside>
 
 
