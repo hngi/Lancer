@@ -4,77 +4,39 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Client Information Inactive</title>
-    <link rel="stylesheet" href="client.css">
+
+    <title>CLIENT INFORMATION</title>
 </head>
 <body>
-    <nav id="topmenu">
-        <p class="ico">x</p>
-        <p class="ico"><</p>
-        <p id="cli"><b>Client</b></p>
-        <button class="cli">NEXT</button>
-    </nav>
-    <h1>Client Information</h1>
+    <div class="container">
+        <div class="page-header">
+            <!--CLOSE BUTTON-->
+            <button></button>
+            <!--BACK BUTTON-->
+            <button></button>
+
+            <h4>Client</h4>
+            <button type="button">Next</button>
+        </div>
+
+        <div class="page-content">
+            
+            <h2>Client Information</h2>
+            <!--FORM-->
+            <form>
+                <h4>Business Information</h4>
+                <label>Company Name <input type="text" placeholder="e.g Sunshine Studio"</label>
+                <p>Add address +</p>
+
+                <h4>Contact Information</h4>
+                <label>Contact Name <input type="text" placeholder="e.g Ben Davies"</label><br>
+                <label>Contact Email <input type="text" placeholder="e.g email@domail.com"</label>
+                <p>Add other contacts +</p>
+                <button type="button">NEXT</button>
+            </form>
+            <!--END OF FORM-->
+        </div>
+    </div>
     
-    <form id='form'>
-        <h2 class="hel">Business Information</h2>
-        <div class="row">
-            <p class="sp">Company name</p>
-            <input type="text" class="con" placeholder="e.g Sunshine Studio" required>
-        </div>
-        <p  id="add"> <b> Add address <span>+</span></b></p>
-        <div id='info'>
-                <p class="hel"><b>Business Address</b> </p>
-                <div class="row">
-                    <p class="sd"> Street&Number</p>
-                    <div class="col">
-                            <input type="text" class="cont" placeholder="Street">
-                            <input type="number" class="cont" placeholder="Number">
-                    </div>
-                </div>
-                <div class="row">
-                    <p class="sd">City&Zip code</p> 
-                        <div class="col">
-                                <input type="text" class="cont" placeholder="City">
-                                <input type="number" class="cont" placeholder="Postal code">
-                        </div>
-                </div>
-                <div class="row">
-                    <p class="sd">Country&State</p>
-                    <div class="col">
-                            <!-- <input type="text" class="cont" placeholder="Country"> -->
-                            <select name=""  id="cont">
-                                <option value="">Country</option>
-                                <option value=""> Nigeria</option>
-                                <option value=""> America</option>
-                                <option value="">China</option>
-                                <option value="">Ghana</option>
-                                <option value="">Germany</option>
-        
-                            </select>
-                            <input type="text" class="cnt" placeholder="State">
-                    </div>
-                </div>
-        </div>
-        <p class="hel"> <b>Contact Information</b></p>
-        <div id='contact'>
-                <div class="row">
-                        <p class="sp">Contact name </p> 
-                        <input type="text" class="con" placeholder="e.g Ben Davies"> 
-                    </div>
-                    <div class="row">   
-                        <p class="sp">Contact email </p>
-                        <input type="email" class="con" placeholder="e.g email@domain.com " required>
-                    </div>
-        </div>
-         
-        <p> <b> Add Other contacts <span id="plus">+</span></b></p>
-    </form>
-    <button type="button" class="btn "> NEXT</button>
-    <script src="client.js"></script>
 </body>
 </html>
-
-    
-        
-         
