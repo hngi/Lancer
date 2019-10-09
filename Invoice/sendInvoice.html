@@ -12,13 +12,92 @@
     
     
     <style>
+        *{
+    font-family: sans-serif;
+    font-weight: bold;
+    margin: 0;}
+        
+body{
+    background-color: #F2F3F3;;
+}
+.container-a{
+    display:flex;
+    background: white;
+    font-size: 0.9em !important;
+}
+
+/* .container-b{
+    display:flex;
+    background: white;
+    border: 2px solid #0ABAB5;
+    flex: 1;
+    padding:10px auto 10px auto;
+} */
+.container-a > div{
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: center;
+    font-size: 1rem;
+}
+.box-1{
+    
+    flex-flow: column wrap;
+    flex-grow: 1;
+  }
+  
+  .container-a>.box-2{
+    flex:1;
+    
+  }
+  
+  .container-a>.box-3{
+    flex:2;
+    cursor: pointer;
+    
+  }
+  .container-a>.box-4{
+    flex:4;
+    
+  }
+  .box-1:hover, .box-2:hover, .box-3:hover, .box-4:hover {
+      background:#0ABAB5;
+      transition: all 0.3s ease 0s;
+      border-color: #0ABAB5;
+      color: white;
+
+  }
+  .container-a>.box-5{
+    flex:2; 
+    background: #0ABAB5;
+    cursor: pointer;
+    border: none;
+}
+.container-a>.box-5:hover{
+    background:  rgb(5, 128, 123);
+    transition: all 0.3s ease 0s;
+}
+
+.sendInvoice {
+    
+    color: white;
+    border: none;
+    background:none;
+    height: 100%;
+   
+    cursor: pointer;
+    
+  }
+  img:hover{
+      color: white;
+  }
         .card {
             border: 0px
         }
         
         .mainContent {
-            margin: 50px;
-            
+            margin: auto;
+            margin-top: 100px;
+            max-width: 550px;
             position: relative;
 
             background: #FFFFFF;
@@ -42,9 +121,12 @@
         .editInvoice {
             background-color: #00FFA3;
             color: #333333;
-            font-weight: bold;
+            font-weight: 900;
             border: none;
             border-radius: 0%;
+            font-size: 0.8em;
+            padding-top: 10px;
+            padding-bottom: 10px; 
         }
 
         .editInvoice:hover {
@@ -127,11 +209,30 @@
   </head>
   <body>
     <div class="pageBackground">
+        <header class="container-a">
+                <div class="box-1">
+                        <i class="fa fa-times" aria-hidden="true"></i>
+            </div>
+            <div class="box-2">
+                    <i class="fa fa-chevron-left" aria-hidden="true"></i>
+                </div>
+        
+                    <div class="box-3">
+                            Save and Close
+                        </div>
+                        <div class="box-4">
+                                Invoice
+                            </div>
+                            <div class="box-5">
+                                    <a href="#"><button class="sendInvoice">SEND INVOICE</button></a>
+                                </div>
+        </header>
+
         <main>
             <div class=" container mainContent">
                 <section>
                     <div class="row topMenu">
-                        <button type="button" class="btn btn-primary editInvoice ">EDIT INVOICE</button>
+                        <button type="button" class="btn btn-primary editInvoice "><i class="fa fa-pencil" aria-hidden="true"></i>&nbsp;EDIT INVOICE</button>
                         <div class="ml-auto align-middle"><a class="invoiceSettings" href=""><i class="fas fa-cog"></i> Invoice Settings</a></div>
                     </div>
                 </section>
@@ -155,7 +256,7 @@
                         <div class="card payment ml-auto">
                             <div style="font-size: 0.8em; color: #B1B1B1">Amount Due</div>
 
-                            <div class="Amount" style="font-size: 1.5em; font-weight: bold">US$8,800 <span style="font-size: 0.5em">USD</span></div>
+                            <div class="Amount" style="font-size: 2em; font-weight: bold">US$8,800 <span style="font-size: 0.5em">USD</span></div>
 
                             <div>
                                 <div class="issueDate float-left">
