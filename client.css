@@ -1,0 +1,107 @@
+body{
+    font-family: Ubuntu;
+}
+h1 {
+    margin-left:20%
+}
+#form {
+    margin:auto;
+    padding:10px;
+    width:60%;
+    border: 1px solid #919191;}
+.row{
+    padding:0;
+    width:90%;
+    display:flex;
+    justify-content: space-between;
+}
+.col{
+    width:50%;
+    display:flex;
+    padding:0;
+}
+.cont{
+    width:50%;
+    height: 20px;
+    border-radius: 0;
+    padding:5px;
+    margin-left:2%;
+    border: 1px solid #919191;
+
+}
+.hel{
+    height: 25px;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+}
+.con{
+    position:absolute;
+    left:47.5%;
+    height: 20px;
+    width:28.5%;
+    border-radius: 0;
+    padding:5px;
+    border: 1px solid #919191;
+}
+.btn{
+    background: rgba(196, 196, 196, 0.4);
+    height:45px;
+    width:15%;
+    margin:10px 40%;
+    color:white;
+    border: 1px solid #999999;
+}
+#cont{
+    position:absolute;
+    width:14.5%;
+    height: 32px;
+    border-radius: 0;
+    margin-left:0.5%;
+    border: 1px solid #919191;
+    background-color: white;
+
+}
+.cnt{
+    position:absolute;
+    width:13.5%;
+    height: 29px;
+    border-radius: 0;
+    margin-left:15.5%;
+    border: 1px solid #919191;
+    background-color: white;
+    padding-left:5px;
+
+}
+#info{
+    display:none;
+}
+#add,#plus{
+    cursor: pointer;
+}
+#topmenu{
+    display:flex;
+    height: 25px;
+    border-bottom: 1px solid #999999;
+    align-items: center;
+    margin:0;
+}
+.ico{
+    color:#919191;
+    width:5%;
+    border-right: 1px solid #999999;
+    text-align: center;
+}
+#cli{
+    width: 80%;
+    text-align: center;
+}
+.cli{
+    background: rgba(196, 196, 196, 0.4);
+    color:white;
+    border: 1px solid rgba(196, 196, 196, 0.4);
+    width:20%;
+    margin:0;
+    height:25px;
+}
+
