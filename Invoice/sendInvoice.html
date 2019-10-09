@@ -13,83 +13,82 @@
     
     <style>
         *{
-    font-family: sans-serif;
-    font-weight: bold;
-    margin: 0;}
+            font-family: sans-serif;
+            font-weight: bold;
+            margin: 0;}
         
-body{
-    background-color: #F2F3F3;;
-}
-.container-a{
-    display:flex;
-    background: white;
-    font-size: 0.9em !important;
-}
+        body{
+            background-color: #F2F3F3;;
+        }
+        .container-a{
+            display:flex;
+            background: white;
+            font-size: 0.9em !important;
+        }
 
-/* .container-b{
-    display:flex;
-    background: white;
-    border: 2px solid #0ABAB5;
-    flex: 1;
-    padding:10px auto 10px auto;
-} */
-.container-a > div{
-    border: 1px solid #ccc;
-    padding: 10px;
-    text-align: center;
-    font-size: 1rem;
-}
-.box-1{
-    
-    flex-flow: column wrap;
-    flex-grow: 1;
-  }
-  
-  .container-a>.box-2{
-    flex:1;
-    
-  }
-  
-  .container-a>.box-3{
-    flex:2;
-    cursor: pointer;
-    
-  }
-  .container-a>.box-4{
-    flex:4;
-    
-  }
-  .box-1:hover, .box-2:hover, .box-3:hover, .box-4:hover {
-      background:#0ABAB5;
-      transition: all 0.3s ease 0s;
-      border-color: #0ABAB5;
-      color: white;
+        /* .container-b{
+            display:flex;
+            background: white;
+            border: 2px solid #0ABAB5;
+            flex: 1;
+            padding:10px auto 10px auto;
+        } */
+        .container-a > div{
+            border: 1px solid #ccc;
+            padding: 10px;
+            text-align: center;
+            font-size: 1rem;
+        }
+        .box-1{
+            
+            flex-flow: column wrap;
+            flex-grow: 1;
+        }
+        
+        .container-a>.box-2{
+            flex:1;
+            
+        }
+        
+        .container-a>.box-3{
+            flex:2;
+            cursor: pointer;
+            
+        }
+        .container-a>.box-4{
+            flex:4;
+            
+        }
+        .box-1:hover, .box-2:hover, .box-3:hover, .box-4:hover {
+            background:#0ABAB5;
+            transition: all 0.3s ease 0s;
+            border-color: #0ABAB5;
+            color: white;
 
-  }
-  .container-a>.box-5{
-    flex:2; 
-    background: #0ABAB5;
-    cursor: pointer;
-    border: none;
-}
-.container-a>.box-5:hover{
-    background:  rgb(5, 128, 123);
-    transition: all 0.3s ease 0s;
-}
+        }
+        .container-a>.box-5{
+            flex:2; 
+            background: #0ABAB5;
+            cursor: pointer;
+            border: none;
+        }
+        .container-a>.box-5:hover{
+            background:  rgb(5, 128, 123);
+            transition: all 0.3s ease 0s;
+        }
 
-.sendInvoice {
-    
-    color: white;
-    border: none;
-    background:none;
-    height: 100%;
-   
-    cursor: pointer;
-    
-  }
-  img:hover{
-      color: white;
-  }
+        .sendInvoice {
+            color: white;
+            border: none;
+            background:none;
+            height: 100%;
+            cursor: pointer;
+        }
+
+        img:hover{
+            color: white;
+        }
+
         .card {
             border: 0px
         }
@@ -121,12 +120,13 @@ body{
         .editInvoice {
             background-color: #00FFA3;
             color: #333333;
-            font-weight: 900;
+            font-weight: 700;
             border: none;
             border-radius: 0%;
-            font-size: 0.8em;
+            font-size: 0.8rem;
             padding-top: 10px;
-            padding-bottom: 10px; 
+            padding-bottom: 10px;
+            max-width: 200px;
         }
 
         .editInvoice:hover {
@@ -194,6 +194,13 @@ body{
             margin-right: auto;
         }
 
+
+        th, td {
+            padding-left: 0px !important;
+            padding-right: 28px !important;
+            /* padding-right: 24px !important; */
+        }
+
         .table-card {
             width: 100%;
         }
@@ -207,7 +214,7 @@ body{
     </style>
     
   </head>
-  <body>
+  <body style="margin-right: auto; margin-left: auto">
     <div class="pageBackground">
         <header class="container-a">
                 <div class="box-1">
@@ -232,14 +239,14 @@ body{
             <div class=" container mainContent">
                 <section>
                     <div class="row topMenu">
-                        <button type="button" class="btn btn-primary editInvoice "><i class="fa fa-pencil" aria-hidden="true"></i>&nbsp;EDIT INVOICE</button>
+                        <button type="button" class="btn btn-sm editInvoice "><i class="fa fa-pencil" aria-hidden="true"></i>&nbsp;EDIT INVOICE</button>
                         <div class="ml-auto align-middle"><a class="invoiceSettings" href=""><i class="fas fa-cog"></i> Invoice Settings</a></div>
                     </div>
                 </section>
 
                 <section >
                     <div class="row" style="margin-top: 30px">
-                            <img src="./Mask%20Group.svg" alt="clientLogo" class="clientLogo">
+                            <img src="https://res.cloudinary.com/nxcloud/image/upload/v1570633061/Lancer/Mask_Group_x8xuki.svg" alt="clientLogo" class="clientLogo">
                     </div>
                 </section>
 
@@ -247,7 +254,7 @@ body{
                     <section>
                     
                     <div class="addressAndPayment row">
-                        <div class="card">
+                        <div class="card" style="font-weight: normal">
                             <div style="font-weight: bold">Glacier Inc,</div>
                             Abuja, FCT<br>
                             Nigeria
@@ -272,16 +279,18 @@ body{
                         </div>
                     </div>
                     
-                </section>
+                    </section>
 
                 <section class="invoiceDetails row">
-                    <div class="card table-card">
-                        <div class="card-title">Invoice</div>
+                    <div class="card table-card" style="margin-top: 10px">
+                        <div class="card-title">
+                            Invoice <span style="font-weight: normal; font-size: 0.6em">No. 1</span> <p style="margin-top: 10px">Glacier Fintech App</p>
+                        </div>
                         <div class="card-body tableSection" style="font-size: 0.8em">
                             <table class="table">
                               <thead>
-                                <tr>
-                                  <th scope="col">Description</th>
+                                <tr style="border-top-style: hidden">
+                                  <th style="width: 70%">Description</th>
                                   <th scope="col">Qty</th>
                                   <th scope="col">Price</th>
                                   <th scope="col">Amount</th>
@@ -303,6 +312,7 @@ body{
                                 </tr>
                               </tbody>
                             </table>
+                            <div style="min-height: 100px"></div>
                             <hr>
                             Juliet Asim
                             <div style="margin-bottom: 40px"></div>
