@@ -1,0 +1,43 @@
+body{
+    padding: 0%;
+    margin: 0%;
+}
+section{
+    background: #091429;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 20%;
+    height: 550px;
+}
+section nav a{
+    color: #ffffff;
+}
+.logo-font{
+    position: absolute;
+    top: 0%;
+    left: 7.5%;
+    padding-top: 1%;
+    color: #ffffff;
+    font-family: 'Pacifico', cursive;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 36px;
+    line-height: 63px;
+}
+span{
+    color: cyan;
+}
+ol li{
+    list-style-type: none;
+    padding-top: 40%;
+}
+a{
+    text-decoration: none;
+}
+img{
+    width: 1rem;
+}
+select{
+    border: 0;
+}
