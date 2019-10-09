@@ -6,42 +6,159 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Document</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <style>
+    body {
+      background-color: #E5E5E5;
+      box-sizing: border-box;
+      margin: 0px;
+      font-family: Roboto;
+    }
+
+    .con-div {
+      background-color: #FFFFFF;
+      width: 100%;
+      margin: auto;
+    }
+
+    .top-divs {
+      display: flex;
+      margin: 0 auto;
+      width: 100%;
+      background-color: #FFFFFF;
+      font-family: Roboto;
+    }
+
+    .ctrl-div {
+      width: 8%;
+      text-align: center;
+      border: 1px solid #919191;
+    }
+
+    .ctrl-btn {
+      width: 100%;
+      background-color: #FFFFFF;
+      border: none;
+    }
+
+    .inv-div {
+      width: 60%;
+      text-align: center;
+      border: 1px solid #919191;
+    }
+
+    #inv-btn {
+      width: 100%;
+      border: none;
+      padding: 0.6em;
+      font-weight: 600;
+      background-color: #FFFFFF
+    }
+
+    .send-div {
+      width: 32%;
+      text-align: center;
+      border: 1px solid #919191
+    }
+
+    #send-btn {
+      width: 100%;
+      border: none;
+      padding: 0.6em;
+      color: #FFF;
+      background-color:  rgba(196, 196, 196, 0.4);
+    }
+
+    .cli-info {
+      width:75%;
+      height:80vh;
+      background-color:#FFFFFF;
+      margin: auto
+    }
+
+    .cli-box {
+      display: flex;
+      justify-content:space-between;
+    }
+
+    .sub-box {
+      width: 40%;
+      padding: 1em;
+      background-color:#FFF;
+      text-align:center;
+      border: 1px solid #919191;
+      border-radius: 2px
+    }
+
+    .select-project {
+      width: 90%;
+      padding: 0.4em;
+      border: 1px solid #919191;
+    }
+
+    .cli-text {
+      padding-top: 1.5em;
+    }
+
+    .my-icon {
+      width: 100%;
+      padding: 8px 0;
+      background-color: #FFFFFF;
+    }
+
+    .what-cli {
+      padding: 3.5em 0.5em;
+      margin: 0;
+    }
+
+    @media screen and (max-width: 420px) {
+      .cli-box {
+        display: block;
+      }
+
+      .sub-box {
+        width: 90%;
+        margin: 2em 0em;
+      }
+
+      option {
+        width: 80%;
+      }
+    }
+  </style>
 </head>
-<body style="background: #E5E5E5; box-sizing: border-box; margin-top: 0px">
-  <div style="background-color: #FFFFFF; width: 60%; margin: auto;">
-    <div>
-      <div class="top-divs" style="display: flex; margin: 0 auto; width: 100%; background-color: #FFFFFF; font-family: Roboto;">
-        <div class="close ctrl-div" style="width: 8%; text-align: center; border: 1px solid #919191">
-            <button style="width: 100%; background-color: #FFFFFF; border: none"><i class="fa fa-times" aria-hidden="true" style="width: 100%; padding: 8px 0; background-color: #FFFFFF;"></i></button>
-          <!-- <input type="submit" value="x" class="ctrl" style="width: 100%; padding: 0.5em; background-color: #FFFFFF"> -->
+<body>
+  <div class="con-div">
+    <div class="max-con">
+      <div class="top-divs">
+        <div class="close ctrl-div">
+            <button class="ctrl-btn"><i class="fa fa-times my-icon" aria-hidden="true"></i></button>
         </div>
-        <div class="left-arrow ctrl-div" style="width: 8%; text-align: center; border: 1px solid #919191">
-          <button style="width: 100%; background-color: #FFFFFF; border: none"><i class="fa fa-chevron-left" style="width: 100%; padding: 8px 0; background-color: #FFFFFF"></i></button>
-          <!-- <input type="submit" value="<" class="ctrl" style="width: 100%; padding: 0.5em; background-color: #FFFFFF"> -->
+        <div class="left-arrow ctrl-div">
+          <button class="ctrl-btn"><i class="fa fa-chevron-left my-icon"></i></button>
         </div>
-        <div class="inv ctrl-div" style="width: 60%; text-align: center; border: 1px solid #919191">
-          <input type="submit" name="" id="" value="Client" class="ctrl" style="width: 100%; border: none; padding: 0.6em; background-color: #FFFFFF">
+        <div class="inv-div">
+          <input type="submit" name="" id="inv-btn" value="Client">
         </div>
-        <div class="send-btn ctrl-div" style="width: 32%; text-align: center; border: 1px solid #919191">
-          <input type="submit" name="" id="" value="Next" class="ctrl" style="width: 100%; border: none; padding: 0.6em; background-color:  rgba(196, 196, 196, 0.4);">
+        <div class="send-div">
+          <input type="submit" name="" id="send-btn" value="NEXT">
         </div>
       </div>
 
-      <div style="width:75%; height:80vh; background-color:#FFFFFF; margin: auto">
+      <div class="cli-info">
         <div>
-          <h3 style="padding: 2em 0.5em; font-family: Roboto;">What Client is it for?</h3>
+          <h3 class="what-cli">What Client is it for?</h3>
         </div>
 
-        <div style="display: flex; justify-content:space-between;">
-          <div style="width: 40%; padding: 1em; background-color:#FFF; text-align:center; border: 1px solid #919191; border-radius: 2px">
-            <p style="font-family: Roboto;">An already existing Client</p>
-            <select name="" id="" style="width: 90%; padding: 0.4em; border: 1px solid #919191; font-family: Roboto;">
+        <div class="cli-box">
+          <div class="sub-box">
+            <p>An already existing Client</p>
+            <select name="" class="select-project">
               <option value="">Select Project</option>
               <option value="">Demo</option>
             </select>
           </div>
-          <div style="width: 40%; padding: 0.5em; background-color:#FFF; text-align:center; border: 1px solid #919191;  border-radius: 2px">
-            <p style="padding-top: 1.5em; font-family: Roboto;">A new Client</p>
+          <div class="sub-box">
+            <p class="cli-text">A new Client</p>
           </div>
         </div>
       </div>
