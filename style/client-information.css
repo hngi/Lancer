@@ -1,0 +1,45 @@
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+.header-container {
+	width: 90%;
+	display: flex;
+	flex-direction: row;
+	margin: 0 auto;
+	height: 8vh;
+}
+
+.header-container * {
+	border: 1px solid #C4C4C4;
+}
+
+.header-container h4 {
+	flex: 2;
+	text-align: center;
+	padding-top: 2.4vh;
+}
+
+.back-close {
+	display: flex;
+	margin: 0;
+	padding: 0;
+}
+
+.back-close button {
+	width: 3em;
+}
+
+.header-container img {
+	border: 0;
+}
+
+#create {
+	width: 8rem;
+	background-color: #0ABAB5;
+	color: #fff;
+}
+
+
+
