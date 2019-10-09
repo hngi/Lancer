@@ -1,0 +1,286 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous" />
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <style>
+        @import url("https://fonts.googleapis.com/css?family=Open+Sans:400,700|Pacifico|Ubuntu:400,500,700&display=swap");
+
+        *,
+        *::after,
+        *::before {
+            margin: 0;
+            padding: 0;
+            box-sizing: inherit;
+        }
+
+        html {
+            font-size: 62.5%;
+        }
+
+        body {
+            box-sizing: border-box;
+            background-color: white;
+            font-family: "Montserrat", sans-serif;
+            font-size: 2rem;
+        }
+
+        header {
+            display: flex;
+            justify-content: ;
+            align-items: center;
+            position: fixed;
+            top: 0%;
+            left: 18%;
+            height: 10rem;
+            width: 82%;
+            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+            padding: 2.5rem 4.5rem 2.5rem 6.5rem;
+        }
+
+        .searchContainer {
+            padding: 0.1rem 1.7rem;
+            display: inline-flex;
+            flex: 1 1 300px;
+            position: relative;
+            width: 50rem;
+            border: 1px solid #B1B1B1;
+            box-sizing: border-box;
+            border-radius: 4px;
+            overflow: hidden;
+        }
+
+        .searchIcon {
+            padding: 1.1rem 1.5rem;
+            color: #000;
+            opacity: 0.54;
+        }
+
+        .searchBox {
+            border: 0;
+            padding: 0.5rem 0.5rem 0.5rem 0;
+            flex: 1;
+        }
+
+        .searchContainer input::placeholder {
+            color: #000;
+            font-weight: 500;
+            font-size: 18px;
+            line-height: 25px
+        }
+
+        header .header-panel {
+            height: 100%;
+        }
+
+        header .header-panel_nav {
+            display: grid;
+            align-items: center;
+            grid-template-columns: repeat(4, max-content);
+            gap: 4rem;
+            list-style-type: none;
+            height: 100%;
+            margin: 0;
+        }
+
+        header .header-panel_nav-item {
+            height: 100%;
+            display: flex;
+            align-items: center;
+        }
+
+        header .header-panel_nav-item a {
+            text-decoration: none;
+            color: #262626;
+            display: flex;
+            align-items: center;
+        }
+
+        header .header-panel_nav-item a img {
+            width: 3rem;
+            height: 3rem;
+            margin-right: 1rem;
+        }
+
+        header .header-panel_nav-item a .user-image {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 3px solid #000;
+        }
+
+        aside {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 18vw;
+            height: 100vh;
+            background-color: #091429;
+            position: fixed;
+            top: 0;
+            left: 0;
+            padding-top: 3rem;
+        }
+
+        aside .logo {
+            font-family: "Pacifico", cursive;
+            color: white;
+            margin-bottom: 7.5rem;
+        }
+
+        aside .logo span {
+            color: #00f9ff;
+        }
+
+        aside ul {
+            list-style-type: none;
+            display: flex;
+            flex-direction: column;
+        }
+
+        aside ul li {
+            margin-bottom: 7.5rem;
+        }
+
+        aside ul li a {
+            text-decoration: none;
+            color: white;
+            font-family: Open Sans;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 1.8rem;
+            display: flex;
+            align-items: center;
+        }
+
+        aside ul li a img {
+            width: 2.5rem;
+            height: 2.5rem;
+            margin-right: 1.5rem;
+        }
+
+        main {
+            position: absolute;
+            top: 10rem;
+            left: 18%;
+            padding: 5rem 6.5rem;
+            display: flex;
+            flex-direction: column;
+            font-family: Ubuntu;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 18px;
+            line-height: 21px;
+        }
+
+        main .container a.button {
+            background-color: #0abab5;
+            padding: 1.6rem 1rem;
+            font-family: Ubuntu;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 28px;
+            line-height: 32px;
+            text-align: center;
+            color: white;
+        }
+
+        main .container a.button:hover {
+            text-decoration: none;
+        }
+
+        main .container h2 {
+            font-family: Ubuntu;
+            font-style: normal;
+            font-weight: 500;
+            font-size: 28px;
+            line-height: 32px;
+            margin-top: 5rem;
+            color: #262626;
+        }
+
+        main .container p {
+            margin-top: 3.5rem;
+            font-family: Ubuntu;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 18px;
+            line-height: 21px;
+            color: #091429;
+        }
+    </style>
+    <title>Lancer - Active Projects</title>
+</head>
+
+<body>
+    <header>
+       
+       
+    
+        <div class="header-panel">
+            <!--    Search bar starts here-->
+            <div class="searchContainer">
+            <i class="fa fa-search searchIcon"></i>
+            <input class="searchBox" type="search" name="search" placeholder="Search">
+        </div>
+               <!--     search bar ends here-->
+            <ul class="header-panel_nav">
+                <li class="header-panel_nav-item">
+                    <a href=""><img src="images/svg/help.svg" alt="" /></a>
+                </li>
+                <li class="header-panel_nav-item">
+                    <a href=""><img src="images/svg/alarm_clock.svg" alt="" /></a>
+                </li>
+                <li class="header-panel_nav-item">
+                    <a href=""><img src="images/svg/notification.svg" alt="" srcset="" /></a>
+                </li>
+                <li class="header-panel_nav-item">
+                    <a href="">
+
+                        <div class="user-image">
+                            <h1>AU</h1>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </header>
+
+    <aside>
+        <h1 class="logo">Lan<span>c</span>ers</h1>
+        <ul>
+            <li>
+                <a href=""><img src="images/svg/home.svg" alt="" srcset="" /> Dashboard</a>
+            </li>
+            <li>
+                <a href=""><img src="images/svg/customer.svg" alt="" srcset="" /> Client</a>
+            </li>
+            <li>
+                <a href=""><img src="images/svg/lightbulb.svg" alt="" srcset="" /> Project</a>
+            </li>
+            <li>
+                <a href=""><img src="images/svg/approve-invoice.svg" alt="" srcset="" />
+                    Invoice</a>
+            </li>
+            <li>
+                <a href=""><img src="images/svg/policy.svg" alt="" srcset="" /> Contract</a>
+            </li>
+            <li>
+                <a href=""><img src="images/svg/approval.svg" alt="" srcset="" /> Proposals</a>
+            </li>
+        </ul>
+    </aside>
+
+    <main>
+        <div class="container w-100">
+            
+        </div>
+    </main>
+</body></html>
