@@ -39,10 +39,7 @@
             width: 9rem;
             float: right;   
         }
-        .table-date{
-            position: relative;
-            color: red;
-        }
+       
     </style>
 <body>
     
@@ -73,7 +70,9 @@
                     <thead >
                         <tr>
                             <th> Bill to</th>
+                            
                             <th> Issue Date </th>
+                            <th></th>
                             <th> Hourly Rate</th>
                         </tr>
                     </thead>
@@ -81,7 +80,8 @@
                         <br>
                         <td><span contenteditable="">John Doe</span> </td>
                         <td><span contenteditable=""> 18th September 2019</td>
-                        <td> N/A</td>
+                        <td></td>
+                         <td> N/A</td>
                         
                     </tr>
                     <tr>
@@ -106,12 +106,57 @@
                     </tr>
                 
                 </table>  
-        </div>
+      
 
-        <section class="invoice-description"></section>
-     
-            
+        <section class="invoice-description mt-5    ">
+        
+                <table class="table table-responsive container " style="width: 100%">
+                        <thead class="thead-dark">
+                          <tr >
+                            <th scope="col"  class="">Description</th>
+                            <th>   </th>
+                            <th></th>
+                            <th></th>
+                            <th scope="col">Quantity    </th> 
+                            
+                            <th></th>
+                            
+                            <th scope="col">Rate </th>
+                        
+                           
+                            <th></th>
+                            <th scope="col">Amount</th>
+                           
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td colspan="4">Sed ut perspiciatis unde omnis iste</td>
+                            <td>1</td>
+                            <td></td>
+                            <td>NGN3500</td>
+                          </tr>
+                          <tr>
+                            <td colspan="4">Sed ut perspiciatis unde omnis iste</td>
+                            <td>10</td>
+                            <td></td>
+                            <td>NGN3500</td>
+                          </tr>
+                          <tr>
+                            <td colspan="4">Sed ut perspiciatis unde omnis iste</td>
+                           
+                           <td>15</td>
+                           <td></td>
+                            <td>NGN3500</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                      
+            </section> 
+        </div>
     </section>
+
+
         <section class="invoice-table" style="position: relative; top: 30rem">
             <section class="note">
                 <h5> Note</h5>
