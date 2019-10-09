@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Edit Invoice</title>
+    <!-- <link rel="stylesheet" type="text/css" href="invoice.css"> -->
+<link href="https://fonts.googleapis.com/css?family=Ubuntu&display=swap" rel="stylesheet">
+<meta name="viewport" content="width=1024">
+<style type="text/css">
+    * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Ubuntu';
+}
+
+body {
+    background-color: #F2F3F3;
+}
+
+main {
+    margin-top: 5%;
+  margin-left: auto;
+  margin-right: auto;
+    width: 70%;
+    background-color: white;
+  /*flex: 70%;*/
+}
+
+.edit {
+    width: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 1%;
+    height: 30vh;
+
+}
+
+.garki {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 1%;
+}
+
+.garki textarea {
+    width: 40%;
+}
+
+.garki .map {
+    width: 30%;
+    display: inline-block;
+    margin-left: 29%;
+}
+
+.amountdue {
+    color: grey;
+    margin-bottom: 2px;
+    font-size: 10px;
+}
+
+.amount {
+    color: black;
+    font-weight: bolder;
+}
+select {
+    /*margin-left: 37%;*/
+}
+
+hr {
+    width: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+.littleside {
+    margin-left: 60%;
+    display: inline-block;
+    margin-top: 3%;
+}
+
+.issued, .due {
+    display: inline-block;
+    color: grey;
+    font-size: 10px;
+}
+
+.pay {
+    background-color: #0ABAB5;
+    padding: 10px;
+    width: 100%;
+    color: white;
+    border: 1px solid #0ABAB5;
+    margin-top: 3px;
+}
+.smallheading {
+    width: 100%;
+    margin-left: 10%;
+    font-weight: bolder;
+}
+
+.smallheading p {
+    margin-bottom: 20px;
+}
+ul {
+    width: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+ul li {
+    list-style-type: none;
+    display: inline-block;
+    padding: 8px;
+}
+
+.desc li:nth-child(1) {
+    margin-right: 25%;
+}
+
+.desc li:nth-child(2) {
+    margin-right: 15%;
+}
+
+.desc li:nth-child(3) {
+    margin-right: 17%;
+}
+
+.mobile li:nth-child(1) {
+    margin-right: 20%;
+}
+.mobile li:nth-child(2) {
+    margin-right: 17%;
+}
+
+.mobile li:nth-child(3) {
+    margin-right: 13%;
+}
+.total li:nth-child(1), .tax li:nth-child(1), .discount li:nth-child(1){
+    margin-right: 52.5%;
+}
+
+.total li:nth-child(3) {
+    margin-right: 15.5%;
+}
+
+.table, .notes {
+    margin-top: 40px;
+}
+
+.review span{
+    color: grey;
+    border: 1px solid grey;
+    font-size: 12px;
+}
+
+.discount, .tax {
+    color: grey;
+    font-size: 12px;
+}
+
+.notes {
+    width: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-bottom: 10px;
+}
+
+.foot {
+    width: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 10px;
+}
+
+.footbox {
+    width: 100%;
+    height: 10vh;
+}
+
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    /*height: 1px;*/
+}
+
+.cancel a, .forward a {
+    text-decoration: none;
+    color: #C4C4C4;
+}
+
+.cancel {
+    width: 5%;
+    color: #C4C4C4;
+    font-size: 40px;
+    text-align: center;
+    border-right: 1px solid #C4C4C4;
+}
+
+.forward {
+    width: 5%;
+    color: #C4C4C4;
+    font-size: 40px;
+    text-align: center;
+    border-right: 1px solid #C4C4C4;
+}
+
+#save {
+    width: 15%;
+    color: #919191;
+    font-size: 20px;
+    text-align: center;
+    border-right: 1px solid #C4C4C4;
+    background: white;
+    line-height: 50px;
+    padding-left: 3px;
+    padding-right: 3px;
+}
+
+.headertext {
+    width: 57%;
+    color: #323A43;
+    font-size: 20px;
+    text-align: center;
+    border-right: 1px solid #C4C4C4;
+    background: white;
+    line-height: 50px;
+}
+
+#send {
+    width: 18%;
+    background: #C4C4C4;
+    border: none;
+    color: white;
+    font-size: 20px;
+    /*display: inline-block;*/
+}
+.done {
+    /*margin-top: 4%;*/
+    background-color: #00FFA3;
+    /*padding: 8px;*/
+    text-align: center;
+    line-height: 50px;
+    color: #333333;
+    font-size: 20px;
+}
+
+.done span {
+    
+}
+.nav2 {
+    width: 100%;
+    background-color: #00FFA3;
+    /*height: 1px;*/
+}
+
+.cancel2 {
+    width: 5%;
+    font-size: 40px;
+}
+
+.forward2 {
+    width: 5%;
+    font-size: 40px;
+}
+
+#save2 {
+    width: 15%;
+    padding-left: 3px;
+    padding-right: 3px;
+}
+
+.headertext2 {
+    width: 57%;
+    font-size: 20px;
+    color: #333333;
+    text-align: center;
+    line-height: 50px;
+}
+
+#send2 {
+    width: 10%;
+    color: 333333;
+    font-size: 20px;
+    margin-top: 5px;
+    height: 30px;
+    /*display: inline-block;*/
+}
+
+.ggh {
+    float: right;
+}
+</style>
+</head>
+<body>
+    <nav>
+        <p class="cancel" ><a href="#">&#10006</a></p>
+        <p class="forward"><a href="#">&#10094</a></p>
+        <p id="save">Save and close</p>
+        <p class="headertext">Invoice</p>
+        <input type="button" name="" id="send" value="Send Invoice">
+    </nav>
+    <nav class="nav2">
+        <p class="cancel2"></p>
+        <p class="forward2"></p>
+        <p id="save2"></p>
+        <p class="headertext2">Editing</p>
+        <button id ="send2" type="button" name="button">DONE</button>
+    </nav>
+        <!-- <p class="done"><span>Editing</span><button type="button" name="button">DONE</button></p> -->
+    
+
+    <main>
+        <textarea class="edit">edit branding</textarea><br>
+        <div class="garki"><textarea>Glacier Inc</textarea>
+            <!-- <textarea readonly>hhhhh</textarea> -->
+            <div class="map">
+                <p class="amountdue">Amount Due</p>
+                <p class="amount">US$8,800.00
+                        <select id="currency" name="currency">
+                            <option value="USD">USD</option>
+                            <option value="NGN">NGN</option>
+                        </select>
+                </p>
+            </div>
+        </div>
+        <div class="littleside">    
+            <div class="issued">Issued<br>
+            <input type="date" id="date" name="02/10/2019"></div>
+            <div class="due">Due<br>
+            <select id="date" name="date"><option selected>Upon completion</option></select></div><br>
+            <input class="pay" type="button" name="" value="Pay now">
+        </div>
+
+        <div class="smallheading">
+            <p>Invoice <span>No. 1</span></p>
+            <p>Glacier Fintech App</p>
+        </div>
+            
+        <div class="table">
+            <ul class="desc">
+                <li><b>Description</b></li>
+                <li><b>Qty</b></li>
+                <li><b>Price</b></li>
+                <li><b>Amount</b></li>
+            </ul>
+            <hr>
+            <ul class="review">
+                <li>Review Project Billing <br><span>EDIT BILLING ITEMS</span></li>
+            </ul>
+            <hr>
+            <ul class="mobile">
+                <li>Mobile App UI</li>
+                <li>1</li>
+                <li>US$8,800.00</li>
+                <li>US$8,800.00</li>
+            </ul>
+            <hr>
+            <ul class="total">
+                <li></li>
+                <li></li>
+                <li><b>Subtotal</b></li>
+                <li>US$8,800.00</li>
+            </ul>
+            <hr>
+            <ul class="discount">
+                <li></li>
+                <li></li>
+                <li>Add discount +</li>
+                <li></li>
+            </ul>
+            <ul class="tax">
+                <li></li>
+                <li></li>
+                <li>Amount tax +</li>
+                <li></li>
+            </ul>
+        </div>
+        <p class="notes"><b>Notes</b><br>
+        <input class="footbox" type="textarea" placeholder="Add notes or extra payment instructions...">
+        <hr></p>
+        <p class="foot"><b>Juliet Asim</b></p>
+    </main>
+</body>
+</html>
