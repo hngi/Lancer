@@ -23,7 +23,6 @@
             height: 100%;
             background: #FFFFFF;
             overflow: hidden;
-            overflow: hidden;
             font-size:62.5%;
         }
 
@@ -55,25 +54,32 @@
 
         .sidebar ul li a {
             text-decoration: none;
-            color: white;
-            font-family: 'Open Sans', sans-serif;
+            color: #FFFFFF;
+            font-family: Ubuntu;
+            font-weight: bold;
+            font-size: 18px;
+            line-height: 21px;
             font-style: normal;
             align-items: center;
-            font-size:2rem;
         }
 
         .sidebar ul li a img {
             height: 1.5rem;
             padding-right: 1rem;
         }
+        .sidebar ul li a i {
+            padding-left: 8px;
+
+}
 
         .top-navigation{
-            height: 9.8rem;
+            height: 6.5rem;
             width: 118rem;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            border-bottom: .4rem solid #ccc;
+            
+            box-shadow: 0px 4px 2px rgba(0, 0, 0, 0.1);
         }
         @media only screen and(min-width:411px){
             .top-navigation{
@@ -90,8 +96,13 @@
         }
 
         .sign-up {
-            width: 14.5rem;
-            height: 5.4rem;
+            font-family: Ubuntu;
+            font-style: normal;
+            font-weight: 450;
+            font-size: 14px;
+            line-height: 20px;
+            width: 10.0rem;
+            height: 3.5rem;
             background-color: #0ABAB5;
             border: none;
             color: #fff;
@@ -108,47 +119,62 @@
         .content{
             width:100%;
             height:100%;
+            font-family: Ubuntu;
+            font-style: normal;
+            
         }
         .create-invoice{
-            width:23rem;
-            height:6.5rem;
+            width:16rem;
+            height:4.5rem;
             background: #0ABAB5;
-            border:none;
+            color: white;
+            border: none;
+            font-size: 16px;
+            text-align: center;
             position: absolute;
             left: 22.43%;
             right: 61.46%;
             top: 14.55%;
             bottom: 82.13%;
+            font-weight: bold;
            
+        }
+        .invoice{
+            padding-left:50px;
+            left: 22.43%;
+            
+            top: 3.03%;
+            bottom: 93.46%;
+            color: #323A43;
+            font-family: Ubuntu;
         }
         .content h3{
             position: absolute;
-left: 22.43%;
-right: 27.29%;
-top: 23%;
-bottom: 73.49%;
+            left: 22.43%;
+            right: 27.29%;
+            top: 24%;
+            bottom: 73.49%;
 
-font-family: Ubuntu;
-font-style: normal;
-font-weight: 500;
-font-size: 28px;
-line-height: 32px;
+            font-family: Ubuntu;
+            font-style: normal;
+            font-weight: 500;
+            font-size: 22px;
+            lins-spacing: 1.2rem;
+            line-height: 32px;
 
 /* Text color */
-color: #262626;
+        color: #262626;
         }
         .content p{
             position: absolute;
             left: 22.43%;
             right: 28.75%;
-            top: 30.13%;
+            top: 32.13%;
             bottom: 67.54%;
-
-font-family: Ubuntu;
-font-style: normal;
-font-weight: normal;
-font-size: 18px;
-line-height: 21px;
+            font-weight: normal;
+            lins-spacing: 1.0rem;
+            font-size: 14px;
+            line-height: 20px;
 
 color: #091429;
         }
@@ -159,32 +185,32 @@ color: #091429;
  <div class="container">
     <div class="sidebar">
         <div class="logo">
-            <a href="homepage"><img src="/images/Lancers.png"></a>
+            <a href="homepage"><img src="./images/Lancers.png"></a>
         </div>
         <ul>
             <li>
-                <a href=""><img src="/images/svg/home.svg" alt="" srcset="" /> Dashboard</a>
+                <a href=""><img src="images/svg/home.svg" alt="" srcset="" /> Dashboard</a>
             </li>
             <li>
-                <a href=""><img src="/images/svg/customer.svg" alt="" srcset="" /> Client</a>
+                <a href=""><img src="images/svg/customer.svg" alt="" srcset="" /> Client</a>
             </li>
             <li>
-                <a href=""><img src="/images/svg/lightbulb.svg" alt="" srcset="" /> Project</a>
+                <a href=""><img src="images/svg/lightbulb.svg" alt="" srcset="" /> Project<i class="fa fa-angle-down"></i></a></a>
             </li>
             <li>
-                <a href=""><img src="/images/svg/approve-invoice.svg" alt="" srcset="" />
+                <a href=""><img src="images/svg/approve-invoice.svg" alt="" srcset="" />
                     Invoice</a>
             </li>
             <li>
-                <a href=""><img src="/images/svg/policy.svg" alt="" srcset="" /> Contract</a>
+                <a href=""><img src="images/svg/policy.svg" alt="" srcset="" /> Contract</a>
             </li>
             <li>
-                <a href=""><img src="/images/svg/approval.svg" alt="" srcset="" /> Proposals</a>
+                <a href=""><img src="images/svg/approval.svg" alt="" srcset="" /> Proposals</a>
             </li>
         </ul>
     </div>
     <div class="top-navigation">
-        <h3>Invoice</h3>
+        <h3 class="invoice" >Invoices</h3>
         <div class="btn">
             <a href="#">Login</a>
 
