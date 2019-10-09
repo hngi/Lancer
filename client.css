@@ -82,15 +82,18 @@ h1 {
 #topmenu{
     display:flex;
     height: 25px;
-    border-bottom: 1px solid #999999;
+    border: 1px solid #999999;
     align-items: center;
     margin:0;
+    padding: 0;
 }
 .ico{
     color:#919191;
     width:5%;
     border-right: 1px solid #999999;
     text-align: center;
+    height:25px;
+    padding:auto;
 }
 #cli{
     width: 80%;
@@ -104,4 +107,51 @@ h1 {
     margin:0;
     height:25px;
 }
+@media only screen and (max-width: 600px) {
+    #cli{
+        width: 60%;
+    }
+    .ico{
+        width:10%
+    }
+    h1 {
+        margin-left:20%;
+        font-size:20px
+    }
+    .hel{
+        font-size:15px
+    }
+    #form{
+        width:90%
+    }
+    .sp,.sd{
+        font-size:12px
+    }
+    .con{
+        width:42%;
+        height:15px;
+        font-size:12px
+    }
+    .cont{
+        height:15px;
+        font-size:12px;
+    }
+    #cont{
+        width:23%;
+        height:28px;
+        font-size:12px;
+    }
+    .cnt{
+    margin-left:24.5%;
+    height:24px;
+    font-size:12px;
+    width:20%
+    }
+    .btn{
+        width:30%;
+        height:25px;
+        margin:10px 35%
+    }
+}
+
 
