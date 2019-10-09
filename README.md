@@ -3,9 +3,10 @@
 # Important!
 
 Please before you push your codes to the repository make sure you pull from the repository, so the changes that have been made can be reflected on your local machine, for us to avoid merge conflicts
-``use git command line
+use the git command line
+```git
     git pull 
-    ```
+```
 
 # Developers guide.
 This process here should be able to guide you on how to contribute effectively to this project, follow the steps below. You should not be new to the git workflow process however if you still are, the guide should still be able to help you through the process.
