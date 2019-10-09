@@ -113,3 +113,18 @@ h3:last-of-type {
 }
 
 
+@media screen and (min-width: 800px) {
+	body {
+		background-color: red;
+	}
+	
+	input, select {
+		display: inline-block;
+		width: 40%;
+	}
+
+	label {
+		margin-left: 0.2em;
+	}
+
+}
