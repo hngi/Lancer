@@ -38,11 +38,29 @@
             margin-right: auto;
             margin-top: 15px
         }
+
+        .editInvoice {
+            background-color: #00FFA3;
+            color: #333333;
+            font-weight: bold;
+            border: none;
+            border-radius: 0%;
+        }
+
+        .editInvoice:hover {
+            background-color: #03E493;
+            color: #333333;
+        }
+
+        .invoiceSettings{
+            color: #B1B1B1;
+            font-size: 0.8em;
+        }
         
         .clientLogo {
-/*            position: relative;*/
-            width: 221px;
-            height: 221px;
+            position: relative;
+            width: 120px;
+            height: 120px;
             margin: auto;
 /*
             left: 610px;
@@ -51,7 +69,9 @@
         }
         
         .addressAndPayment{
-            margin: auto
+            margin: auto;
+            font-size: 0.8em;
+            margin-top: 30px;
         }
         
         .address {
@@ -67,6 +87,7 @@
         
         .payment {
             max-width: 300px;
+            font-weight: bold;
         }
         
         .issueDate {
@@ -74,10 +95,11 @@
         }
         
         .paymentButton {
-            font-family: Ubuntu;
             font-style: normal;
             font-weight: bold;
-            font-size: 28px;
+            font-size: 1em;
+            border: none;
+            border-radius: none;
             line-height: 32px;
             text-align: center;
             background-color: #0ABAB5;
@@ -89,6 +111,16 @@
             margin-left: auto;
             margin-right: auto;
         }
+
+        .table-card {
+            width: 100%;
+        }
+
+        .card-body {
+            margin: 0px;
+            padding: 0px !important;
+            width: 100%
+        }
         
     </style>
     
@@ -99,44 +131,52 @@
             <div class=" container mainContent">
                 <section>
                     <div class="row topMenu">
-                        <button type="button" class="btn btn-primary">EDIT INVOICE</button>
-                        <div class="invoiceSettings"></div>
+                        <button type="button" class="btn btn-primary editInvoice ">EDIT INVOICE</button>
+                        <div class="ml-auto align-middle"><a class="invoiceSettings" href=""><i class="fas fa-cog"></i> Invoice Settings</a></div>
                     </div>
                 </section>
 
-                <section class="clientLogo row"><img src="./Mask%20Group.svg" alt="clientLogo"></section>
+                <section >
+                    <div class="row" style="margin-top: 30px">
+                            <img src="./Mask%20Group.svg" alt="clientLogo" class="clientLogo">
+                    </div>
+                </section>
 
                 <section class="mainContentBelowLogo">
                     <section>
                     
                     <div class="addressAndPayment row">
                         <div class="card">
-                            <p>Glacier Inc,</p>
-                            <p>Abuja, FCT</p>
-                            <p>Nigeria</p>
+                            <div style="font-weight: bold">Glacier Inc,</div>
+                            Abuja, FCT<br>
+                            Nigeria
                         </div>
 
                         <div class="card payment ml-auto">
-                            Amount Due
+                            <div style="font-size: 0.8em; color: #B1B1B1">Amount Due</div>
 
-                            <div class="Amount">US$8,800 <span>USD</span></div>
+                            <div class="Amount" style="font-size: 1.5em; font-weight: bold">US$8,800 <span style="font-size: 0.5em">USD</span></div>
 
                             <div>
-                                <div class="issueDate float-left">Issued <p>02/10/2019</p></div>
+                                <div class="issueDate float-left">
+                                    <div style="font-size: 0.8em; color: #B1B1B1">Issued <p style="font-size: 1.2em; color: black">02/10/2019</p></div>
+                                </div>
 
-                                <div class="dueDate float-left">Due<p>Upon completion</p></div>
+                                <div class="dueDate float-left">
+                                    <div style="font-size: 0.8em; color: #B1B1B1">Due<p style="font-size: 1.2em; color: black">Upon completion</p></div>
+                                </div>
                             </div>
 
-                            <button type="button" class="btn btn-primary">Pay with Flutterwave</button>
+                            <button type="button" class="btn btn-primary paymentButton">Pay with Flutterwave</button>
                         </div>
                     </div>
                     
                 </section>
 
                 <section class="invoiceDetails row">
-                    <div class="card">
+                    <div class="card table-card">
                         <div class="card-title">Invoice</div>
-                        <div class="card-body">
+                        <div class="card-body tableSection" style="font-size: 0.8em">
                             <table class="table">
                               <thead>
                                 <tr>
@@ -153,8 +193,18 @@
                                   <td>US$8,800.00</td>
                                   <td>US$8,800.00</td>
                                 </tr>
+                                <tr scope="row">
+                                    <td></td>
+                                    <td></td>
+                                    <td style="font-weight:bold">Subtotal<br>Total<br>Amount Due
+                                    </td>
+                                    <td>US$8,800.00<br>US$8,800.00<br>US$8,800.00</td>
+                                </tr>
                               </tbody>
                             </table>
+                            <hr>
+                            Juliet Asim
+                            <div style="margin-bottom: 40px"></div>
                         </div>
                     </div>
                 </section>
@@ -164,6 +214,8 @@
             </div>
         </main>
     </div>
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/6d241bcdf9.js" crossorigin="anonymous"></script>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
