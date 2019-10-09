@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Edit Invoice</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!--Edit invoice starts here-->
+    <nav>
+        <a href="#">X</a>
+        <a href="#"><</a>
+        <a href="#">Save and close</a>
+        <a href="#">Invoice</a>
+        <a href="#">SEND INVOICE</a>
+        <p><span>Editing<button type="button" name="button">DONE</button>
+    </nav>
+    
+    <div class="Invoice" overflow-auto>
+        <div style="min-width: 600px">
+            <header>
+                <div class="col">
+                    <a target="_blank" href="#">!Edit Branding</a>
+                </div>
+            </header>
+        </div>
+    </div>
+
+    <main>
+        <div class="row contacts">
+            <div class="col invoice-to">
+                <h2 class="to">Glacier Inc.</h2>
+                <div class="address">Abuja, FCT</div>
+                <div class="address">Nigeria</div>
+                <div class="update">Update contact +</div>
+            </div>
+        </div>
+
+        <div class="col invoice-details">
+            <p class="text-gray-light">Amount Due</p>
+            <h1 class="amount">US$8,800.00
+                <select id="currency" name="currency"><option selected>Select one</option>
+                    <option value="US$">US$</option>
+                    <option value="naira">Naira</option>
+                </select>
+            </h1>
+            <div class="text-gray-light">Issued</div>
+            <input type="date" id="date" name="02/10/2019">
+            </div>
+            <div class="text-gray-light">Due</div>
+            <select id="date" name="date"><option selected>Upon completion</option></select>
+
+            <button class="pay-btn" type="button">Pay with Flutterwave</button>
+        </div>
+        
+            <div class="col invoice">
+                <div class="invoice-id">Invoice No 1</div>
+                <p>Glacier Fintech App</p>
+            </div>
+
+            <table border="0" cellspacing="0" cellpadding="0">
+            <thead>
+                <tr>
+                    <th>Description</th>
+                    <th>Qty</th>
+                    <th>Price</th>
+                    <th>Amount</th>  
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr>
+                    <td>Review Project Billing
+                    <p>EDIT BILLING ITEMS</p>
+                    </td>     
+                </tr>
+
+                <tr>
+                    <td class="desc">Mobile App UI</td>
+                    <td class="qty">1</td>
+                    <td class="unit">US$8,800.00</td>
+                    <td class="amount">US$8,800.00</td>
+                </tr>
+            </tbody>
+
+            <tfoot>
+                <tr>
+                    <td colspan="2"></td>
+                    <td colspan="2">SUBTOTAL</td>
+                    <td>US$8,800.00</td>
+                </tr>
+
+                <tr>
+                    <td colspan="2"></td>
+                    <td colspan="2">Add Discount +</td>
+                    <td></td>
+                </tr>
+
+                <tr>
+                    <td colspan="2"></td>
+                    <td colspan="2">Amount tax +</td>
+                    <td></td>
+                </tr>
+            </tfoot>
+        </table>        
+    </main>
+
+    <div class="notes">Notes</div>
+    <div class="notes">Add notes or extra payment instructions...</div>
+    <hr>
+
+    <p>Juliet Asim</p>
+</body>
+</html>
