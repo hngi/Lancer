@@ -1,3 +1,5 @@
+<!-- Built by @PN and his amazing team -->
+
 <!doctype html>
 <html lang="en">
   <head>
@@ -10,7 +12,10 @@
 
     <title>Send Invoice</title>
     
-    
+    <!-- Here are the internal styles we used for this project-->
+
+    <!-- Some inlince styles were used in order to save time and meet the deadline. This can be moved out later but care should be taken when doing so -->
+
     <style>
         @import url('https://fonts.googleapis.com/css?family=Ubuntu&display=swap');
 
@@ -25,7 +30,8 @@
         .container-a{
             display:flex;
             background: white;
-            font-size: 0.9em !important;
+            font-size: 0.8em !important;
+            max-height: 60px;
         }
 
         /* .container-b{
@@ -61,7 +67,7 @@
             flex:4;
             
         }
-        .box-1:hover, .box-2:hover, .box-3:hover, .box-4:hover {
+        .box-1:hover, .box-2:hover, .box-3:hover {
             background:#0ABAB5;
             transition: all 0.3s ease 0s;
             border-color: #0ABAB5;
@@ -96,11 +102,12 @@
         }
         
         .mainContent {
+            margin-left: 20px;
+            margin-right: 20px;
             margin: auto;
             margin-top: 100px;
             max-width: 550px;
             position: relative;
-
             background: #FFFFFF;
             /* Secondary blue */
 
@@ -140,6 +147,11 @@
             color: #B1B1B1;
             font-size: 0.8em;
         }
+
+        .invoiceSettings p{
+            margin-top: auto;
+            margin-bottom: auto;
+        }
         
         .clientLogo {
             position: relative;
@@ -159,14 +171,10 @@
         }
         
         .address {
-/*            position: absolute;*/
             width: 99px;
             height: 77px;
             margin: auto;
-/*
-            left: 323px;
-            top: 645px;
-*/
+
         }
         
         .payment {
@@ -200,7 +208,6 @@
         th, td {
             padding-left: 0px !important;
             padding-right: 28px !important;
-            /* padding-right: 24px !important; */
         }
 
         .table-card {
@@ -212,37 +219,122 @@
             padding: 0px !important;
             width: 100%
         }
+
+        .bottomSpace{
+            margin-bottom: 50px;
+        }
+
+        .address{
+            margin-right: 30px;
+        }
+
+        .menuForSmallScreens {
+                display: none;
+            }
+
+        /* Media Queries to make things look better on mobile devices including switching the navbar to a more mobile friendly version */
+        @media only screen and (max-width: 600px) {
+            .mainContent{
+                margin-top: 50px;
+            }
+
+            .addressCard{
+                display: none;
+            }
+
+            .addressAndPayment.row {
+                padding: 0% !important;
+            }
+            .payment{
+                margin-left: auto !important;
+                margin-right: auto !important;
+                margin-bottom: 20px !important;
+                width: 100% !important;
+                max-width: 100% !important;
+                 
+            }
+
+            .menuForLargeScreens {
+                display: none;
+            }
+
+            .menuForSmallScreens {
+                display: flex;
+            }
+        }
         
     </style>
     
   </head>
   <body style="margin-right: auto; margin-left: auto">
     <div class="pageBackground">
-        <header class="container-a">
-                <div class="box-1">
+        <!-- So here we used two navbars cos we didn't have time to figure out how to build a responsive navbar that looks exactly like the design. The display is handled by media queries  -->
+
+        <!-- This is the navbar for small screens -->
+        <header class="container-a menuForSmallScreens">
+                <div class="box-1" style="max-width: 50px">
                         <i class="fa fa-times" aria-hidden="true"></i>
-            </div>
-            <div class="box-2">
+                </div>
+                <div class="box-2" style="max-width: 50px">
                     <i class="fa fa-chevron-left" aria-hidden="true"></i>
                 </div>
         
-                    <div class="box-3">
+                <div class="box-3">
+                    Save
+                </div>
+                <div class="box-4">
+                    Invoice
+                </div>
+                <div class="box-5">
+                    <a href="#"><button class="sendInvoice">SEND</button></a>
+                </div>
+        </header>
+
+        <!-- This is the navbar for large screens -->
+        <header class="container-a menuForLargeScreens">
+                <!-- <header> -->
+                        <div class="box-1" style="max-width: 50px">
+                                <i class="fa fa-times" aria-hidden="true"></i>
+                        </div>
+                        <div class="box-2" style="max-width: 50px">
+                            <i class="fa fa-chevron-left" aria-hidden="true"></i>
+                        </div>
+                
+                        <div class="box-3">
                             Save and Close
                         </div>
                         <div class="box-4">
-                                Invoice
+                            Invoice
+                        </div>
+                        <div class="box-5">
+                            <a href="#"><button class="sendInvoice">SEND INVOICE</button></a>
+                        </div>
+
+                        <!-- Our failed attempt at implementing it with bootstrap lol -->
+                        
+                        <!-- <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                            <a class="navbar-brand" href="#">Navbar</a>
+                            <a class="navbar-brand">Invoice</a>
+                            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                              <span class="navbar-toggler-icon"></span>
+                            </button>
+                            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                              <div class="navbar-nav">
+                                <a class="nav-item nav-link active" href="#">Home <span class="sr-only">(current)</span></a>
+                                <a class="nav-item nav-link" href="#">Features</a>
+                                <a class="nav-item nav-link" href="#">Pricing</a>
+                                <a class="nav-item nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+                              </div>
                             </div>
-                            <div class="box-5">
-                                    <a href="#"><button class="sendInvoice">SEND INVOICE</button></a>
-                                </div>
-        </header>
+                          </nav> -->
+                </header>
 
         <main>
             <div class=" container mainContent">
                 <section>
                     <div class="row topMenu">
                         <button type="button" class="btn btn-sm editInvoice "><i class="fa fa-pencil" aria-hidden="true"></i>&nbsp;EDIT INVOICE</button>
-                        <div class="ml-auto align-middle"><a class="invoiceSettings" href=""><i class="fas fa-cog"></i> Invoice Settings</a></div>
+                        <div class="ml-auto"><a class="invoiceSettings" href=""><p><i class="fas fa-cog"></i> Invoice Settings</a></p></div>
                     </div>
                 </section>
 
@@ -256,7 +348,7 @@
                     <section>
                     
                     <div class="addressAndPayment row">
-                        <div class="card" style="font-weight: normal">
+                        <div class="card addressCard" style="font-weight: normal">
                             <div style="font-weight: bold">Glacier Inc,</div>
                             Abuja, FCT<br>
                             Nigeria
@@ -284,11 +376,11 @@
                     </section>
 
                 <section class="invoiceDetails row">
-                    <div class="card table-card" style="margin-top: 10px">
-                        <div class="card-title">
-                            Invoice <span style="font-weight: normal; font-size: 0.6em">No. 1</span> <p style="margin-top: 10px">Glacier Fintech App</p>
+                    <div class=" table-card" style="margin-top: 10px">
+                        <div class="">
+                            Invoice <span style="font-weight: normal; font-size: 0.6em">No. 1</span> <p class="serviceRendered" style="margin-top: 10px">Glacier Fintech App</p>
                         </div>
-                        <div class="card-body tableSection" style="font-size: 0.8em">
+                        <div class="tableSection" style="font-size: 0.8em; width: 100%; overflow-x: scroll">
                             <table class="table">
                               <thead>
                                 <tr style="border-top-style: hidden">
@@ -314,11 +406,11 @@
                                 </tr>
                               </tbody>
                             </table>
-                            <div style="min-height: 100px"></div>
-                            <hr>
-                            Juliet Asim
-                            <div style="margin-bottom: 40px"></div>
+                            <div style="min-height: 50px"></div>
                         </div>
+                        <hr>
+                        Juliet Asim
+                        <div style="margin-bottom: 40px"></div>
                     </div>
                 </section>
 
@@ -326,6 +418,10 @@
                 </section>
             </div>
         </main>
+
+        <footer>
+            <div class="bottomSpace"></div>
+        </footer>
     </div>
     <!-- Font Awesome -->
     <script src="https://kit.fontawesome.com/6d241bcdf9.js" crossorigin="anonymous"></script>
