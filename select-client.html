@@ -49,8 +49,9 @@
     #inv-btn {
       width: 100%;
       border: none;
-      padding: 0.6em;
-      font-weight: 600;
+      padding: 0.5em;
+      font-weight: 500;
+      font-size: 28px;
       background-color: #FFFFFF
     }
 
@@ -63,25 +64,28 @@
     #send-btn {
       width: 100%;
       border: none;
-      padding: 0.6em;
+      padding: 0.5em;
       color: #FFF;
+      font-size: 28px;
       background-color:  rgba(196, 196, 196, 0.4);
     }
 
     .cli-info {
       width:75%;
+      height:80vh;
       background-color:#FFFFFF;
       margin: auto
     }
 
     .cli-box {
       display: flex;
-      justify-content:space-between;
+      justify-content:space-around;
     }
 
     .sub-box {
-      width: 40%;
-      padding: 1em;
+      width: 30%;
+      padding: 2em 1em;
+      margin: 2em;
       background-color:#FFF;
       text-align:center;
       border: 1px solid #919191;
@@ -90,7 +94,7 @@
 
     .select-project {
       width: 90%;
-      padding: 0.4em;
+      padding: 1em;
       border: 1px solid #919191;
     }
 
@@ -100,20 +104,24 @@
 
     .my-icon {
       width: 100%;
-      padding: 8px 0;
+      margin: 0.6em 0;
+      color: #c4c4c4;
       background-color: #FFFFFF;
     }
 
     .what-cli {
-      padding: 3.5em 0.5em;
+      padding: 1.5em 1em;
       margin: 0;
+      font-size: 42px;
+      font-weight: bold;
+      color: #323232;
     }
 
-    .max-con {
-      height: 100vh;
+    .txt {
+      margin: 2em 0;
     }
 
-    @media screen and (max-width: 420px) {
+    @media screen and (max-width: 500px) {
       .cli-box {
         display: block;
       }
@@ -126,6 +134,10 @@
       option {
         width: 80%;
       }
+
+      .what-cli {
+        font-size: 1.3em;
+      }
     }
   </style>
 </head>
@@ -134,10 +146,10 @@
     <div class="max-con">
       <div class="top-divs">
         <div class="close ctrl-div">
-            <button class="ctrl-btn"><i class="fa fa-times my-icon" aria-hidden="true"></i></button>
+            <button class="ctrl-btn"><i class="fa fa-times fa-2x my-icon" aria-hidden="true"></i></button>
         </div>
         <div class="left-arrow ctrl-div">
-          <button class="ctrl-btn"><i class="fa fa-chevron-left my-icon"></i></button>
+          <button class="ctrl-btn"><i class="fa fa-chevron-left fa-2x my-icon"></i></button>
         </div>
         <div class="inv-div">
           <input type="submit" name="" id="inv-btn" value="Client">
@@ -149,12 +161,12 @@
 
       <div class="cli-info">
         <div>
-          <h3 class="what-cli">What Client is it for?</h3>
+          <p class="what-cli">What Client is it for?</p>
         </div>
 
         <div class="cli-box">
           <div class="sub-box">
-            <p>An already existing Client</p>
+            <p class="txt">An already existing Client</p>
             <select name="" class="select-project">
               <option value="">Select Project</option>
               <option value="">Demo</option>
