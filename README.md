@@ -2,8 +2,8 @@
 
 # Important!
 
-Please before you push your codes to the repository make sure you pull from the repository, so the changes that have been ade can be reflected on your machine, for us to avoid merge conflicts
-``git
+Please before you push your codes to the repository make sure you pull from the repository, so the changes that have been made can be reflected on your local machine, for us to avoid merge conflicts
+``use git command line
     git pull 
     ```
 
@@ -12,23 +12,23 @@ This process here should be able to guide you on how to contribute effectively t
 
 - Fork the repository to generate a copy of your own.
 - Clone the repository.
-```git
+```use git command line
     git clone https://github.com/hngi/Lancer.git
 ```
 - Make the repository (the forked repo) the remote upstream 
-```git 
+```use git command line
     git add remote upstream https://github.com/hngi/Lancer.git
 ```
 - Create a branch, the branch name should at least be meaningfull e.g if you're working on the footer, your branch name would be;
-```git 
+```use git command line
     git checkout -b footer
 ```
 - Make your changes, add them and make your commits
-```git 
+```use git command line 
     git commit -m "your message"
 ```
 - Push your codes to the remote upstream repository
-```git 
+```use git command line
     git push -u origin master
 ```
 - Or you can also push your code to the current branch which you are in.
