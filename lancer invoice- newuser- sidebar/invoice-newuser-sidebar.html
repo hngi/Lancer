@@ -13,6 +13,7 @@
             padding: 0;
             margin: 0;
             box-sizing: border-box;
+
         }
 
         body, html {
@@ -20,34 +21,33 @@
             height: 100%;
             background: #FFFFFF;
             overflow: hidden;
+            font-size:62.5%;
         }
 
         .container {
             width: 100%;
             height: 100%;
             display: flex;
-            border: 2px solid red;
         }
 
         .logo {
-            padding-top: 25px;
+            padding-top: 2.5rem;
             text-align: center;
-            margin-bottom: 30px;
+            margin-bottom: 3rem;
         }
 
         .sidebar {
-            width: 260px;
+            width: 26rem;
             background: #091429;
             color: #FFFFFF;
-            height: 1024px;
+            height: 102rem;
         }
 
         .sidebar ul li {
-            padding: 22px 0px;
+            padding: 2rem 0rem;
             text-align: left;
             list-style: none;
-            margin-left: 40px;
-
+            margin-left: 4rem;
         }
 
         .sidebar ul li a {
@@ -56,31 +56,51 @@
             font-family: 'Open Sans', sans-serif;
             font-style: normal;
             align-items: center;
+            font-size:2rem;
         }
 
         .sidebar ul li a img {
             height: 1.5rem;
-            padding-right: 10px;
-
+            padding-right: 1rem;
         }
 
         .top-navigation{
-            height: 98px;
-            width: 1180px;
+            height: 9.8rem;
+            width: 118rem;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            border-bottom: 4px solid #ccc;
+            border-bottom: .4rem solid #ccc;
+        }
+        @media only screen and(min-width:411px){
+            .top-navigation{
+                width:50%;
+            }
+        }
+        .top-navigation, h3{
+            font-size:2rem;
+        }
+        .btn a:link{
+            text-decoration: none;
+            color: #000000;
+            font-size:2rem;
         }
 
         .sign-up {
-            width: 145px;
-            height: 54px;
+            width: 14.5rem;
+            height: 5.4rem;
             background-color: #0ABAB5;
             border: none;
             color: #fff;
-            margin-right: 37px;
-            margin-left: 22px;
+            margin-right: 3.7rem;
+            margin-left: 2.2rem;
+        }
+        @media only screen and(min-width:320px){
+            .sign-up{
+                width:10rem;
+                height:3rem;
+            }
+
         }
     </style>
 </head>
@@ -114,9 +134,10 @@
         </ul>
     </div>
     <div class="top-navigation">
-        you can write invoices here
-        <div>
-            you can put the login text here
+        <h3>Invoice</h3>
+        <div class="btn">
+            <a href="#">Login</a>
+
             <button class="sign-up">Sign Up</button>
         </div>
     </div>
