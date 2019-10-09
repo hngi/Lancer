@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+
+    <title>Lancers</title>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+     
+
+    <!-- Bootstrap core CSS -->
+    <link
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+
+    <!-- Google imported font for pacifico -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Pacifico&display=swap"
+      rel="stylesheet"
+    />
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet"> 
+
+    <!-- Font awesome icon -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- Custom styles for lancer -->
+    <style>
+      body {
+  overflow-x: hidden;
+}
+
+#sidebar-wrapper {
+  min-height: 100vh;
+  margin-left: -15rem;
+  -webkit-transition: margin 0.25s ease-out;
+  -moz-transition: margin 0.25s ease-out;
+  -o-transition: margin 0.25s ease-out;
+  transition: margin 0.25s ease-out;
+  background-color: #091429 !important;
+}
+
+i {
+  margin-right: 14px !important;
+}
+
+#sidebar-wrapper .sidebar-heading {
+  padding: 0.875rem 1.25rem;
+}
+
+.sidebar-heading {
+  font-size: 36px;
+  font-family: "Pacifico", cursive;
+  color: azure;
+  font-size: normal;
+  font-weight: normal;
+  line-height: 63px;
+}
+
+#sidebar-wrapper .list-group {
+  width: 15rem;
+}
+
+#page-content-wrapper {
+  min-width: 100vw;
+}
+
+#wrapper.toggled #sidebar-wrapper {
+  margin-left: 0;
+}
+
+.list-group-item {
+  margin-top: 1rem;
+  background-color: #091429 !important;
+  color: azure;
+  font-style: normal;
+  font-size: 18px;
+  line-height: 25px;
+  font-family: "Open Sans", sans-serif;
+}
+
+@media (min-width: 768px) {
+  #sidebar-wrapper {
+    margin-left: 0;
+  }
+
+  #page-content-wrapper {
+    min-width: 0;
+    width: 100%;
+  }
+
+  #wrapper.toggled #sidebar-wrapper {
+    margin-left: -15rem;
+  }
+}
+
+.invoiceContentInner {
+  margin-top: 6%;
+  margin-left: 2%;
+}
+
+li {
+  margin-right: 40px;
+}
+.nav2 li {
+  margin-right: 10px;
+}
+
+    </style>
+
+  </head>
+
+  <body>
+    <div class="d-flex" id="wrapper">
+      <!-- Sidebar -->
+      <div class="bg-dark border-right bar" id="sidebar-wrapper">
+        <div class="sidebar-heading">Lan<span style="color: #00F9FF">c</span>ers</div>
+        <div class="list-group list-group-flush">
+          <a href="#" class="list-group-item list-group-item-action bg-light"
+            > <i class="fa fa-home" aria-hidden="true"></i> Dashboard</a>
+          
+          <a href="#" class="list-group-item list-group-item-action bg-light"
+            > <i class="fa fa-users" aria-hidden="true"> </i> Client</a
+          >
+
+          
+          <a href="#" class="list-group-item list-group-item-action bg-light"
+            > <i class="fa fa-lightbulb-o" aria-hidden="true">  </i> Project</span></a
+          >
+
+          <a href="#invoice-toggle" class="list-group-item list-group-item-action bg-light"
+            ><i class="fa fa-file-text-o" aria-hidden="true"></i></i> Invoice</a
+          >
+          <a href="#" class="list-group-item list-group-item-action bg-light"
+            > <i class="fa fa-handshake-o"></i> Contract</a
+          >
+          <a href="#" class="list-group-item list-group-item-action bg-light"
+            > <i class="fa fa-area-chart" aria-hidden="true"></i> Proposal</a
+          >
+        </div>
+      </div>
+      <!-- /#sidebar-wrapper -->
+
+      <!-- Page Content for invoice.-->
+      <div id="page-content-wrapper">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light navbar-fixed-top border-bottom">
+            <button class="btn btn-lg" id="invoice-toggle"><strong>Invoices</strong></button>
+            <button class="navbar-toggler"type="button" data-toggle="collapse" data-target="#navbarSupportedContent"aria-controls="navbarSupportedContent"aria-expanded="false"aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class=" nav navbar-nav ml-auto mt-2 mt-lg-0">
+                    <li  class="nav-item nav text-center"> <a class=" nav-link ml-3" href="#"><i class="fa fa-comments fa-2x" aria-hidden="true"></i>Support</a></li>
+                    <li class="nav-item"><a class=" nav-link " href="#"> <i class="fa fa-bell fa-2x" aria-hidden="true"></i></a></li>
+              </ul> 
+              <ul>    
+                <!-- Profile image drop down -->
+                    <li class="nav-item avatar dropdown">
+                            <a class="nav-link dropdown-toggle" id="ProfileDropDownMenu" data-toggle="dropdown"
+                              aria-haspopup="true" aria-expanded="true">
+                              <img src="img/avatar.jpg" class="rounded-circle z-depth-0"
+                                alt="profile image"> Juliet
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-lg-right dropdown-secondary"
+                              aria-labelledby="ProfileDropdownMenu">
+                              <a class="dropdown-item" href="#">Profile</a>
+                              <a class="dropdown-item" href="#">Settings</a>
+                              <a class="dropdown-item" href="#">Log out</a>
+                            </div>
+                    </li>
+            </ul> 
+          </div>
+        </nav>        
+         <div class="container" id="invoice-toggle">
+            <div class=" container-fluid invoiceContentInner">
+                    <div class="container"><button class="btn btn-success btn-bg"        style="background-color: #0ABAB5"><span class="lead"><strong>Create Invoice</strong> </span></button>
+                    </div>
+                    <div class="container-fluid">
+                        <h3 class="Bold">INVOICE</h3>
+                    </div>
+                    <div>
+                      <div>
+                          <input class="form-control" id="myInvoice" type="text" placeholder="Search..">
+                          <br>
+                      </div>
+                      <div class="container ">           
+                          <table class="table table-striped table table-bordered table-md" cellspacing="0" width="100%">
+                            <thead>
+                              <tr>
+                                <th class="th-md">Invoice</th>
+                                <th>Client</th>
+                                <th>Project</th>
+                                <th>Issued</th>
+                                <th>Status</th>
+                                <th>Bill</th>
+                              </tr>
+                            </thead>
+                            <tbody id="invoiceTable">
+                              <tr>
+                                <td>1</td>
+                                <td>Grande Agency</td>
+                                <td>Branding</td>
+                                <td>01/10/19</td>
+                                <td><span class="badge badge-button badge-success"> Paid </span></td>
+                                <td>US$4,200</td>
+                              </tr>
+                              <tr>
+                                  <td>2</td>
+                                  <td>Gracier Inc</td>
+                                  <td>Glacier Fintech App</td>
+                                  <td>02/10/19</td>
+                                  <td><span class="badge badge-button badge-primary"> Sent </span></td>
+                                  <td>US$5,200</td>
+                                </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                        
+                    </div>
+                    
+                    
+            </div>
+                
+         </div>
+        </div>
+      <!-- /#page-content-wrapper -->
+
+    </div>
+    <!-- /#wrapper -->
+   
+    <!-- Script -->
+    <script>
+      $("#invoice-toggle").click(function(e) {
+  e.preventDefault();
+  $("#wrapper").toggleClass("toggled");
+});
+
+
+$(document).ready(function() {
+  $("#myInvoice").DataTable();
+  $(".dataTables_length").addClass("bs-select");
+});
+
+    </script>
+  </body>
+</html>
