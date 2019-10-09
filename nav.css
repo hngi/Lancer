@@ -1,0 +1,44 @@
+*,
+*::before,
+*::after{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+html{
+    font-size:62.5%;
+}
+body{
+    font-family: 'Grenze', serif;
+}
+nav{
+display: flex;
+flex-wrap: wrap;
+justify-content: space-between;
+font-size: 4rem;
+
+}
+
+.invoice{
+    font-size:3.5rem;
+    position: relative;
+    left:18rem;
+    top:2.5rem;
+
+  
+}
+
+
+nav,li{
+list-style-type: none;
+display:inline;
+ position: relative; 
+top:2rem;
+left:12rem;
+translate:transformX(80%);
+
+}
+nav, a:link{
+    text-decoration: none;
+    color:rgba(0, 0, 0, 0.835);
+}
