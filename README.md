@@ -5,4 +5,4 @@ For both tasks in stage 5
 # live code: magenta-war.surge.sh
 
 
-developed by Seun Fadeyi @slarin and Adebayo Oluwaseun @seunbayo
+# Codes by Seun Fadeyi @slarin and Adebayo Oluwaseun @seunbayo
