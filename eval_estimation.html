@@ -193,6 +193,7 @@
       border: 1px solid #91919187;
     }
 /* @Ezeko*/
+    
     .date>input{
       border: none;
       text-decoration: underline;
@@ -213,8 +214,11 @@
         top: 2%;
         margin-left:2%;
       }
-      .date>p{
-        padding-right:80%;
+      #cost,#sub,#pay,#proj,#rate{
+          width: 100%;
+      }
+      .date>p, #bill>div>p{
+        width: 100%;
         }
       h5{
         font-size: 11px;
@@ -368,11 +372,11 @@
       <div>
         <p>How long (in hours) will it take you to complete this project?</p>
         <input type="text" name="estTime" placeholder="Hours" />
-      </div>
+      </div><br />
       <div>
           <p>How much (in hours) do you charge per hour?</p>
           <input type="text" name="estPrice" placeholder="NGN 0.00" />
-        </div>
+        </div><br />
         <div class="date">
           <p>Project starts/ends</p>
           <i class="fa fa-calendar"></i><input type="text" onfocus="(this.type='date')" name="estStartDate" placeholder=" Set start date" />
@@ -384,7 +388,7 @@
       <hr />
       <h3>Expenses</h3>
       <div>
-        <p>
+        <p id="cost">
           How much would it cost you to power your devices or equipment for this
           project?
         </p>
@@ -392,7 +396,7 @@
       </div><br />
 
       <div>
-        <p>Are you subcontracting to anyone?</p>
+        <p id="sub">Are you subcontracting to anyone?</p>
         <input
           type="text"
           name="est2"
@@ -402,7 +406,7 @@
       </div><br />
 
       <div>
-        <p>How much would they be paid?</p>
+        <p id="pay">How much would they be paid?</p>
         <input type="text" name="est3" id="est3" placeholder="NGN 0.00" />
       </div>
       <!-- Slack Display Name: Akosworldwide, GitHub Username: Akosworldwide -->
@@ -411,14 +415,14 @@
       <h3>Expertise</h3>
 
       <div>
-        <p>How many similar projects have<br>you done before?</p>
+        <p id="proj">How many similar projects have<br>you done before?</p>
         <input type="text" name="exp1" id="exp1">
       </div>
 
         <br>
         
       <div>
-        <p>Out of 5 how would you rate your<br>experience level in executing this<br>project?<p>
+        <p id="rate">Out of 5 how would you rate your<br>experience level in executing this<br>project?<p>
         <input type="text" name="exp2" id="exp2">  /5
       </div>
       <hr />
