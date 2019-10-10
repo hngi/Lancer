@@ -5,7 +5,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Contact Support</title>
+    <title>LANCER | Collaborators</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0-11/css/all.min.css">
     <link href="https://fonts.googleapis.com/css?family=Ubuntu:300,400&display=swap" rel="stylesheet">
@@ -204,7 +204,7 @@
         }
 
         aside ul li {
-            margin-bottom: 1.7rem;
+            margin-bottom: 3rem;
         }
 
         .aside-logo {
@@ -221,7 +221,7 @@
 
         .mainnavul ul {
             display: none;
-            margin-top: 0;
+            margin-top: 1rem;
             margin-left: 2.7rem;
 
         }
@@ -231,7 +231,7 @@
         }
 
         .mainnavul ul li {
-            margin-bottom: 1rem;
+            margin-bottom: 2rem;
         }
 
         main .collaborators {
@@ -245,7 +245,8 @@
             width: 95%;
             display: flex;
             height: auto;
-            background-color: #091429;
+            background-color: #009FFF;
+            ;
             overflow-x: visible;
         }
 
@@ -253,10 +254,25 @@
             color: #fff;
             font-size: 1.1rem;
             padding: 0.8rem 1.23rem;
+
         }
 
-        main .collaborators_submenu a:nth-child(2) {
-            color: #0ABAB5;
+        .dash:before {
+            content: "";
+            position: absolute;
+            width: 54px;
+            height: 1px;
+            top: 4.7rem;
+            left: ;
+            border-bottom: 2px solid #fff;
+        }
+        .wash:before {
+            content: "";
+            position: absolute;
+            width: 54px;
+            margin-top: 22px;
+            left: ;
+            border-bottom: 2px solid #fff;
         }
 
         .collaborate_table_head {
@@ -324,14 +340,12 @@
             font-size: 2vw;
             width: 4vw;
             height: 4vw;
-            color: background: #FFFFFF;
+            color: #FFFFFF;
             border-radius: 50%;
-            opacity: 0.54;
+            opacity: ;
             position: fixed;
             top: 85%;
-
-
-            background: #0ABAB5;
+            background: #009FFF;
             box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.24), 0px 0px 8px rgba(0, 0, 0, 0.12);
         }
 
@@ -721,7 +735,7 @@
                 <li><a href="#">
                 <li>Overview</li></a></li>
                 <li><a href="#">
-                <li>Collabrators</li></a></li>
+                <li class="wash">Collaborators</li></a></li>
                 <li><a href="#">
                 <li>Task</li></a></li>
                 <li><a href="#">
@@ -743,11 +757,11 @@
             <!-- Main body -->
             <div class="container main-container">
                 <div class="collaborators">
-                    <p>COLLABRATORS</p>
+                    <p>COLLABORATORS</p>
                 </div>
                 <div class="collaborators_submenu">
                     <a href="#">Over View</a>
-                    <a href="#">Collabrators</a>
+                    <span class="d-flex"><a class="dash" href="#">Collaborators</a></span>
                     <a href="#">Task</a>
                     <a href="#">Documents</a>
                 </div>
