@@ -36,4 +36,3 @@ This process here should be able to guide you on how to contribute effectively t
 - Make your Pull request and wait for it to be merged.
 
 # Happy hacking!
-
