@@ -173,6 +173,10 @@
             margin-top: 8rem;
             margin-left: 20%;
             margin-bottom: 20%;
+
+        }
+
+        .table {
             overflow-x: scroll;
         }
 
@@ -266,6 +270,7 @@
             left: ;
             border-bottom: 2px solid #fff;
         }
+
         .wash:before {
             content: "";
             position: absolute;
@@ -284,7 +289,7 @@
             text-align: center;
             padding: 1.5rem;
             font-weight: bold;
-            font-size: 18px;
+            font-size: ;
 
         }
 
@@ -325,11 +330,11 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            width: 3vw;
-            height: 3vw;
+            width: 2rem;
+            height: 2rem;
             border: 2px solid #091429;
             border-radius: 50%;
-            font-size: 1.4vw;
+            font-size: ;
             color: #000;
         }
 
@@ -655,24 +660,50 @@
                     position: absolute;
                     right: -15vw;
                 }
+
+                .collaborate_table_head th {
+
+                    text-align: center;
+                    padding: 1rem 2rem;
+                    font-weight: bold;
+                    font-size: 1rem;
+
+                }
+
+                .collaborators_submenu {
+                    height:
+                }
             }
 
             @media(max-width:450px) {
                 main .collaborators_submenu {
-                    width: 52vh;
+                    width: 99%;
+                    height: px;
+                    display: flex;
+                    justify-content: center;
                 }
 
                 main .collaborators_submenu a {
-                    font-size: 4vw;
+                    font-size: 3.3vw;
                     padding: 5px 10px;
+                }
+
+                .dash:before {
+                    top: 4rem;
                 }
             }
 
             @media(max-width:360px) {
                 main .collaborators_submenu {
-                    width: 52vh
+                    width:
+                }
+
+                .dash:before {
+                    top: 12.4%;
+                    width: 10%
                 }
             }
+            
     </style>
 </head>
 <!--header-lists support-list header-panel-->
@@ -765,7 +796,7 @@
                     <a href="#">Task</a>
                     <a href="#">Documents</a>
                 </div>
-                <div>
+                <div class="table">
                     <table class="collaborate_table_head">
                         <tr>
                             <th></th>
