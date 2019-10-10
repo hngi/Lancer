@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link href="https://fonts.googleapis.com/css?family=Ubuntu&display=swap" rel="stylesheet">
+	
+
+	<title>Lancer</title>
+</head>
+<style type="text/css">
+* {
+	box-sizing: border-box;
+	font-family: sans-serif;
+}
+
+body {
+	min-height: 100vh;
+	min-width: 100vw;
+
+}
+
+.sidebar {
+  height: 100%;
+  width: 230px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #091429;
+  overflow-x: hidden;
+  padding-top: 20px;
+}
+
+/* sidebar p */
+.sidebar p a {
+  margin-top: 30%;
+font-style: none;
+font-weight: normal;
+font-size: 12px;
+line-height: 15px;
+color: white;
+display: block;
+text-decoration: none;
+text-align: center;
+}
+
+.sidebar a:hover {
+  color: #f1f1f1;
+}
+
+.main {
+  margin-left: 230px; /* Same as the width of the sidenav */
+  margin-top: 90px;
+  padding: 0px 10px;
+}
+
+
+@media screen and (max-width: 700px) {
+  .sidebar {
+    width: 100%;
+    height: auto;
+    position: relative;
+  }
+  .sidebar a {float: left;}
+  div.content {margin-left: 0;}
+}
+
+@media screen and (max-width: 400px) {
+  .sidebar a {
+    text-align: center;
+    float: none;
+  }
+}
+
+nav {
+	border-bottom: 1px solid rgba(0, 0, 0, 0.25);
+	box-shadow: 0px 3px rgba(0, 0, 0, 0.25);
+}
+
+form.search-form input[type=text] {
+	padding: 7px 3px;
+	font-size: 17px;
+	border: 1px solid #B1B1B1;
+	float: left;
+	width: 85%;
+	background: #FFFFFF;
+	border-left: none;
+	border-radius: 0px 4px 4px 0px;
+	margin-bottom: 20px;
+}
+
+form.search-form button {
+	float: left;
+	width: 15%;
+	padding: 7px 3px;
+	background: #FFFFFF;
+	color: black;
+	font-size: 17px;
+	border: 1px solid #B1B1B1;
+	border-right: none;
+	cursor: pointer;
+	border-radius: 4px 4px 0px 0px;
+	margin-bottom: 20px;
+}
+
+form.search-form button:hover {
+	background: #0b7dda;
+}
+
+form.search-form::after {
+	content: "";
+	clear: both;
+	display: table;
+}
+
+nav img {
+	height: 30px;
+	width: 30px;
+	padding: 5px;
+	margin: 8px;
+}
+
+.navli {
+	border-right: 2px solid #B1B1B1;
+	margin-bottom: 14px;
+}
+
+.user {
+	width: 50px;
+	height: 50px;
+	background-color: #FFFFFF;
+	color: #000000;
+	border: 1px solid;
+	border-radius: 50px;
+	text-align: center;
+	padding: 15px 15px;
+	margin: 7px;
+	text-decoration: none;
+	
+}
+
+.menu {
+	width: 20%;
+	float: left;
+	padding: 15px;
+}
+
+.main {
+	width: 80%;
+	float: left;
+	padding: 15px;
+	overflow: hidden;
+ 
+}
+
+h1 {
+	width: 141px;
+	height: 25px;
+	font-family: sans-serif;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 18px;
+	margin-bottom: 20px;
+	margin-top: 24px;
+	
+}
+
+
+.notification-box img {
+	margin: 10px;
+	margin-left: 20px;
+	margin-right: -10px;
+	padding: 14px;
+}
+
+.notification-box {
+	border: 1px solid #C4C4C4;
+	margin-bottom: 15px;
+	margin-right: 20px;
+}
+
+
+b {
+	font-family: sans-serif;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 14px;
+	
+}
+
+
+span {
+	font-family: sans-serif;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 14px;
+	line-height: 2
+}
+
+p {
+	font-family: sans-serif;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 12px;
+	margin-bottom: 0px;
+}
+
+
+.main .float {
+	position: fixed;
+	width: 50px;
+	height: 50px;
+	bottom: 40px;
+	left: width;
+	margin-left: 50px;
+	background-color: #0ABAB5;
+	color: #FFF;
+	border: none;
+	border-radius: 50px;
+	text-align: center;
+	box-shadow: 2px 2px 3px #999;
+	text-decoration: none;
+}
+
+.float .my-float{
+	font-size: 25px;
+	line-height: 20px;
+	color: white;
+	margin-top: 50px;
+	text-decoration: none;
+}
+
+
+@media screen and (max-width: 700px) {
+body {
+	box-sizing: border-box;
+}
+
+.menu {
+	display: none;
+}
+
+.main {
+	width: 100%;
+}
+
+form.search-form input[type=text] {
+	width: 50px;
+	box-sizing: border-box;
+	border:none;
+	border-radius: 4px;
+	font-size: 16px;
+	background-color: white;
+	padding: 6px 10px 6px 20px;
+	-webkit-transition: width 0.4s ease-in-out;
+	transition: width 0.4s ease-in-out;
+	
+}
+
+form.search-form button[type=submit] {
+	display: none;
+}
+
+form.search-form input[type=text]:focus {
+  width: 80%;
+}
+
+.navli {
+	margin-bottom: 20px;
+}
+
+}
+
+</style>
+<body>
+	
+<div class="sidebar">
+
+<img src="https://res.cloudinary.com/dlyuvm4rn/image/upload/v1570657880/lancers1.png" alt="Lancers-logo" style="text-align: center;
+margin-left: 30%;
+size: 10%;">
+<ul>
+
+  <p><a href="#home"><img src="https://res.cloudinary.com/dlyuvm4rn/image/upload/v1570657805/hicon.png" alt="home-icon"> Dashboard</p>
+  <p><a href="#clients"><img src="https://res.cloudinary.com/dlyuvm4rn/image/upload/v1570657765/cicon.hng.png" alt="customer-icon"> Clients</a></p>
+  <p><a href="#"><img src="https://res.cloudinary.com/dlyuvm4rn/image/upload/v1570657724/bicon.png" alt="lightbulb-icon"> Project
+      <i class="fa fa-caret-down"></i></p>
+  <p><a href="#invoice"><img src="https://res.cloudinary.com/dlyuvm4rn/image/upload/v1570657846/iicon.png" alt="invoice-icon"> Invoice</a></p>
+  <p><a href="#contract"><img src="https://res.cloudinary.com/dlyuvm4rn/image/upload/v1570657912/picon.png" alt="Project-icon"> Contract</a></p>
+  <p><a href="#Proposals"><img src="https://res.cloudinary.com/dlyuvm4rn/image/upload/v1570657682/Aicon.png" alt="approval-icon"> Proposals</a></p>
+</ul>
+</div>
+
+	<div class="main">
+		<nav>
+			<div class="d-flex bd-highlight">
+				<div class="p-2 flex-grow-1 bd-highlight">
+					<form class="search-form" action="#" style="margin:auto;max-width:300px">
+						<button type="submit" id="searchbtn"><i class="fa fa-search" id= searchIco><img src="https://res.cloudinary.com/dgoh40pqo/image/upload/v1570685899/loupe_bo3cv2.png" id="searchIcon"></i></button><input type="text" placeholder="Search.." name="search">
+					</form>
+
+				</div>
+				<div class="p-2 bd-highlight navli">
+					<a href="#" ><img src="https://res.cloudinary.com/dgoh40pqo/image/upload/v1570685873/help_zv6goq.png"></a>
+				</div>
+				<div class="p-2 bd-highlight navli">
+					<a href="#" ><img src="https://res.cloudinary.com/dgoh40pqo/image/upload/v1570685737/alarm_l2ldwx.png"></a>
+				</div>
+				<div class="p-2 bd-highlight navli">
+					<a href="#" ><img src="https://res.cloudinary.com/dgoh40pqo/image/upload/v1570685911/notification_vwfn7k.png"></a>
+				</div>
+				<div class="p-2 bd-highlight">
+					<a href="#" class="user"><b >PN</b></a>
+				</div>
+			</div>
+		</nav>
+		<h1>NOTIFICATIONS</h1>
+		<div class="notification-box">
+			<div class="d-flex bd-highlight">
+				<div class="p-2 flex-shrink-1 bd-highlight">
+					<img src="https://res.cloudinary.com/dgoh40pqo/image/upload/v1570685927/Vector_alakzb.png">
+				</div>
+			  	<div class="p-2 w-100 bd-highlight">
+			  		<b>A new invoice was created</b><br>
+					<span>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+					tempor incididunt ut labore et dolore magna aliqua.</span>
+					<p>Today 10:21AM</p>
+				</div>
+			</div>
+		</div>
+
+		<div class="notification-box">
+			<div class="d-flex bd-highlight">
+				<div class="p-2 flex-shrink-1 bd-highlight">
+					<img src="https://res.cloudinary.com/dgoh40pqo/image/upload/v1570685963/Vector3_hrdnhy.png">
+				</div>
+			  	<div class="p-2 w-100 bd-highlight">
+			  		<b>A new invoice was created</b><br>
+					<span>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+					tempor incididunt ut labore et dolore magna aliqua.</span>
+					<p>Today 10:21AM</p>
+				</div>
+			</div>
+		</div>
+
+		<div class="notification-box">
+			<div class="d-flex bd-highlight">
+				<div class="p-2 flex-shrink-1 bd-highlight">
+					<img src="https://res.cloudinary.com/dgoh40pqo/image/upload/v1570685927/Vector_alakzb.png">
+				</div>
+			  	<div class="p-2 w-100 bd-highlight">
+			  		<b>A new invoice was created</b><br>
+					<span>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+					tempor incididunt ut labore et dolore magna aliqua.</span>
+					<p>Today 10:21AM</p>
+				</div>
+			</div>
+		</div>
+
+		<div class="notification-box">
+			<div class="d-flex bd-highlight">
+				<div class="p-2 flex-shrink-1 bd-highlight">
+					<img src="https://res.cloudinary.com/dgoh40pqo/image/upload/v1570685951/Vector1_fmsy3b.png">
+				</div>
+			  	<div class="p-2 w-100 bd-highlight">
+			  		<b>A new invoice was created</b><br>
+					<span>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+					tempor incididunt ut labore et dolore magna aliqua.</span>
+					<p>Today 10:21AM</p>
+				</div>
+			</div>
+		</div>
+
+		<div class="notification-box">
+			<div class="d-flex bd-highlight">
+				<div class="p-2 flex-shrink-1 bd-highlight">
+					<img src="https://res.cloudinary.com/dgoh40pqo/image/upload/v1570685951/Vector1_fmsy3b.png">
+				</div>
+				<button class="float"><a href="#" class="my-float">+</a></button>
+			  	<div class="p-2 w-100 bd-highlight">
+			  		<b>A new invoice was created</b><br>
+					<span>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+					tempor incididunt ut labore et dolore magna aliqua.</span>
+					<p>Today 10:21AM</p>
+				</div>
+			</div>
+		</div>
+
+		<div class="notification-box">
+			<div class="d-flex bd-highlight">
+				<div class="p-2 flex-shrink-1 bd-highlight">
+					<img src="https://res.cloudinary.com/dgoh40pqo/image/upload/v1570685927/Vector_alakzb.png">
+				</div>
+			  	<div class="p-2 w-100 bd-highlight">
+			  		<b>A new invoice was created</b><br>
+					<span>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+					tempor incididunt ut labore et dolore magna aliqua.</span>
+					<p>Today 10:21AM</p>
+				</div>
+			</div>
+		</div>
+
+	</div>
+
+	<script type="text/javascript">
+		var w = window.innerWidth;
+  		if (w >= 500) {
+  			document.getElementById("searchIcon").style.display = "none"
+  			document.getElementById("searchbtn").style.display = ""
+  		}	
+	</script>
+	
+</body>
+</html>
