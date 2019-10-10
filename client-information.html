@@ -205,7 +205,7 @@
 
        <div class="form">
            <h1>Client Information</h1>
-           <form autocomplete="on" action="" method="post" onsubmit="checkForm()">
+           <form autocomplete="on" action="" method="post" onsubmit="return checkForm()">
             <div>
                     <p class="error" id="errorMsg">All Fields Required</p>
             <h3> Business Information</h3>
@@ -512,15 +512,15 @@
       var contactemail = document.getElementById("contactemail");
       // check if any input is empty.
       function checkForm() {
-          if((companyname.value.length = 0 || streetname.value.length == 0 ||
-              strnumber.value.length == 0 || city.value.length == 0 ||
-              postalcode.value.length == 0 || state.value.length == 0
-              || contactme.value.length == 0 || contactemail.value.length == 0)){
+          if((companyname.value == "" || streetname.value == "" ||
+              strnumber.value == "" || city.value == "" ||
+              postalcode.value == "" || state.value == ""
+              || contactme.value == "" || contactemail.value == "")){
 
               document.getElementById("errorMsg").style.display ="block";
           }
           else {
-              document.getElementById("errorMsg").style.display ="none";
+              document.getElementById("errorMsg").style.display ="complete";
           }
       }
       function removeNameErrorWhenCorrecting() {
