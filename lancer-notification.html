@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Notification</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0-11/css/all.min.css">
     <link href="https://fonts.googleapis.com/css?family=Ubuntu:300,400&display=swap" rel="stylesheet">
     <style type="text/css">
@@ -111,6 +112,7 @@
         .notif-logo-area{
             margin-top: 3rem;
             text-align: center;
+            width: 100%;
         }
 
         .notification-sidebar-nav{
@@ -139,6 +141,17 @@
         }
 
 
+        .notif-trans-btn{
+            background: transparent;
+            border: none;
+            color: #fff;
+            display: none;
+        }
+
+        .notif-trans-btn:focus{
+            outline: 0;
+        }
+
 
 
 
@@ -159,7 +172,6 @@
             }
             .nav-icons-col{
                 justify-content: flex-start;
-                background: #f5f4f4;
             }
 
             .nav-icons-col .nav-item{
@@ -178,27 +190,42 @@
 
             .notification-sidebar-nav{
              margin-top: 2rem;
+             display: none;
            }
 
            .notif-logo-area{
             text-align: left;
             padding-left: 2rem;
+            margin-top: 1rem;
+            margin-bottom: 1rem;
            }
 
-           .navbar{
-                position: fixed;
-                z-index: 1030;
-                background: #fff;
-                right: 0;
-                left: 0;   
-                border-radius: 0;
-                top: 0;
-                border-width: 0 0 1px;
-            } 
 
         }
 
+        @media(max-width: 1200px){
+            .notification-sidebar{
+            width: 100% !important;
+            max-width: 100% !important;
+            flex: 1;
+           }
 
+           .notification-body{
+            width: 100% !important;
+            max-width: 100% !important;
+            flex: 0 0 100%;
+           }
+
+           .notif-logo-area{
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+           }
+
+           .notif-trans-btn{
+               display: block;
+           }
+
+        }
 
 
     </style>
@@ -208,8 +235,10 @@
     <div class="container-fluid">
         <div class="row">
         <div class="col-md-2 notification-sidebar">
+           <div class="justify-content-sm-between d-flex">
             <div class="notif-logo-area"><img src="img/logo.svg" class="img img-fluid"></div>
-
+            <button class="notif-trans-btn"><i class="fa fa-bars" aria-hidden="true"></i></button>
+            </div>
             <ul class="notification-sidebar-nav">
                 <li class="nav-list-item"><a class="notif-a" href="#"><img src="img/home.svg" class="img img-fluid"> Dashboard</a></li>
                 <li class="nav-list-item"><a class="notif-a" href="#"><img src="img/gift.svg" class="img img-fluid"> Client</a></li>
@@ -220,14 +249,11 @@
             </ul>
 
         </div>
-        <div class="col-md-10 notification-body p-0">
+        <div class="col-12 col-md-10 notification-body p-0">
             <!-- Navigation Area -->
     <nav class="navbar navbar-expand-lg navbar-light notification-nav">
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
 
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <div class="w-100">
         <div class="container-fluid">
         <div class="row py-1">
             <div class="col-lg-3">
@@ -363,10 +389,26 @@
 
     
 
-
-
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+<script type="text/javascript">
+    
+
+    $(".notif-trans-btn" ).click(function() { 
+        $(".notification-sidebar-nav" ).toggle( 300, function() {
+      }); 
+    });
+
+    $(window).resize(function() {
+    if ($(window).width() > 1180) {
+       $(".notification-sidebar-nav").show()
+      }
+      else{
+        $(".notification-sidebar-nav").hide()
+      }
+    });
+
+</script>
 </body>
 </html
