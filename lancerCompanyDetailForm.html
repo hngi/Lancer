@@ -10,12 +10,7 @@
 	<style type="text/css">
 		body {
 	        font-family: "Roboto";
-	        box-sizing: border-box;
-        }
-
-        #wrap {
-	        width: 99%;
-        }
+            }
 
         #wrapper {
 	        border: 1px solid #c4c4c4;
@@ -58,7 +53,6 @@
 	        line-height: 16px;
 	        color: #919191;
         }
-
         input, select {
 	        display: block;
 	        margin-bottom: 16px;
@@ -81,6 +75,11 @@
 	        border: 1px solid #c4c4c4;
         }
 
+        #stateDiv, #countryDiv, #companyPhoneNumberDiv, #companyEmailDiv
+        #designationDiv, #personCountryDiv,#designation2Div, #newContactDiv {
+
+        }
+
         #state, #country, #companyPhoneNumber, #companyEmail,
         #designation, #personCountry, #designation2Div, #newContactDiv {
 	        width: 349px;
@@ -98,7 +97,7 @@
         }
 
         #designation {
-        	height: 48.5px;
+	        height: 48.5px;
         }
 
         #designation2Div, #newContactDiv {
@@ -124,7 +123,7 @@
         }
 
         #productRequirement {
-        	margin-top: auto;
+	        margin-top: auto;
 	        margin-bottom: auto;
 	        border: none;
 	        font-size: 14px;
@@ -133,11 +132,11 @@
         }
 
         ::placeholder {
-           color: black; 
+            color: black; 
         } 
   
         :-ms-input-placeholder {
-          color: black; 
+           color: black; 
         } 
   
         ::-ms-input-placeholder {
@@ -145,26 +144,114 @@
         }
 
         select{ 
-            -webkit-appearance: ;
-            -moz-appearance:   ;
-            appearance:         ;   
-           -webkit-border-radius: 0; 
-           -moz-border-radius: 0;
-           border-radius: 0;
+            -webkit-appearance: none;
+            -moz-appearance:    none;
+            appearance:         none;   
+            -webkit-border-radius: 0;   
+            -moz-border-radius: 0;     
+            border-radius: 0;
         }
-	</style>
+
+        @media screen and (max-width: 1280px) {
+            #wrapper {
+	            left: 218px;
+            }
+        }
+
+        @media screen and (max-width: 1050px) {
+            #wrapper {
+	            left: 108px;
+            }
+        }
+
+        @media screen and (max-width: 940px) {
+            #wrapper {
+	            width: 90%;
+	            height: initial;
+	            position: initial;
+	            margin: 205px auto 70px auto;
+            }
+
+            #form {
+    	        width: 99%;
+    	        margin: 35px auto;
+            }
+
+            .innerWrapper {
+    	        margin-bottom: 10px;
+            }
+
+            label {
+    	        width: 99.5%;
+            }
+
+            #companyName, #businessType, #contactPerson {
+    	        width: 97.5%;
+            }
+
+            #stateDiv, #countryDiv {
+    	        width: 100%;
+            }
+
+            #state, #country {
+    	        width: 100%;
+            }
+
+            #companyPhoneNumberDiv, #companyEmailDiv {
+    	        width: 100%;
+            }
+
+            #companyPhoneNumber, #companyEmail {
+    	        width: 97.5%;
+            }
+
+            #designationDiv, #personCountryDiv {
+    	        width: 100%;
+            }
+
+            #personCountry {
+    	        width: 97.5%;
+            }
+
+            #designation {
+    	        width: 100%;
+            }
+
+            .innerWrap {
+    	        width: 100%;
+            }
+
+            #designation2Div, #newContactDiv {
+    	        width: 100%;
+            }
+
+            #newContactDiv {
+    	        justify-content: center;
+            }
+
+            #newContactDiv i {
+    	        margin-right: 50px;
+            }
+
+            .twoColumns {
+	            flex-direction: column;
+	            justify-content: space-between;
+	            align-items: baseline;
+            }
+        }
+    </style>
 </head>
 <body>
-	<div id="wrap">
 	<div id="wrapper">
 		<div id="logoDiv"><img id="logo" alt="logo" src="Ellipse.png"></div>
 		<form id="form">
 			<h4 id="companyInfoH4">Company Information</h4>
-			<div><label for="companyName">Company Name</label><input id="companyName" type="text" name="companyName" placeholder="Foodie"></div>
 
-			<div><label for="businessType">Business Type</label><input id="businessType" type="text" name="businessType" placeholder="Private"></div>
+			<div class="innerWrapper"><label for="companyName">Company Name</label><input id="companyName" type="text" name="companyName" placeholder="Foodie"></div>
 
-			<div class="twoColumns">
+			<div class="innerWrapper"><label for="businessType">Business Type</label><input id="businessType" type="text" name="businessType" placeholder="Private"></div>
+
+			<div class="twoColumns innerWrapper">
 				<div id="stateDiv">
 					<label for="state">State</label>
 					<select name="state" id="state">
@@ -182,7 +269,7 @@
 				</div>
 			</div>
 
-			<div class="twoColumns">
+			<div class="twoColumns innerWrapper">
 				<div id="companyPhoneNumberDiv">
 					<label for="companyPhoneNumber">Company's Phone Number</label>
 					<input id="companyPhoneNumber" type="text" name="companyPhoneNumber" placeholder="+23479089000000">
@@ -193,13 +280,14 @@
 					<input id="companyEmail" type="email" name="companyEmail" placeholder="foodie@gmail.com">
 				</div>
 			</div>
+
 			<h4>Personal Information</h4>
-		    <div id="contactPersonDiv">
+		    <div id="contactPersonDiv" class="innerWrapper">
 			    <label for="contactPerson">Contact Person</label>
 			    <input id="contactPerson" type="text" name="contactPerson" placeholder="Simbi Emmanuel">
 		    </div>
 
-		    <div class="twoColumns">
+		    <div class="twoColumns innerWrapper">
 			    <div id="designationDiv">
 				    <label for="designation">Designation</label>
 				    <select name="designation" id="designation">
@@ -212,8 +300,8 @@
 				    <input id="personCountry" type="text" name="personCountry" placeholder="+23470389000000">
 			    </div>
 		    </div>
-		    <div class="twoColumns">
-			    <div>
+		    <div class="twoColumns innerWrapper">
+			    <div class="innerWrap">
 			    	<label for="designation2Div">Designation</label>
 			    	<div id="designation2Div">
 				        <i class="fa fa-clone"></i>
@@ -221,16 +309,15 @@
 				        <i class="fa fa-times"></i>
 				    </div>
 			    </div>
-			    <div>
+			    <div class="innerWrap">
 			    	<label style="color: transparent;">New Contact</label>
 			        <div id="newContactDiv">
 				        <i class="fa fa-plus"></i>
-				        <button style="background-color: none;">Add New Contact</button>
+				        <button>Add New Contact</button>
 				    </div>
 			    </div>
 		    </div>
 		</form>
-	</div>
     </div>
 </body>
 </html>
