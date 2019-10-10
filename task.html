@@ -41,6 +41,10 @@
             margin: 10px;
         }
 
+        .navi-active {
+            color: #0ABAB5 !important;
+        }
+
         .text-primary {
             color: var(--primary-color) !important;
         }
@@ -480,12 +484,12 @@
                 <div class="container-fluid">
                     <div class="">
                         <h1 style="margin-top: 15px;">Tasks</h1>
-                        <div style="height: 10vh; background-color: #091429;">
+                        <div style=" background-color: #091429;">
                             <ul class="navi-ul">
-                                <li class="navi-links">Overview</li>
-                                <li class="navi-links">Collaborators</li>
-                                <li class="navi-links">Task</li>
-                                <li class="navi-links">Documents</li>
+                                <li class="navi-links"><a href="#">Overview</a></li>
+                                <li class="navi-links"><a href="#">Collaborators</a></li>
+                                <li class="navi-links navi-active"><a href="#">Task</a></li>
+                                <li class="navi-links"><a href="#">Documents</a></li>
                             </ul>
                         </div>
                         <div class="table-responsive">
