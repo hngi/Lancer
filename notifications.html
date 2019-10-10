@@ -4,7 +4,7 @@
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link href="https://fonts.googleapis.com/css?family=Pacifico|Ubuntu&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+  <link rel="stylesheet" href="font-awesome/css/all.min.css">
   <style>
     *{
       font-family: 'Pacifico', cursive;
@@ -55,6 +55,47 @@
       display: none;
       color: #091429;
     }
+    /* .dropdown {
+    float: left;
+    overflow: hidden;
+    } */
+    .dropdown .dropbtn {
+      font-size: 25px;  
+      border: none;
+      outline: none;
+      color: white;
+      padding: 20px;
+      background-color: inherit;
+      font-family: Ubuntu;
+    }
+    .dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+
+
 
     @media screen and (max-height: 450px) {
       .sidenav {
@@ -90,12 +131,22 @@
   <div id="mySidenav" class="sidenav">
     <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
     <h1 class="logo" style="font-family: Pacifico; color: white;">Lan<span style="color: #0ABAB5; font-family: Pacifico;">c</span>er</h1>
-    <a href="#"><i class="fa fa-home"></i> Dashboard</a>
-    <a href="#"><i class="fa fa-users" aria-hidden="true"></i> Client</a>
-    <a href="#"><i class="fa fa-lightbulb-o" aria-hidden="true"></i> Project</a>
-    <a href="#"><i class="fa fa-book" aria-hidden="true"></i> Invoice</a>
-    <a href="#"><i class="fa fa-book" aria-hidden="true"></i> Contract</a>
-    <a href="#"><i class="fa fa-book" aria-hidden="true"></i> Proposals</a>
+    <a href="#"><i class="fas fa-home"></i> Dashboard</a>
+    <a href="#"><i class="fas fa-users" aria-hidden="true"></i> Client</a>
+    <!-- <a href="#"><i class="fas fa-lightbulb" aria-hidden="true"></i> Project</a> -->
+    <div class="dropdown">
+      <button class="dropbtn"><i class="fas fa-lightbulb" aria-hidden="true"></i>Project 
+        <i class="fa fa-caret-down"></i>
+      </button>
+      <div class="dropdown-content">
+        <a href="#">Link 1</a>
+        <a href="#">Link 2</a>
+        <a href="#">Link 3</a>
+      </div>
+    </div> 
+    <a href="#"><i class="fas fa-file-invoice"></i> Invoice</a>
+    <a href="#"><i class="fas fa-scroll" aria-hidden="true"></i> Contract</a>
+    <a href="#"><i class="fas fa-book" aria-hidden="true"></i> Proposals</a>
 
   </div>
 
