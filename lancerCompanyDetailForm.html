@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+	<title>Lancer Company Detail form</title>
+	<meta charset="utf-8">
+	<!--<link rel="stylesheet" type="text/css" href="lancerCompanyDetailForm.css">-->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link href="https://fonts.googleapis.com/css?family=Ubuntu&display=swap" rel="stylesheet">
+	<style type="text/css">
+		body {
+	        font-family: "Roboto";
+	        box-sizing: border-box;
+        }
+
+        #wrap {
+	        width: 99%;
+        }
+
+        #wrapper {
+	        border: 1px solid #c4c4c4;
+	        width: 778px;
+	        height: 914px;
+	        position: absolute;
+	        left: 437px;
+	        top: 205px;
+        }
+
+        #logoDiv {
+	        display: flex;
+	        justify-content: center;
+	        align-items: center;
+	        margin-top: 40px;
+	        margin-bottom: 32px;
+        }
+
+        #form {
+	        margin-left: 32px;
+	        margin-right: 32px;
+	        margin-bottom: 81px;
+        }
+
+        h4 {
+	        font-family: "Open sans";
+	        font-style: normal;
+	        font-size: 18px;
+	        font-weight: bold;
+	        line-height: 25px;
+	        color: #000000;
+	        margin-bottom: 32px;
+        }
+
+        label {
+	        display: block;
+	        margin-bottom: 8px;
+	        font-size: 14px;
+	        font-weight: bold;
+	        line-height: 16px;
+	        color: #919191;
+        }
+
+        input, select {
+	        display: block;
+	        margin-bottom: 16px;
+	        padding-left: 10px;
+	        font-size: 14px;
+	        outline: none;
+	        color: #000000;
+        }
+
+        .twoColumns {
+	        display: flex;
+	        flex-direction: row;
+	        justify-content: space-between;
+	        align-items: center;
+        }
+
+        #companyName, #businessType, #contactPerson {
+	        width: 714px;
+	        height: 44px;
+	        border: 1px solid #c4c4c4;
+        }
+
+        #state, #country, #companyPhoneNumber, #companyEmail,
+        #designation, #personCountry, #designation2Div, #newContactDiv {
+	        width: 349px;
+	        height: 44px; 
+	        background-color: #ffffff;
+        }
+
+        #state, #country, #designation, #designation2Div, #newContactDiv  {
+	        width: 363px;
+	        border: 1px solid #c4c4c4;
+        }
+
+        #state, #companyPhoneNumber, #designation, #designation2Div {
+	        margin-right: 5px;
+        }
+
+        #designation {
+        	height: 48.5px;
+        }
+
+        #designation2Div, #newContactDiv {
+	        display: flex;
+	        justify-content: space-around;
+	        align-items: center;
+        }
+
+        #designation2Div input {
+            background: none;
+	        display: inline-flex;
+        }
+
+        #newContactDiv button, #newContactDiv i {
+	        color: #009fff;
+	        border:none;
+	        outline: none;
+            font-size: 14px;
+	        font-style: normal;
+	        font-weight: bold;
+	        line-height: 16px;
+	        cursor: pointer;
+        }
+
+        #productRequirement {
+        	margin-top: auto;
+	        margin-bottom: auto;
+	        border: none;
+	        font-size: 14px;
+	        font-weight: bold;
+	        line-height: 16px;
+        }
+
+        ::placeholder {
+           color: black; 
+        } 
+  
+        :-ms-input-placeholder {
+          color: black; 
+        } 
+  
+        ::-ms-input-placeholder {
+            color: black; 
+        }
+
+        select{ 
+            -webkit-appearance: ;
+            -moz-appearance:   ;
+            appearance:         ;   
+           -webkit-border-radius: 0; 
+           -moz-border-radius: 0;
+           border-radius: 0;
+        }
+	</style>
+</head>
+<body>
+	<div id="wrap">
+	<div id="wrapper">
+		<div id="logoDiv"><img id="logo" alt="logo" src="Ellipse.png"></div>
+		<form id="form">
+			<h4 id="companyInfoH4">Company Information</h4>
+			<div><label for="companyName">Company Name</label><input id="companyName" type="text" name="companyName" placeholder="Foodie"></div>
+
+			<div><label for="businessType">Business Type</label><input id="businessType" type="text" name="businessType" placeholder="Private"></div>
+
+			<div class="twoColumns">
+				<div id="stateDiv">
+					<label for="state">State</label>
+					<select name="state" id="state">
+                        <option value="">Lagos</option>
+                        <option value="">Abuja</option>
+                    </select>
+				</div>
+
+				<div id="countryDiv">
+					<label for="country">Country</label>
+					<select name="country" id="country">
+                        <option value="">Nigeria</option>
+                        <option value="">Kenya</option>
+                    </select>
+				</div>
+			</div>
+
+			<div class="twoColumns">
+				<div id="companyPhoneNumberDiv">
+					<label for="companyPhoneNumber">Company's Phone Number</label>
+					<input id="companyPhoneNumber" type="text" name="companyPhoneNumber" placeholder="+23479089000000">
+				</div>
+
+				<div id="companyEmailDiv">
+					<label for="companyEmail">Company Email</label>
+					<input id="companyEmail" type="email" name="companyEmail" placeholder="foodie@gmail.com">
+				</div>
+			</div>
+			<h4>Personal Information</h4>
+		    <div id="contactPersonDiv">
+			    <label for="contactPerson">Contact Person</label>
+			    <input id="contactPerson" type="text" name="contactPerson" placeholder="Simbi Emmanuel">
+		    </div>
+
+		    <div class="twoColumns">
+			    <div id="designationDiv">
+				    <label for="designation">Designation</label>
+				    <select name="designation" id="designation">
+                        <option value="">Project Manager</option>
+                        <option value="">Supervisor</option>
+                    </select>
+			    </div>
+			    <div id="personCountryDiv">
+				    <label for="personCountry">Country</label>
+				    <input id="personCountry" type="text" name="personCountry" placeholder="+23470389000000">
+			    </div>
+		    </div>
+		    <div class="twoColumns">
+			    <div>
+			    	<label for="designation2Div">Designation</label>
+			    	<div id="designation2Div">
+				        <i class="fa fa-clone"></i>
+				        <input id="productRequirement" type="text" name="productRequirement"  placeholder="Product Requirement" i>
+				        <i class="fa fa-times"></i>
+				    </div>
+			    </div>
+			    <div>
+			    	<label style="color: transparent;">New Contact</label>
+			        <div id="newContactDiv">
+				        <i class="fa fa-plus"></i>
+				        <button style="background-color: none;">Add New Contact</button>
+				    </div>
+			    </div>
+		    </div>
+		</form>
+	</div>
+    </div>
+</body>
+</html>
+
+
+
+
+
