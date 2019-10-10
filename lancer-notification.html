@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Notification</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0-11/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu:300,400&display=swap" rel="stylesheet">
+    <style type="text/css">
+
+        .notification-container{
+            font-family: 'Ubuntu', sans-serif;
+        }
+        .notification-bar{
+            border: 1.2px solid #C4C4C4;
+            box-sizing: border-box;
+            padding: 10px; 
+            margin-top: 20px;
+        }
+        .notification-icon{
+            margin: 20px 5px 20px 20px;
+        }
+        .notification-title{
+            font-size: 24px; 
+            font-weight:800;
+        }
+        .notification-add-btn{
+            position: fixed; 
+            bottom: 0; 
+            border-radius: 50%; 
+            padding: 10px 20px; 
+            font-size: 25px;
+        }
+
+        .notification-subtitle{
+            font-size: 18px; 
+            font-weight:600;
+        }
+
+        .notification-search-bar{
+            width: 100% !important;
+            max-width: 500px;
+            padding-left: 2.5rem;
+            font-size: 1.1rem;
+            font-weight: 500;
+            color: #000;
+        }
+
+        .notification-search-bar:focus{
+           box-shadow: none;
+           border-color: #e5e5e5;
+        }
+
+        .notification-nav{
+            box-shadow: 1px 2px 2px #d0cdcd;
+        }
+
+        .border-right-grey{
+            border-right:2px solid #e5e5e5;
+        }
+
+        .notification-nav .img{
+            max-width: 20px;
+        }
+
+        .notification-nav .nav-item{
+            padding:1rem 1.5rem;
+        }
+
+        .notification-nav .fa-search{
+            position: absolute;
+            left: 3.5%;
+        }
+
+        .nav-icons-col{
+            display: flex;
+           justify-content: flex-end;
+        }
+
+        .notification-user-profile{
+            display: flex;
+            height: 50px;
+            width: 50px;
+            border: 2px solid #000;
+            border-radius: 50%;
+            align-items: center;
+            position: relative;
+            }
+
+        .notif-abbrv-name{
+            position: absolute;
+            left: 20%;
+            font-weight: bold;
+            font-size: 1.2rem;
+            color:#000;
+        }
+
+        .navbar-toggler:focus{
+            outline:0;
+        }
+
+        .notification-sidebar{
+                background: #091429;
+            }
+        
+        .notification-sidebar .img{
+            max-width: 150px;
+        }
+
+        .notif-logo-area{
+            margin-top: 3rem;
+            text-align: center;
+        }
+
+        .notification-sidebar-nav{
+            margin-top: 6rem;
+        }
+
+        .notification-sidebar-nav .nav-list-item{
+            list-style: none;
+            color:#fff;
+            font-size: 1.1rem;
+            font-weight: bold;
+            margin-bottom:4.5rem;
+        }
+
+        .notification-sidebar-nav .img{
+            max-width: 18px;
+            top: -2px;
+            position: relative;
+            margin-right: .8rem;
+        }
+
+
+        .notification-sidebar-nav .notif-a{
+            text-decoration: none;
+            color:#fff;
+        }
+
+
+
+
+
+        @media (max-width: 1050px){
+
+            .notif-logo-area{
+            margin-top: 5rem;
+            }
+
+            .nav-icons-col .navbar-nav{
+              flex-direction: row;
+              width: 100%;
+              text-align: center;
+           }
+            .notification-search-bar{
+                max-width: 100%;
+                margin-top:1rem;
+            }
+            .nav-icons-col{
+                justify-content: flex-start;
+                background: #f5f4f4;
+            }
+
+            .nav-icons-col .nav-item{
+                flex:1;
+            }
+
+            .notification-nav .fa-search {
+                position: absolute;
+                left: 5%;
+                top:35px;
+            }
+
+            .notification-sidebar-nav .nav-list-item {
+                margin-bottom: .6rem;
+            }
+
+            .notification-sidebar-nav{
+             margin-top: 2rem;
+           }
+
+           .notif-logo-area{
+            text-align: left;
+            padding-left: 2rem;
+           }
+
+           .navbar{
+                position: fixed;
+                z-index: 1030;
+                background: #fff;
+                right: 0;
+                left: 0;   
+                border-radius: 0;
+                top: 0;
+                border-width: 0 0 1px;
+            } 
+
+        }
+
+
+
+
+    </style>
+</head>
+<body>
+
+    <div class="container-fluid">
+        <div class="row">
+        <div class="col-md-2 notification-sidebar">
+            <div class="notif-logo-area"><img src="img/logo.svg" class="img img-fluid"></div>
+
+            <ul class="notification-sidebar-nav">
+                <li class="nav-list-item"><a class="notif-a" href="#"><img src="img/home.svg" class="img img-fluid"> Dashboard</a></li>
+                <li class="nav-list-item"><a class="notif-a" href="#"><img src="img/gift.svg" class="img img-fluid"> Client</a></li>
+                <li class="nav-list-item"><a class="notif-a" href="#"><img src="img/bulb.svg" class="img img-fluid"> Project</a></li>
+                <li class="nav-list-item"><a class="notif-a" href="#"><img src="img/invoice.svg" class="img img-fluid"> Invoice</a></li>
+                <li class="nav-list-item"><a class="notif-a" href="#"><img src="img/contract.svg" class="img img-fluid"> Contract</a></li>
+                <li class="nav-list-item"><a class="notif-a" href="#"><img src="img/proposals.svg" class="img img-fluid"> Proposals</a></li>
+            </ul>
+
+        </div>
+        <div class="col-md-10 notification-body p-0">
+            <!-- Navigation Area -->
+    <nav class="navbar navbar-expand-lg navbar-light notification-nav">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <div class="container-fluid">
+        <div class="row py-1">
+            <div class="col-lg-3">
+            </div>
+            <div class="col-md-5 align-self-center">
+              <form class="form-inline my-2 my-lg-0">
+               <i class="fa fa-search"></i><input class="notification-search-bar form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">             
+              </form>
+            </div>
+            <div class="col-md-4 nav-icons-col">
+                <ul class="navbar-nav">
+                  <li class="nav-item border-right-grey">
+                    <a class="nav-link" href="#"><img src="img/help.svg" class="img img-fluid"></span></a>
+                  </li>
+                  <li class="nav-item border-right-grey">
+                    <a class="nav-link" href="#"><img src="img/alarm-clock.svg" class="img img-fluid"></a>
+                  </li>
+                  <li class="nav-item border-right-grey">
+                    <a class="nav-link" href="#"><img src="img/bell.svg" class="img img-fluid"></a>
+                  </li>
+                  <li class="nav-item p-0 pl-3">
+                    <a class="nav-link" href="#"><span class="notification-user-profile"><span class="notif-abbrv-name">AU</span></span></a>
+                  </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+        
+      </div>
+    </nav>
+
+    <!-- Notification Body -->
+
+    <div class="container-fluid notification-container">
+        <div class="row p-5">
+            <h1 class="notification-title">NOTIFICATIONS</h1>
+            <div class="col-12 notification-bar">
+               <div class="notification-content d-flex">
+                    <div class="icon">
+                            <img src="https://res.cloudinary.com/benjee/image/upload/v1570664442/Vector_1_txuocl.svg" alt="Notification" width="30" height="30" class="notification-icon">
+                    </div>
+                    <div class="notification-text p-2">
+                        <h5 class="notification-subtitle">A new Invoice was created</h5>
+                        <p>It is a long established fact that a reader will be 
+                            distracted by the readable content of a page when 
+                            at its layout
+                        </p>
+                        <span>Today 10:21AM</span>
+                    </div>
+                </div> 
+            </div>
+            <div class="col-12 notification-bar">
+                <div class="notification-content d-flex">
+                    <div class="icon">
+                            <img src="https://res.cloudinary.com/benjee/image/upload/v1570664442/Vector_1_txuocl.svg" alt="Notification" width="30" height="30" class="notification-icon">
+                    </div>
+                    <div class="notification-text p-2">
+                        <h5 class="notification-subtitle">A new Invoice was created</h5>
+                        <p>It is a long established fact that a reader will be 
+                            distracted by the readable content of a page when 
+                            at its layout
+                        </p>
+                        <span>Today 10:21AM</span>
+                    </div>
+                </div> 
+            </div>
+            <div class="col-12 notification-bar">
+                <div class="notification-content d-flex">
+                    <div class="icon">
+                            <img src="https://res.cloudinary.com/benjee/image/upload/v1570664450/Vector_ct8ry6.svg" alt="Notification" width="30" height="30" class="notification-icon">
+                    </div>
+                    <div class="notification-text p-2">
+                        <h5 class="notification-subtitle">A new Invoice was created</h5>
+                        <p>It is a long established fact that a reader will be 
+                            distracted by the readable content of a page when 
+                            at its layout
+                        </p>
+                        <span>Today 10:21AM</span>
+                    </div>
+                </div> 
+            </div>
+            <div class="col-12 notification-bar">
+                <div class="notification-content d-flex">
+                    <div class="icon">
+                            <img src="https://res.cloudinary.com/benjee/image/upload/v1570664450/Vector_ct8ry6.svg" alt="Notification" width="30" height="30" class="notification-icon">
+                    </div>
+                    <div class="notification-text p-2">
+                        <h5 class="notification-subtitle">A new Invoice was created</h5>
+                        <p>It is a long established fact that a reader will be 
+                            distracted by the readable content of a page when 
+                            at its layout
+                        </p>
+                        <span>Today 10:21AM</span>
+                    </div>
+                </div> 
+            </div>
+            <div class="col-12 notification-bar">
+                <div class="notification-content d-flex">
+                    <div class="icon">
+                            <img src="https://res.cloudinary.com/benjee/image/upload/v1570664442/Vector_1_txuocl.svg" alt="Notification" width="30" height="30" class="notification-icon">
+                    </div>
+                    <div class="notification-text p-2">
+                        <h5 class="notification-subtitle">A new Invoice was created</h5>
+                        <p>It is a long established fact that a reader will be 
+                            distracted by the readable content of a page when 
+                            at its layout
+                        </p>
+                        <span>Today 10:21AM</span>
+                    </div>
+                </div> 
+            </div>
+            <div class="col-12 notification-bar">
+                <div class="notification-content d-flex">
+                    <div class="icon">
+                            <img src="https://res.cloudinary.com/benjee/image/upload/v1570664450/Vector_ct8ry6.svg" alt="Notification" width="30" height="30" class="notification-icon">
+                    </div>
+                    <div class="notification-text p-2">
+                        <h5 class="notification-subtitle">A new Invoice was created</h5>
+                        <p>It is a long established fact that a reader will be 
+                            distracted by the readable content of a page when 
+                            at its layout
+                        </p>
+                        <span>Today 10:21AM</span>
+                    </div>
+                </div> 
+            </div>
+            <button type="button" class="btn btn-primary notification-add-btn">+</button>
+        </div>
+        </div>
+        </div>
+      </div>
+    </div>
+
+    
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</body>
+</html
