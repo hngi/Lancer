@@ -7,136 +7,333 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
   <link href="https://fonts.googleapis.com/css?family=Pacifico&display=swap" rel="stylesheet" />
   <link href="https://fonts.googleapis.com/css?family=Ubuntu&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css" />
   <title>Lancer - pending</title>
+  <style>
+    body {
+      font-family: "Ubuntu", sans-serif;
+    }
+
+    .container {
+      padding-left: 0;
+      padding-right: 0;
+      margin-left: 0;
+      margin-right: 0;
+    }
+
+    @media (min-width: 1200px) {
+      .container {
+        max-width: 100%;
+      }
+    }
+
+    @media (min-width: 992px) {
+      .container {
+        max-width: 100%;
+      }
+    }
+
+    @media (min-width: 768px) {
+      .container {
+        max-width: 100%;
+      }
+    }
+
+    @media (min-width: 576px) {
+      .container {
+        max-width: 100%;
+      }
+    }
+
+    .side-bar {
+      background: #091429;
+      flex: 2;
+      color: #fff;
+    }
+
+    .side-bar-list li {
+      padding-bottom: 30px;
+      padding-left: 20px;
+      list-style-type: none;
+    }
+
+    .side-bar a {
+      text-decoration: none;
+      color: white;
+    }
+
+    .dropdown-content {
+      padding-left: 20px;
+    }
+
+    .logo {
+      text-align: center;
+      font: normal normal 36px/63px "Pacifico", cursive;
+    }
+
+    .logo span {
+      color: lightskyblue;
+    }
+
+    .active {
+      border-bottom: 2px solid #fff;
+    }
+
+    .main {
+      flex: 8;
+    }
+
+    .row {
+      margin-left: 0;
+    }
+
+    .pending {
+      width: 50%;
+      padding: 7px 10px;
+      border-radius: 4px;
+      background-color: rgba(219, 114, 16, 0.3);
+      color: #F77A06;
+      font-weight: bold;
+      text-align: center;
+      font-size: 15px;
+    }
+
+    td img {
+      position: relative;
+      left: 30px;
+      top: 2px;
+    }
+
+    .header {
+      align-items: center;
+    }
+    .search {
+      padding-left: 80px;
+      padding-top: 30px;
+      padding-bottom: 30px;
+    }
+    
+    table .table-body {
+      border: 1px solid #c4c4c4;
+      box-sizing: border-box;
+    }
+
+    .search>input {
+      width: 80%;
+      background-image: url(https://res.cloudinary.com/kayode/image/upload/v1570641135/icons/search_ah4hi2.svg);
+      background-repeat: no-repeat;
+      text-indent: 25px;
+      border: 1px solid #b1b1b1;
+      box-sizing: border-box;
+      border-radius: 4px;
+    }
+    .search>input:focus {
+      background: 0;
+      text-indent: 0px;
+    }
+    .header-right {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+    }
+
+    .header-right>* {
+      flex: 1;
+      align-self: center;
+    }
+    .header-right > li + li {
+      border-left: 2px solid #b1b1b1;
+      padding-left: 34px;
+      padding-top: 30px;
+      padding-bottom: 30px;
+    }
+ 
+    #initial {
+      border-radius: 50%;
+      border: 2px solid #000;
+      font-weight: bold;
+      padding: 5px;
+    }
+
+    header {
+      box-shadow: 0 2px 2px rgba(0, 0, 0, 0.3);
+    }
+
+    .con {
+      padding: 30px 20px;
+    }
+    .con > h4 {
+      font-size: 18px;
+      font-weight: bold;
+      margin-bottom: 40px;
+    }
+    .con > form > select {
+      padding: 10px 16px;
+      min-width: 304px;
+    }
+
+    @media (max-width: 425px) {
+      .side-bar, .main {
+        width: 100%;
+      }
+
+      .search {
+        padding-left: 5px;
+        flex: 4;
+      }
+
+      .x-right {
+        flex: 8;
+      }
+
+      .header-right > li + li {
+        border-left: 0;
+        padding-left: 5px;
+      }
+    }
+
+    @media (max-width: 350px) {
+      .container {
+        min-width: 350px;
+      }
+    }
+  </style>
 </head>
 
-<body>
-  <div class="side-bar">
-    <h1>Lan<span>c</span>ers</h1>
-    <ul>
-      <li>
-        <!--YOU CAN USE SVG DOCUMENT OR FONT AWESOME IN IMG SRC-->
-        <a href="" class="icon-text"><span><img id="icon"
-              src="https://res.cloudinary.com/kayode/image/upload/v1570633702/icons/home_agclfa.svg" /></span>
-          Dashboard</a>
-      </li>
-      <li>
-        <!--YOU CAN USE SVG DOCUMENT OR FONT AWESOME IN IMG SRC-->
-        <a href="" class="icon-text"><span><img id="icon"
-              src="https://res.cloudinary.com/kayode/image/upload/v1570633702/icons/customer_rcfque.svg" /></span>
-          Client</a>
-      </li>
-      <!--DROPDOWN-->
-      <li>
-        <div class="dropdown">
-          <p class="dropbtn">
-            <span><img id="icon"
-                src="https://res.cloudinary.com/kayode/image/upload/v1570633702/icons/Group_levt6m.svg" /></span>
-            Project
-            <span id="shape"><img
-                src="https://res.cloudinary.com/kayode/image/upload/v1570635462/icons/Shape_a5fc5v.svg"
-                alt="v" /></span>
-          </p>
-          <div class="dropdown-content">
-            <p></p><a href="#"><span class="active">Status</span></a></p>
-            <p> <a href="#">Overview</a></p>
-            <p><a href="#">Collabrators</a></p>
-            <p><a href="#">Task</a></p>
-            <p><a href="#">Document</a></p>
+<body class="container">
+  <div class="row">
+    <div class="side-bar">
+      <h1 class="logo">Lan<span>c</span>ers</h1>
+      <ul class="side-bar-list">
+        <li>
+          <!--YOU CAN USE SVG DOCUMENT OR FONT AWESOME IN IMG SRC-->
+          <a href="" class="icon-text"><span><img id="icon"
+                src="https://res.cloudinary.com/kayode/image/upload/v1570633702/icons/home_agclfa.svg" /></span>
+            <span class="label"> Dashboard</span> </a>
+        </li>
+        <li>
+          <!--YOU CAN USE SVG DOCUMENT OR FONT AWESOME IN IMG SRC-->
+          <a href="" class="icon-text"><span><img id="icon"
+                src="https://res.cloudinary.com/kayode/image/upload/v1570633702/icons/customer_rcfque.svg" /></span>
+            Client</a>
+        </li>
+        <!--DROPDOWN-->
+        <li>
+          <div class="dropdown">
+            <p class="dropbtn">
+              <span><img id="icon"
+                  src="https://res.cloudinary.com/kayode/image/upload/v1570633702/icons/Group_levt6m.svg" /></span>
+              <span class="label">Project</span>
+              <span id="shape"><img
+                  src="https://res.cloudinary.com/kayode/image/upload/v1570635462/icons/Shape_a5fc5v.svg"
+                  alt="v" /></span>
+            </p>
+            <div class="dropdown-content">
+              <p></p><a href="#"><span class="active">Status</span></a></p>
+              <p> <a href="#">Overview</a></p>
+              <p><a href="#">Collabrators</a></p>
+              <p><a href="#">Task</a></p>
+              <p><a href="#">Document</a></p>
+            </div>
+          </div>
+        </li>
+
+        <li>
+
+          <a href=""><img id="icon"
+              src="https://res.cloudinary.com/kayode/image/upload/v1570637803/icons/invoice_vwreax.svg" alt=""
+              srcset="" />
+            <span class="label">Invoice</span> </a>
+        </li>
+        <li>
+          <!--YOU CAN USE SVG DOCUMENT OR FONT AWESOME IN IMG SRC-->
+          <a href=""><img id="icon"
+              src="https://res.cloudinary.com/kayode/image/upload/v1570637803/icons/policy_sebvah.svg" alt=""
+              srcset="" />
+            <span class="label">Contract</span> </a>
+        </li>
+        <li>
+          <!--YOU CAN USE SVG DOCUMENT OR FONT AWESOME IN IMG SRC-->
+          <a href=""><img id="icon"
+              src="https://res.cloudinary.com/kayode/image/upload/v1570638152/icons/approval_blr1q3.png" alt=""
+              srcset="" />
+            <span class="label">Proposals</span> </a>
+        </li>
+      </ul>
+    </div>
+    <!--NAV-->
+    <div class="main">
+      <header>
+        <div class="row header">
+          <form action="#" class="col-6 search">
+            <input type="text" id="search" placeholder="Search" />
+          </form>
+          <div class="col-6 x-right">
+            <ul class="nav navbar header-right">
+              <li class="nav-item">
+                <!--YOU CAN USE SVG DOCUMENT OR FONT AWESOME IN IMG SRC-->
+                <a href=""><img src="https://res.cloudinary.com/kayode/image/upload/v1570637803/icons/help_yctata.svg"
+                    alt="" /></a>
+              </li>
+              <li class="nav-item">
+                <!--YOU CAN USE SVG DOCUMENT OR FONT AWESOME IN IMG SRC-->
+                <a href=""><img src="https://res.cloudinary.com/kayode/image/upload/v1570637803/icons/time_pj7b6m.svg"
+                    alt="" srcset="" /></a>
+              </li>
+              <li class="nav-item">
+                <!--YOU CAN USE SVG DOCUMENT OR FONT AWESOME IN IMG SRC-->
+                <a href=""><img
+                    src="https://res.cloudinary.com/kayode/image/upload/v1570637803/icons/notification_xo9w7i.svg"
+                    alt="" srcset="" /></a>
+              </li>
+              <li class="nav-item">
+                <span id="initial">KG</span>
+              </li>
+            </ul>
           </div>
         </div>
-      </li>
+      </header>
+      <!--END OF NAV-->
+      <!--SIDE NAV -->
+      <!--END OF SIDE NAV-->
+      <!--MAIN WORK-->
+      <main class="con">
+        <h4>PROJECTS</h4>
+        <form>
+          <select>
+            <option value="all">All</option>
+            <option value="pending">Pending</option>
+            <option value="all">All</option>
+          </select>
+        </form>
+        <br />
+        <br />
+        <div class="table-responsive">
+          <table class="table">
+            <tr class="table-head">
+              <th>Date</th>
+              <th>Title</th>
+              <th>Start Date</th>
+              <th>Paid</th>
+              <th>Due</th>
+              <th>Status</th>
+            </tr>
+            <tr class="table-body">
+              <td>5/09/2019</td>
+              <td>Foodie</td>
+              <td>20/09/2019</td>
+              <td>#200,000</td>
+              <td>#200,000</td>
+              <td>
+                <h5><span class="pending">Pending</span><img
+                    src="https://res.cloudinary.com/kayode/image/upload/v1570690734/icons/dot_fo3eqq.svg" alt=""></h5>
+              </td>
+            </tr>
+          </table>
+        </div>
 
-      <li>
-
-        <a href=""><img id="icon"
-            src="https://res.cloudinary.com/kayode/image/upload/v1570637803/icons/invoice_vwreax.svg" alt=""
-            srcset="" />
-          Invoice</a>
-      </li>
-      <li>
-        <!--YOU CAN USE SVG DOCUMENT OR FONT AWESOME IN IMG SRC-->
-        <a href=""><img id="icon"
-            src="https://res.cloudinary.com/kayode/image/upload/v1570637803/icons/policy_sebvah.svg" alt="" srcset="" />
-          Contract</a>
-      </li>
-      <li>
-        <!--YOU CAN USE SVG DOCUMENT OR FONT AWESOME IN IMG SRC-->
-        <a href=""><img id="icon"
-            src="https://res.cloudinary.com/kayode/image/upload/v1570638152/icons/approval_blr1q3.png" alt=""
-            srcset="" />
-          Proposals</a>
-      </li>
-    </ul>
-  </div>
-  <!--NAV-->
-  <div class="main">
-    <header>
-      <form action="#">
-        <input type="text" id="search" placeholder="Search" />
-      </form>
-      <div>
-        <ul>
-          <li class="li-br">
-            <!--YOU CAN USE SVG DOCUMENT OR FONT AWESOME IN IMG SRC-->
-            <a href=""><img src="https://res.cloudinary.com/kayode/image/upload/v1570637803/icons/help_yctata.svg"
-                alt="" /></a>
-          </li>
-          <li class="li-br">
-            <!--YOU CAN USE SVG DOCUMENT OR FONT AWESOME IN IMG SRC-->
-            <a href=""><img src="https://res.cloudinary.com/kayode/image/upload/v1570637803/icons/time_pj7b6m.svg"
-                alt="" srcset="" /></a>
-          </li>
-          <li class="li-br">
-            <!--YOU CAN USE SVG DOCUMENT OR FONT AWESOME IN IMG SRC-->
-            <a href=""><img
-                src="https://res.cloudinary.com/kayode/image/upload/v1570637803/icons/notification_xo9w7i.svg" alt=""
-                srcset="" /></a>
-          </li>
-          <li id="last-list">
-            <span id="initial">KG</span>
-          </li>
-        </ul>
-      </div>
-    </header>
-    <!--END OF NAV-->
-    <!--SIDE NAV -->
-    <!--END OF SIDE NAV-->
-    <!--MAIN WORK-->
-    <main>
-      <h4>PROJECTS</h4>
-      <form>
-        <select>
-          <option value="all">All</option>
-          <option value="pending">Pending</option>
-          <option value="all">All</option>
-        </select>
-      </form>
-      <br />
-      <br />
-
-      <table>
-        <tr class="table-head">
-          <th>Date</th>
-          <th>Title</th>
-          <th>Start Date</th>
-          <th>Paid</th>
-          <th>Due</th>
-          <th>Status</th>
-        </tr>
-        <tr class="table-body">
-          <td>5/09/2019</td>
-          <td>Foodie</td>
-          <td>20/09/2019</td>
-          <td>#200,000</td>
-          <td>#200,000</td>
-          <td>
-            <h5><span>Pending</span><img
-                src="https://res.cloudinary.com/kayode/image/upload/v1570690734/icons/dot_fo3eqq.svg" alt=""></h5>
-          </td>
-        </tr>
-      </table>
-    </main>
+      </main>
+    </div>
   </div>
 </body>
 
