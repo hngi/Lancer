@@ -85,13 +85,18 @@
             padding: 30px;
         }
 
+        .cree:focus,
+        .cree:focus-within {
+            border: 4px solid #999999;
+        }
+
         section {
             /* width: 80%; */
             margin: auto;
             /* position: relative; */
         }
          .a-next {
-            background: rgba(196, 196, 196, 0.4);
+            background: rgba(207, 204, 204, 0.4);
             width: 200px;
             padding: 20px;
             margin: auto;
@@ -99,6 +104,8 @@
             font-size: 24px;
             font-weight: bold;
             color: white;
+            margin-top: 12px;
+            clear: both;
         }
         
         .a-next a {
@@ -112,6 +119,7 @@
             width: fit-content;
         }
         .dropbtn, .project {
+            /* margin-top: 37px; */
             width: 100%;
             height: 75px;
             padding: 10px;
@@ -120,6 +128,7 @@
 
         }
         .project {
+            /* margin-top: 30px; */
             border: 2px solid rgba(145, 145, 145, 0.4);
             height: 60px;
             width: 93% !important;
@@ -154,7 +163,7 @@
 
         .est {
             color: white; 
-            background:  #0ABAB5;;
+            background:  #0ABAB5;
             font-weight: bold;
             font-size: 28px;
             line-height: 32px;
@@ -190,6 +199,12 @@
         }
         .hidden {
             display: none;
+        }
+        .disabled {
+            cursor: not-allowed;
+        }
+        .box {
+            min-height: 180px;
         }
 
     @media screen and (min-width: 600px) {
@@ -241,20 +256,24 @@
             <button class="close"  id="close"><img  src="https://res.cloudinary.com/celx/image/upload/v1570718446/vhmdnd4sf3f5w3burj4m.svg" alt=""></button></li>
             <h4 class="c-estimate" >Create Estimate</h4>
            <!-- <ul class="heading-container"> -->
-               <a class="next" href="#">NEXT</a>
+               <a class="next disabled" href="#" >NEXT</a>
        </header>
        <section>
            <h1>What project are you estimating</h1>
            <div class="cree">
                <div class="lists">
-                   <h3 class="first-head"><h3>A previously created project</h3></p>
-                   <p class="contents">Find estimate for the previously created project, by</p>
-                       doing so the estimate gets populated with some of the data
-                   </p>
+                   <div class="box">
+                        <h3 class="first-head"><h3>A previously created project</h3></p>
+                        <p class="contents">Find estimate for the previously created project, by
+                            doing so the estimate gets populated with some of the data
+                        </p>
+                   </div>
+                  
                    <div class="contents dropdown">
-                           <select class="dropbtn" name="" id="">
-                               <option value="">Select Project</option>
-                               <option value="">Select Project</option>
+                           <select class="dropbtn" name="" onmouseout="verifyPath()" id="projectSelect">
+                               <option>Select Project</option>
+                               <option>Glacier Fintech App</option>
+                               <option> AB Technology Solutions Branding</option>
                            </select>  
                            <!-- <i class="fa fa-caret-down"></i> -->
                            
@@ -265,18 +284,21 @@
    
            <div class="cree">
                    <div class="lists glacier">
-                       <h3 class="first-head">A new project</h3>
-                       <p class="contents">Create a new estimate and set up a new project <br />
-                           based on the information 
-                       </p>
+                       <div class="box">
+                            <h3 class="first-head">A new project</h3>
+                            <p class="contents">Create a new estimate and set up a new project <br />
+                                based on the information 
+                            </p>
+                       </div>
+                      
                        <div class="contents project">
-                           <input class="l-proj" type="text" placeholder= "Project Name" name="" id="">
+                           <input class="l-proj" type="text" onmouseout="verifyPath()" placeholder= "Project Name" name="" id="createProject">
                            <br>
                            <span class="req">Required</span></div>
        
                    </div>
                </div>
-               <button class="a-next"><a href="#">NEXT</a></button>
+               <button class="a-next disabled"><a href="#">NEXT</a></button>
        </section>
     </div>
 
@@ -298,7 +320,34 @@
         document.querySelector('#estimate').classList.remove('hidden');
         document.querySelector('#Create_estimate').classList.add('hidden');
 
-    })
+    });
+
+        //createProject = '';
+    
+    
+    
+
+    function verifyPath(){
+        let createProject = document.getElementById('createProject').value;
+        let projectSelect = document.getElementById('projectSelect');
+
+        let ele = projectSelect.selectedIndex;
+
+        if ( createProject !== "" || ele !== 0 ){
+            document.querySelector('.a-next').style.background = '#0ABAB5';
+            document.querySelector('.next').style.background = '#0ABAB5';
+            
+            document.querySelector('.a-next').classList.remove('disabled');
+            document.querySelector('.next').classList.remove('disabled');
+        } else {
+            //console.log('here works');
+            document.querySelector('.next').style.background = 'rgba(207, 204, 204, 0.4)';
+            document.querySelector('.next').classList.add('disabled');
+            document.querySelector('.a-next').style.background = 'rgba(207, 204, 204, 0.4)';
+            document.querySelector('.a-next').classList.add('disabled');
+        }
+        
+    }
     </script>
     
 </body>
