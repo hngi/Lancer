@@ -1,53 +1,205 @@
 <!DOCTYPE html>
 <html class="no-js">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Mentor Setup Page | 2</title>
-        <meta name="description" content="mentors">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link href="https://fonts.googleapis.com/css?family=Open+Sans|Ubuntu|Pacifico&display=swap" rel="stylesheet">
-        <link rel="stylesheet" type="text/css" href="mentorPage2.css">
-        <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-        <script src="https://use.fontawesome.com/185cfd0ddc.js"></script>
-        <style>
-            /*body style*/
-            body {
-                font-family: 'Ubuntu';
-            }
-            * {
-                box-sizing: border-box;
-            }
-            .block {
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Mentor Setup Page | 2</title>
+    <meta name="description" content="mentors">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans|Ubuntu|Pacifico&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="mentorPage2.css">
+    <link rel="stylesheet" type="text/css"
+        href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://use.fontawesome.com/185cfd0ddc.js"></script>
+    <style>
+        /*body style*/
+        body {
+            font-family: 'Ubuntu';
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        .block {
+            display: block;
+            border: none;
+            background-color: rgb(81, 216, 211);
+            padding: 8px 14px;
+            font-size: 16px;
+            color: white;
+            cursor: pointer;
+        }
+
+        /* side nav styling by lavidegeorge  */
+        ul {
+            list-style: none;
+            margin: 0%;
+            padding-inline-start: 0%;
+        }
+
+        body {
+            margin: 0%;
+            padding: 0%;
+        }
+
+        .kc-logo {
+            width: 200px;
+            display: flex;
+            justify-content: center;
+            background: #091429;
+            color: #ffffff;
+            padding: 1rem;
+            font-family: 'Open Sans', sans-serif;
+        }
+
+        #kc-side-btn {
+            width: 30px;
+            height: 30px;
+            margin-right: 10px;
+        }
+
+        #kc-aside {
+            width: 200px;
+            height: calc(100vh - 65px);
+            display: flex;
+            justify-content: center;
+            background: #091429;
+            color: #ffffff;
+            padding: 1rem;
+            font-family: 'Open Sans', sans-serif;
+            transition: .5s ease-in-out;
+        }
+
+        .kc-side-nav {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .kc-side-nav ul li {
+            font-size: .8em;
+            width: 100%;
+            height: 70px;
+            display: flex;
+            align-items: center;
+            /* justify-content: center; */
+        }
+
+        .kc-icon {
+            width: 15px;
+            height: 15px;
+            margin-right: 10px;
+        }
+
+        .margin-left {
+            margin-left: 10px;
+            margin-right: 0%;
+        }
+
+        .none {
+            display: none;
+        }
+
+        .kc-trans {
+            transform: translateX(0%);
+        }
+
+        /* MEDIA Q */
+        @media only screen and (max-width: 600px) {
+            .none {
                 display: block;
-                border: none;
-                background-color: rgb(81, 216, 211); 
-                padding: 8px 14px;
-                font-size: 16px;
-                color: white;
-                cursor: pointer;
             }
-       
-        </style>
-    </head>
-    <body>
 
-        <!--navigation-bar-->
-        <!--Side bar-->
-        <!--Body Section-->
-        <button type="button" class="block">Create Estimate</button>
-        <h2>Estimate helps you place value to your work</h2>
-        <p>Create an estimate and easily convert it to an invoice and send to your client</p>
-        
-        <!--FooterSection-->
-        
+            #kc-aside {
+                transform: translateX(-100%);
+                height: auto;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!--navigation-bar-->
+    <!--Side bar by lavidegeorge -->
+    <div class="kc-logo">
+        <img src="/Lancer/img/button.png" class="none" id="kc-side-btn" alt="">
+        <img src="/Lancer/img/Lancers.png" alt="Lancer-Logo">
+    </div>
+    <aside id="kc-aside">
+
+        <div class="kc-side-nav">
+            <ul>
+                <li>
+                    <img src="/Lancer/img/home.png" class="kc-icon" alt="">
+                    Dasboard
+                </li>
+                <li>
+                    <img src="/Lancer/img/client.png" class="kc-icon" alt="">
+                    Client
+                </li>
+                <li>
+                    <img src="/Lancer/img/lightbulb.png" class="kc-icon" alt="">
+                    Project
+                    <img src="/Lancer/img/expand.png" class="kc-icon margin-left" alt="">
+                </li>
+                <li>
+                    <img src="/Lancer/img/invoice.png" class="kc-icon" alt="">
+                    Invoice
+                </li>
+                <li>
+                    <img src="/Lancer/img/contract.png" class="kc-icon" alt="">
+                    Contract
+                </li>
+                <li>
+                    <img src="/Lancer/img/proposal.png" class="kc-icon" alt="">
+                    Proposals
+                </li>
+            </ul>
+        </div>
+    </aside>
+    <!--Body Section-->
+    <div class="body">
+            <button type="button" class="block">Create Estimate</button>
+            <h2>Estimate helps you place value to your work</h2>
+            <p>Create an estimate and easily convert it to an invoice and send to your client</p>
+    </div>
+
+    <!--FooterSection-->
 
 
 
 
-        
-        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-    </body>
+
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+    </script>
+</body>
+<script>
+    const sideBtn = document.getElementById('kc-side-btn');
+    sideBtn.addEventListener('click', () => {
+        const x = window.matchMedia("(max-width: 600px)");
+        if (x.matches) {
+            const sideNav = document.getElementById('kc-aside');
+            if (sideNav.style.transform = 'translateX(-100%)') {
+                sideNav.style.transform = 'translateX(0%)';
+                console.log(true);
+            } else {
+                console.log(false);
+                sideNav.style.transform = 'translateX(-100%)'
+            }
+        }
+    })
+</script>
+
 </html>
