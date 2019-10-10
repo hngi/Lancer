@@ -112,6 +112,7 @@
 
         .msg{
             color: red;
+            padding: 5px 5px;
         }
 
         
@@ -171,9 +172,10 @@
         <div class="row align-items-center mt-5 form-container">
             
             <h5 class="form_title">Profile Setting</h5>
-            <label for="" class="msg"></label>
+            
            <div class="col-sm-8 offset-md-5 profile_form mt-5 pl-5 pr-5 pt-4 pb-4">
                 <form id="profileForm">
+                        <label for="" class="msg"></label>
                     <div class="form-group">
                         <div class="names">
                             <div class="firstname">
@@ -242,14 +244,17 @@
     const conPassword = document.querySelector("#cpassword");
     const msg = document.querySelector(".msg");
     const submitButton = document.querySelector(".mybtn");
-    let form =  document.querySelector("#profileForm");
+    const form =  document.querySelector("#profileForm");
+
+
+    
 
     submitButton.addEventListener('click', (e) => {
         e.preventDefault();
         msg.textContent = " ";
-        if(firstName.value === ' '|| lastName.value === ' ' || email.value === ' ' || title.value === ' '  || password.value === ' ' || newPassword.value === ' ' || conPassword.value === ' '){
+        if(firstName.value == ' ' || lastName.value === ' ' || email.value === ' ' || title.value === ' '  || password.value === ' ' || newPassword.value === ' ' || conPassword.value === ' '){
             msg.textContent = "Please, fill all required fields";
-            msg.style.color = "red";
+            //msg.style.color = "red";
             return false;
          }
     });
@@ -258,7 +263,7 @@
         msg.textContent = " ";
         const validator = /^[a-zA-Z]+(([',. -][a-zA-Z ])?[a-zA-Z]*)*$/g;
         if (!validator.test(firstName.value)) {
-            msg.textContent = "Please, enter valid first name & not numbers numbers";
+            msg.textContent = "Please, enter valid first name & not numbers";
             //error.style.color = "red";
             return false;
         } 
@@ -268,7 +273,7 @@
         msg.textContent = " ";
         const validator = /^[a-zA-Z]+(([',. -][a-zA-Z ])?[a-zA-Z]*)*$/g;
         if (!validator.test(lastName.value)) {
-            msg.textContent = "Please, enter valid last name & not numbers numbers";
+            msg.textContent = "Please, enter valid last name & not numbers";
             //msg.style.color = "red";
             return false;
         } 
@@ -285,7 +290,6 @@
     });
 
     
-
     email.addEventListener('input', (e) => {
         msg.textContent = " ";
         const validator = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
@@ -298,7 +302,7 @@
 
     password.addEventListener('input', (e) => {
         msg.textContent = " ";
-        const validator = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#\$%\^&\*])(?=.{8,})/;
+        const validator = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[#$^+=!*()@%&]).{8,}$/;
         
         if (!validator.test(password.value)) {
             msg.textContent = "Password must contain 1 lower and 1 uppercase alphabet, must contain a special character and must not be less than 8 character length";
@@ -307,11 +311,12 @@
         } 
     });
 
+   
     newPassword.addEventListener('input', (e) => {
         msg.textContent = " ";
-        const validator = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#\$%\^&\*])(?=.{8,})/;
+        const validator = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[#$^+=!*()@%&]).{8,}$/;
         
-        if (!validator.test(password.value)) {
+        if (!validator.test(newPassword.value)) {
             msg.textContent = "Password must contain 1 lower and 1 uppercase alphabet, must contain a special character and must not be less than 8 character length";
             //msg.style.color = "red";
             return false;
