@@ -88,31 +88,70 @@
 
     td,
     th {
-        padding: 10px;
+        padding: 0 30px 10px;
         text-align: left;
     }
+thead, .table-date {
+        font-family: Ubuntu;
+        font-weight: bold;
+        font-size: 14px;
+        line-height: 28px;
+        color: #A6A6A6;
+}
+tbody, .bold {
 
+        font-family: Ubuntu;
+        font-size: .97rem;
+        font-weight: 500;
+        line-height: 1.5;
+        color: #212529;
+     }
+     .tableAmount {
+        font-weight: 900;
+        font-size: 1.05rem;
+     }
+     .invoice-main {
+      width: 100%;
+     }
     .invoice-container {
         position: relative;
         top: 10rem;
-        width: 50%;
-        margin-left: 21%;
+        width: 80.5vh;
+        margin-left: 4.5rem;
+        background: #FFFFFF;
+        border: 1px solid #C4C4C4;
+        box-sizing: border-box;
+        margin-bottom: 2rem;
     }
-
+.invoice-table {
+  padding-bottom: 2rem;
+  padding-left: 1rem;
+}
+.removeBorder  {
+    padding: .75rem;
+    vertical-align: top;
+    border-top: none !important;
+}
+.thickLine {
+    padding: .75rem;
+    vertical-align: top;
+    border-top: 3px solid #000 !important;
+}
     .logo-img {
-        width: 9rem;
+        width: 7.5rem;
         float: right;
     }
-
-    .table-date {
-        position: relative;
-        color: red;
-    }
-
     h1 {
         color: rgb(66, 58, 58);
-        font-size: 24px;
+        font-size: 26px;
+        font-family: Ubuntu;
+        font-style: normal;
+        font-weight: bold;
+        color: #546067;
     }
+    p {
+        margin-bottom: .5rem;
+      }
 /*
     #showcase {
         padding: 20px;
@@ -244,6 +283,54 @@ svg {
     color: #0ABAB5;
 }
 
+@media (max-width: 992px) {
+    td,
+    th {
+        padding: 0 10px 5px;
+    }
+thead, .table-date {
+        font-size: 12px;
+        line-height: 14px;
+}
+tbody, .bold {
+        font-size: .907rem;
+        line-height: 1.2;
+     }
+     .tableAmount {
+        font-weight: 900;
+        font-size: .9rem;
+     }
+     .invoice-main {
+      width: 100%;
+     }
+    .invoice-container {
+        position: relative;
+        top: 10rem;
+        width: 70.5vh;
+        margin-left: 4.5rem;
+        background: #FFFFFF;
+        border: 1px solid #C4C4C4;
+        box-sizing: border-box;
+        margin-bottom: 2rem;
+    }
+.invoice-table {
+  padding-left: 0;
+}
+.thickLine {
+    border-top: 2px solid #000 !important;
+}
+    .logo-img {
+        width: 5.5rem;
+        float: right;
+    }
+    h1 {
+        font-size: 20px;
+    }
+    p {
+        margin-bottom: .2rem;
+        font-size: .8rem;
+      }
+}
 @media (min-width: 768px) {
   #sidebar-wrapper {
     margin-left: 0;
@@ -360,9 +447,9 @@ svg {
       </nav> 
 
     <section class="invoice-main ">
-        <div class="container shadow invoice-container ">
+        <div class="container invoice-container ">
             <section id="showcase ">
-                <div class="row container pt-5 ">
+                <div class="row container pt-4 ">
                     <div class="col-6 mb-4">
                         <h1> Invoice </h1>
                         <address contenteditable="">
@@ -381,46 +468,35 @@ svg {
                     <thead>
                         <tr>
                             <th> Bill to</th>
-
                             <th> Issue Date </th>
-                            <th></th>
                             <th> Hourly Rate</th>
                         </tr>
                     </thead>
+                    <tbody>
                     <tr>
-                        <br>
                         <td><span contenteditable="">John Doe</span> </td>
-                        <td><span contenteditable=""> 18th September 2019</td>
-                        <td> N/A</td>
-
-                           
-
-                            
+                        <td><span contenteditable=""> 18th September 2019</span></td>
+                        <td> N/A</td>      
                     </tr>
                     <tr>
-                        <td><span contenteditable="">Johndoe@gmail.com</span></td>
+                      <td><span contenteditable="">Johndoe@gmail.com</span></td>
                         <td></td>
                         <td></td>
                     </tr>
                     <tr>
                         <td><span contenteditable="">Accra, Ghana</span> </td>
+                        <th class="table-date"> Due Date</th>
+                        <th class="table-date"> Amount Due</th>
                     </tr>
-
-                    <tr class="table-date">
-                        <th></th>
-                        <th> Due Date</th>
-                        <th> Amount Due</th>
+                    <tr>
+                      <td></td>
+                      <td><span contenteditable="">28th September 2019</span> </td>
+                      <td><span contenteditable="" class="tableAmount">NGN 38,500</span> </td>
                     </tr>
-
-                    <tr class="table-date">
-                        <td></td>
-                        <td><span contenteditable="">28th September 2019</span> </td>
-                        <td><span contenteditable="">NGN 38,500</span> </td>
-                    </tr>
-
+                  </tbody>
                 </table>
                 
-            <section class="invoice-description mt-5    ">
+            <section class="invoice-description mt-4    ">
 
                     <table class="table table-responsive container " style="width: 100%">
                         <thead class="thead-dark">
@@ -454,37 +530,58 @@ svg {
                                 <td colspan="4">Sed ut perspiciatis unde omnis iste</td>
                                 <td>10</td>
                                 <td></td>
-                                <td>NGN3500</td>
+                                <td>NGN1700</td>
                                 <td></td>
-                                <td>NGN3500</td>
+                                <td>NGN17000</td>
                             </tr>
                             <tr>
                                 <td colspan="4">Sed ut perspiciatis unde omnis iste</td>
     
                                 <td>15</td>
                                 <td></td>
-                                <td>NGN3500</td>
+                                <td>NGN1200</td>
                                 <td></td>
-                                <td>NGN3500</td>
+                                <td>NGN18000</td>
+                            </tr>
+                          <tr>
+                           <td colspan="4"></td>
+                              <td></td>
+                              <td></td>
+                              <td>Total</td>
+                              <td></td>
+                              <td>NGN38500</td>
                             </tr>
                         </tbody>
+                        <tfoot>
+                            <tr>
+                              
+                           <td class="removeBorder" colspan="4"></td>
+                              <td class="removeBorder"></td>
+                              <td class="removeBorder table-date" colspan="2" style="text-align: right;">Discount</td>
+                              <td class="removeBorder"></td>
+                              <td class="removeBorder bold">N/A</td>
+                            </tr>
+                            <tr>
+                           <td class="removeBorder" colspan="4"></td>
+                              <td class="removeBorder"></td>
+                              <td class="thickLine bold" colspan="2" style="text-align: right;">Amount Due</td>
+                              <td class="thickLine"></td>
+                              <td class="thickLine bold">NGN38500</td>
+                            </tr>
+                          </tfoot>
                     </table>
-                   
                 </section>
-                </div>
-            </section>
-        </div>
-<!---
-        <section class="invoice-table" style="position: relative; top: 30rem">
+
+                <section class="invoice-table" style="position: relative; top: 0rem">
                 <section class="note">
                     <h5> Note</h5>
                     <p> Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium dolor laudantium, totam
                         rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi.</p>
                 </section>
+                </section>
+                </div>
             </section>
-        </section>
-        </section>
-    -->
+    
 
 
 
