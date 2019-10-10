@@ -94,60 +94,28 @@
 
     .invoice-container {
         position: relative;
-        top: 10rem;
-        width: 50%;
-        margin-left: 21%;
+        top: 5rem;
+        width: 60%;
+        margin-left: 20%;
     }
 
     .logo-img {
-        width: 9rem;
+        width: 180px;
         float: right;
+        height: 240px;
+        margin-top: 2rem;
     }
 
-    .table-date {
-        position: relative;
-        color: red;
-    }
-
-    h1 {
+h1 {
         color: rgb(66, 58, 58);
         font-size: 24px;
-    }
-/*
-    #showcase {
-        padding: 20px;
-
-    }
-
-    table {
-        border-spacing: 5px;
-    }
-
-    td,
-    th {
-        padding: 10px;
-        text-align: left;
-    }
-
-    .invoice-container {
-        position: relative;
-        top: 10rem;
-        width: 50%;
-        margin-left: 21%;
-        float: right;
-    }
-
-    .logo-img {
-        width: 9rem;
-        float: right;
-    }
-    */
-    body {
+}
+body {
   overflow-x: hidden;
 }
 #sidebar-wrapper {
-  height: 80vh;
-  width: 22vh;
+  height: 90vh;
+  width: 30vh;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)!important;
   -webkit-transition: margin .25s ease-out;
   -moz-transition: margin .25s ease-out;
@@ -244,6 +212,22 @@ svg {
     color: #0ABAB5;
 }
 
+h1{
+    font-family: Ubuntu;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 5rem;
+    line-height: 6rem;
+    color: #546067;
+
+}
+.footer-text{
+    font-family: Ubuntu;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 1rem;
+    line-height: 28px;
+}
 @media (min-width: 768px) {
   #sidebar-wrapper {
     margin-left: 0;
@@ -264,25 +248,6 @@ svg {
     
 
 
-<!---
-    <section class="navbar-section"></section>
-    
-    <section class="sidebar-section"></section>
-    <section>
-            <a href="" class="logo-font">Lan<span>c</span>ers</a><br>
-            <nav>
-                <ol>
-                    <li><a href=""> <img src="images/svg/home.svg" alt=""> Dashboard</a></li>
-                    <li><a href=""> <img src="images/svg/client.svg" alt=""> Client</a></li>
-                    <li><a href=""> <img src="images/svg/project.svg" alt=""> Project</a></li>
-                    <li><a href=""> <img src="images/svg/invoice.svg" alt=""> Invoice</a></li>
-                    <li><a href=""> <img src="images/svg/contract.svg" alt=""> Contract</a></li>
-                    <li><a href=""> <img src="images/svg/proposals.svg" alt=""> Proposals</a></li>
-                </ol>
-    
-            </nav>
-        </section>
-    -->
     <div class="d-flex" id="wrapper">
 
     <!-- Sidebar -->
@@ -359,10 +324,21 @@ svg {
         </div>
       </nav> 
 
+      <section class="invoice-body"> 
+          <div class="container ">
+              <div class="row mt-5 ml-4">
+                <button type="button" class="btn btn-outline-dark ">Print</button>
+                <button type="button" class="btn btn-outline-dark ml-4">Download as PDF   </button>
+                <button type="button" class="btn btn-outline-dark m-1 ml-auto">Edit</button>
+                <button type="button" class="btn btn-primary">Other actions</button>
+              </div>
+          </div>
+      </section>
+
     <section class="invoice-main ">
         <div class="container shadow invoice-container ">
             <section id="showcase ">
-                <div class="row container pt-5 ">
+                <div class="row container pt-3 ">
                     <div class="col-6 mb-4">
                         <h1> Invoice </h1>
                         <address contenteditable="">
@@ -385,37 +361,38 @@ svg {
                             <th> Issue Date </th>
                             <th></th>
                             <th> Hourly Rate</th>
-                        </tr>
+                          
+                          </tr>
                     </thead>
                     <tr>
                         <br>
                         <td><span contenteditable="">John Doe</span> </td>
                         <td><span contenteditable=""> 18th September 2019</td>
-                        <td> N/A</td>
-
-                           
-
-                            
+                        <td></td>
+                        <td> N/A</td>                            
                     </tr>
                     <tr>
                         <td><span contenteditable="">Johndoe@gmail.com</span></td>
-                        <td></td>
-                        <td></td>
+                        
                     </tr>
                     <tr>
-                        <td><span contenteditable="">Accra, Ghana</span> </td>
+                        <td>Accra, Ghana   </td>
                     </tr>
 
                     <tr class="table-date">
                         <th></th>
                         <th> Due Date</th>
+                        <th></th>
                         <th> Amount Due</th>
                     </tr>
 
                     <tr class="table-date">
                         <td></td>
                         <td><span contenteditable="">28th September 2019</span> </td>
+                        <td></td>
                         <td><span contenteditable="">NGN 38,500</span> </td>
+                        <td></td>
+                        <td> <span contenteditable=""> </span></td>
                     </tr>
 
                 </table>
@@ -423,7 +400,7 @@ svg {
             <section class="invoice-description mt-5    ">
 
                     <table class="table table-responsive container " style="width: 100%">
-                        <thead class="thead-dark">
+                        <thead class="" style="background-color: #009FFF; color: white">
                             <tr>
                                 <th scope="col" class="">Description</th>
                                 <th> </th>
@@ -438,7 +415,7 @@ svg {
     
                                 <th></th>
                                 <th scope="col">Amount</th>
-    
+                                
                             </tr>
                         </thead>
                         <tbody>
@@ -449,6 +426,7 @@ svg {
                                 <td>NGN3500</td>
                                 <td></td>
                                 <td>NGN3500</td>
+                               
                             </tr>
                             <tr>
                                 <td colspan="4">Sed ut perspiciatis unde omnis iste</td>
@@ -467,29 +445,65 @@ svg {
                                 <td></td>
                                 <td>NGN3500</td>
                             </tr>
+                            
+                          <tr style="border: none">
+                              <th></th>
+                              <th></th>
+                              <th></th>
+                              <th></th>
+                              <th></th>
+                              <th></th>
+                              <th > Total</th>
+                              <th></th>
+                              
+                              <th> N38500   </th>
+                          </tr>
+
+                          <tr style="border: none">
+                              <td style="border: none"></td>
+                              <td style="border: none"></td>
+                              <td style="border: none"></td> 
+                              <td style="border: none"></td>     
+                              <td style="border: none"></td> 
+                              <td style="border: none" ></td>
+                              <td style="border: none">Discount</td>
+                              <td style="border: none"></td>
+                              <td style="border: none"> <strong> N/A</strong></td>
+                          </tr>
+                          
+                          <tr>
+                              <th style="border: none"></th>
+                              <th style="border: none"></th>
+                              <th style="border: none"></th>
+                              <th style="border: none"></th>
+                              <th style="border: none"></th>
+                              <th > </th>
+                              <th> Amount Due</th>
+                              <th></th>
+                              <th> NGN38,500</th>  
+                          </tr>
+
                         </tbody>
+                        
                     </table>
-                   
+                    
+                </section>
+                <section>
+                        <div class="container">
+                            <h5> Notes</h5>
+                            <p class="footer-text">
+                                Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium dolor laudantium,
+                                totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi.
+                            </p>
+                            <div style="height: 2rem"></div>
+                        </div>
                 </section>
                 </div>
+              
             </section>
+            
         </div>
-<!---
-        <section class="invoice-table" style="position: relative; top: 30rem">
-                <section class="note">
-                    <h5> Note</h5>
-                    <p> Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium dolor laudantium, totam
-                        rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi.</p>
-                </section>
-            </section>
-        </section>
-        </section>
-    -->
 
-
-
-
-       
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
