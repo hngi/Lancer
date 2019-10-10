@@ -77,6 +77,46 @@
             background-color: red;
         }
 
+        @media only screen and (max-width: 770px) {
+            .register{
+                margin-top: 0px;
+                text-align: center;                
+            }
+            .register li {
+                text-align: initial;
+            }
+            h2{
+                font-size: 2px larger;
+            }
+            h5{
+                font-size: larger;
+            }
+            .float-left{
+                text-align: center;
+                margin-left: 100px;
+            }
+        }
+
+        @media only screen and (max-width: 360px) {
+            .register{
+                margin-top: 0px;
+                text-align: center;                
+            }
+            .register li {
+                text-align: initial;
+            }
+            h2{
+                font-size: 1px larger;
+            }
+            h5{
+                font-size: large;
+            }
+            .float-left{
+                text-align: center;
+                margin-left: 100px;
+            }
+        }
+
     </style>
 </head>
 
@@ -96,7 +136,7 @@
                 <ul class="list">
                     <li><h5>- The document generator</h5></li>
                     <li><h5>- Our project management features</h5></li>
-                    <li><h5>- Much more</h5></li>
+                    <li><h5>- Much more...</h5></li>
                 </ul>
             </div>
             <div class="col-md-5 offset-md-1 signinform mt-5 pl-5 pr-5 pt-4 pb-4">
@@ -115,7 +155,7 @@
                     <div class="form-group">
                         <label for="my-password">Password</label>
                         <input id="password" class="form-control" type="password" name="my-password" placeholder=""> 
-                        <span id="pmessage"></span>
+                        <span id="pmessage" ></span>
                     </div>
                     <div class="form-group">
                             <label for="my-password">Password Confirmation</label>
