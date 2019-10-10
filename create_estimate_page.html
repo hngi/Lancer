@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Create Estimate</title>
+
+    <style>
+        * {
+            margin-right: 0px;
+            margin-left: 0px;
+            font-family: Ubuntu;
+        }
+        body {
+            margin-top: 0px;
+        }
+        ul {
+            display: inline-block;
+            float: right;   
+            width: fit-content;
+            padding-inline-start: 10px;
+            margin-top: 24px;
+            
+        }
+
+        li {
+            
+            display: inline;
+        }
+
+        button {
+            float: left;
+            width: 80px;
+            background: #ffffff;
+            border: none;
+            height: 100%;
+            border-right: 2px solid rgba(196, 196, 196, 0.4);
+        }
+        header {
+            padding-right: 0px !important;
+            padding-top: 0px !important;
+            padding-bottom: 0px !important;
+            overflow: hidden;
+            height: 80px;
+            padding: 5px;
+            border-bottom: 4px solid;
+            border-bottom-color: rgba(196, 196, 196, 0.4);   
+        }
+        .c-estimate {
+            width: fit-content;
+            float: left; 
+            /* margin-left: auto; */
+            /* margin-right: auto; */
+            align-content: center;
+            margin-left: 2%;
+            margin-top: 30px;
+            font-weight: bold;
+            font-size: 20px;
+            line-height: 33px;
+        }
+        a {
+            text-decoration: none;
+        }
+        .next a {
+            color: #ffffff;
+        }
+        .next {
+            width: 10px;
+            padding: 26px;
+            background: rgba(196, 196, 196, 0.4);
+            float: right;
+            font-size: 24px;
+            font-weight: bold;
+            padding-right: 98px;
+            padding-left: 47px;
+            color: white;
+}
+        .cree {
+            width: 80%;
+            float: left;
+            margin: 10px;
+            border: 1px solid #999999;
+            min-height: 300px;
+            padding: 30px;
+        }
+
+        section {
+            /* width: 80%; */
+            margin: auto;
+            /* position: relative; */
+        }
+         .a-next {
+            background: rgba(196, 196, 196, 0.4);
+            width: 200px;
+            padding: 20px;
+            margin: auto;
+            margin-left: 27%;
+            font-size: 24px;
+            font-weight: bold;
+            color: white;
+        }
+        
+        .a-next a {
+            color: white;
+        }
+        p, h3 {
+            width: fit-content;
+
+        }
+        .lists {
+            width: fit-content;
+        }
+        .dropbtn, .project {
+            width: 100%;
+            height: 75px;
+            padding: 10px;
+            border: 1px solid rgba(145, 145, 145, 0.4);
+            /* box-sizing: border-box; */
+
+        }
+        .project {
+            border: 2px solid rgba(145, 145, 145, 0.4);
+            height: 60px;
+            width: 93% !important;
+            overflow: hidden;
+        }
+        .l-proj {
+            height: 47px;
+            border: none;
+            width: 100%;
+        }
+        .l-proj::placeholder {
+            font-family: Ubuntu;
+            font-size: 20px;
+        }
+        .l-proj:focus {
+            border: none;
+        }
+        .req {
+            /* margin-left: 221px; */
+
+            float: right;
+        }
+        .signup {
+            background: #0ABAB5;
+            width: 145px;
+            height: 54px;
+            font-weight: 500;
+            font-size: 18px;
+            line-height: 21px;
+            color: white;
+        }
+
+        .est {
+            color: white; 
+            background:  #0ABAB5;;
+            font-weight: bold;
+            font-size: 28px;
+            line-height: 32px;
+            padding: 10px;
+            text-align: center;
+            padding-top: 10px !important;
+        }
+        li {
+            padding: 15px;
+            margin: 8px !important;
+            margin-top: 21px;
+        }
+        li a {
+            margin: 1px;
+            padding: 1px;
+            color: black;
+
+        }
+
+        #new_user {
+            margin-top: 20px;
+            margin-left: 2%;
+        }
+        .shift {
+            font-weight: bold;
+            font-size: 28px;
+            line-height: 32px;
+        }
+        .login {
+            font-weight: 500;
+            font-size: 18px;
+            line-height: 21px;
+        }
+        .hidden {
+            display: none;
+        }
+
+    @media screen and (min-width: 600px) {
+        section {
+            margin-left: 18% !important;
+            min-height: 500px;
+            overflow: hidden;
+        }
+        .cree {
+            width: 30%;
+        }
+        .a-next {
+            margin-left: 29%;
+        }
+        .c-estimate {
+            margin-left: 35%;
+            font-size: 27px;
+        }
+        .shift {
+            margin-left: 18% !important;
+        }
+}
+    </style>
+</head>
+<body>
+    <div id="estimate">
+        <header>
+            <span class = "c-estimate shift">Estimates</span>
+            <ul>
+                <li class="login"><a  href="#">Login</a></li>
+                <li class = "signup" ><a class = "signup" href="">Signup</a></li>
+            </ul>
+
+        </header>
+        <section id="new_user">
+            <div>
+                <a class="btn est" id="est_content" href="#">Create Estimate</a> <br>
+                <h2><p class = "pad">Estimates helps you place value to your work and time!</p></h2>
+                <p class = "pad"><h5 class = "pad">Create and estimate and easily convert it to your invoice and send to your client</h5></p>
+            </div>
+        </section>
+    </div>
+
+
+
+
+    <div id="Create_estimate" class="hidden">
+        <header>
+            <button class="close"  id="close"><img  src="https://res.cloudinary.com/celx/image/upload/v1570718446/vhmdnd4sf3f5w3burj4m.svg" alt=""></button></li>
+            <h4 class="c-estimate" >Create Estimate</h4>
+           <!-- <ul class="heading-container"> -->
+               <a class="next" href="#">NEXT</a>
+       </header>
+       <section>
+           <h1>What project are you estimating</h1>
+           <div class="cree">
+               <div class="lists">
+                   <h3 class="first-head"><h3>A previously created project</h3></p>
+                   <p class="contents">Find estimate for the previously created project, by</p>
+                       doing so the estimate gets populated with some of the data
+                   </p>
+                   <div class="contents dropdown">
+                           <select class="dropbtn" name="" id="">
+                               <option value="">Select Project</option>
+                               <option value="">Select Project</option>
+                           </select>  
+                           <!-- <i class="fa fa-caret-down"></i> -->
+                           
+                   </div>
+               </div>
+           </div>
+   
+   
+           <div class="cree">
+                   <div class="lists glacier">
+                       <h3 class="first-head">A new project</h3>
+                       <p class="contents">Create a new estimate and set up a new project <br />
+                           based on the information 
+                       </p>
+                       <div class="contents project">
+                           <input class="l-proj" type="text" placeholder= "Project Name" name="" id="">
+                           <br>
+                           <span class="req">Required</span></div>
+       
+                   </div>
+               </div>
+               <button class="a-next"><a href="#">NEXT</a></button>
+       </section>
+    </div>
+
+    <script>
+    let est_content = document.querySelector('#est_content');
+    let estimate_page = document.querySelector('#Create_estimate');
+
+    let hide = () => {
+       // estimate_page.classList.add('hidden');
+       document.querySelector('#Create_estimate').classList.remove('hidden');
+       document.querySelector('#estimate').classList.add('hidden');
+       
+    }
+
+    est_content.addEventListener('click', hide );
+
+
+    document.querySelector('#close').addEventListener('click', () => {
+        document.querySelector('#estimate').classList.remove('hidden');
+        document.querySelector('#Create_estimate').classList.add('hidden');
+
+    })
+    </script>
+    
+</body>
+</html>
