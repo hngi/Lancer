@@ -42,6 +42,11 @@
 	border: 0;
 }
 
+.header-container button:hover {
+	border: 4px solid #0A90ff;
+	transition: border 1s;
+}
+
 #create, #bottom-create {
 	width: 8rem;
 	background-color: #0ABAB5;
@@ -81,12 +86,22 @@ form {
 	position: relative;
 	top: 4em;
 	height: 8vh;
+	margin-bottom: 2em;
+}
+
+#bottom-create:hover {
+	font-weight: bolder;
+	background-color: #0A90ff;
+	transition: font-weight 1s, background-color 1s;
 }
 
 footer {
 	width: 30%;
-	margin: 2em auto;
+	margin-top: 2em;
+	margin-bottom: 2em;
 	padding-bottom: 2em;
+	margin-left: calc(50%);
+	transform: translateX(-50%);
 }
 
 label, input, select {
@@ -101,11 +116,14 @@ input, select {
 }
 
 #addcontact {
-	width: 50%;
+	width: 40%;
 	background-color: #fff;
 	border: 0;
 	font-weight: bolder;
-	margin: 0 auto;
+	margin-top: 1em;
+	margin-bottom: 1em;
+	margin-left: calc(25%);
+	
 }
 
 h3:last-of-type {
@@ -113,18 +131,52 @@ h3:last-of-type {
 }
 
 
-@media screen and (min-width: 800px) {
-	body {
-		background-color: red;
-	}
+@media screen and (min-width: 700px) {
 	
 	input, select {
 		display: inline-block;
 		width: 40%;
+		padding: 0.5em;
 	}
 
 	label {
 		margin-left: 0.2em;
 	}
 
+	#addcontact {
+		
+		margin-left: 0;
+		text-align: left;
+	}
+
+	footer {
+	
+	margin-left: calc(50% + 4rem);
+	transform: translateX(-50%);
+}
+
+}
+
+@media screen and (min-width: 900px) {
+	body {
+		max-width: 1020px;
+		margin: 0 auto;
+	}
+
+	label {
+		display: inline-block;
+		margin-right: 10px;
+		width: 20%;
+	}
+
+	
+
+	form h3, form h4 {
+	text-align: left;
+	margin-bottom: 1em;
+}
+	input, select {
+		margin-left: 1.5em;
+		width: 30%;
+	}
 }
