@@ -13,9 +13,15 @@
     </style>
 </head>
 <style>
+    /*
     body {
-        padding: 0%;
-        margin: 0%;
+        padding: 0% ; 
+        background: #091429;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 20%;
+        height: 550px;
     }
 
     section {
@@ -64,16 +70,14 @@
     select {
         border: 0;
     }
+    */
 
-    h1 {
-        color: rgb(66, 58, 58);
-        font-size: 24px;
+    *{
+        box-sizing: border-box;
     }
+   
 
-    #showcase {
-        padding: 20px;
-
-    }
+    
 
     table {
         border-spacing: 5px;
@@ -106,7 +110,7 @@
         color: rgb(66, 58, 58);
         font-size: 24px;
     }
-
+/*
     #showcase {
         padding: 20px;
 
@@ -127,36 +131,39 @@
         top: 10rem;
         width: 50%;
         margin-left: 21%;
+        float: right;
     }
 
     .logo-img {
         width: 9rem;
         float: right;
     }
+    */
 </style>
 
 <body>
-    <section>
-        <a href="" class="logo-font">Lan<span>c</span>ers</a><br>
-        <nav>
-            <ol>
-                <li><a href=""> <img src="images/svg/home.svg" alt=""> Dashboard</a></li>
-                <li><a href=""> <img src="images/svg/client.svg" alt=""> Client</a></li>
-                <li><a href=""> <img src="images/svg/project.svg" alt=""> Project</a></li>
-                <li><a href=""> <img src="images/svg/invoice.svg" alt=""> Invoice</a></li>
-                <li><a href=""> <img src="images/svg/contract.svg" alt=""> Contract</a></li>
-                <li><a href=""> <img src="images/svg/proposals.svg" alt=""> Proposals</a></li>
-            </ol>
-
-        </nav>
-    </section>
+    
 
 
-
+<!---
     <section class="navbar-section"></section>
-
+    
     <section class="sidebar-section"></section>
-
+    <section>
+            <a href="" class="logo-font">Lan<span>c</span>ers</a><br>
+            <nav>
+                <ol>
+                    <li><a href=""> <img src="images/svg/home.svg" alt=""> Dashboard</a></li>
+                    <li><a href=""> <img src="images/svg/client.svg" alt=""> Client</a></li>
+                    <li><a href=""> <img src="images/svg/project.svg" alt=""> Project</a></li>
+                    <li><a href=""> <img src="images/svg/invoice.svg" alt=""> Invoice</a></li>
+                    <li><a href=""> <img src="images/svg/contract.svg" alt=""> Contract</a></li>
+                    <li><a href=""> <img src="images/svg/proposals.svg" alt=""> Proposals</a></li>
+                </ol>
+    
+            </nav>
+        </section>
+    -->
     <section class="invoice-main ">
         <div class="container shadow invoice-container ">
             <section id="showcase ">
@@ -189,13 +196,11 @@
                         <br>
                         <td><span contenteditable="">John Doe</span> </td>
                         <td><span contenteditable=""> 18th September 2019</td>
-                        <<<<<<< HEAD <td> N/A</td>
+                        <td> N/A</td>
 
-                            =======
-                            <td></td>
-                            <td> N/A</td>
+                           
 
-                            >>>>>>> d9b9278ee81bbd5d60d7665e653cfc977dc517a5
+                            
                     </tr>
                     <tr>
                         <td><span contenteditable="">Johndoe@gmail.com</span></td>
@@ -203,7 +208,7 @@
                         <td></td>
                     </tr>
                     <tr>
-                        <td><span contenteditable="">Ghana</span> </td>
+                        <td><span contenteditable="">Accra, Ghana</span> </td>
                     </tr>
 
                     <tr class="table-date">
@@ -219,85 +224,77 @@
                     </tr>
 
                 </table>
-        </div>
-
-        <section class="invoice-description"></section>
-
-
-    </section>
-    <section class="invoice-table" style="position: relative; top: 30rem">
-        <section class="note">
-            <h5> Note</h5>
-            <p> Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium dolor laudantium, totam rem
-                aperiam, eaque ipsa quae ab illo inventore veritatis et quasi.</p>
-
-            </table>
-
-
+                
             <section class="invoice-description mt-5    ">
 
-                <table class="table table-responsive container " style="width: 100%">
-                    <thead class="thead-dark">
-                        <tr>
-                            <th scope="col" class="">Description</th>
-                            <th> </th>
-                            <th></th>
-                            <th></th>
-                            <th scope="col">Quantity </th>
-
-                            <th></th>
-
-                            <th scope="col">Rate </th>
-
-
-                            <th></th>
-                            <th scope="col">Amount</th>
-
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td colspan="4">Sed ut perspiciatis unde omnis iste</td>
-                            <td>1</td>
-                            <td></td>
-                            <td>NGN3500</td>
-                            <td></td>
-                            <td>NGN3500</td>
-                        </tr>
-                        <tr>
-                            <td colspan="4">Sed ut perspiciatis unde omnis iste</td>
-                            <td>10</td>
-                            <td></td>
-                            <td>NGN3500</td>
-                            <td></td>
-                            <td>NGN3500</td>
-                        </tr>
-                        <tr>
-                            <td colspan="4">Sed ut perspiciatis unde omnis iste</td>
-
-                            <td>15</td>
-                            <td></td>
-                            <td>NGN3500</td>
-                            <td></td>
-                            <td>NGN3500</td>
-                        </tr>
-                    </tbody>
-                </table>
-
+                    <table class="table table-responsive container " style="width: 100%">
+                        <thead class="thead-dark">
+                            <tr>
+                                <th scope="col" class="">Description</th>
+                                <th> </th>
+                                <th></th>
+                                <th></th>
+                                <th scope="col">Quantity </th>
+    
+                                <th></th>
+    
+                                <th scope="col">Rate </th>
+    
+    
+                                <th></th>
+                                <th scope="col">Amount</th>
+    
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td colspan="4">Sed ut perspiciatis unde omnis iste</td>
+                                <td>1</td>
+                                <td></td>
+                                <td>NGN3500</td>
+                                <td></td>
+                                <td>NGN3500</td>
+                            </tr>
+                            <tr>
+                                <td colspan="4">Sed ut perspiciatis unde omnis iste</td>
+                                <td>10</td>
+                                <td></td>
+                                <td>NGN3500</td>
+                                <td></td>
+                                <td>NGN3500</td>
+                            </tr>
+                            <tr>
+                                <td colspan="4">Sed ut perspiciatis unde omnis iste</td>
+    
+                                <td>15</td>
+                                <td></td>
+                                <td>NGN3500</td>
+                                <td></td>
+                                <td>NGN3500</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                   
+                </section>
+                </div>
             </section>
-            </div>
-        </section>
-
-
+        </div>
+<!---
         <section class="invoice-table" style="position: relative; top: 30rem">
-            <section class="note">
-                <h5> Note</h5>
-                <p> Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium dolor laudantium, totam
-                    rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi.</p>
+                <section class="note">
+                    <h5> Note</h5>
+                    <p> Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium dolor laudantium, totam
+                        rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi.</p>
+                </section>
             </section>
         </section>
-    </section>
-    </section>
+        </section>
+    -->
+
+
+
+
+       
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
