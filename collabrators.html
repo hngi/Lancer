@@ -373,6 +373,11 @@
                 flex-direction: column;
                 align-items: center;
             }
+            header .header_menu {
+            padding: 0 1rem;
+            border-right: none;
+          
+            }
 
             main {
                 margin-left: 30vw
@@ -412,10 +417,10 @@
             }
 
             .hamburger {
-                position: relative;
+                position: absolute;
                 /* z-index: 1; */
-                right: 0;
-                top: 1px;
+                right:-90% ;
+                top: 15x;
                 height: 20px;
                 width: 28px;
                 cursor: pointer;
@@ -530,7 +535,10 @@
                 .main-container {
                     width: auto !important;
                 }
-
+                .hamburger{
+                    position: absolute;
+                    right: -75%;
+                }
 
             }
 
@@ -574,6 +582,13 @@
                 .header-lists li {
                     padding-right: 1rem;
                 }
+                
+            .hamburger {
+                position: absolute;
+                /* z-index: 1; */
+                right:-45% ;
+            }
+
 
                 .hamburger-btn {
                     top: 11px;
@@ -615,6 +630,10 @@
                     align-items: center;
                     grid-row-gap: 0.5rem;
                 }
+                .hamburger{
+                    position: absolute;
+                    right: -15vw;
+                }
             }
     </style>
 </head>
@@ -649,10 +668,11 @@
                             </div>
                         </a>
                     </li>
-                    <li class="hamburger" id="menuBtn">
+                     <li class="hamburger" id="menuBtn">
                         <span class="hamburger-btn"></span>
                     </li>
                 </ul>
+               
             </div>
 
         </header>
