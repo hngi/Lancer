@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu:400,500,700&display=swap" rel="stylesheet">
+    <title>Invoice Settings</title>
+    <style>
+        body{
+    font-family: 'Ubuntu', sans-serif;
+    font-style: 20px;
+    line-height: 1.5;
+    font-weight: bold;
+
+}
+
+.settings-modal{
+    /*display: none;*/
+    position: fixed;
+    z-index: 2;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    overflow: auto;
+    background-color:rgba(69, 66, 66, 0.59);
+}
+
+.modal-content{
+    background-color: #ffffff;
+    margin: 20% auto;
+    width: 50%;
+    height: auto;
+    border-top: 5px solid #091429;
+    padding: 38px 40px 86px 83px;
+
+}
+
+.closebtn{
+    color: #ccc;
+    float: right;
+    font-size: 30px;
+}
+
+.closebtn:hover, .closebtn:focus{
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.upload-area{
+    width: 100%;
+    height: 106px;
+    border: 1px dashed #ccc;
+}
+
+.text-grey{
+    color: #ccc;
+    text-align: center;
+    padding: 5%;
+    font-weight: normal;
+}
+
+.brand-color{
+    display: grid;
+    grid-template-columns: auto 146px;
+    margin-top: 10%;
+}
+
+.color-pick{
+    float: right;
+    background-color: #091429;
+    list-style-type: none;
+    border: 1px solid black;
+    padding-right: 5px;
+}
+
+.colors{
+    background-color: #ffffff;
+    text-align: center;
+}
+
+.samples{
+    display: flex;
+    background-color: #ccc;
+    margin:auto;
+    width: 100%;
+    height: 154px;
+}
+
+.btn-text{
+    background-color: #091429;
+    color: #ffffff;
+    font-size: 24px;
+    width: 40%;
+    margin-right: 10%;
+    margin-top: 9%;
+    height: 50px;
+    text-align: center;
+
+}
+
+.title-text{
+color: #091429;
+font-size: 24px;
+margin: 10%;;
+width: 40%
+}
+
+.save-set{
+    background-color: #091429;
+    text-align: center;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    font-size: 24px;
+    color: #ffffff;
+}
+    </style>
+
+</head>
+<body>
+    <div class="settings-modal">
+        <div class="modal-content">
+            <span class="closebtn">&times;</span>
+            <p>Branding Options</p>
+            <p>Logo</p>
+            <div class="upload-area">
+                <p class="text-grey">Drag Logo here or upload file</p>
+            </div>
+            <div class="brand-color">
+                <p class="text-bc">Brand Color</p>
+                <ul class="color-pick">
+                   <li class="colors">#091429</li>
+                </ul>
+            </div>
+
+                <div class="samples">
+                    <p class="title-text">Sample Title</p>
+                    <p class="btn-text">Sample Button</p>
+                </div>
+
+                <p class="save-set">SAVE SETTINGS</p>
+        </div>
+    </div>
+</body>
+</html>
