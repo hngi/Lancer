@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0-11/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu:300,400&display=swap" rel="stylesheet">
+    <title>Profile</title>
+
+    <style>
+        body {
+            font-family: 'Ubuntu', sans-serif;
+            font-weight: 200;
+        }
+        
+        h1 {
+            font-family: 'Ubuntu', sans-serif;
+            font-weight: 300;
+            font-size: 72px;
+        }
+        
+        h4 {
+            font-family: 'Ubuntu', sans-serif;
+            font-weight: 300;
+            font-size: 32px;
+        }
+
+        .form-container{
+            width: 70%;
+            margin-left: 250px;
+        }
+        
+        .profile_form {
+            border: thin #c4c4c4 solid;
+            border-radius: 1% 1% 1% 1%;
+        }
+
+        .names, .title_text, .newpassword{
+            width: 100%;
+            overflow: hidden;
+        }
+
+        .firstname,
+        .lastname,
+        .title,
+        .email,
+        .newPass,
+        .conPass {
+            width: 49%;
+        }
+        
+        .firstname, 
+        .title,
+        .newPass {
+            float: left;
+        }
+        
+        .lastname,
+        .email,
+        .conPass {
+            float: right;
+        }
+        
+        label {
+            display: block;
+        }
+
+        .form_title{
+            text-transform: uppercase;
+            margin-left: 470px;
+        }
+
+        a {
+            color: #000;
+        }
+        
+        a:hover {
+            text-decoration: none;
+            color: #000;
+        }
+        
+        .btn-success {
+            background-color: #0ABAB5;
+            border: thin #0ABAB5 solid;
+        }
+        
+        .btn-success:hover {
+            background-color: #0ABAB5;
+            border: thin #0ABAB5 solid;
+        }
+
+        .mybtn{
+            margin-left: 200px;
+        }
+        
+        form#loginform button {
+            background: #0ABAB5;
+            border: 0px
+        }
+        
+        div.floatright a,
+        div.floatright p {
+            font-size: 16px;
+        }
+        
+        .error {
+            background-color: red;
+        }
+
+        .msg{
+            color: red;
+        }
+
+        
+        @media (max-width: 616px) {
+
+            .form-container{
+                width: 100%;
+                margin-left: 0px;
+            }
+            .profile_form {
+                width: 90%;
+                margin: 0 auto;
+            }
+
+             .mybtn{
+            margin-left: 0px;
+        }
+
+        .firstname, 
+        .title,
+        .newPass {
+            float: none;
+            width: 100%;
+        }
+        
+        .lastname,
+        .email,
+        .conPass {
+            float: none;
+            width: 100%;
+        }
+
+        .form_title{
+            text-transform: uppercase;
+            margin-left: 30px;
+            margin-bottom: 0px;
+            padding-bottom: 0px;
+        }
+    
+}
+
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="clearfix mt-3">
+            <div class="float-left">
+                <a href="" class="navbar-brand"><img src="https://res.cloudinary.com/sgnolebagabriel/image/upload/v1570531368/Lancers_evgrmc.png" alt="logo"></a>
+            </div>
+            <div class="float-right">
+
+            </div>
+        </div>
+    </div>
+       
+        <div class="row align-items-center mt-5 form-container">
+            
+            <h5 class="form_title">Profile Setting</h5>
+            <label for="" class="msg"></label>
+           <div class="col-sm-8 offset-md-5 profile_form mt-5 pl-5 pr-5 pt-4 pb-4">
+                <form id="profileForm">
+                    <div class="form-group">
+                        <div class="names">
+                            <div class="firstname">
+                                <label for="firstName">First Name</label>
+                                <input id="Fname" class="form-control" type="text" name="" placeholder="First Name">
+                            </div>
+                            <div class="lastname">
+                                <label for="lastName">Last Name</label>
+                                <input id="Lname" class="form-control" type="text" name="" placeholder="Last Name">
+                            </div>
+                        </div>
+                            <!-- <span id="name_message"></span> -->
+                    </div>
+                    <div class="form-group">
+                        <div class="title_text">
+                                <div class="title">
+                                    <label for="title">Title</label>
+                                    <input id="mytitle" class="form-control" type="text" name="" placeholder="Your Job Title">
+                                </div>
+                                <div class="email">
+                                    <label for="my-email">User Email</label>
+                                    <input id="email" class="form-control" type="text" name="" placeholder="Your Email Address">
+                                </div>
+                        </div>
+                        <!-- <span id="emessage"></span> -->
+                    </div>
+                    <div class="form-group">
+                        <div>
+                            <label for="my-password">Password</label>
+                            <input id="password" class="form-control" type="password" name="my-password" placeholder="Current password">
+                        </div>
+                        <div class="newpassword">
+                                <div class="newPass">
+                                    <label for="new_password">New Password</label>
+                                    <input id="npassword" class="form-control" type="password" name="new_password" placeholder="New password">
+                                </div>
+                                <div class="conPass">
+                                    <label for="confirm_password">Confirm Password</label>
+                                    <input id="cpassword" class="form-control" type="password" name="confirm_password" placeholder="Confirm password">
+                                </div>
+                        </div>
+                        <!-- <span id="pmessage"></span> -->
+                    </div>
+                  
+                    <button type="submit" class="btn btn-success col-sm-5 pt-2 pb-2 mt-2 mb-2 mybtn">Update</button>
+                </form>
+            </div>
+        </div>
+ 
+
+
+
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.slim.min.js "></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.15.0/umd/popper.min.js "></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js "></script>
+
+
+<script>
+    const firstName = document.querySelector("#Fname");
+    const lastName = document.querySelector("#Lname");
+    const email = document.querySelector("#email");
+    const title = document.querySelector("#mytitle");
+    const password = document.querySelector("#password");
+    const newPassword = document.querySelector("#npassword");
+    const conPassword = document.querySelector("#cpassword");
+    const msg = document.querySelector(".msg");
+    const submitButton = document.querySelector(".mybtn");
+    let form =  document.querySelector("#profileForm");
+
+    submitButton.addEventListener('click', (e) => {
+        e.preventDefault();
+        msg.textContent = " ";
+        if(firstName.value === ' '|| lastName.value === ' ' || email.value === ' ' || title.value === ' '  || password.value === ' ' || newPassword.value === ' ' || conPassword.value === ' '){
+            msg.textContent = "Please, fill all required fields";
+            msg.style.color = "red";
+            return false;
+         }
+    });
+
+    firstName.addEventListener('input', (e) =>{
+        msg.textContent = " ";
+        const validator = /^[a-zA-Z]+(([',. -][a-zA-Z ])?[a-zA-Z]*)*$/g;
+        if (!validator.test(firstName.value)) {
+            msg.textContent = "Please, enter valid first name & not numbers numbers";
+            //error.style.color = "red";
+            return false;
+        } 
+    });
+
+    lastName.addEventListener('input', (e) =>{
+        msg.textContent = " ";
+        const validator = /^[a-zA-Z]+(([',. -][a-zA-Z ])?[a-zA-Z]*)*$/g;
+        if (!validator.test(lastName.value)) {
+            msg.textContent = "Please, enter valid last name & not numbers numbers";
+            //msg.style.color = "red";
+            return false;
+        } 
+    });
+
+    title.addEventListener('input', (e) =>{
+        msg.textContent = " ";
+        const validator = /^[a-zA-Z]+(([',. -][a-zA-Z ])?[a-zA-Z]*)*$/g;
+        if (!validator.test(title.value)) {
+            msg.textContent = "Please, enter valid job title";
+           // msg.style.color = "red";
+            return false;
+        } 
+    });
+
+    
+
+    email.addEventListener('input', (e) => {
+        msg.textContent = " ";
+        const validator = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+        if (!validator.test(email.value)) {
+            msg.textContent = "Please, enter valid email address";
+            //msg.style.color = "red";
+            return false;
+        } 
+    });
+
+    password.addEventListener('input', (e) => {
+        msg.textContent = " ";
+        const validator = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#\$%\^&\*])(?=.{8,})/;
+        
+        if (!validator.test(password.value)) {
+            msg.textContent = "Password must contain 1 lower and 1 uppercase alphabet, must contain a special character and must not be less than 8 character length";
+            //msg.style.color = "red";
+            return false;
+        } 
+    });
+
+    newPassword.addEventListener('input', (e) => {
+        msg.textContent = " ";
+        const validator = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#\$%\^&\*])(?=.{8,})/;
+        
+        if (!validator.test(password.value)) {
+            msg.textContent = "Password must contain 1 lower and 1 uppercase alphabet, must contain a special character and must not be less than 8 character length";
+            //msg.style.color = "red";
+            return false;
+        } 
+    });
+
+    conPassword.addEventListener('input', (e) => {
+        msg.textContent = " ";
+        if(newPassword.value !== conPassword.value){
+            msg.textContent = "Passwords do not match";
+            //msg.style.color = "red";
+            return false;
+        }
+    });
+    
+    
+</script>
+
+</html>
