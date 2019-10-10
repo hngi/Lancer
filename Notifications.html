@@ -55,6 +55,9 @@
                 z-index: 1;
 
             }
+            .Mobile-logo {
+            	display: none;
+            }
             .navbar-logo{
                 background-color: black;
                 padding: 20px 20px 60px 0px;
@@ -133,10 +136,42 @@
 		cursor: pointer;
 	}
 	   /*Mobile Responsiveness*/
-	@media only screen and (max-width: 768px) {
+	@media only screen and (max-width: 800px) {
+		section {
+			display: none;
+		}
+		.Mobile-logo {
+            	display: block;
+            	font-family: Pacifico;
+            	font-size: 36px;
+            	padding: 20px;
+            }
+		.notification {
+		text-align: center;
+		box-sizing: border-box;
+		top: 50px;
+		left: 30px;
+		position: absolute;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		margin: 10px;
+		}
+		.notifications-wrapper {
+		width:70%;
+		margin: 20px;
+	}
+	.notifications-wrapper .container {
+		display: inline-flex;
+		flex-wrap: wrap;
+		border: 1px solid #B1B1B1;
+		box-sizing: border-box;
+		border-radius: 5px;
+		width: 80%;
+	}
 	  .Navbar__Items,
 	  .Navbar {
-	    flex-direction: column;
+	   display: none;
 	  }
 	  .Navbar__Items {
 	    display:none;
@@ -160,13 +195,13 @@
 	      <input type="text" placeholder="Search..">
 	    </div>
 	    <div class="Navbar__Link">
-	      <img src="./img/help.svg">
+	      <img src="https://res.cloudinary.com/dimejismile/image/upload/v1570700555/help_uax19v.svg">
 	    </div>
 	    <div class="Navbar__Link">
-	      <img src="./img/alarm.svg">
+	      <img src="https://res.cloudinary.com/dimejismile/image/upload/v1570700555/alarm_cbsbw8.svg">
 	    </div>
 	    <div class="Navbar__Link">
-	      <img src="./img/notification.svg">
+	      <img src="https://res.cloudinary.com/dimejismile/image/upload/v1570701016/notification_mzdng4.svg">
 	    </div>
 	    <div class="Navbar__Link">
 	      <div class="user">
@@ -174,12 +209,13 @@
 	    </div>
 	  </nav>
 	</div>
+	<div class="Mobile-logo"><span>Lancer</span></div>
 
 	<section>
         <aside>
             <div class="side-panel">
                 <ul>
-                    <li><div class="navbar-logo" href="#"><img src="img/Lancers.png"></div></li>   
+                    <li><div class="navbar-logo" href="#"><img src="https://res.cloudinary.com/dimejismile/image/upload/v1570700555/Lancers_k3v0jz.png"></div></li>   
                     <li><i class="fa fa-home"></i><a href="#">Dashboard</a></li>
                     <li><i class="fa fa-users"></i><a href="#">Client</a></li>
                     <li><i class="fa fa-lightbulb-o"></i>Project <i class="fa fa-angle-down dropdown"></i> </li>
@@ -196,7 +232,7 @@
 			<div class="header">NOTIFICATIONS</div>
 		<div class="container">
 			<div class="notify-icon">
-				<img src="./img/noticon3.svg" width="20px" height="20px">
+				<img src="https://res.cloudinary.com/dimejismile/image/upload/v1570700555/noticon3_w4ubu1.svg" width="20px" height="20px">
 			</div>
 			<div class="text">
 				<p class="not-head">A new invoice was created</p>
@@ -206,7 +242,7 @@
 		</div>
 		<div class="container">
 			<div class="notify-icon">
-				<img src="./img/noticon.svg" width="20px" height="20px">
+				<img src="https://res.cloudinary.com/dimejismile/image/upload/v1570700555/noticon_gdnkrj.svg" width="20px" height="20px">
 			</div>
 			<div class="text">
 				<p class="not-head">A new invoice was created</p>
@@ -216,7 +252,7 @@
 		</div>				
 		<div class="container">
 			<div class="notify-icon">
-				<img src="./img/noticon2.svg" width="20px" height="20px">
+				<img src="https://res.cloudinary.com/dimejismile/image/upload/v1570700555/noticon2_vac8kj.svg" width="20px" height="20px">
 			</div>
 			<div class="text">
 				<p class="not-head">A new invoice was created</p>
@@ -236,7 +272,7 @@
 		</div>	
 		<div class="container">
 			<div class="notify-icon">
-				<img src="./img/noticon4.svg" width="20px" height="20px">
+				<img src="https://res.cloudinary.com/dimejismile/image/upload/v1570701058/noticon4_xsnq1t.svg" width="20px" height="20px">
 			</div>
 			<div class="text">
 				<p class="not-head">A new invoice was created</p>
@@ -246,7 +282,7 @@
 		</div>	
 		<div class="container">
 			<div class="notify-icon">
-				<img src="./img/noticon5.svg" width="20px" height="20px">
+				<img src="https://res.cloudinary.com/dimejismile/image/upload/v1570701022/noticon5_rtvcct.svg" width="20px" height="20px">
 			</div>
 			<div class="text">
 				<p class="not-head">A new invoice was created</p>
