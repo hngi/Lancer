@@ -18,27 +18,89 @@
             * {
                 box-sizing: border-box;
             }
+            /* #side-nav {
+                position: fixed;
+                height: 100vh;
+                left: 0;
+                top: 0;
+                background-color: #091429;
+            } */
+            .navbar {
+                box-shadow:  #8898AA 0px 3px 5px;
+            }
             .block {
                 display: block;
                 border: none;
-                background-color: rgb(81, 216, 211); 
+                background-color: #0ABAB5;
                 padding: 8px 14px;
                 font-size: 16px;
                 color: white;
                 cursor: pointer;
             }
+            main{
+                
+            }
+            .list-group-item {
+                background: inherit;
+                border-radius: 0;
+                margin: 0;
+                border: none;
+            }
        
         </style>
     </head>
     <body>
-
-        <!--navigation-bar-->
         <!--Side bar-->
-        <!--Body Section-->
-        <button type="button" class="block">Create Estimate</button>
-        <h2>Estimate helps you place value to your work</h2>
-        <p>Create an estimate and easily convert it to an invoice and send to your client</p>
+        <!-- <div id="side-nav" class="col-2 list-group">
+            <a class="list-group-item list-group-item-action" href="#list-item-1">Item 1</a>
+            <a class="list-group-item list-group-item-action" href="#list-item-2">Item2</a>
+            <a class="list-group-item list-group-item-action" href="#list-item-3">Item 3</a>
+            <a class="list-group-item list-group-item-action" href="#list-item-4">Item 4</a>
+        </div> -->
+        <!--navigation-bar-->
+    <main class="offset-2">
+        <nav class=" navbar navbar-expand-lg navbar-light">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <a class="navbar-brand" href="#">Navbar</a>
+            
+            <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+                <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Link</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link disabled" href="#">Disabled</a>
+                </li>
+                </ul>
+                <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                </form>
+            </div>
+        </nav>
         
+        <!--Body Section-->
+        <section class="p-5">
+            <button type="button" class="block">Create Estimate</button>
+            <h2>Estimate helps you place value to your work</h2>
+            <p>Create an estimate and easily convert it to an invoice and send to your client</p>
+        <div data-spy="scroll" data-target="#list-example" data-offset="0" class="scrollspy-example">
+                <h4 id="list-item-1">Item 1</h4>
+                <p>...</p>
+                <h4 id="list-item-2">Item 2</h4>
+                <p>...</p>
+                <h4 id="list-item-3">Item 3</h4>
+                <p>...</p>
+                <h4 id="list-item-4">Item 4</h4>
+                <p>...</p>
+            </div>
+        </section>
+    </main>
         <!--FooterSection-->
         
 
