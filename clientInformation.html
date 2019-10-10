@@ -22,6 +22,11 @@
         body {
             font-family: Ubuntu;
         }
+
+        a:hover {
+            text-decoration: none;
+            color: grey;
+        }
         .container {
             margin: 0 auto;
             max-width: 660px;
@@ -116,7 +121,7 @@
             .column-2 {
                 width: 75%;
                 padding: 0.7em;
-                font-size: 1em;
+                font-size: 1.5em;
             }
             .column-3 {
                 width: 25%;
@@ -146,12 +151,12 @@
     <body style="margin: 0;">
         <header style="border-bottom: 2px solid rgb(223, 223, 223);">
             <nav style="display: flex; ">
-                <a href="#" class="column-1"
-                    ><img src="./icons/clear.png" alt=""
-                /></a>
-                <a href="#" class="column-1"
-                    ><img src="./icons/Vector.png" alt=""
-                /></a>
+                <a href="#" class="column-1">
+                    <div style="font-size: 1.5em;;">&times;</div>
+                </a>
+                <a href="#" class="column-1">
+                        <div style="font-size: 1.5em;;">&lt;</div>
+                </a>
                 <div class="column-2">client</div>
                 <a href="#" class="column-3">NEXT</a>
             </nav>
@@ -185,7 +190,7 @@
                         </div>
                     </label>
                     <p style="padding: 1em;font-weight: bold; font-size: .8em">
-                        Add Address <img src="./icons/plus.svg" alt="" />
+                        Add Address <a href="client-information-inactive-2.html" style="font-size: 1.5em;"> +</a>
                     </p>
                     <h4 style="font-weight:700">Contact Information</h4>
                     <div class="name">
