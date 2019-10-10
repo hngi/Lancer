@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu&display=swap" rel="stylesheet">
+    <title>Lancer client Information inactive</title>
+</head>
+<style>
+    *{
+        box-sizing: border-box;
+    }
+  body{
+        font-family: 'Ubuntu', sans-serif;
+        margin: 0;
+        padding: 0;
+    }
+  .container {
+    max-width: 800px;
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+    border: 1px solid #919191;
+    padding: 2rem;
+    margin-top: 1rem;
+  }
+  li {
+    list-style: none;
+  }
+  .form-row, .form-row-1{
+    display: flex;
+    justify-content: center;
+    padding: .5em;
+  }
+  .form-row > label {
+    flex: .5;
+  }
+  .form-row > input {
+    flex: 1;
+  }
+   .form-row-1 > label {
+    flex: 1;
+  }
+  .form-row-1 > input {
+    flex: 1;
+  }
+  #contact input[type="text"],
+  #contact input[type="email"] {
+    font: 400 12px/16px; 
+  }
+
+  fieldset {
+    border: medium none !important;
+    margin: 0 0 10px;
+    min-width: 100%;
+    padding: 0;
+    width: 100%;
+  }
+
+  #contact input[type="text"],
+  #contact input[type="email"] {
+    width: 100%;
+    border: 1px solid #ccc;
+    background: #FFF;
+    margin: 0 0 5px;
+    padding: 15px;
+  }
+
+  #contact input[type="text"]:hover,
+  #contact input[type="email"]:hover{
+    -webkit-transition: border-color 0.3s ease-in-out;
+    -moz-transition: border-color 0.3s ease-in-out;
+    transition: border-color 0.3s ease-in-out;
+    border: 1px solid #aaa;
+  }
+  #contact input:focus {
+    outline: 0;
+    border: 1px solid #aaa;
+  }
+
+  ::-webkit-input-placeholder {
+    color: #888;
+  }
+
+  :-moz-placeholder {
+    color: #888;
+  }
+
+  ::-moz-placeholder {
+    color: #888;
+  }
+
+  :-ms-input-placeholder {
+    color: #888;
+  }
+  .add-contact {
+    font-weight: 700;
+  }
+  li {
+    font-size: 18px;
+  }
+  .add-contact {
+    text-decoration: none;
+    color: #262626;
+    font-weight: 800;
+  }
+  h3 {
+    font-size: 24px;
+    font-weight: 600
+  }
+  h2 {
+    margin-top: 4rem;
+    margin-left: 20%;
+  }
+  .button-div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+  }
+  .btn {
+    border: 1px solid #999999;
+    background: rgba(196, 196, 196, 0.4);
+    padding: 17px 80px;
+    font-size: 18px;
+    text-align: center;
+    color: #FFFFFF;
+    cursor: pointer;
+  }
+.container-a{
+      display:flex;
+      background: white;
+      font-size: 0.8em !important;
+      max-height: 60px;
+  }
+  .container-a > div{
+      border: 1px solid #ccc;
+      padding: 20px;
+      text-align: center;
+      font-size: 1rem;
+  }
+  .box-1{
+      
+      flex-flow: column wrap;
+      flex-grow: 2;
+  }
+  
+  .container-a>.box-2{
+      flex:2;
+      
+  }
+  
+  .container-a>.box-3{
+      flex:3;
+      cursor: pointer;
+      
+  }
+  .container-a>.box-4{
+      flex:6;
+      font-weight: 600;
+      font-size: 23px;
+      
+  }
+  .box-1:hover, .box-2:hover, .box-3:hover {
+      background: rgba(196, 196, 196, 0.4);
+      transition: all 0.3s ease 0s;
+      border-color:#999999;
+      color: white;
+
+  }
+  .container-a>.box-5{
+      flex: 1; 
+      background: rgba(196, 196, 196, 0.4);
+      cursor: pointer;
+      border: none;
+  }
+  .next-btn {
+      color: #ffffff;
+      border: none;
+      background:none;
+      height: 100%;
+      cursor: pointer;
+  }
+  a {
+    color: #C4C4C4;
+  }
+    @media only screen and (max-width: 600px) {
+      .menuForSmallScreens {
+          display: flex;
+      }
+      .container {
+        display: flex;
+        justify-content: center;
+        border: none;
+        margin-top: 0rem;
+      }
+      h2 {
+        margin-top: 1.5rem;
+        text-align: center;
+        margin-left: 0;
+      }
+      #contact input[type="text"],
+      #contact input[type="email"] {
+        width: 100%;
+        border: 1px solid #ccc;
+        background: #FFF;
+        margin: 0 0 5px;
+        padding: 10px;
+      }
+  }
+        
+</style>
+<body>
+  <header class="container-a menuForSmallScreens">
+      <div class="box-1" style="max-width: 50px">
+        <a href=""><i class="fa fa-times" aria-hidden="true"></i></a>
+        
+      </div>
+      <div class="box-2" style="max-width: 50px">
+        <a href=""><i class="fa fa-chevron-left" aria-hidden="true"></i></a>
+      </div>
+      <div class="box-4">
+        Client
+      </div>
+      <div class="box-5">
+        <a href="#"><button class="next-btn">NEXT</button></a>
+      </div>
+  </header>
+    <h2>Client Information</h2>
+    <div class="container">
+      <form id="contact" action="" method="post">
+        <h3>Business Information</h3>
+        <ul>
+          <fieldset>
+            <li class="form-row">
+              <label for="townborn">Comapny name</label>
+              <input placeholder="e.g Sunshine Studio" type="text" tabindex="1" required autofocus>
+            </li>
+          </fieldset>
+        </ul>
+        <h3>Business Address</h3>
+        <ul>
+          <fieldset>
+            <li class="form-row-1">
+              <label for="townborn">Street & Address</label>
+              <input placeholder="Street" type="text" tabindex="1" required autofocus>
+              <input placeholder="Number" class="in" type="text" tabindex="1" required autofocus>
+            </li>
+            <li class="form-row-1">
+              <label for="townborn">City & ZIP Code</label>
+              <input placeholder="City" type="text" tabindex="1" required autofocus>
+              <input placeholder="Postal Code" type="text" tabindex="1" required autofocus>
+            </li>
+            <li class="form-row-1">
+              <label for="townborn">Country & State</label>
+              <input placeholder="e.g Country" type="text" tabindex="1" required autofocus>
+              <input placeholder="e.g State" type="text" tabindex="1" required autofocus>
+            </li>
+          </fieldset>
+        </ul>
+        <h3>Contact Information</h3>
+        <ul>
+          <fieldset>
+            <li class="form-row">
+              <label for="townborn">Contact name</label>
+              <input placeholder="e.g Ben Davies" type="text" tabindex="1" required autofocus>
+            </li>
+          </fieldset>
+          <fieldset>
+            <li class="form-row">
+              <label for="email">Email Address</label>
+              <input placeholder="e.g email@domain.com" type="email" tabindex="1" required autofocus>
+            </li>
+          </fieldset>
+          <li class="form-row">
+            <label for="townborn">Contact name</label>
+            <input placeholder="e.g Ben Davies" type="text" tabindex="1" required autofocus>
+          </li>
+          </fieldset>
+          <fieldset>
+            <li class="form-row">
+              <label for="email">Email Address</label>
+              <input placeholder="e.g email@domain.com" type="email" tabindex="1" required autofocus>
+            </li>
+          </fieldset>
+          <li><a href="#" class="add-contact">Add other contact +</a></li>
+        </ul>
+      </form>
+    </div>
+      <div class="button-div">
+        <button type="button" class="btn">NEXT</button>
+      </div>
+
+</body>
+</html>
