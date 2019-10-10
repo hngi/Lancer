@@ -190,30 +190,31 @@
     </head>
 
     <body>
+    <nav>
+        <div class="header-container">
+            <div class="back-close">
+                <button id="close"><img src="https://res.cloudinary.com/mide358/image/upload/v1570621469/clear_24px_rasbwc.png" alt="back"></button>
+                <button id="back"><img src="https://res.cloudinary.com/mide358/image/upload/c_scale,h_27,w_13/v1570621434/Vector_ag4hnv.png" alt="back"></button>
+            </div>
+
+            <h4>Client</h4>
+            <button id="create">Create Invoice</button>
+        </div>
+    </nav>
         <div class="container">
-            <nav>
-            <div class="header-container">
-                <div class="back-close">
-                    <button id="close"><img src="https://res.cloudinary.com/mide358/image/upload/v1570621469/clear_24px_rasbwc.png" alt="back"></button>
-                  <button id="back"><img src="https://res.cloudinary.com/mide358/image/upload/c_scale,h_27,w_13/v1570621434/Vector_ag4hnv.png" alt="back"></button>
-                </div>
-                
-               <h4>Client</h4>
-               <button id="create">Create Invoice</button>
-            </div>   
-        </nav>
+
        <div class="form">
            <h1>Client Information</h1>
            <form autocomplete="on" action="" method="post" onsubmit="checkForm()">
             <div>
                     <p class="error" id="errorMsg">All Fields Required</p>
-            <h3> Business Information</h3> 
-            
+            <h3> Business Information</h3>
+
                <label for="company-name">Company name</label>
                <input type="text" id="companyname" name="company" placeholder="e.g Sunshine Studio">
                <br><br>
                <h4>Business Address</h4>
-                <label for="Street">Street & Number</label> 
+                <label for="Street">Street & Number</label>
                 <input type="text" id="streetname" name="streetname" placeholder="Street">
                 <input type="number" id="strnumber" name="strnumber" placeholder="number">
                 <br>
@@ -473,34 +474,33 @@
                     <option value="Zimbabwe">Zimbabwe</option>
                  </select>
                  <input type="text" id="state" name="state" placeholder="State">
-            </div> 
+            </div>
               <div>
                   <h3>Contact Information</h3>
-                  <label for="contact-name">Contact name</label> 
+                  <label for="contact-name">Contact name</label>
                 <input type="text" id="contactname" name="contactname" placeholder="e.g Ben Davies">
                 <br>
-                <label for="contact-email">Contact email</label> 
+                <label for="contact-email">Contact email</label>
                 <input type="email" id="contactemail" name="contactemail" placeholder="e.g email@domain.com">
                 <br>
                 <p class="error" id="errorEmail"></p>
                 <br>
                 <h4>Add other contacts</h4>
               </div>
-                   
-               
+
+
            </form>
-           
+
        </div>
         </div>
 
-        <footer> <button id="bottom-create">Create Invoice</button></footer>
+        <footer> <button id="bottom-create" type="submit">Create Invoice</button></footer>
        
 
 
            </body>
   <script>
 
-      // ================================== Validation =============================================
       var companyname = document.getElementById("companyname");
       var streetname = document.getElementById("streetname");
       var strnumber = document.getElementById("strnumber");
@@ -510,7 +510,6 @@
       var state = document.getElementById("state");
       var contactme = document.getElementById("contactname");
       var contactemail = document.getElementById("contactemail");
-
       // check if any input is empty.
       function checkForm() {
           if((companyname.value.length = 0 || streetname.value.length == 0 ||
@@ -524,12 +523,10 @@
               document.getElementById("errorMsg").style.display ="none";
           }
       }
-
       function removeNameErrorWhenCorrecting() {
 
           document.getElementById("errorMsg").style.display = "none";
       }
-
       if (companyname.addEventListener) {
           companyname.addEventListener('blur', checkForm, false);
           companyname.addEventListener('focus', removeNameErrorWhenCorrecting, false);
@@ -568,14 +565,10 @@
       }
 
 
-
       // If email is the right format
-
       function checkEmailField() {
-
           // format for email validation
           var mailFormat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
-
           if (contactemail.value.indexOf("@", 0) < 0) {
               document.getElementById("errorEmail").style.display = "block";
               document.getElementById("errorEmail").textContent = "Your email address does not have an '@' symbol!";
@@ -585,7 +578,6 @@
           else if (contactemail.value.indexOf(".", 0) < 0) {
               document.getElementById("errorEmail").style.display = "block";
               document.getElementById("errorEmail").textContent = "A '.' symbol is missing in your email address, please check!";
-
 
           }
           else if (mailFormat.test(contactemail.value) == false) {
@@ -599,11 +591,9 @@
               contactemail.removeAttribute('disabled');
           }
       }
-
       function removeEmailErrorWhenCorrecting() {
           document.getElementById("errorEmail").style.display = "none";
       }
-
       if (contactemail.addEventListener) {
           contactemail.addEventListener('blur', checkEmailField, false);
           contactemail.addEventListener('focus', removeEmailErrorWhenCorrecting, false);
