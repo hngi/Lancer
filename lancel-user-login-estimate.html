@@ -1,32 +1,137 @@
 <!DOCTYPE html>
 <html class="no-js">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Mentor Setup Page | 2</title>
-        <meta name="description" content="mentors">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link href="https://fonts.googleapis.com/css?family=Open+Sans|Ubuntu|Pacifico&display=swap" rel="stylesheet">
-        <link rel="stylesheet" type="text/css" href="mentorPage2.css">
-        <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-        <script src="https://use.fontawesome.com/185cfd0ddc.js"></script>
-        <style>
-            /*body style*/
-            body {
-                font-family: 'Ubuntu';
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Mentor Setup Page | 2</title>
+    <meta name="description" content="mentors">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans|Ubuntu|Pacifico&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="mentorPage2.css">
+    <link rel="stylesheet" type="text/css"
+        href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://use.fontawesome.com/185cfd0ddc.js"></script>
+    <style>
+        /*body style*/
+        body {
+            font-family: 'Ubuntu';
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        .block {
+            display: block;
+            border: none;
+            background-color: rgb(81, 216, 211);
+            padding: 8px 14px;
+            font-size: 16px;
+            color: white;
+            cursor: pointer;
+        }
+
+        /* side nav styling by lavidegeorge  */
+        ul {
+            list-style: none;
+            margin: 0%;
+            padding-inline-start: 0%;
+        }
+
+        body {
+            margin: 0%;
+            padding: 0%;
+        }
+
+        .kc-logo {
+            width: 200px;
+            display: flex;
+            justify-content: center;
+            background: #091429;
+            color: #ffffff;
+            padding: 1rem;
+            font-family: 'Open Sans', sans-serif;
+        }
+
+        #kc-side-btn {
+            width: 30px;
+            height: 30px;
+            margin-right: 10px;
+        }
+
+        #kc-aside {
+            width: 200px;
+            height: calc(100vh - 65px);
+            display: flex;
+            justify-content: center;
+            background: #091429;
+            color: #ffffff;
+            padding: 1rem;
+            font-family: 'Open Sans', sans-serif;
+            transition: .5s ease-in-out;
+        }
+
+        .kc-side-nav {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .kc-side-nav ul li {
+            font-size: .8em;
+            width: 100%;
+            height: 70px;
+            display: flex;
+            align-items: center;
+            /* justify-content: center; */
+        }
+
+        .kc-icon {
+            width: 15px;
+            height: 15px;
+            margin-right: 10px;
+        }
+
+        .margin-left {
+            margin-left: 10px;
+            margin-right: 0%;
+        }
+
+        .none {
+            display: none;
+        }
+
+        .kc-trans {
+            transform: translateX(0%);
+        }
+
+        /* MEDIA Q */
+        @media only screen and (max-width: 600px) {
+            .none {
+                display: block;
             }
-            * {
-                box-sizing: border-box;
+
+            #kc-aside {
+                transform: translateX(-100%);
+                height: auto;
             }
-            /* #side-nav {
+        }
+            #side-nav {
                 position: fixed;
                 height: 100vh;
                 left: 0;
                 top: 0;
                 background-color: #091429;
-            } */
+            }
             .navbar {
                 box-shadow:  #8898AA 0px 3px 5px;
+                color: #000000;
+            }
+            i {
+                color: #000000;
+                padding: 10px;
             }
             .block {
                 display: block;
@@ -51,36 +156,79 @@
     </head>
     <body>
         <!--Side bar-->
-        <!-- <div id="side-nav" class="col-2 list-group">
-            <a class="list-group-item list-group-item-action" href="#list-item-1">Item 1</a>
-            <a class="list-group-item list-group-item-action" href="#list-item-2">Item2</a>
-            <a class="list-group-item list-group-item-action" href="#list-item-3">Item 3</a>
-            <a class="list-group-item list-group-item-action" href="#list-item-4">Item 4</a>
-        </div> -->
+        <div id="side-nav" class="col-2 list-group">
+           <!--Side bar by lavidegeorge -->
+    <div class="kc-logo">
+            <img src="./img/button.png" class="none" id="kc-side-btn" alt="">
+            <img src="./img/Lancers.png" alt="Lancer-Logo">
+        </div>
+        <aside id="kc-aside">
+    
+            <div class="kc-side-nav">
+                <ul>
+                    <li>
+                        <img src="./img/home.png" class="kc-icon" alt="">
+                        Dasboard
+                    </li>
+                    <li>
+                        <img src="./img/client.png" class="kc-icon" alt="">
+                        Client
+                    </li>
+                    <li>
+                        <img src="./img/lightbulb.png" class="kc-icon" alt="">
+                        Project
+                        <img src="./img/expand.png" class="kc-icon margin-left" alt="">
+                    </li>
+                    <li>
+                        <img src="./img/invoice.png" class="kc-icon" alt="">
+                        Invoice
+                    </li>
+                    <li>
+                        <img src="./img/contract.png" class="kc-icon" alt="">
+                        Contract
+                    </li>
+                    <li>
+                        <img src="./img/proposal.png" class="kc-icon" alt="">
+                        Proposals
+                    </li>
+                </ul>
+            </div>
+        </aside>
+    
+        </div>
         <!--navigation-bar-->
     <main class="offset-2">
         <nav class=" navbar navbar-expand-lg navbar-light">
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <a class="navbar-brand" href="#">Navbar</a>
+            <a class="navbar-brand" href="#">Estimates</a>
             
             <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
-                <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
                 <li class="nav-item active">
-                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                    <a class="nav-link" href="#"><i class="fa fa-comments"></i>Support <span class="sr-only">(current)</span></a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Link</a>
+                <li class="nav-item ">
+                    <a href=""><i class="fa fa-bell"></i></a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link disabled" href="#">Disabled</a>
+                <li class="nav-item ">
+                    <a href=""><i class="fa fa-user"></i></a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Juliet
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                        <a class="dropdown-item" href="#">Dashboard</a>
+                        <a class="dropdown-item" href="#">Client</a>
+                        <a class="dropdown-item" href="#">Project</a>
+                        <a class="dropdown-item" href="#">Invoice</a>
+                        <a class="dropdown-item" href="#">Contract</a>
+                        <a class="dropdown-item" href="#">Proposals</a>
+                    </div>
                 </li>
                 </ul>
-                <form class="form-inline my-2 my-lg-0">
-                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-                </form>
             </div>
         </nav>
         
@@ -89,16 +237,6 @@
             <button type="button" class="block">Create Estimate</button>
             <h2>Estimate helps you place value to your work</h2>
             <p>Create an estimate and easily convert it to an invoice and send to your client</p>
-        <div data-spy="scroll" data-target="#list-example" data-offset="0" class="scrollspy-example">
-                <h4 id="list-item-1">Item 1</h4>
-                <p>...</p>
-                <h4 id="list-item-2">Item 2</h4>
-                <p>...</p>
-                <h4 id="list-item-3">Item 3</h4>
-                <p>...</p>
-                <h4 id="list-item-4">Item 4</h4>
-                <p>...</p>
-            </div>
         </section>
     </main>
         <!--FooterSection-->
@@ -107,7 +245,23 @@
 
 
 
-        
+        <!-- <script>
+                const sideBtn = document.getElementById('kc-side-btn');
+                sideBtn.addEventListener('click', () => {
+                    const x = window.matchMedia("(max-width: 600px)");
+                    if (x.matches) {
+                        const sideNav = document.getElementById('kc-aside');
+                        if (sideNav.style.transform = 'translateX(-100%)') {
+                            sideNav.style.transform = 'translateX(0%)';
+                            console.log(true);
+                        } else {
+                            console.log(false);
+                            sideNav.style.transform = 'translateX(-100%)'
+                        }
+                    }
+                })
+        </script> -->
+            
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
