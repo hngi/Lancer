@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="pro.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+     <script
+      src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+      integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+      crossorigin="anonymous"
+    ></script>
+	<title>lancer</title>
+	<style>
+	@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,700|Pacifico|Ubuntu:400,500,700&display=swap");
+		body{
+			margin: 0px;
+			padding: 0px;
+		}
+
+     header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: fixed;
+        top: 0%;
+        left: 18%;
+        height: 50px;
+        width: 82%;
+        box-shadow: 0px 4px 2px rgba(0, 0, 0, 0.1);
+        padding: 2.5rem 4.5rem 2.5rem 6.5rem;
+      }
+      header h1 {
+        font-family: Ubuntu;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 2rem;
+        color: #262626;
+      }
+      header .header-panel {
+        height: 100%;
+      }
+      header .header-panel_nav {
+        display: grid;
+        align-items: center;
+        grid-template-columns: repeat(3, max-content);
+        gap: 4rem;
+        list-style-type: none;
+        height: 100%;
+        margin: 0;
+        margin-top: -2.5rem;
+      }
+      header .header-panel_nav-item {
+        height: 100%;
+        display: flex;
+        align-items: center;
+      }
+      header .header-panel_nav-item a {
+        text-decoration: none;
+        color: #262626;
+        display: flex;
+        align-items: center;
+      }
+      header .header-panel_nav-item a h2 {
+        font-family: Ubuntu;
+        font-style: normal;
+        font-weight: 400; 
+        font-size: 1rem;
+        margin: 0;
+      }
+      header .header-panel_nav-item a img {
+        width: 3rem;
+        height: 3rem;
+        margin-right: 1rem;
+      }
+      header .header-panel_nav-item a .user {
+        display: grid;
+        grid-template-columns: repeat(3, max-content);
+        gap: 01rem;
+        align-items: center;
+        font-size: 2rem;
+      }
+      header .header-panel_nav-item a .user .user-image {
+        width: 5rem;
+        height: 5rem;
+        border-radius: 2.5rem;
+        overflow: hidden;
+      }
+      header .header-panel_nav-item a .user .user-image img {
+        width: 100%;
+        height: 100%;
+      }
+      header .header-panel_nav-item a .user i {
+        font-size: 1.8rem;
+      }
+		.grid{
+			display: flex;
+		}
+
+
+		.sidebar{
+			flex: 1;
+			background-color: #091429;
+			height: 1000px;
+      
+		}
+          /*.sidebar {
+
+                height: 100%;
+                width: 18vw;
+                position: fixed;
+                z-index: 1;
+                top: 0;
+                left: 0;
+                background-color: #091429;
+                
+                overflow-x: hidden;
+                padding-top: 16px;
+            }*/
+            
+            /* Style sidebar links */
+            .sidebar a {
+            text-decoration: none;
+            font-size: 18px;
+            margin: 1.5rem;
+            color: #FFF;
+            display: block;
+            font-family: 'Ubuntu';
+            font-weight: bold;
+            }
+            
+            /* Style links on mouse-over */
+            .sidebar a:hover {
+            color: #333;
+            }
+            
+            /* Style the main content */
+            .main {
+            margin-left: 260px; /* Same as the width of the sidenav */
+            padding: 0px 10px;
+            }
+            
+            .logo {
+            font-family: "Pacifico", cursive;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 36px;         
+            color: white;         
+            padding: 32px 32px;
+            }
+
+            .logo span {
+            color: #00f9ff;
+            }
+
+            a img {
+            width: 1rem;
+            height: 1rem;
+            margin-right: 0.5rem;
+            }
+
+            #invoice {
+                color: #333;
+            }
+            /* Add media queries for small screens (when the height of the screen is less than 450px, add a smaller padding and
+            font-size) */
+           /*  @media screen and (min-width: 480px) {
+            .logo {
+                font-size: 12px;
+            }
+            .sidebar a {font-size: 10px;}
+
+            } */
+	/*
+     
+            @media screen and (max-height: 450px) {
+            .sidebar {padding-top: 15px;}
+            .sidebar a {font-size: 18px;}
+            }*/
+
+          /*   header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: fixed;
+        top: 0%;
+        left: 18%;
+        height: 10rem;
+        width: 82%;
+        box-shadow: 0px 4px 2px rgba(0, 0, 0, 0.1);
+        padding: 2.5rem 4.5rem 2.5rem 6.5rem;
+      }*/
+     
+		.mainbody{
+			flex: 4;
+			background-color: #ffffff;
+		}
+		.mainbodycontent{
+			padding: 80px;
+			margin-top: 0px;
+		}
+		.invoice{
+			width: 100%;
+			height: 25px;
+			margin-left: 10%;
+			margin-top: 50px;
+			font-family: Open Sans;
+			font-style: normal;
+			font-weight: bold;
+			font-size: 18px;
+			line-height: 25px;
+			color: #000000;
+			}
+
+.tableButton {
+ 
+	background-color: #091429;
+	display:inline-block;
+	color:#ffffff;
+	font-size:28px;
+	margin-top: 50px; 
+
+	text-decoration:none;
+
+	font-family: Ubuntu;
+   font-style: normal;
+	font-weight: bold;
+	line-height: 32px;
+	text-align: center;
+
+	border: 1px solid #999999;
+   box-sizing: border-box;
+   padding: 16px 20px 16px 20px;
+}
+
+.tableButton:hover {
+	background-color: #ffffff;
+  color:#0ABAB5;
+}
+
+.tableButton:active {
+	position:relative;
+	top:3px;
+}
+
+	</style>
+</head>
+<body>
+ <header>
+                <h1>Invoices</h1>
+                <div class="header-panel">
+                  <ul class="header-panel_nav">
+                    <li class="header-panel_nav-item">
+                      <a href=""
+                        ><img src="images/svg/help.svg" alt="" />
+                        <h2>Support</h2></a
+                      >
+                    </li>
+                    <li class="header-panel_nav-item">
+                      <a href=""
+                        ><img src="images/svg/notification.svg" alt="" srcset=""
+                      /></a>
+                    </li>
+                    <li class="header-panel_nav-item">
+                      <a href="">
+                        <div class="user">
+                          <div class="user-image">
+                            <img src="images/profile-pic.jpg" alt="" />
+                          </div>
+                          <h2 class="username">Juliet</h2>
+                          <i class="fas fa-chevron-down"></i>
+                        </div>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </header>
+
+<div class="grid">
+	
+	   <div class="sidebar">
+            <h1 class="logo">Lan<span>c</span>ers</h1>
+      <ul>
+        <li>
+          <a href=""
+            ><img src="images/svg/home.svg" alt="" srcset="" /> Dashboard</a
+          >
+        </li>
+        <li>
+          <a href=""
+            ><img src="images/svg/customer.svg" alt="" srcset="" /> Client</a
+          >
+        </li>
+        <li>
+          <a href=""
+            ><img src="images/svg/lightbulb.svg" alt="" srcset="" /> Project</a
+          >
+        </li>
+        <li>
+          <a href=""
+            ><img src="images/svg/approve-invoice.svg" alt="" srcset="" />
+            Invoice</a
+          >
+        </li>
+        <li>
+          <a href=""
+            ><img src="images/svg/policy.svg" alt="" srcset="" /> Contract</a
+          >
+        </li>
+        <li>
+          <a href=""
+            ><img src="images/svg/approval.svg" alt="" srcset="" /> Proposals</a
+          >
+        </li>
+      </ul>
+        </div>
+
+	<div class="mainbody">
+
+ 
+
+    
+	<div class="mainbodycontent">
+
+	<button class="tableButton">Create Invoice</button> <br><br><br>
+  <h4 style="color:#000000">INVOICE</h4> <br><br>
+
+   <div class="dropdown" style="display:flex;">
+    <select name="select" aria-controls="example" class="form-control input-sm" style="flex:1">
+    <option>All</option>
+    <option>1</option>
+    <option>2</option>
+    </select><br><br><br>
+    <div class="nil" style="flex:3;"></div>
+	</div>
+
+
+  <table class="table">
+    <thead class="table table-striped w-auto">
+      <tr>
+        <th>Invoice</th>
+        <th>Client</th>
+        <th>Project</th>
+         <th>Issued</th>
+        <th>Status</th>
+        <th>Status</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+       <td><ul><li>1</li></ul></td>
+        <td>Grande Agency</td>
+        <td>Branding</td>
+        <td>01/10/2019</td>
+       <td> <button type="button" class="btn" style="color:#00ff00; background-color:#00ff00  0.3; font-weight:bold;">Paid</button></td>
+        <td>US$4,2000.00</td>
+
+      </tr>
+      <tr>
+        <td><ul><li>1</li></ul></td>
+        <td>Glacier inc.</td>
+        <td>Glacier Fintech App</td>
+        <td>02/10/2019</td>
+       <td> <button type="button" class="btn" style="font-weight:bold;">Sent</button></td>
+        <td>US$8,8000.00</td>
+      </tr>
+     
+    </tbody>
+  </table></div></div>
+</body>
+</html>
