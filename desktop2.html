@@ -16,7 +16,7 @@
     font-family: Ubuntu;
 }
 body{
-    overflow:hidden;
+    overflow-y:hidden;
     /* position:fixed; */
     min-width:454px;
 }
@@ -48,7 +48,7 @@ aside p, aside div {
 
 }
 .search-container{
-    width:70%;
+    width:60%;
     height:100%;
     text-align:center;
     padding: 30px 0;
@@ -58,6 +58,21 @@ aside p, aside div {
     border: 1px solid #B1B1B1;
     border-radius:4px;
     padding: 4px;
+}
+.icon{
+    width:50px;
+    height:50px;
+    padding:4px;
+    margin:18px;
+    border-right:1px solid grey;
+}
+.initial{
+    border: 1px solid black; 
+    border-radius:50%; 
+    width:50px;height:50px;
+    padding:12px;
+    margin:16px;
+    margin-top:20px;
 }
 .nav-main{
     border-bottom: 2px solid #E5E5E5;
@@ -144,10 +159,11 @@ img{
     width:40px;
     height: 40px;
 }
+.menu{
+    display:none;
+}
 
 @media only screen and (max-width: 779px) {
-    body{height:100vh; overflow: scroll;}
-    main{height:100vh !important;}
     .nav-left{display:none;}
     .image{
         
@@ -168,7 +184,7 @@ img{
     }
     .card{
         height: 100%;
-        width: 80%;
+        width: 100vw;
         border: 2px solid rgba(0, 0, 0, 0.25);
         border-top: 0;
         border-bottom: 3px solid rgba(0, 0, 0, 0.25);
@@ -187,13 +203,44 @@ img{
     .toggle-show{
         display: block;
     }
+    .icon{
+    width:20px;
+    height:20px;
+    padding:4px;
+    margin:10px;
+    border-right:1px solid grey;
+    margin-top: 40px;
+    }
+    .initial{
+    border: 0;
+    border-radius: 50%;
+    width:auto;
+    height: auto;
+    padding: 15px;
+    margin: 0;
+    margin-top: 22px;
+    padding-left: 7px;
+    }
+    .initial p{
+    padding: 3px;
+    margin: 0;
+    font-size: 12px;
+    border: 1px solid black;
+    border-radius: 50%;
+}
+    .menu{
+        display: block;
+        margin-top:5px;
+        margin-left:5px;
+    }
+    
 }@media only screen and (max-width: 970px){
-    body{height:100vh; overflow: scroll;}
     .content{
-        width:50%;
+        display:none;
+        /* width:50%;
         margin-top:5%;
         font-size:14px;
-        margin-right:2%;
+        margin-right:2%; */
     }
     .card{
         height: 100%;
@@ -212,6 +259,7 @@ img{
 </head>
 <body>
     <div class="container-fluid">
+        
         <div class="row">
             <div class="col-md-2  nav-left">
                 <aside class="d-flex flex-column justify-content-around text-center"> 
@@ -233,19 +281,22 @@ img{
             </div>
             <div class="col-md" style="margin:0px;padding:0px;">
                 <div class="d-flex justify-contect-around nav-main">
+                        <div class="menu">
+                                <i class="fa fa-bars"></i>
+                        </div>
                     <div class="search-container">
                         <input type="search" name="search" id="search" placeholder ="Search" class="fal fa-search search">
                     </div>
                     <div>
-                        <img style='width:50px;height:50px;padding:4px;margin:18px;border-right:1px solid grey' src="https://res.cloudinary.com/laplace/image/upload/v1570739214/ugrqpvvqkpw6g4xjluco.png" alt="help">
+                        <img class="icon" src="https://res.cloudinary.com/laplace/image/upload/v1570739214/ugrqpvvqkpw6g4xjluco.png" alt="help">
                     </div>
                     <div >
-                        <img  style='width:50px;height:50px;padding:4px;margin:18px;border-right:1px solid grey' src="https://res.cloudinary.com/laplace/image/upload/v1570738202/s1zgdvui4w4h6dnfeyk9.svg" alt="notification">
+                        <img class="icon" src="https://res.cloudinary.com/laplace/image/upload/v1570738202/s1zgdvui4w4h6dnfeyk9.svg" alt="notification">
                     </div style='border-right:1px soid black'>
                     <div>
-                        <img style='width:50px;height:50px;padding:4px;margin:18px;border-right:1px solid grey' src="https://res.cloudinary.com/laplace/image/upload/v1570738859/ku004v0cyp1fmou8h5ju.png" alt="">
+                        <img class="icon" src="https://res.cloudinary.com/laplace/image/upload/v1570738859/ku004v0cyp1fmou8h5ju.png" alt="">
                     </div>
-                    <div style="border: 1px solid black; border-radius:50%; width:50px;height:50px;padding:12px;margin:16px;margin-top:20px;">
+                    <div class="initial">
                             <p >AU</p>
                     </div>
 
@@ -280,7 +331,7 @@ img{
                                         <a href="#"> <i class="fa fa-facebook"    aria-hidden="true"></i></a>&nbsp;&nbsp;&nbsp;
                                         <a href="#"><i class="fa fa-twitter" aria-hidden="true" ></i></a>&nbsp;&nbsp;&nbsp;
                                         <a href="#"><i class="fa fa-youtube"aria-hidden="true" ></i></a>
-                                    </p> 
+                                </p> 
                         </p>
                     <div>
                       
