@@ -1,8 +1,8 @@
-.nav-box{
+.kc-nav-box{
 	min-height:15vh;
 	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
-.a-u{
+.kc-a-u{
 	height:8vh;
 	width:4vw;
 	border:1px solid black;
@@ -11,7 +11,7 @@
 
 
 @media only screen and (max-width: 1024px) {
-    .a-u{
+    .kc-a-u{
         height:4vh;
         width:6vw;
     }
@@ -19,13 +19,13 @@
 }
 
 @media only screen and (max-width: 768px) {
-    .unlist-item{
+    .kc-unlist-item{
         flex-direction:row;
     }
    
 }
 @media only screen and (max-width: 768px) {
-    .a-u{
+    .kc-a-u{
         height:7vh;
         width:10vw;
         margin-left:2vh;
@@ -34,7 +34,7 @@
 }
 
 @media only screen and (max-width: 414px) {
-    .a-u{
+    .kc-a-u{
         height:6vh;
         width:13vw;
         margin-left:2vh;
@@ -43,13 +43,13 @@
 }
 
 @media only screen and (max-width: 375px) {
-    .unlist-item{
+    .kc-unlist-item{
         flex-direction:row;
     }
    
 }
 @media only screen and (max-width: 375px) {
-    .a-u{
+    .kc-a-u{
         height:7vh;
         width:15vw;
         margin-left:2vh;
@@ -57,14 +57,14 @@
    
 }
 @media only screen and (max-width: 360px) {
-    .unlist-item{
+    .kc-unlist-item{
         flex-direction:row;
     }
    
 }
 
 @media only screen and (max-width: 360px) {
-    .a-u{
+    .kc-a-u{
         height:7vh;
         width:15vw;
         margin-left:2vh;
@@ -72,7 +72,7 @@
    
 }
 @media only screen and (max-width: 320px) {
-    .a-u{
+    .kc-a-u{
         height:8vh;
         width:15vw;
         margin-left:2vh;
