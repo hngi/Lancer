@@ -4,14 +4,10 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Mentor Setup Page | 2</title>
+    <title>Lancer - User Estimate</title>
     <meta name="description" content="mentors">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans|Ubuntu|Pacifico&display=swap" rel="stylesheet">
-    <!-- <link rel="stylesheet" type="text/css" href="mentorPage2.css"> -->
-    <!-- <link rel="stylesheet" type="text/css"
-        href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> -->
     <script src="https://use.fontawesome.com/185cfd0ddc.js"></script>
     <style>
         /*body style*/
@@ -71,10 +67,11 @@
             transition: .5s ease-in-out;
             
         }
-
+        .display__flex {
+            display: flex;
+        }
         .kc-side-nav {
             width: 100%;
-            display: flex;
             flex-direction: column;
         }
 
@@ -126,11 +123,19 @@
             .lancer-logo{
                 display: none;
             }
-            #kc-aside {
+            /* #kc-aside {
                 display: none;
-            }
+            } */
             .est{
                 display: none;
+            }
+            
+            .display__hidden {display: none !important;}
+            .display__block {
+                display: block !important;
+                position: fixed;
+                top: 65px;
+                left: 0;
             }
         }
 
@@ -193,13 +198,14 @@
                 font-weight: bold;
                 font-size: 1.3em;
             }
+            
         </style>
     </head>
     <body>
     
            <!--Side bar by lavidegeorge -->
     <div class="header">
-        <div class="kc-logo">
+        <div class="kc-logo display__flex">
             <img src="https://res.cloudinary.com/laviedegeorge/image/upload/v1570744697/startng/hng/img/Lancers_k3r04r.png" class="lancer-logo" alt="Lancer-Logo">
             <a href="javascript:void(0);"><i class="fa fa-bars none" id="kc-side-btn" onclick="showNav()"></i></a>
         </div>
@@ -231,9 +237,9 @@
         
 
    <div class="main-cont">
-    <aside id="kc-aside">
+    <aside id="kc-aside" class="display__hidden">
 
-        <div class="kc-side-nav">
+        <div class="kc-side-nav display__hidden display__block" id="kc-side-nav">
             <ul>
                 <li>
                     <img src="https://res.cloudinary.com/laviedegeorge/image/upload/v1570744696/startng/hng/img/home_n13gmd.png" class="kc-icon" alt="">
@@ -283,17 +289,21 @@
 
 
         <script>
-                        const showNav = () => {
-                        const sideNav = document.getElementById('kc-aside');
-                        if (sideNav.style.display === 'block') {
-                            sideNav.style.display = 'none';
-                        } else {
-                            sideNav.style.position = 'absolute';
-                            sideNav.style.display = 'block';
-                            sideNav.style.zIndex = '10';
-                      
-                        }
-                }
+            const showNav = () => {
+            const sideNav = document.getElementById('kc-aside');
+            // if (sideNav.style.display === 'block') {
+            //     sideNav.style.display = 'none';
+            // } else {
+            //     sideNav.style.position = 'absolute';
+            //     sideNav.style.display = 'block';
+            //     sideNav.style.zIndex = '10';
+            
+            // }
+            // sideNav.classList.toggle('display__hidden');
+            sideNav.classList.toggle('display__block');
+            document.getElementById('kc-side-nav').classList.toggle('display__flex');
+
+            }
         </script>
             
         <!-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
