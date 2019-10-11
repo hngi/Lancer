@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,7 +13,6 @@
             line-height: 1.5;
             font-weight: bold;
         }
-
         .settings-modal {
             /*display: none;*/
             position: fixed;
@@ -26,48 +24,41 @@
             overflow: auto;
             background-color: rgba(69, 66, 66, 0.59);
         }
-
         .modal-content {
-            background-color: #ffffff;
-            margin: 20% auto;
-            width: 50%;
+            background-color: #ffffff;                      
+            margin: 5% auto; /* adjust this*/
+            width: 58%;
             height: auto;
             border-top: 5px solid #0ABAB5;
             padding: 38px 50px 86px 50px;
         }
-
         .closebtn {
             color: #ccc;
             float: right;
             font-size: 30px;
         }
-
         .closebtn:hover,
         .closebtn:focus {
             color: black;
             text-decoration: none;
             cursor: pointer;
         }
-
         .upload-area {
             width: 100%;
             height: 106px;
             border: 1px dashed #ccc;
         }
-
         .text-grey {
             color: #ccc;
             text-align: center;
             padding: 5%;
             font-weight: normal;
         }
-
         .brand-color {
             display: grid;
             grid-template-columns: auto 146px;
             margin-top: 10%;
         }
-
         .colors-box {
             border: 2px solid #ccc;
             background-color: white;
@@ -79,7 +70,6 @@
             margin-top: -10%;
             margin-left: 4px;
         }
-
         .colors {
             background-color: #ffffff;
             text-align: center;
@@ -90,7 +80,6 @@
             text-decoration: none;
             margin-bottom: -8%;
         }
-
         .color-text {
             border: 0px solid red;
             margin-left: -50;
@@ -98,24 +87,20 @@
             padding-left: -10%;
             font-size: 14px;
         }
-
         .icon {
             width: 20px;
             float: right;
             border: 0px solid blue;
             margin-bottom: 5px;
             margin-top: -3%;
-
         }
-
         .samples {
             display: flex;
-            background-color: #ccc;
+            background-color: #F7F6F6;
             margin: auto;
             width: 100%;
             height: 154px;
         }
-
         .btn-text {
             background-color: #0ABAB5 !important;
             color: #ffffff;
@@ -126,14 +111,12 @@
             height: 50px;
             text-align: center;
         }
-
         .title-text {
             color: #0ABAB5;
             font-size: 20px;
             margin: 60px 55px;
             width: 40%;
         }
-
         .save-set {
             background-color: #0ABAB5;
             text-align: center;
@@ -142,7 +125,6 @@
             font-size: 24px;
             color: #ffffff;
         }
-
         .button_1 {
             width: 30%;
             height: 45px;
@@ -152,7 +134,6 @@
             margin-top: 55px;
             border: none;
         }
-
         .button_2 {
             width: 100%;
             height: 50px;
@@ -163,53 +144,44 @@
             font-weight: bold;
             margin-top: 15px;
         }
-
         .button_1:hover {
             background-color: rgb(15, 207, 201);
             transition-delay: .3s;
             transition-timing-function: linear;
             transition-delay: .1s;
         }
-
         .button_2:hover {
             background-color: rgb(15, 207, 201);
             transition-delay: .3s;
             transition-timing-function: linear;
             transition-delay: .1s;
         }
-
         @media screen and (max-width:1125px) {
             .button_1 {
                 font-size: 20px;
             }
         }
-
         @media screen and (max-width:980px) {
             .button_1 {
                 font-size: 15px;
                 font-weight: bold;
             }
-
             .title-text {
                 font-size: 20px;
             }
         }
-
         @media screen and (max-width:900px) {
             .button_1 {
                 font-size: 15px;
                 font-weight: bold;
             }
-
             .title-text {
                 font-size: 20px;
             }
-
             .samples {
                 height: 130px;
             }
         }
-
         @media screen and (max-width:810px) {
             .button_1 {
                 font-size: 10px;
@@ -218,38 +190,30 @@
                 height: 40px;
                 margin-right: 40px;
             }
-
             .sample {
                 height: 100px;
             }
-
             .title-text {
                 font-size: 15px;
                 margin-left: 20px;
                 margin-top: 60px;
             }
         }
-
         @media screen and (max-width:630px) {
             .title-text {
                 width: 160px;
             }
         }
-
         @media screen and (max-width:430px) {
             body {
                 font-size: 15px;
-
             }
-
             .title-text {
                 width: 160px;
             }
-
             .samples {
                 height: 100px;
             }
-
             .button_2 {
                 height: 50px;
                 font-size: 12px;
@@ -259,131 +223,102 @@
                 height: 22px;
                 margin-left: -10%;
             }
-
             .colors{
                 min-height: 22px;
                 width: 30px;
             }
-
             .color-text{
                 font-size: 12px;
                 width: 100px;
                 margin-top: 0%;
             }
         }
-
         @media only screen and (max-width: 431px) {
             .upload-area {
                 font-size: 1px larger;
             }
-
             .brand-color {
-
                 font-weight: normal;
             }
-
             .text-bc {
                 width: 60px;
                 font-size: 11px;
                 text-align: center;
                 margin-right: 40px;
             }
-
             input {
                 margin-right: 270px;
             }
-
             .modal-content {
                 padding: 36px 60px 70px 60px;
                 width: 50%;
             }
-
             .button_1 {
-
                 margin-right: 15px;
                 margin-top: 30px;
             }
-
             .button_2 {
                 font-size: 12px;
             }
-
             .title-text {
                 font-size: 12px;
                 margin-top: 30px;
                 margin-left: 5px;
                 margin-bottom: 80px;
             }
-
             .colors-box{
                 width: 100px;
                 height: 22px;
             }
-
             .colors{
                 min-height: 22px;
                 width: 30px;
             }
-
             .color-text{
                 font-size: 12px;
                 width: 100px;
             }
-
         }
-
         @media only screen and (max-width: 360px) {
             .upload-area {
                 font-size: 1px larger;
             }
-
             .brand-color {
-
                 font-weight: normal;
             }
-
             .text-bc {
                 font-size: 11px;
                 text-align: center;
                 margin-right: 40px;
             }
-
             input {
                 margin-left: 10px;
             }
-
             .modal-content {
                 padding: 36px 60px 70px 60px;
                 width: 50%;
             }
-
             .button_1 {
-
                 margin-right: 15px;
                 margin-top: 30px;
             }
-
             .button_2 {
                 font-size: 12px;
             }
-
             .title-text {
                 font-size: 12px;
                 margin-top: 30px;
                 margin-left: 5px;
                 margin-bottom: 80px;
             }
-
             .colors-box{
                 width: 100px;
                 height: 22px;
             }
-
             .colors{
                 min-height: 22px;
                 width: 30px;
             }
-
             .color-text{
                 font-size: 12px;
                 width: 100px;
@@ -391,7 +326,9 @@
         }
     </style>
 
+
 </head>
+
 
 <body>
     <div class="settings-modal">
@@ -413,6 +350,7 @@
                             alt="arrow-icon">#0ABAB5</p>
                 </div>
             </div>
+
 
             <div class="samples">
                 <p class="title-text">Sample Title</p>
