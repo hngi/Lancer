@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Profile Info</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://use.fontawesome.com/078be77031.css">
+
+        <link href="https://fonts.googleapis.com/css?family=Ubuntu&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Pacifico|Ubuntu&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans|Pacifico|Ubuntu&display=swap" rel="stylesheet">
+
+        <link rel="stylesheet" href="style/project-info.css">
+
+        <style>
+        
+        .fa{
+    margin-right: 5px; 
+    font-size: 14px;
+}
+
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+body{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+#header-container{
+    height: 120%;
+    width: 30%;
+    background: #091429;
+    color: white;
+    
+}
+    #logo{
+        padding: 30px 0px;
+        width: 50%;
+    }
+        #lancer{
+            margin-left: 20%;
+        }
+    #nav-bar{
+        padding: 0 50px 340px 50px;
+    }
+    i{
+        background: black; 
+    }
+        #nav-bar li{
+        margin-bottom: 70px;
+        list-style-type: none;
+        margin-left: auto;
+        margin-right: auto;
+        }
+            #nav-bar li a{
+                color: white;
+                text-decoration: none;
+                font-size: 14px;
+            }
+            #nav-bar li img{
+                width: 20%;
+            }
+
+main{
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+    #first-section{
+        display: flex;
+        justify-content: space-between;
+        padding: 30px 0 45px 0;
+        font-size: 30px;
+    }
+        #first-section a{
+            text-decoration: none;
+            color: black;
+        }
+        #first-section a:active, #first-section a:nth-child(1){
+            color: #0ABAB5;
+        }
+        #first-section a:hover{
+            color: #0ABAB5;
+        }
+
+    #second-section{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        padding: 50px 0px;
+    }
+        button{
+            border: 3px solid #0ABAB5;
+            border-radius: 10px;
+            padding: 12px;
+            background-color: white;
+            cursor: pointer;
+        }
+            .space{
+                margin-right: 25px;
+            }
+            #different{
+                color: white;
+                background: #0ABAB5;
+            }
+    
+
+    #third-section{
+        border: 1px solid #C4C4C4;
+        padding: 50px  35px;
+    }
+
+        #first{
+            display: flex;
+            justify-content: space-between;
+            font-size: 24px;
+            line-height: 48px;
+        }
+  
+                #invoice #title{
+                    font-size: 55px;
+                    line-height: 63px;
+                    color: #546067;
+                }
+            #invoice-image{
+                height: 90%;
+            }
+
+        #second{
+            display: flex;
+            justify-content: space-between;
+            font-weight: normal;
+            font-size: 24px;
+            line-height: 35px;
+            padding: 50px 0;
+        }
+        .c-title{
+            color: #A6A6A6;
+        }
+            #three{
+                text-align: right;
+            }
+        
+            .inner-div:nth-child(1){
+                background: #091429;
+                color: white;
+                text-align: center;
+            }
+            .inner-div{
+                display: flex;
+                justify-content: space-between;
+                font-size: 18px;
+                line-height: 28px;
+                border-bottom: 1px solid rgba(0, 0, 0, 0.7);
+                
+            }
+
+                .one-third{
+                    width: 35%;
+                    padding: 20px 0;
+                }
+                .two-third, .three-third, .four-third{
+                    text-align: center;
+                    width: 15%;
+                    align-self: center;   
+                }
+            
+                #underline{
+                border-bottom: 2px solid #000000;
+               
+            }
+            
+            .special{
+                width: 34%;
+                display: flex;
+                margin-left: 66%;
+                justify-content: space-between;
+                padding: 20px 0;
+            }
+                .special p{
+                  width: 40%;
+                  text-align: center;
+                  line-height: 30px;
+                  font-weight: 500;
+                }
+            
+        #fourth{
+            padding-bottom: 20px;
+            font-size: 24px;
+            line-height: 34px;
+        }
+@media screen and (max-width: 990px){
+    #first-section{
+        font-size: 21px;
+    }
+    #first, #second, #third{
+        font-size: 18px;
+        line-height: 20px;
+    }
+    #first{
+        line-height: 33px;
+    }
+}
+
+@media screen and (max-width: 767px){
+    .fa{
+        font-size: 10px;
+    }
+    body{
+        flex-direction: column;
+    }
+        #header-container{
+            width: 100%;
+            padding: 0;
+        }
+            #logo{
+                width: 40%;
+                margin-left: auto;
+                margin-right: auto;
+                padding: 3px;
+            }
+                #nav-bar{
+                    padding: 0 0 4px 0;
+                }
+                #nav-bar ul{
+                    display: flex;
+                    justify-content: space-between;
+                    flex-flow: row wrap;
+                    padding: 0 5px;
+                }
+                #nav-bar ul li{
+                    display: inline-block;
+                    padding: 0;
+                    margin: 0;
+                }
+                #nav-bar ul li a{
+                    font-size: 14px;
+                }
+
+    #first-section{
+        justify-content: space-around;
+        padding: 10px 0 15px 0;
+        font-size: 14px;
+    }
+    #second-section{
+        padding: 20px 0;
+    }
+
+    button{
+        padding: 8px;
+    }
+
+    #first{
+        font-size: 15px;
+        line-height: 34px;
+        padding: 20px 0;
+    }
+        #invoice-image{
+            width: 30%;
+        }
+    #second{
+        font-size: 14px;
+        line-height: 20px;
+        padding: 30px 0;
+    }
+
+    .inner-div{
+        font-size: 14px;
+        line-height: 28px;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.7);
+        
+    }
+
+        .one-third{
+            width: 35%;
+            padding: 10px 0;
+        }
+        .special{
+            padding: 10px 0;
+            font-size: 14px;
+        }
+        .special p{
+            line-height: 20px;
+            font-weight: 400;
+        }
+
+    
+    #fourth{
+    padding-bottom: 20px;
+    font-size: 14px;
+    line-height: 24px;
+}
+
+}
+
+
+@media screen and (max-width: 600px){
+    #nav-bar li a{
+        font-size: 10px;
+    }
+
+    #first-section{
+        font-size: 12px;;
+    }
+
+    #second-section{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        padding: 30px 0px;
+    }
+        button{
+            border-radius: 4px;
+            padding: 5px;
+        }
+            .space{
+                margin-right: 5px;
+            }
+
+    #third-section{
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    #first{
+        font-size: 13px;
+        line-height: 28px;
+    }
+            #invoice-image{
+                height: 100%;
+            }
+    .inner-div, .special{
+        font-size: 12px;
+        padding: 5px 0;
+        line-height: 15px
+    }
+    #second{
+        font-size: 12px;
+    }
+    #nav-bar ul{
+        justify-content: space-around;
+        font-size: 20px;
+        cursor: pointer;
+    }
+    #nav-bar ul li a.hide{
+        display: none;
+    }
+}
+        </style>
+    </head>
+    <body>
+    
+        <header id="header-container">
+            <div class="header-item" id="logo">
+                <img src="images/Lancers.png" alt="" id="lancer">
+            </div>
+
+            <nav class="header-item" id="nav-bar">
+                <ul>
+                    <li>
+                            <i class="fa fa-dashboard"></i>
+                         <a href="" class="hide">Dashboard</a>
+                    </li>
+                    <li>
+                        <a href=""><i class="fa fa-user"></i></a>
+                        <a href="" class="hide">Client</a>
+                    </li>
+                    <li>
+                            <i class="fas fa-calendar"></i>
+                        <a href="Project" class="hide">Project</a>
+                    </li>
+                    <li>
+                            <i class="fa fa-credit-card"></i>
+                        <a href="" class="hide">Invoice</a>
+                    </li>
+                    <li>
+                            <i class="fa fa-briefcase"></i>
+                        <a href="" class="hide">Contract</a>
+                    </li>
+                    <li>
+                            <i class="fa fa-sticky-note"></i>
+                            <a href="" class="hide">Proposals</a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+
+        <main>
+            <section id="first-section">
+               <a href="pr">Project Info</a>
+               <a href="">Client-Info</a>
+               <a href="">Settings</a>
+               <a href="">Tools & Resources</a>
+            </section>
+
+            <section id="second-section">
+                <div id="first-button">
+                    <button class="space">Print</button>
+                    <button>Download as PDF</button>
+                </div>
+                <div id="second-button">
+                        <button class="space">Edit</button>
+                        <button id="different">Other actions</button>
+                </div>
+            </section>
+
+            <section id="third-section">
+                <div id="first">
+                    <div id="invoice">
+                        <h3 id="title">Invoice</h3>
+                        <p><b>Project:</b> Branding and Marketting</p>
+                        <p><b>Lancer: </b>Endurance Dan jumbo</p>
+                        <p><b>Email:</b> Edanjumo@gmail.com</p>
+                        <p><b>Address: </b>Accra, Ghana</p>
+                    </div>
+                    <img src="images/invoice.png" alt="" id="invoice-image">
+                </div>
+                <div id="second">
+                    <div id="one">
+                        <h5 class="c-title">Bill to</h5>
+                        <p>John Doe</p>
+                        <p>Johndoe@gmail.com</p>
+                        <p>Accra, lagos</p>
+                    </div>
+                    <div id="two">
+                        <h5 class="c-title">Issue Date</h5>
+                        <p>John Doe</p>
+                        <h5 class="c-title">Bill Date</h5>
+                        <p>28th September, 2019</p>
+                    </div>
+                    <div id="three">
+                            <h5 class="c-title">Hourly Rate</h5>
+                            <p>N/A</p>
+                            <h5 class="c-title">Amount Due</h5>
+                            <p>NGN 38,500</p>
+                        </div>
+                </div>
+
+                <div id="third">
+                        <div class="inner-div">
+                            <p class="one-third">Description</p>
+                            <p class="two-third">Quantity</p>
+                            <p class="three-third">Rate</p>
+                            <p class="four-third">Amount</p>
+                        </div>
+                        <div class="inner-div">
+                            
+                            <p class="one-third">Sed ut perspiciatis unde omnis iste </p>
+                            <p class="two-third">1</p>
+                            <p class="three-third">NGN3500</p>
+                            <p class="four-third">NGN3500</td>
+                        </div>
+                        <div class="inner-div">
+                            <p class="one-third">Sed ut perspiciatis unde omnis iste </p>
+                            <p class="two-third">10</p>
+                            <p class="three-third">NGN1700</p>
+                            <p class="four-third">NGN17000</p>
+                        </div>
+                        <div class="inner-div">
+                            <p class="one-third">Sed ut perspiciatis unde omnis iste </p>
+                            <p class="two-third">15</p>
+                            <p class="three-third">NGN1200</p>
+                            <p class="four-third">NGN18000</p>
+                        </div>
+                        <div class="special" id="underline">
+                            <p>Total <br><span class="c-title">Discount</span></p>
+                            <p>N38,500 <br>N/A</p>
+                        </div>
+                        <div class="special">
+                            <p>Amount Due</p>
+                            <p>N38,500</p>
+                        </div>
+                </div>
+                <div id="fourth">
+                    <h5 class="c-title">Note</h5>
+                    <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium dolor laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi.</p>
+                </div>
+            </section>
+        </main>
+
+
+        
+        
+    </body>
+</html>
