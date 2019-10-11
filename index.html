@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,7 +9,7 @@
     <!--<link rel="stylesheet" href="stylesettings.css"> -->
     <link href="https://fonts.googleapis.com/css?family=Ubuntu:400,500,700&display=swap" rel="stylesheet">
 
-<style>
+    <!-- <style>
 
 body{
     font-family: 'Ubuntu', sans-serif;
@@ -73,73 +74,19 @@ body{
     background color: #0ABAB5;
 }
 
-* {
-	box-sizing: border-box;
-	font-family: "Arial";
-}
-.wrapper-dropdown {
-    position: relative;
-    width: 200px;
-    background: #FFF;
-    color: #2e2e2e;
-    outline: none;
-    cursor: pointer;
-}
-.wrapper-dropdown > span {
-	width: 100%;
-	display: block;
-	border: 1px solid #ababab;
-	padding: 5px;
-}
-.wrapper-dropdown > span > span {
-  padding: 0 12px;
-  margin-right: 5px;
-}
-.wrapper-dropdown > span:after {
-    content: "";
-    width: 0;
-    height: 0;
-    position: absolute;
-    right: 16px;
-    top: calc(50% + 4px);
-    margin-top: -6px;
-	  border-width: 6px 6px 0 6px;
-    border-style: solid;
-	  border-color: #2e2e2e transparent;
+.color-pick{
+    float: right;
+    background-color: #0ABAB5;
+    list-style-type: none;
+    border: 1px solid black;
+    padding-right: 0px;
 }
 
-.wrapper-dropdown .dropdown {
-    position: absolute;
-	  z-index: 10;
-    top: 100%;
-    left: 0;
-    right: 0;
-    background: #fff;
-    font-weight: normal;
-	  list-style-type: none;
-	  padding-left: 0;
-	  margin: 0;
-	  border: 1px solid #ababab;
-	  border-top: 0;
+.colors{
+    background-color: white;
+    text-align: center;
 }
 
-.wrapper-dropdown .dropdown li {
-    display: block;
-    text-decoration: none;
-    color: #2e2e2e;
-	  padding: 5px;
-	  cursor: pointer;
-}
-
-.wrapper-dropdown .dropdown li > span {
-  padding: 0 12px;
-  margin-right: 5px;
-}
-
-.wrapper-dropdown .dropdown li:hover {
-    background: #eee;
-	  cursor: pointer;
-}
 .samples{
     display: flex;
     background-color: #ccc;
@@ -180,31 +127,172 @@ width: 40%
 
 
 </style>
+-->
 
 
 </head>
-<body>
-    <div class="settings-modal">
-        <div class="modal-content">
-            <span class="closebtn">&times;</span>
-            <p>Branding Options</p>
-            <p>Logo</p>
-            <div class="upload-area">
-                <p class="text-grey">Drag Logo here or upload file</p>
-            </div>
-            <div class="brand-color">
-                <p class="text-bc">Brand Color</p>
-                <div id="color-picker">
-                    <div class="wrapper-dropdown">
-                        <span @click="toggleDropdown()" v-html="selector"></span>
-                        <ul class="dropdown" v-show="active">
-                            <li v-for="color in colors" @click="setColor(color.hex, color.name)"><span :style="{background: color.hex}"></span> {{color.name}}</li>
-                        </ul>
-                    </div>
-                    </div>
-            </div>
 
-                <div class="samples">
+<body>
+    <div class="col-md-4col-xs-12">
+        <style>
+            body {
+                font-family: 'Ubuntu', sans-serif;
+                font-style: 20px;
+                line-height: 1.5;
+                font-weight: bold;
+
+            }
+
+            .settings-modal {
+                /*display: none;*/
+                position: fixed;
+                z-index: 2;
+                left: 0;
+                top: 0;
+                height: 100%;
+                width: 100%;
+                overflow: auto;
+
+                /* background-color:rgba(69, 66, 66, 0.59);*/
+            }
+
+            .modal-content {
+                background-color: #ffffff;
+                margin: 20% auto;
+                width: 50%;
+                height: auto;
+                border-top: 5px solid #0ABAB5;
+                padding: 38px 40px 86px 83px;
+
+            }
+
+            .closebtn {
+                color: #ccc;
+                float: right;
+                font-size: 30px;
+            }
+
+            .closebtn:hover,
+            .closebtn:focus {
+                color: black;
+                text-decoration: none;
+                cursor: pointer;
+            }
+
+            .upload-area {
+                width: 100%;
+                height: 106px;
+                border: 1px dashed #ccc;
+            }
+
+            .upload-area:hover{
+                background-color: lightgray;
+            }
+
+            .text-grey {
+                color: #ccc;
+                text-align: center;
+                padding: 5%;
+                font-weight: normal;
+            }
+
+            .brand-color {
+                display: grid;
+                grid-template-columns: auto 146px;
+                margin-top: 10%;
+            }
+            .colors-box {
+                border: 2px solid #ccc;
+                background-color: white;
+                text-align: end;;
+                width: 146px;
+                height: 32px;
+                padding-bottom: 5%;
+                margin-bottom: 10%;
+                margin-top: -10%;
+
+            }
+            .colors{
+                min-height: 32px;
+                margin-left: -38%;
+                margin-top: -14%;
+                float: left;
+                text-decoration: none;
+                margin-bottom: -8%;
+            }
+            .color-text{
+                border: 0px solid red;
+                margin-left: -50;
+                margin-top: -2%;
+                padding-left: -10%;
+                font-size: 14px;
+            }
+
+            .icon{
+                width: 20px;
+                float: right;
+                border: 0px solid blue;
+                margin-bottom: 5px;
+                margin-top: -3%;
+                
+            }
+
+            .samples {
+                display: flex;
+                background-color: #ccc;
+                margin: auto;
+                width: 100%;
+                height: 154px;
+            }
+
+            .btn-text {
+                background-color: #0ABAB5 !important;
+                color: #ffffff;
+                font-size: 20px;
+                width: 40%;
+                margin-right: 10%;
+                margin-top: 9%;
+                height: 50px;
+                text-align: center;
+
+            }
+
+            .title-text {
+                color: #0ABAB5 !important;
+                font-size: 20px;
+                margin: 10%;
+                ;
+                width: 40%
+            }
+
+            .save-set {
+                background-color: #0ABAB5 !important;
+                text-align: center;
+                padding-top: 2%;
+                padding-bottom: 2%;
+                font-size: 20px;
+                color: #ffffff;
+                width: 100%;
+                margin-top: 40px;
+            }
+        </style>
+        <div class="settings-modal">
+            <div class="modal-content">
+                <span class="closebtn">&times;</span>
+                <p>Branding Options</p>
+                <p>Logo</p>
+                <div class="upload-area">
+                    <p class="text-grey">Drag Logo here or upload file</p>
+                </div>
+                <div class="brand-color">
+                    <div class="text-bc">Brand Color</div>
+                    <div class="colors-box">
+                    <ul>
+                        <input class="colors" type="color" name="favcolor" value="#0ABAB5">
+                    </ul>
+                    <p class="color-text"><img class="icon" src="https://res.cloudinary.com/kome/image/upload/v1570716992/hng/icon_juaw6d.png" alt="arrow-icon">#0ABAB5</p></div>
+                </div>
+                 <div class="samples">
                     <p class="title-text">Sample Title</p>
                     <button class="btn-text">Sample Button</button>
                 </div>
@@ -212,5 +300,6 @@ width: 40%
                 <button class="save-set">SAVE SETTINGS</button>
             </div>
         </div>
+    </div>
 </body>
 </html>
