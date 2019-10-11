@@ -7,25 +7,30 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0-11/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css?family=Ubuntu:300,400&display=swap" rel="stylesheet">
-    <title>Profile</title>
+		<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700|Roboto&display=swap" rel="stylesheet">
+		<link
+		href="https://fonts.googleapis.com/css?family=Open+Sans|Pacifico&display=swap"
+		rel="stylesheet"
+	/>
+		<title>Setting | Profile</title>
 
     <style>
         body {
-            font-family: 'Ubuntu', sans-serif;
+					font-family: 'Roboto', sans-serif;
             font-weight: 200;
+						font-size:14px;
         }
         
         h1 {
-            font-family: 'Ubuntu', sans-serif;
-            font-weight: 300;
-            font-size: 72px;
+						font-family: 'Open Sans', sans-serif;
+            font-weight: Bold;
+            font-size: 24px;
         }
         
-        h4 {
-            font-family: 'Ubuntu', sans-serif;
-            font-weight: 300;
-            font-size: 32px;
+        h3 {
+					font-family: 'Open Sans', sans-serif;
+            font-weight: bold;
+            font-size: 18px;
         }
 
         .form-container{
@@ -34,8 +39,7 @@
         }
         
         .profile_form, .company-details-form {
-            border: thin #c4c4c4 solid;
-            border-radius: 1% 1% 1% 1%;
+            border: 1px solid #c4c4c4;
         }
 
         .names, 
@@ -85,6 +89,7 @@
         
         label {
             display: block;
+
         }
 
         .company-details-form{
@@ -144,17 +149,65 @@
             padding: 5px 5px;
         }
 
-        .password-section {
+        /* .password-section {
             display: none;   
             transform: scale(1.0);
             transition: visibility 0s linear 0s, opacity 0.25s 0s, transform 0.25s;
-        }
+        } */
 
         .show-angle-down{
             display: none;
         }
-
-        
+				input, select{
+					font-family: Roboto;
+					font-style: normal;
+					font-weight: bold!important;
+					font-size: 14px!important;
+				}
+				label{
+					font-weight: bold;
+				}
+				.green-btn {
+				font-size: 16px;
+				padding: 5px 20px;
+				background-color: #0abab5;
+				color: #ffffff;
+				border: none;
+				border-radius: 6px;
+			}
+			.side-nav {
+				box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+				padding-bottom: 200px;
+			}
+			.logo-con {
+				background-color: #000000;
+			}
+			.logo {
+				font-family: "Pacifico", cursive;
+				color: #ffffff;
+				font-size: 36px;
+			}
+			.logo span {
+				color: #0abab5;
+			}
+			.nav-option {
+				font-family: Open Sans;
+				font-style: normal;
+				font-weight: bold;
+				font-size: 18px;
+				color: #4f4f4f;
+				text-align: left;
+			}
+			.active-nav {
+				color: #0abab5;
+			}
+			a:hover {
+				text-decoration: none;
+				color: #0abab5;
+			}
+			form{
+				min-height:500px;
+			}
         @media (max-width: 616px) {
 
             .form-container{
@@ -202,167 +255,192 @@
 </head>
 
 <body>
-    <div class="container">
-        <div class="clearfix mt-3">
-            <div class="float-left">
-                <a href="" class="navbar-brand"><img src="https://res.cloudinary.com/sgnolebagabriel/image/upload/v1570531368/Lancers_evgrmc.png" alt="logo"></a>
-            </div>
-            <div class="float-right">
-
-            </div>
-        </div>
-    </div>
+    
        
-        <div class="row align-items-center mt-5 form-container">
+<div class="container-fluid">
+		<div class="row mt-5 no-gutters">
             
-            <h5 class="form_title">Profile Setting</h5>
-            
-           <div class="col-sm-8 offset-md-5 profile_form mt-5 pl-5 pr-5 pt-4 pb-4">
-                <form id="profileForm">
-                        <label for="" class="msg"></label>
-                    <div class="form-group">
-                        <div class="names">
-                            <div class="firstname">
-                                <label for="firstName">First Name</label>
-                                <input id="Fname" class="form-control" type="text" name="" placeholder="First Name">
-                            </div>
-                            <div class="lastname">
-                                <label for="lastName">Last Name</label>
-                                <input id="Lname" class="form-control" type="text" name="" placeholder="Last Name">
-                            </div>
-                        </div>
-                            <!-- <span id="name_message"></span> -->
-                    </div>
-                    <div class="form-group">
-                        <div class="title_text">
-                                <div class="title">
-                                    <label for="title">Title</label>
-                                    <input id="mytitle" class="form-control" type="text" name="" placeholder="Your Job Title">
-                                </div>
-                                <div class="email">
-                                    <label for="my-email">User Email</label>
-                                    <input id="email" class="form-control" type="text" name="" placeholder="Your Email Address">
-                                </div>
-                        </div>
-                        <!-- <span id="emessage"></span> -->
-                    </div>
-                    <div class="caret">
-                        <h6> <i class="fas fa-angle-down show-angle-down"></i><i class="fas fa-angle-up show-angle-up"></i> &nbsp Change Password</h6>
-                    </div>
-                    <div class="form-group show-password-section">
-                            <!-- <div class="form-group show-password-section password-section"> -->
-                        <p>
-                        <div>
-                            <label for="my-password">Password</label>
-                            <input id="password" class="form-control" type="password" name="my-password" placeholder="Current password">
-                        </div>
-                        </p>
-                        <div class="newpassword">
-                                <div class="newPass">
-                                    <label for="new_password">New Password</label>
-                                    <input id="npassword" class="form-control" type="password" name="new_password" placeholder="New password">
-                                </div>
-                                <div class="conPass">
-                                    <label for="confirm_password">Confirm Password</label>
-                                    <input id="cpassword" class="form-control" type="password" name="confirm_password" placeholder="Confirm password">
-                                </div>
-                        </div>
-                        <!-- <span id="pmessage"></span> -->
-                    </div>
-                  
-                    <button type="submit" class="btn btn-success col-sm-5 pt-2 pb-2 mt-2 mb-2 mybtn">Update</button>
-                </form>
-            </div>
-        </div>
+				<!-- <h3 class="form_title">Profile Setting</h3> -->
+				
+				<div class="col-md-4 d-none d-md-block">
+					<div class="container">
+							<div class="side-nav">
+									<div class="logo-con">
+										<p class="logo text-center py-2">Lan<span>c</span>ers</p>
+									</div>
+									<div class="d-flex flex-column align-items-center">
+										<div class="d-flex flex-column">
+											<a href="" class="nav-option active-nav py-3">Profile Settings</a>
+											<a href="" class="nav-option  py-3"
+												>Email Notifications</a>
+											<a href="" class="nav-option py-3">Subscription</a>
+										</div>
+									</div>
+								</div>
+					</div>
+					</div>
 
-        <div class="row align-items-center mt-5 form-container">
-                
-               <div class="col-sm-8 offset-md-5 company-details-form mt-5 pl-5 pr-5 pt-4 pb-4">
-                    <form id="company-details">
-                            <label for="" class="msg"></label>
-                        <p>
-                        <div class="form-group">
-                            <div class="coy-details">
-                                <div class="coy-details-name">
-                                    <label for="firstName">Company Name</label>
-                                    <input id="coyName" class="form-control" type="text" name="" placeholder="Company Name">
-                                </div>
-                                <div class="coy-details-email">
-                                    <label for="lastName">Company Email</label>
-                                    <input id="coyEmail" class="form-control" type="text" name="" placeholder="Company Email">
-                                </div>
-                            </div>
-                                <!-- <span id="name_message"></span> -->
-                        </div>
-                    </p>
-                        <!-- <p>
-                            <div class="caretCompany">
-                                <h6> <i class="fas fa-angle-down show-angle-down"></i><i class="fas fa-angle-up show-angle-up"></i> &nbsp Address Setting</h6>
-                            </div>
-                        </p> -->
-                  
-                        <div class="form-group">  
-                            <p>
-                            <div>
-                                <label for="my-password">Company Address</label>
-                                <input id="coyaddress" class="form-control" type="password" name="my-password" placeholder="Company Address">
-                            </div>
-                        </p> 
-                            <div class="coy-contact">
-                                    <div class="coy-contact-country">
-                                        <label for="state">Country</label>
-                                        <select class="form-control">
-                                                <option>Country</option>
-                                                <option>Nigeria</option>
-                                                <option>United States</option>
-                                                <option>Japan</option>
-                                                <option>Brazil</option>
-                                        </select>
-                                    </div>
-                                    <div class="coy-contact-state">
-                                        <label for="country">State</label>
-                                        <select class="form-control" id="country">
-                                                <option>State</option>
-                                                <option>Lagos</option>
-                                                <option>Ogun</option>
-                                                <option>Ondo</option>
-                                                <option>Oyo</option>
-                                        </select>
-                                    </div>
-                            </div>
-                       
-                        </div>
-                            <div class="form-group">
-                                    <div class="coy-details-2">
-                                            <div class="coy-currency">
-                                                <label for="currency">Currency</label>
-                                                <select class="form-control" id="country">
-                                                        <option>Currency</option>
-                                                        <option>Naira</option>
-                                                        <option>Dollar</option>
-                                                        <option>Pounds</option>
-                                                        <option>Euro</option>
-                                                </select>
-                                            </div>
-                                            <div class="coy-time-zone">
-                                                <label for="time-zone">Time Zone</label>
-                                                <select class="form-control" id="country">
-                                                        <option>Time Zone</option>
-                                                        <option>GMT</option>
-                                                        <option>GMT +1</option>
-                                                        <option>Don't know</option>
-                                                        <option>Don't care</option>
-                                                </select>
-                                            </div>
-                                    </div>
-                                    <!-- <span id="emessage"></span> -->
-                            <!-- <span id="pmessage"></span> -->
-                        </div>
-                      
-                        <button type="submit" class="btn btn-success col-sm-5 pt-2 pb-2 mt-2 mb-2 btn-company-details">Update</button>
-                    </form>
-                </div>
-            </div>
+			 <div class="col-sm-12 col-md-8  pl-2 pr-2 pb-4">
+					<div class="container profile_form">
+							<form id="profileForm">
+									<label for="" class="msg"></label>
+							<div class="form-group">
+									<div class="names">
+											<div class="firstname">
+													<label for="firstName">First Name</label>
+													<input id="Fname" class="form-control" type="text" name="" placeholder="First Name">
+											</div>
+											<div class="lastname">
+													<label for="lastName">Last Name</label>
+													<input id="Lname" class="form-control" type="text" name="" placeholder="Last Name">
+											</div>
+									</div>
+											<!-- <span id="name_message"></span> -->
+							</div>
+							<div class="form-group">
+									<div class="title_text">
+													<div class="title">
+															<label for="title">Title</label>
+															<input id="mytitle" class="form-control" type="text" name="" placeholder="Your Job Title">
+													</div>
+													<div class="email">
+															<label for="my-email">User Email</label>
+															<input id="email" class="form-control" type="text" name="" placeholder="Your Email Address">
+													</div>
+									</div>
+									<!-- <span id="emessage"></span> -->
+							</div>
+							<div class="caret">
+									<h6> <i class="fas fa-angle-down show-angle-down"></i><i class="fas fa-angle-up show-angle-up"></i> &nbsp Change Password</h6>
+							</div>
+							<div class="form-group show-password-section">
+										
+									<p>
+									<div>
+											<label for="my-password">Password</label>
+											<input id="password" class="form-control" type="password" name="my-password" placeholder="Current password">
+									</div>
+									</p>
+									<div class="newpassword">
+													<div class="newPass">
+															<label for="new_password">New Password</label>
+															<input id="npassword" class="form-control" type="password" name="new_password" placeholder="New password">
+													</div>
+													<div class="conPass">
+															<label for="confirm_password">Confirm Password</label>
+															<input id="cpassword" class="form-control" type="password" name="confirm_password" placeholder="Confirm password">
+													</div>
+									</div>
+									<!-- <span id="pmessage"></span> -->
+							</div>
+						
+						
+					</form>
+					<div class="d-flex justify-content-center mb-3">
+							<button type="submit" class="green-btn">Update</button>
+						</div>
+					</div>
+					
+				</div>
+		</div>
+
+		<div class="row align-items-center mt-5 no-gutters">
+						
+					 <div class="col-sm-8 offset-md-4 company-details-form mt-5 pl-5 pr-5 pt-4 pb-4">
+							<div class="container">
+									<form id="company-details">
+											<label for="" class="msg"></label>
+									<p>
+									<div class="form-group">
+											<div class="coy-details">
+													<div class="coy-details-name">
+															<label for="firstName">Company Name</label>
+															<input id="coyName" class="form-control" type="text" name="" placeholder="Company Name">
+													</div>
+													<div class="coy-details-email">
+															<label for="lastName">Company Email</label>
+															<input id="coyEmail" class="form-control" type="text" name="" placeholder="Company Email">
+													</div>
+											</div>
+													<!-- <span id="name_message"></span> -->
+									</div>
+							</p>
+									<!-- <p>
+											<div class="caretCompany">
+													<h6> <i class="fas fa-angle-down show-angle-down"></i><i class="fas fa-angle-up show-angle-up"></i> &nbsp Address Setting</h6>
+											</div>
+									</p> -->
+						
+									<div class="form-group">  
+											<p>
+											<div>
+													<label for="my-password">Company Address</label>
+													<input id="coyaddress" class="form-control" type="password" name="my-password" placeholder="Company Address">
+											</div>
+									</p> 
+									<div class="caret">
+											<h6> <i class="fas fa-angle-down show-angle-down"></i><i class="fas fa-angle-up show-angle-up"></i> &nbsp Change Password</h6>
+									</div>
+											<div class="coy-contact">
+															<div class="coy-contact-country">
+																	<label for="state">Country</label>
+																	<select class="form-control">
+																					<option>Country</option>
+																					<option>Nigeria</option>
+																					<option>United States</option>
+																					<option>Japan</option>
+																					<option>Brazil</option>
+																	</select>
+															</div>
+															<div class="coy-contact-state">
+																	<label for="country">State</label>
+																	<select class="form-control" id="country">
+																					<option>State</option>
+																					<option>Lagos</option>
+																					<option>Ogun</option>
+																					<option>Ondo</option>
+																					<option>Oyo</option>
+																	</select>
+															</div>
+											</div>
+								 
+									</div>
+									
+											<div class="form-group">
+															<div class="coy-details-2">
+																			<div class="coy-currency">
+																					<label for="currency">Currency</label>
+																					<select class="form-control" id="country">
+																									<option>Currency</option>
+																									<option>Naira</option>
+																									<option>Dollar</option>
+																									<option>Pounds</option>
+																									<option>Euro</option>
+																					</select>
+																			</div>
+																			<div class="coy-time-zone">
+																					<label for="time-zone">Time Zone</label>
+																					<select class="form-control" id="country">
+																									<option>Time Zone</option>
+																									<option>GMT</option>
+																									<option>GMT +1</option>
+																									<option>Don't know</option>
+																									<option>Don't care</option>
+																					</select>
+																			</div>
+															</div>
+															<!-- <span id="emessage"></span> -->
+											<!-- <span id="pmessage"></span> -->
+									</div>
+								
+									<div class="d-flex justify-content-center">
+											<button type="submit" class="green-btn">Update</button>
+										</div>
+							</form>
+							</div>
+						</div>
+				</div>
+</div>
  
 
 
