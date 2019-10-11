@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Pacifico&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.10.2/css/all.css" integrity="sha384-rtJEYb85SiYWgfpCr0jn174XgJTn4rptSOQsMroFBPQSGLdOC5IbubP6lJ35qoM9" crossorigin="anonymous">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <title>Document</title>
+    <style>
+        body{
+            margin:0;
+            padding:0;
+            box-sizing: border-box;
+        }
+        .top-horizontal-bar{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            left: 20%;
+            max-width: 990px;
+            width: 100%;
+            height: 60px;
+            padding: 10px;
+            position: relative;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 3px 5px 0 rgba(0, 0, 0, 0.19);
+            text-align: center;
+        }
+        .top-horizontal-bar .ham {
+            margin-left: 15px;
+            display: none;
+        }
+        .search-div{
+            margin-left: 60px;
+        }
+        #search-box{
+            height: 40px;
+            width: 400px;
+            border-radius: 4px;
+            border: 1px solid #B1B1B1;
+            font-family: Open Sans;
+            font-weight: normal;
+            font-size: 18px;
+            line-height: 25px;
+            padding-left: 30px;
+            
+        }
+        .search-icon{
+            position: absolute;
+            top: 22px;
+            margin-left: 8px;
+            padding: 10px; 
+            min-width: 50px; 
+            background: url('https://res.cloudinary.com/young-einstein/image/upload/v1570671702/Shapesearch_rqnboo.png') no-repeat;
+            background-size: contain;
+            z-index: 1;
+        }
+        .horizontal-icons{
+            /* position: relative;
+            float: right; */
+            padding: 10px;
+        }
+        .horizontal-colon {
+            display: none;
+        }
+        .horizontal-icons a{
+            padding: 20px;
+            border-right: 1px solid #B1B1B1;
+        }
+        .horizontal-icons .last_a{
+            margin-left: 10px;
+            border:1px solid black;
+        }
+        .horizontal-icons a img{
+            height: 15px;
+        }
+        .top-horizontal-bar .profile{
+            width: 40px;
+            height: 40px;        
+            border:1px solid black;
+            /* float: right; */
+            border-radius: 50%;
+            margin-right: 30px;
+        }
+        .top-horizontal-bar .profile p{
+            line-height: 40px;
+            font-family: 'Open Sans';
+        }
+        .tab-container{
+            margin-left: 250px;
+        }
+        .table-container{
+            margin-top: 3.5%;
+            line-height: 50px;
+            margin-left: 30px;
+        }
+        .table-container h6 {
+            margin-bottom: 30px;
+        }
+         /* Table Styles*/
+         .table {
+                margin-left: 220px;
+                
+            }
+            .table-container h4 {
+                margin-bottom: 50px;
+            }
+            table { 
+                border-collapse: collapse; 
+            } 
+            table thead tr th {
+                border: none;
+                text-align: left;
+            }
+            .dot {
+                margin-right: 15px;
+            }
+            /* .colon {
+                margin-left: 35px;
+            } */
+            .bg {
+                background:#d9cfcf;
+                padding: 5px 20px;
+            }
+            .babel {
+                margin-top: 20px;
+            }
+          
+            th, td { 
+                width:150px; 
+                text-align:left; 
+                border:1px solid #B1B1B1; 
+                padding:5px;
+                border-left: none;
+                border-right: none;              
+            } 
+            td:nth-child(1) {
+                border-top-right-radius: 0;
+                border-bottom-right-radius: 0;
+            }
+            .geeks { 
+                border-right:hidden; 
+            } 
+            .gfg { 
+                border-collapse:separate; 
+                border-spacing:0 15px;
+                color: #312A2A; 
+            } 
+            .gfg tr td:nth-child(1) {
+                border-left: 1px solid #B1B1B1;
+                border-radius: 5px;
+                border-bottom-right-radius: 5px;
+                border-top-right-radius: 0;
+                border-bottom-right-radius: 0;
+            }
+            .gfg tr td:nth-child(6) {
+                border-right: 1px solid #B1B1B1;
+                border-radius: 5px;
+                border-bottom-right-radius: 5px;
+                border-top-left-radius: 0;
+                border-bottom-left-radius: 0;
+            }
+
+
+       
+        /* h2 sytling */
+        h2{
+            font-family:'Pacifico';
+            color: white;
+        }
+        .span{
+            color:#0ABAB5;
+        }
+        #select{
+            width: 30%;
+            padding: 15px;
+            border: 1px solid #B1B1B1;
+            border-radius: 3px;
+            color: #312A2A;
+        }
+
+        /* Fixed sidenav, full height */
+        .sidenav {
+          height: 100%;
+          width: 20%;
+          position: fixed;
+          z-index: 1;
+          top: 0;
+          left: 0;
+          background-color: #091429;
+          overflow-x: hidden;
+          padding-top: 20px;
+          line-height: 50px;
+        }
+        
+        /* Style the sidenav links and the dropdown button */
+        .sidenav a, .dropdown-btn {
+          padding: 6px 8px 6px 16px;
+          text-decoration: none;
+          font-size: 20px;
+          color: white;
+          display: block;
+          border: none;
+          background: none;
+          width: 100%;
+          text-align: left;
+          cursor: pointer;
+          outline: none;
+        }
+        /* buttong plus sign */
+        .plus-sign{
+            margin-top: 8%;
+            margin-left: 90px;
+            width: 50px;
+            height: 50px;
+            background: #0ABAB5;
+        
+            display: flex;
+            justify-content: center;        
+            border-radius: 50%;
+            color:
+            white;
+            font-size: 25px;
+            box-shadow: 0 5px 5px gray;
+            cursor: pointer;
+        }
+
+        .plus-sign strong {
+            align-self: center;
+        }
+      
+
+        /* On mouse-over */
+        a:hover, .dropdown-btn:hover {
+            color:#0ABAB5;
+}
+
+        /* Dropdown container (hidden by default). Optional: add a lighter background color and some left padding to change the design of the dropdown content */
+        .dropdown-container {
+          display: none;
+          background-color: #091429;
+          padding-left: 8px;
+        }
+
+
+        @media screen and (max-width: 1024px) {
+            .horizontal-icons {             
+                padding: 10px;
+                margin-right: 0px; 
+            }
+            .top-horizontal-bar .profile {
+                margin-right: 190px;
+            }
+            .top-horizontal-bar .profile p {
+                line-height: 10px;
+            }
+            .search-div {
+                margin-left: 30px;
+            }
+            .tab-container {
+                margin-left: 230px;
+            }
+            .plus-sign {
+                margin-left: 60px;
+            }
+
+        }
+     
+
+        @media screen and (max-width: 768px) {
+            .top-horizontal-bar .ham {
+                display: block;
+                margin-left: 15px;
+            }
+            .sidenav {
+                display: none;
+            }
+            .top-horizontal-bar{
+                width: 100%;
+                position: relative;
+                left: 0;
+                top: 0;
+            }
+            #search-box {
+                height: 35px;
+                width: 250px;
+                border-radius: 4px;
+                border: 1px solid #B1B1B1;
+                font-family: Open Sans;
+                font-weight: normal;
+                font-size: 16px;
+                line-height: 25px;
+                padding-left: 30px;
+            }
+            .search-div {
+                margin-left: 40px;
+            }
+            .tab-container {
+                margin-left: 0;
+            }
+            .table-container h6 {
+                margin-bottom: 20px;
+            }
+            /* .colon {
+                margin-left: 20px;
+            } */
+            .bg {
+                background: #d9cfcf;
+                padding: 5px 10px;
+            }
+            .bg {
+                padding: 5px 10px;
+                padding-right: 7px;
+            }
+            th, td {
+                width: 110px;
+                text-align: left;
+            }
+            .table-container {
+                margin-top: 8%;
+                line-height: 50px;
+                margin-left: 30px;
+            }
+            .plus-sign {
+                margin-top: 40%;
+            }
+        }
+
+        @media screen and (max-width: 576px) {
+            th, td {
+                width: 110px;
+                text-align: left;
+                padding: 0;
+            }
+            .dot{
+                display: none;
+            }
+            #select{
+                width: 40%;
+            }
+            .horizontal-icons {
+                padding: 0;
+            }
+            .horizontal-icons a {
+                padding: 15px;
+                border-right: 1px solid #B1B1B1;
+            }
+            .top-horizontal-bar .profile p {
+                line-height: 25px;
+            }
+            .plus-sign {
+                margin-top: 20%;
+            }
+            .horizontal-icons {
+                display: none;            
+            }
+            .horizontal-colon {
+                display: block;
+            }
+            .search-div {
+                margin-left: 20px;
+            }
+            .top-horizontal-bar .profile {
+                width: 30px;
+                height: 30px;
+                border: 1px solid black;
+                border-radius: 50%;
+                margin-right: 30px;
+            }
+        }
+
+        @media screen and (max-width: 375px) {
+            #search-box {
+                height: 35px;
+                width: 200px;
+            }
+            #select{
+                width: 45%;
+            }
+            .horizontal-icons {
+                display: none;            
+            }
+            .horizontal-colon {
+                display: block;
+            }
+            .search-div {
+                margin-left: 20px;
+            }
+            .top-horizontal-bar .profile {
+                width: 30px;
+                height: 30px;
+                border: 1px solid black;
+                border-radius: 50%;
+                margin-right: 30px;
+            }
+            .table-container {
+                margin-left: 10px;
+
+            }
+            .plus-sign {
+                margin-left: 50px;
+            }
+            .tab-container {
+                margin-left: 0;
+                font-size: 12px;
+            }
+            .bg {
+                padding: 5px 0px;
+                padding-right: 7px;
+            }
+            /* .colon {
+                margin-left: 10px;
+            } */
+        }
+        
+    </style>
+</head>
+<body>
+    
+    <div class="top-horizontal-bar">
+        <span class="ham"><i class="fas fa-bars"></i></span>
+
+        <div class="search-div">
+            <i class="search-icon"> </i>
+            <input type="search" name="" id="search-box" placeholder="search">            
+        </div>
+
+        <div class="horizontal-icons">
+            <a href=""><img src="https://res.cloudinary.com/kngkay/image/upload/v1570701036/kngkay/help.png" alt=""></a>
+            <a href=""><img src="https://res.cloudinary.com/kngkay/image/upload/v1570701037/kngkay/alarm-clock.png" alt=""></a>
+            <a href=""><img src="https://res.cloudinary.com/kngkay/image/upload/v1570701036/kngkay/notification_1.png" alt=""></a>            
+        </div>
+
+        
+        <strong class="horizontal-colon"><i class="fas fa-ellipsis-v"></i></strong>
+
+        <div class="profile">
+           <p> <b>AU</b></p>
+        </div>
+    </div>
+    <div class="container sidenav">
+
+        <h2>Lan<span class="span">c</span>ers</h2> 
+        
+         <a href="#dashboard"> <i class="fas fa-home"></i> Dashboard</a>
+          <a href="#client"><i class="fas fa-hotel"></i> Client</a>
+          <button class="dropdown-btn"><i class="far fa-lightbulb"></i> Project 
+            <i class="fa fa-caret-down"></i>
+          </button>
+          <div class="dropdown-container">
+            <a href="#">Status</a>
+            <a href="#">Overview</a>
+            <a href="#">Collaborators</a>
+            <a href="#">Task</a>
+            <a href="#">Documents</a>
+          </div>
+          <a href="#invoice"><i class="fas fa-file-invoice"></i> Invoice</a>
+          <a href="#contract"><i class="fas fa-scroll"></i> Contract</a>
+          <a href="#proposal"><i class="fas fa-paste"></i> Proposals</a>
+        </div>
+
+        <div class="tab-container">
+            <div class="table-container">
+            <h6>
+                PROJECTS
+            </h6>
+            
+            <select class="form-control" id="select">
+                    <option>Active</option>
+                    <option>Inactive</option>
+                  </select>
+
+                  <table class="babel"> 
+                        <thead> 
+                            <tr> 
+                                <th>Date</th> 
+                                <th>Title</th> 
+                                <th>Start Date</th> 
+                                <th>Paid</th> 
+                                <th>Due</th> 
+                                <th>Status</th> 
+                            </tr> 
+                        </thead> 
+                    </table> 
+                    <table class = "gfg"> 
+                        <tr> 
+                            <td><span class="dot">&#8226;</span> 5/09/2019</td>
+                            <td>Foodie</td>
+                            <td>20/09/2019</td>
+                            <td>&#8358; 200,000</td>
+                            <td>&#8358; 200,000</td>
+                            <td class="active">
+                                <span class="bg">
+                                    <span class="text-success"><strong>Active</strong></span>
+                                </span>
+
+                                <strong class="colon"><i class="fas fa-ellipsis-v"></i></strong>
+                            </td>                  
+                        </tr> 
+                        <tr> 
+                            <td><span class="dot">&#8226;</span> 5/09/2019</td>
+                            <td>Foodie</td>
+                            <td>20/09/2019</td>
+                            <td>&#8358; 200,000</td>
+                            <td>&#8358; 200,000</td>
+                            <td class="active">
+                                <span class="bg">
+                                    <span class="text-success"><strong>Active</strong></span>
+                                </span>
+    
+                                <strong class="colon"><i class="fas fa-ellipsis-v"></i></strong>
+                            </td>                          
+                        </tr>               
+                    </table> 
+                </div>
+
+                <div class="plus-sign">
+                    <strong>+</strong>
+                </div>
+    
+</div>
+        <script>
+        /* Loop through all dropdown buttons to toggle between hiding and showing its dropdown content - This allows the user to have multiple dropdowns without any conflict */
+        var dropdown = document.getElementsByClassName("dropdown-btn");
+        var i;
+        
+        for (i = 0; i < dropdown.length; i++) {
+          dropdown[i].addEventListener("click", function() {
+          this.classList.toggle("active");
+          var dropdownContent = this.nextElementSibling;
+          if (dropdownContent.style.display === "block") {
+          dropdownContent.style.display = "none";
+          } else {
+          dropdownContent.style.display = "block";
+          }
+          });
+        }
+        </script>
+</body>
+</html>
