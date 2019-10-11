@@ -268,6 +268,20 @@
           opacity: 1;
           margin: 5px auto;
         }
+
+        .alert.alert-primary.py-0.px-2.small.m-0.pending{
+            color: #F67A06;
+            font-weight: bold;
+            background-color: rgba(201, 133, 70,0.3);
+            border-color: rgba(201, 133, 70,0.3);
+        }
+
+        .alert.alert-primary.py-0.px-2.small.m-0.active{
+            color: #179615;
+            font-weight: bold;
+            background-color: #76D874;
+            border-color:  #76D874;
+        }
         /* ---------------------------------------------------
             MEDIAQUERIES
         ----------------------------------------------------- */
@@ -411,7 +425,7 @@
                             <div class="input-group-prepend">
                                 <span class="input-group-text border-right-0 bg-white" id="basic-addon1"><i class="fas fa-search"></i></span>
                             </div>
-                            <input class="form-control border border-left-0" type="text" placeholder="Search" aria-label="Search" aria-describedby="basic-addon1">
+                            <input class="form-control border border-left-0 searchBox" type="text" placeholder="Search" aria-label="Search" aria-describedby="basic-addon1">
                         </div>
                     </form>
                     <button class="btn btn-dark d-inline-block d-lg-none ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -443,10 +457,11 @@
                     <div class="">
                         <div class="">
                             <form class="form-inline">
-                                <select class="form-control">
-                                    <option>Completed</option>
-                                    <option>Pending</option>
-                                    <option>Active</option>
+                                <select class="form-control status">
+                                    <option value="All">All</option>
+                                    <option value="Completed">Completed</option>
+                                    <option value="Pending">Pending</option>
+                                    <option value="Active">Active</option>
                                 </select>
                             </form>
                         </div>
@@ -471,7 +486,34 @@
                                             </span> 
                                             <span class="">Mar. 10, 2019</span>
                                         </td>
-                                        <td class="border-top border-bottom">Foodie</td>
+                                        <td class="border-top border-bottom titles">Online Music Shop</td>
+                                        <td class="border-top border-bottom">Aug. 10, 2019</td>
+                                        <td class="border-top border-bottom text-right">₦200,000</td>
+                                        <td class="border-top border-bottom text-right">₦200,000</td>
+                                        <td class="border-top border-bottom">
+                                            <span class="alert alert-primary py-0 px-2 small m-0 pending">Pending</span>
+                                        </td>
+                                        <td class="rounded-right border border-left-0">
+                                            <div class="dropdown dropleft">
+                                                <a class="btn btn-white btn-sm dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                    <i class="fas fa-ellipsis-v"></i>
+                                                </a>
+                                                <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                                                    <a class="dropdown-item text-success" href="#"><i class="fas fa-binoculars"></i> View</a>
+                                                    <a class="dropdown-item text-secondary" href="#"><i class="fas fa-edit"></i> Edit</a>
+                                                    <a class="dropdown-item text-danger" href="#"><i class="fas fa-trash-alt"></i> Delete</a>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr class="py-2">
+                                        <td scope="row" class="rounded-left border border-right-0">
+                                            <span class="text-small text-muted mr-2">
+                                                <i class="fas fa-circle"></i>
+                                            </span> 
+                                            <span class="">Mar. 10, 2019</span>
+                                        </td>
+                                        <td class="border-top border-bottom titles">GateGuard</td>
                                         <td class="border-top border-bottom">Aug. 10, 2019</td>
                                         <td class="border-top border-bottom text-right">₦200,000</td>
                                         <td class="border-top border-bottom text-right">₦200,000</td>
@@ -498,7 +540,7 @@
                                             </span> 
                                             <span class="">Mar. 10, 2019</span>
                                         </td>
-                                        <td class="border-top border-bottom">Foodie</td>
+                                        <td class="border-top border-bottom titles">HNG 6.0 Site</td>
                                         <td class="border-top border-bottom">Aug. 10, 2019</td>
                                         <td class="border-top border-bottom text-right">₦200,000</td>
                                         <td class="border-top border-bottom text-right">₦200,000</td>
@@ -525,12 +567,12 @@
                                             </span> 
                                             <span class="">Mar. 10, 2019</span>
                                         </td>
-                                        <td class="border-top border-bottom">Foodie</td>
+                                        <td class="border-top border-bottom titles">Shopping Cart</td>
                                         <td class="border-top border-bottom">Aug. 10, 2019</td>
                                         <td class="border-top border-bottom text-right">₦200,000</td>
                                         <td class="border-top border-bottom text-right">₦200,000</td>
                                         <td class="border-top border-bottom">
-                                            <span class="alert alert-primary py-0 px-2 small m-0">Completed</span>
+                                            <span class="alert alert-primary py-0 px-2 small m-0 active">Active</span>
                                         </td>
                                         <td class="rounded-right border border-left-0">
                                             <div class="dropdown dropleft">
@@ -552,12 +594,12 @@
                                             </span> 
                                             <span class="">Mar. 10, 2019</span>
                                         </td>
-                                        <td class="border-top border-bottom">Foodie</td>
+                                        <td class="border-top border-bottom titles">School Management</td>
                                         <td class="border-top border-bottom">Aug. 10, 2019</td>
                                         <td class="border-top border-bottom text-right">₦200,000</td>
                                         <td class="border-top border-bottom text-right">₦200,000</td>
                                         <td class="border-top border-bottom">
-                                            <span class="alert alert-primary py-0 px-2 small m-0">Completed</span>
+                                            <span class="alert alert-primary py-0 px-2 small m-0 active">Active</span>
                                         </td>
                                         <td class="rounded-right border border-left-0">
                                             <div class="dropdown dropleft">
@@ -579,34 +621,7 @@
                                             </span> 
                                             <span class="">Mar. 10, 2019</span>
                                         </td>
-                                        <td class="border-top border-bottom">Foodie</td>
-                                        <td class="border-top border-bottom">Aug. 10, 2019</td>
-                                        <td class="border-top border-bottom text-right">₦200,000</td>
-                                        <td class="border-top border-bottom text-right">₦200,000</td>
-                                        <td class="border-top border-bottom">
-                                            <span class="alert alert-primary py-0 px-2 small m-0">Completed</span>
-                                        </td>
-                                        <td class="rounded-right border border-left-0">
-                                            <div class="dropdown dropleft">
-                                                <a class="btn btn-white btn-sm dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                                    <i class="fas fa-ellipsis-v"></i>
-                                                </a>
-                                                <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                                                    <a class="dropdown-item text-success" href="#"><i class="fas fa-binoculars"></i> View</a>
-                                                    <a class="dropdown-item text-secondary" href="#"><i class="fas fa-edit"></i> Edit</a>
-                                                    <a class="dropdown-item text-danger" href="#"><i class="fas fa-trash-alt"></i> Delete</a>
-                                                </div>
-                                            </div>
-                                        </td>
-                                    </tr>
-                                    <tr class="py-2">
-                                        <td scope="row" class="rounded-left border border-right-0">
-                                            <span class="text-small text-muted mr-2">
-                                                <i class="fas fa-circle"></i>
-                                            </span> 
-                                            <span class="">Mar. 10, 2019</span>
-                                        </td>
-                                        <td class="border-top border-bottom">Foodie</td>
+                                        <td class="border-top border-bottom titles">CBT Mobile App</td>
                                         <td class="border-top border-bottom">Aug. 10, 2019</td>
                                         <td class="border-top border-bottom text-right">₦200,000</td>
                                         <td class="border-top border-bottom text-right">₦200,000</td>
@@ -650,6 +665,42 @@
                 $('#sidebar').toggleClass('active');
                 $(this).toggleClass('active');
             });
+
+            const searchBox = document.querySelector('.searchBox');
+            const status = document.querySelector('.status');
+            const filterNames =()=>{
+                const titles = document.querySelectorAll('.titles');
+                const searchBoxValue = searchBox.value.toLowerCase();
+            
+                titles.forEach(title=>{
+                    if(!title.textContent.toLowerCase().includes(searchBoxValue)){
+                        title.parentElement.style.display = "none"
+                    }else{
+                        title.parentElement.style.display = "";
+                    }
+                })
+            }
+
+            const filterStatus =()=>{
+                const statusText = document.querySelectorAll('.alert-primary')
+                
+                statusText.forEach(text => {
+                    if(status.value !== 'All'){
+                        if(status.value === text.textContent){
+                            text.parentElement.parentElement.style.display = ""
+                        }else{
+                            text.parentElement.parentElement.style.display = "none"
+                        }
+                     }else{
+                        text.parentElement.parentElement.style.display = ""
+                     }
+                })  
+            }
+
+            searchBox.addEventListener('keyup', filterNames);
+
+            status.addEventListener('change', filterStatus);
+               
         });
     </script>
 </body>
