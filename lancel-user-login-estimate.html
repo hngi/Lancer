@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html class="no-js">
+<html>
 
 <head>
     <meta charset="utf-8">
@@ -8,15 +8,19 @@
     <meta name="description" content="mentors">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans|Ubuntu|Pacifico&display=swap" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="mentorPage2.css">
-    <link rel="stylesheet" type="text/css"
+    <!-- <link rel="stylesheet" type="text/css" href="mentorPage2.css"> -->
+    <!-- <link rel="stylesheet" type="text/css"
         href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> -->
     <script src="https://use.fontawesome.com/185cfd0ddc.js"></script>
     <style>
         /*body style*/
         body {
+            width: 100%;
+            height: 100vh;
             font-family: 'Ubuntu';
+            margin: 0%;
+            padding: 0%;
         }
 
         * {
@@ -39,20 +43,14 @@
             margin: 0%;
             padding-inline-start: 0%;
         }
-
-        body {
-            margin: 0%;
-            padding: 0%;
-        }
-
         .kc-logo {
             width: 200px;
             display: flex;
-            justify-content: center;
             background: #091429;
             color: #ffffff;
             padding: 1rem;
             font-family: 'Open Sans', sans-serif;
+           
         }
 
         #kc-side-btn {
@@ -71,6 +69,7 @@
             padding: 1rem;
             font-family: 'Open Sans', sans-serif;
             transition: .5s ease-in-out;
+            
         }
 
         .kc-side-nav {
@@ -108,15 +107,37 @@
         }
 
         /* MEDIA Q */
-        @media only screen and (max-width: 600px) {
+        @media (max-width: 600px) {
+            .main{
+                grid-column: 1/3;
+                grid-row: 2/3;
+                margin: 2rem;
+            }
+            a{
+                font-size: .85em;
+            }
             .none {
                 display: block;
+                color: #ffffff;
             }
-
+            .kc-logo{
+                width: auto;
+            }
+            .lancer-logo{
+                display: none;
+            }
             #kc-aside {
-                transform: translateX(-100%);
-                height: auto;
+                display: none;
             }
+            .est{
+                display: none;
+            }
+        }
+
+        /* -------------------------------- */
+        .header, .main-cont{
+            width: 100%;
+            display: flex;
         }
             #side-nav {
                 position: fixed;
@@ -126,8 +147,16 @@
                 background-color: #091429;
             }
             .navbar {
+                height: 65px;
+                width: 80.5%;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
                 box-shadow:  #8898AA 0px 3px 5px;
                 color: #000000;
+                grid-column: 2/3;
+                grid-row: 1/2;
+                padding: .5rem 1rem;
             }
             i {
                 color: #000000;
@@ -142,128 +171,133 @@
                 color: white;
                 cursor: pointer;
             }
-            main{
-                
-            }
             .list-group-item {
                 background: inherit;
                 border-radius: 0;
                 margin: 0;
                 border: none;
             }
-       
+            .main{
+                grid-column: 2/3;
+                grid-row: 2/3;
+                margin: 2rem;
+            }
+            .top-nav{
+                display: flex;
+            }
+            a{
+                text-decoration: none;
+                color: #091429;
+            }
+            .est{
+                font-weight: bold;
+                font-size: 1.3em;
+            }
         </style>
     </head>
     <body>
-        <!--Side bar-->
-        <div id="side-nav" class="col-2 list-group">
+    
            <!--Side bar by lavidegeorge -->
-    <div class="kc-logo">
-            <img src="./img/button.png" class="none" id="kc-side-btn" alt="">
-            <img src="./img/Lancers.png" alt="Lancer-Logo">
+    <div class="header">
+        <div class="kc-logo">
+            <img src="https://res.cloudinary.com/laviedegeorge/image/upload/v1570744697/startng/hng/img/Lancers_k3r04r.png" class="lancer-logo" alt="Lancer-Logo">
+            <a href="javascript:void(0);"><i class="fa fa-bars none" id="kc-side-btn" onclick="showNav()"></i></a>
         </div>
-        <aside id="kc-aside">
-    
-            <div class="kc-side-nav">
-                <ul>
-                    <li>
-                        <img src="./img/home.png" class="kc-icon" alt="">
-                        Dasboard
+            <nav class=" navbar">
+               <!--  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button> -->
+                <a class="est" href="#">Estimates</a>
+                
+                <div>
+                    <ul class="top-nav">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#"><i class="fa fa-comments"></i>Support <span class="sr-only">(current)</span></a>
                     </li>
-                    <li>
-                        <img src="./img/client.png" class="kc-icon" alt="">
-                        Client
+                    <li class="nav-item ">
+                        <a href=""><i class="fa fa-bell"></i></a>
                     </li>
-                    <li>
-                        <img src="./img/lightbulb.png" class="kc-icon" alt="">
-                        Project
-                        <img src="./img/expand.png" class="kc-icon margin-left" alt="">
+                    <li class="nav-item ">
+                        <a href=""><i class="fa fa-user"></i></a>
                     </li>
-                    <li>
-                        <img src="./img/invoice.png" class="kc-icon" alt="">
-                        Invoice
+                    <li >
+                        <a  href="#">Juliet</a>
+                        <img src="https://res.cloudinary.com/laviedegeorge/image/upload/v1570744696/startng/hng/img/expand_t3obz5.png" class="kc-icon margin-left" alt="">
                     </li>
-                    <li>
-                        <img src="./img/contract.png" class="kc-icon" alt="">
-                        Contract
-                    </li>
-                    <li>
-                        <img src="./img/proposal.png" class="kc-icon" alt="">
-                        Proposals
-                    </li>
-                </ul>
-            </div>
-        </aside>
-    
+                    </ul>
+                </div>
+            </nav>
+    </div>
+        
+
+   <div class="main-cont">
+    <aside id="kc-aside">
+
+        <div class="kc-side-nav">
+            <ul>
+                <li>
+                    <img src="https://res.cloudinary.com/laviedegeorge/image/upload/v1570744696/startng/hng/img/home_n13gmd.png" class="kc-icon" alt="">
+                    Dasboard
+                </li>
+                <li>
+                    <img src="https://res.cloudinary.com/laviedegeorge/image/upload/v1570744696/startng/hng/img/client_dd2ctb.png" class="kc-icon" alt="">
+                    Client
+                </li>
+                <li>
+                    <img src="https://res.cloudinary.com/laviedegeorge/image/upload/v1570744697/startng/hng/img/lightbulb_tqw4ol.png" class="kc-icon" alt="">
+                    Project
+                    <img src="https://res.cloudinary.com/laviedegeorge/image/upload/v1570744696/startng/hng/img/expand_t3obz5.png" class="kc-icon margin-left" alt="">
+                </li>
+                <li>
+                    <img src="https://res.cloudinary.com/laviedegeorge/image/upload/v1570744696/startng/hng/img/invoice_eplv5p.png" class="kc-icon" alt="">
+                    Invoice
+                </li>
+                <li>
+                    <img src="https://res.cloudinary.com/laviedegeorge/image/upload/v1570744696/startng/hng/img/contract_drqq2t.png" class="kc-icon" alt="">
+                    Contract
+                </li>
+                <li>
+                    <img src="https://res.cloudinary.com/laviedegeorge/image/upload/v1570744697/startng/hng/img/proposal_t8qjfl.png" class="kc-icon" alt="">
+                    Proposals
+                </li>
+            </ul>
         </div>
+    </aside>
+    
+        
         <!--navigation-bar-->
-    <main class="offset-2">
-        <nav class=" navbar navbar-expand-lg navbar-light">
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <a class="navbar-brand" href="#">Estimates</a>
-            
-            <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
-                <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
-                <li class="nav-item active">
-                    <a class="nav-link" href="#"><i class="fa fa-comments"></i>Support <span class="sr-only">(current)</span></a>
-                </li>
-                <li class="nav-item ">
-                    <a href=""><i class="fa fa-bell"></i></a>
-                </li>
-                <li class="nav-item ">
-                    <a href=""><i class="fa fa-user"></i></a>
-                </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Juliet
-                    </a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                        <a class="dropdown-item" href="#">Dashboard</a>
-                        <a class="dropdown-item" href="#">Client</a>
-                        <a class="dropdown-item" href="#">Project</a>
-                        <a class="dropdown-item" href="#">Invoice</a>
-                        <a class="dropdown-item" href="#">Contract</a>
-                        <a class="dropdown-item" href="#">Proposals</a>
-                    </div>
-                </li>
-                </ul>
-            </div>
-        </nav>
+    <main class="">
         
         <!--Body Section-->
-        <section class="p-5">
+        <section class="main">
             <button type="button" class="block">Create Estimate</button>
             <h2>Estimate helps you place value to your work</h2>
             <p>Create an estimate and easily convert it to an invoice and send to your client</p>
         </section>
     </main>
+   </div>
         <!--FooterSection-->
         
 
 
 
 
-        <!-- <script>
-                const sideBtn = document.getElementById('kc-side-btn');
-                sideBtn.addEventListener('click', () => {
-                    const x = window.matchMedia("(max-width: 600px)");
-                    if (x.matches) {
+        <script>
+                        const showNav = () => {
                         const sideNav = document.getElementById('kc-aside');
-                        if (sideNav.style.transform = 'translateX(-100%)') {
-                            sideNav.style.transform = 'translateX(0%)';
-                            console.log(true);
+                        if (sideNav.style.display === 'block') {
+                            sideNav.style.display = 'none';
                         } else {
-                            console.log(false);
-                            sideNav.style.transform = 'translateX(-100%)'
+                            sideNav.style.position = 'absolute';
+                            sideNav.style.display = 'block';
+                            sideNav.style.zIndex = '10';
+                      
                         }
-                    }
-                })
-        </script> -->
+                }
+        </script>
             
-        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <!-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script> -->
     </body>
 </html>
