@@ -187,7 +187,7 @@
         }
         .create-invoice {
             width: 13rem;
-            height: 4.5rem;
+            height: 3.5rem;
             background: #0ABAB5;
             color: white;
             border: none;
@@ -470,13 +470,23 @@
             }
         }
 
-        @media(max-width: 767x) {
+        @media (max-width: 767px) {
             .header {
                 display: grid;
                 justify-content: center;
                 align-items: center;
                 grid-row-gap: 0.5rem;
             }
+
+            main {
+                margin-top: 7rem;
+            }
+
+            .sign-up {
+            width: 5.0rem;
+            margin-right: 0rem;
+        }
+
         }
     </style>
 </head>
@@ -493,10 +503,10 @@
             <div>
                 <ul class="header-lists">
                     <li>
-                        <a href="#" class="login" > <span>Login</span></a>
+                        <a href="/signin.html" class="login" > <span>Login</span></a>
                     </li>
                     <li class="profile-list">
-                        <a href="#" class="sign-up"> <span> Sign Up</span> </a>
+                        <a href="/signup.html" class="sign-up"> <span> Sign Up</span> </a>
                     </li>
                     <li class="hamburger" id="menuBtn">
                         <span class="hamburger-btn"></span>
@@ -548,7 +558,7 @@
             <div class="container main-container">
 
                 <div class="content">
-                    <button class=create-invoice>Create invoice</button>
+                    <button class='create-invoice'>Create invoice</button>
                     <h3>Estimates helps you place value to your work and time!</h3>
                     <p>Create an estimate and easily convert it to an invoice and send to your client.</p>
                 </div>
@@ -583,6 +593,9 @@
             showMenu = false;
         }
     })
+    document.querySelector('.create-invoice').addEventListener('click', () => {
+            location.href = "invoice-view.html"
+        })
 </script>
 
 </html>
