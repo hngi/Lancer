@@ -313,7 +313,7 @@ img{
                         <div class="menu">
                                 <i class="fa fa-bars"></i>
                         </div>
-                    <div class="search-container">
+                    <div class="search-container search-adjust">
                         <input type="search" name="search" id="search" placeholder ="Search" class="fal fa-search search">
                     </div>
                     <div>
@@ -382,6 +382,9 @@ img{
         $(document).ready(function(){
             $('.fa-bars').click(function(){
                 $('.nav-lancer').toggle();
+                $('.search-adjust').css({
+                    'margin-left':'20px'
+                });
                 $(this).css({
                     'position':'fixed',
                     'top':'35px',
