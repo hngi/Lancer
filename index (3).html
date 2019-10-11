@@ -254,10 +254,12 @@
                 margin-right: 0px; 
             }
             .top-horizontal-bar .profile {
-                margin-right: 190px;
+                /* margin-right: 0px; */
+                position: relative;
+                right: 210px;
             }
             .top-horizontal-bar .profile p {
-                line-height: 10px;
+                line-height: 39px;
             }
             .search-div {
                 margin-left: 30px;
@@ -268,7 +270,27 @@
             .plus-sign {
                 margin-left: 60px;
             }
+            #search-box {
+                width: 300px;
+            }
+            .horizontal-icons {
+                /* padding: 10px; */
+                margin-right: 270px;
+            }
+        }
 
+        @media screen and (max-width: 992px) {
+            #search-box {
+                width: 300px;
+            }
+            .horizontal-icons {
+                /* position: relative;
+                right: 110px; */
+            }
+            .top-horizontal-bar .profile {            
+                /* position: relative;
+                right: 170px;
+            } */
         }
      
 
@@ -329,6 +351,18 @@
             .plus-sign {
                 margin-top: 40%;
             }
+            .top-horizontal-bar .profile {
+                margin-right: 30px;
+                position: relative;
+                right: 0;
+            }
+                        .top-horizontal-bar .profile p {
+                line-height: 39px;
+            }
+            .horizontal-icons {
+                padding: 10px;
+                margin-right: 0px;
+            }
         }
 
         @media screen and (max-width: 576px) {
@@ -351,7 +385,7 @@
                 border-right: 1px solid #B1B1B1;
             }
             .top-horizontal-bar .profile p {
-                line-height: 25px;
+                line-height: 39px;
             }
             .plus-sign {
                 margin-top: 20%;
@@ -366,11 +400,9 @@
                 margin-left: 20px;
             }
             .top-horizontal-bar .profile {
-                width: 30px;
-                height: 30px;
-                border: 1px solid black;
-                border-radius: 50%;
                 margin-right: 30px;
+                position: relative; 
+                right: 0;               
             }
         }
 
@@ -396,7 +428,7 @@
                 height: 30px;
                 border: 1px solid black;
                 border-radius: 50%;
-                margin-right: 30px;
+                margin-right: 10px;
             }
             .table-container {
                 margin-left: 10px;
@@ -416,6 +448,14 @@
             /* .colon {
                 margin-left: 10px;
             } */
+            .top-horizontal-bar .profile {
+                position: relative;
+                right: 0;
+                margin-right: 10px;
+            }
+            .top-horizontal-bar .profile p {
+                line-height: 30px;
+            }
         }
         
     </style>
