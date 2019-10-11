@@ -1,0 +1,992 @@
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>Company Detail page</title>
+
+        <!-- Bootstrap core CSS -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+        <!-- Custom styles for this template -->
+  
+    
+
+    <!-- Font Awesome JS -->
+    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js" integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ" crossorigin="anonymous"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js" integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto|Ubuntu&display=swap" rel="stylesheet"> 
+</head>
+
+<style>
+
+
+
+
+body {
+  overflow-x: hidden;
+}
+
+.sidebar-color{
+  background: #091429;
+  color: #fff;
+}
+
+.list-group-item{
+  margin: 8px 0px;
+}
+
+.sidebar-color{
+  background: #091429;
+  color: #fff;
+}
+
+.sidebar-color:hover{
+  background: #091429;  
+  color: #0ABAB5;
+}
+
+.sidebar-color:focus{
+  background: #091429;  
+  color: #0ABAB5;
+}
+
+.sidebar-color img{
+  margin-right: 10px;
+}
+.sidebar-heading{
+  margin: 30px 0;
+}
+
+.navbar-nav {
+
+	align-items: last baseline;
+}
+
+.nav-item:not(:last-child) {
+	border-right: 1px solid #B1B1B1;
+  padding: 10px;
+  
+}
+.nav-item:last-child {
+  padding: 10px;
+  
+}
+
+.abs-center-x {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-top: 23px;
+}
+
+.navbar-light{
+  background: #FFFFFF;
+  box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.25);
+}
+
+.user-avatar {
+	border: 1px solid #091429;
+	width: 50px;
+	height: 50px;
+	border-radius: 25px;
+	text-align: center;
+}
+
+
+#sidebar-wrapper {
+  max-height: 150vh;
+  margin-left: -15rem;
+  -webkit-transition: margin .25s ease-out;
+  -moz-transition: margin .25s ease-out;
+  -o-transition: margin .25s ease-out;
+  transition: margin .25s ease-out;
+  background: #091429;
+  color: #fff;
+}
+
+#sidebar-wrapper .sidebar-heading {
+  padding: 0.875rem 1.25rem;
+  font-size: 1.2rem;
+}
+
+#sidebar-wrapper .list-group {
+	width: 15rem;
+	display: grid;
+	align-items: center;
+	justify-content: center;
+}
+
+#page-content-wrapper {
+  min-width: 100vw;
+}
+
+#wrapper.toggled #sidebar-wrapper {
+  margin-left: 0;
+}
+
+#menu-toggle{
+  display: none;
+}
+
+.company-form{
+
+    border: 1px solid #C4C4C4;
+    padding: 37px;
+  
+}
+
+.form-container {
+	/* width: 500px; */
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	
+	/* position: relative; */
+	/* grid-template-columns: 1fr; */
+}
+
+
+
+@media (min-width: 768px) {
+  #sidebar-wrapper {
+    margin-left: 0;
+  }
+
+  #page-content-wrapper {
+    min-width: 0;
+    width: 100%;
+  }
+
+  #wrapper.toggled #sidebar-wrapper {
+    margin-left: -15rem;
+  }
+
+  .float{
+    position:fixed;
+    width:60px;
+    height:60px;
+    bottom:40px;
+    right:40px;
+    background-color:#0C9;
+    color:#FFF;
+    border-radius:50px;
+    text-align:center;
+    box-shadow: 2px 2px 3px #999;
+  }
+  
+  .my-float{
+    margin-top:22px;
+  }
+
+
+
+/* ?// */
+
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  background: #fafafa;
+}
+
+p {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1.1em;
+  font-weight: 300;
+  line-height: 1.7em;
+  color: #999;
+}
+
+a{
+
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1.1em;
+  font-weight: 300;
+  line-height: 1.7em;
+  color: #999;
+
+}
+
+#sidebarCollapse{
+  display: none;
+}
+
+a, a:hover, a:focus {
+  color: inherit;
+  text-decoration: none;
+  transition: all 0.3s;
+}
+
+#sidebar {
+  /* don't forget to add all the previously mentioned styles here too */
+  background: #091429;
+  color: #fff;
+  transition: all 0.3s;
+  
+}
+
+#sidebar .sidebar-header {
+  padding: 20px;
+  background: #091429;
+}
+
+#sidebar ul.components {
+  padding: 20px 0;
+  border-bottom: 1px solid #47748b;
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  
+}
+
+#sidebar ul p {
+  color: #fff;
+  padding: 10px;
+}
+
+#sidebar ul li a {
+  padding: 10px;
+  font-size: 1.1em;
+  display: block;
+}
+#sidebar ul li a:hover {
+  color: #7386D5;
+  background: #fff;
+}
+
+#sidebar ul li  {
+  margin-bottom: 20px;
+}
+
+#sidebar ul li.active > a, a[aria-expanded="true"] {
+  color: #fff;
+  background: #091429;
+}
+ul ul a {
+  font-size: 0.9em !important;
+  padding-left: 30px !important;
+  background: #091429;
+}
+
+ul li a>img {
+margin-right: 10px;
+}
+
+.wrapper {
+  display: flex;
+  width: 100%;
+  align-items: stretch;
+}
+
+
+
+
+#sidebar {
+  min-width: 250px;
+  max-width: 250px;
+}
+
+#sidebar.active {
+  margin-left: -250px;
+}
+
+
+#sidebar {
+  min-width: 200px;
+  max-width: 250px;
+  max-height: 90vh;
+}
+
+a[data-toggle="collapse"] {
+  position: relative;
+}
+
+.dropdown-toggle::after {
+  display: block;
+  position: absolute;
+  top: 50%;
+  right: 20px;
+  transform: translateY(-50%);
+}
+
+.list-group-item{
+  font-family: 'Open Sans', sans-serif;
+font-style: normal;
+font-weight: bold;
+font-size: 18px;
+line-height: 25px;
+
+
+color: #EEEEEE;
+}
+
+.nav-breadcrumb {
+background: #FFFFFF;
+box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+text-align: center;
+display: flex;
+/* flex-direction: column; */
+/* justify-content: center;
+  /* width: 88vw; */
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 80px;
+align-items: center; 
+}
+
+.nav-breadcrumb a{
+  display: inline;
+  padding: 0 60px;
+  font-family: 'Ubuntu', sans-serif;
+  font-weight: 500;
+  font-size: 20px;
+  /* line-height: 34px; */
+
+}
+
+.active{
+  color: #0ABAB5;
+}
+
+.main-content{
+  margin-top: 100px;
+  display: grid;
+  grid-auto-flow: row;
+  grid-template-columns: 500px;
+  /* text-align: center; */
+
+}
+
+.file-section {
+display: grid;
+align-items: center;
+justify-content: center;
+}
+
+
+.file-section h3 {
+font-style: normal;
+font-weight: bold;
+font-size: 35px;
+line-height: 63px;
+color: #000000;
+}
+
+.file-section img{
+  width: 150px;
+}
+#content{
+  width: 100%;
+}
+
+.companyHeader{
+  font-family: 'Open Sans', sans-serif;
+font-style: normal;
+font-weight: bold;
+font-size: 18px;
+line-height: 25px;
+text-transform: uppercase;
+margin: 15px;
+/* identical to box height */
+color: #000000;
+}
+
+body {
+	font-family: "Roboto";
+	/* display: flex; */
+}
+
+#form-wrapper {
+	/* border: 1px solid #c4c4c4; */
+	width: 778px;
+	/* height: 914px; */
+	/* position: absolute;
+	left: 437px;
+	top: 205px;
+} */
+}
+
+#logoDiv {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-top: 40px;
+	margin-bottom: 32px;
+}
+
+#form {
+	/* margin-left: 32px;
+	margin-right: 32px;
+	margin-bottom: 81px; */
+	border: 1px solid #c4c4c4;
+	padding: 20px;
+
+}
+
+h4 {
+	font-family: "Open sans";
+	font-style: normal;
+	font-size: 18px;
+	font-weight: bold;
+	line-height: 25px;
+	color: #000000;
+	margin-bottom: 32px;
+}
+
+label {
+	display: block;
+	margin-bottom: 8px;
+	font-size: 14px;
+	font-weight: bold;
+	line-height: 16px;
+    font-family: 'Roboto', sans-serif;
+	font-style: normal;
+	color: #919191;
+}
+input, select {
+	display: block;
+	margin-bottom: 16px;
+	padding-left: 10px;
+	font-size: 14px;
+	outline: none;
+    font-family: 'Roboto', sans-serif;
+	
+font-style: normal;
+font-weight: bold;
+font-size: 14px;
+line-height: 16px;
+
+color: #000000;
+
+
+
+	/* color: #000000; */
+}
+
+
+input::-webkit-input-placeholder {
+	color: #231F20 !important;
+	opacity: 1;
+	}
+	 
+	input:-moz-placeholder { /* Firefox 18- */
+	color: #231F20 !important;  
+	opacity: 1;
+	}
+	 
+	input::-moz-placeholder {  /* Firefox 19+ */
+	color: #231F20 !important;  
+	opacity: 1;
+	}
+	 
+	input:-ms-input-placeholder {  
+	color: #231F20 !important;  
+	opacity: 1;
+	}
+
+.twoColumns {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+}
+
+#companyName, #businessType, #contactPerson {
+	width: 714px;
+	height: 44px;
+	border: 1px solid #c4c4c4;
+}
+
+
+
+#state, #country, #companyPhoneNumber, #companyEmail,
+#designation, #personCountry, #designation2Div, #newContactDiv {
+	width: 349px;
+	height: 44px; 
+	background-color: #ffffff;
+}
+
+#state, #country, #designation, #designation2Div, #newContactDiv  {
+	width: 363px;
+	border: 1px solid #c4c4c4;
+}
+
+#state, #companyPhoneNumber, #designation, #designation2Div {
+	margin-right: 5px;
+}
+
+#designation {
+	height: 48.5px;
+}
+
+#designation2Div, #newContactDiv {
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
+}
+
+#designation2Div input {
+    background: none;
+	display: inline-flex;
+}
+
+#newContactDiv{
+	background: #FFFFFF;
+	border: 1px solid #0ABAB5;
+	box-sizing: border-box;
+	border-radius: 4px;
+	
+	color: #0ABAB5;
+}
+
+#newContactDiv button, #newContactDiv i {
+	color: #009fff;
+	border:none;
+	outline: none;
+    font-size: 14px;
+	font-style: normal;
+	font-weight: bold;
+	line-height: 16px;
+	cursor: pointer;
+	
+}
+
+#productRequirement {
+	margin-top: auto;
+	margin-bottom: auto;
+	border: none;
+	font-size: 14px;
+	font-weight: bold;
+	line-height: 16px;
+}
+/* 
+#sideBar {
+	width: 20%;
+	height: 70vh;
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	background-color: #091429;
+	z-index: 100;
+} */
+/* 
+#navBar {
+	width: 100%;
+	height: 80px;
+	position: absolute;
+	top: 0px;
+	border: 1px solid black;
+} */
+/* 
+#wrap {
+	display: flex;
+	flex-direction: column;
+}  */
+
+::placeholder {
+    color: black; 
+} 
+  
+:-ms-input-placeholder {
+    color: black; 
+} 
+  
+::-ms-input-placeholder {
+    color: black; 
+}
+
+select{ 
+	-moz-appearance:none; /* Firefox */
+    -webkit-appearance:none; /* Safari and Chrome */
+    appearance:none; 
+   -webkit-border-radius: 0;  /* Safari 3-4, iOS 1-3.2, Android 1.6- */    
+   -moz-border-radius: 0;  /* Firefox 1-3.6 */     
+   border-radius: 0;  /* Opera 10.5, IE 9, Safari 5, Chrome, Firefox 4, iOS 4, Android 2.1+ */
+   background: url(Shape.svg) 0 0 no-repeat;
+   background-repeat: no-repeat;
+   background-position-x: 95%;
+   background-position-y: 15px;
+   border: 1px solid #dfdfdf;
+   border-radius: 2px;
+   margin-right: 2rem;
+
+   padding-right: 2rem;
+ }
+
+
+input{
+	border: 1px solid #C4C4C4;
+box-sizing: border-box;
+border-radius: 4px;
+font-weight: bold;
+
+color: black;
+font-size: 15px;
+opacity: 1;
+}
+
+@media screen and (max-width: 1280px) {
+    #form-wrapper {
+	left: 360px;
+    }
+}
+
+@media screen and (max-width: 1150px) {
+    #form-wrapper {
+	    left: 275px;
+    }
+}
+
+@media screen and (max-width: 1070px) {
+    #form-wrapper {
+	    left: 245px;
+    }
+}
+
+@media screen and (max-width: 1030px) {
+	#sideBar {
+		display: none;
+	}
+/* 
+	#wrap {
+		width: 100%;
+		position: relative;
+	} */
+
+	/* #navBar {
+		border-left: transparent;
+		border-right: transparent;
+		border-top: transparent;
+		border-bottom: 2px solid grey;
+	} */
+
+    #form-wrapper {
+	    width: 90%;
+	    height: initial;
+	    position: initial;
+	   
+    }
+
+    #form {
+    	width: 99%;
+    	/* margin: 35px auto; */
+
+    }
+
+    .innerWrapper {
+    	margin-bottom: 10px;
+    }
+
+    label {
+    	width: 99.5%;
+    }
+
+    #companyName, #businessType, #contactPerson {
+    	width: 97.5%;
+    }
+
+    #stateDiv, #countryDiv {
+    	width: 100%;
+    }
+
+    #state, #country {
+    	width: 100%;
+    }
+
+    #companyPhoneNumberDiv, #companyEmailDiv {
+    	width: 100%;
+    }
+
+    #companyPhoneNumber, #companyEmail {
+    	width: 97.5%;
+    }
+
+    #designationDiv, #personCountryDiv {
+    	width: 100%;
+    }
+
+    #personCountry {
+    	width: 97.5%;
+    }
+
+    #designation {
+    	width: 100%;
+    }
+
+    .innerWrap {
+    	width: 100%;
+    }
+
+    #designation2Div, #newContactDiv {
+    	width: 100%;
+    }
+
+    #newContactDiv {
+    	justify-content: center;
+    }
+
+    #newContactDiv i {
+    	margin-right: 50px;
+    }
+
+    .twoColumns {
+	    flex-direction: column;
+	    justify-content: space-between;
+	    align-items: baseline;
+    }
+}
+
+
+
+@media (max-width: 768px) {
+ /* #sidebarCollapse{
+      display: block;
+      z-index: 1;
+  } */
+  #sidebar {
+      margin-left: -250px;
+  }
+  #sidebar.active {
+      margin-left: 0;
+  }
+}
+
+/* 
+@media (max-width: 700px) {
+  #menu-toggle{
+    display: block;
+    z-index: 1;
+
+  } */
+}
+
+@media (max-width: 900px) {
+  #menu-toggle{
+    display: block;
+  }
+}
+
+
+</style>
+
+
+<body>
+
+
+    <div class="d-flex" id="wrapper">
+
+            <!-- Sidebar -->
+            <div class="border-right sidebar-color" id="sidebar-wrapper">
+              <div class="sidebar-heading text-center"> 
+                    <a href="#"><img src="https://res.cloudinary.com/mirakul1/image/upload/v1570751514/dozknh7rkkoctxyfa4jg.png" alt="home" srcset=""></a> 
+                 </div>
+                         
+       
+              <div class="list-group list-group-flush sidebar-color">
+                <a href="#" class="list-group-item list-group-item-action sidebar-color"><img src="https://res.cloudinary.com/mirakul1/image/upload/v1570751514/ii7dmm0hogkgg8bzdixl.svg" alt="" srcset="">  Dashboard</a>
+                <a href="#" class="list-group-item list-group-item-action sidebar-color "><img src="https://res.cloudinary.com/mirakul1/image/upload/v1570752048/ckovrwndzipuxe20i3su.svg" alt=""> Client </a>
+                <a href="#pageSubmenu" data-toggle="collapse" 
+                aria-expanded="false" class="dropdown-toggle list-group-item list-group-item-action sidebar-color"> <img src="https://res.cloudinary.com/mirakul1/image/upload/v1570751264/ngyckbfltqisobrjgrqu.svg" alt=""> Projects</a>
+                <ul class="collapse list-unstyled" id="pageSubmenu">
+                    <li>
+                        <a href="#">Page 1</a>
+                    </li>
+                    <li>
+                        <a href="#">Page 2</a>
+                    </li>
+                    <li>
+                        <a href="#">Page 3</a>
+                    </li>
+                </ul>
+                <a href="#" class="list-group-item list-group-item-action sidebar-color"><img src="https://res.cloudinary.com/mirakul1/image/upload/v1570752046/tvzdi92ldvlfbplgleth.svg " alt=""> Invoice</a>
+                <a href="#" class="list-group-item list-group-item-action sidebar-color"><img src="https://res.cloudinary.com/mirakul1/image/upload/v1570751514/uvkncqgv0sf94ji1b3pj.svg" alt=""> Contracts</a>
+                <a href="#" class="list-group-item list-group-item-action sidebar-color"><img src="https://res.cloudinary.com/mirakul1/image/upload/v1570752046/hthsctaqgn7xi7wshks8.svg" alt="">  Proposal</a>
+              </div>
+            </div>
+            <!-- /#sidebar-wrapper -->
+      
+            <!-- Page Content -->
+            <div id="page-content-wrapper">
+      
+              <nav class="navbar navbar-expand-lg navbar-light  border-bottom">
+                <button class="btn" id="menu-toggle"><i class="fas fa-sliders-h"></i></button>      
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+      
+                <form class="form-inline abs-center-x">
+                        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                      </form>
+
+                      
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    
+                  <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
+            
+                    <li class="nav-item active">
+                      <a class="nav-link" href="#"><img src="https://res.cloudinary.com/mirakul1/image/upload/v1570751693/e1tm9z6lqtnfefbftgga.svg" alt=""></a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#"><img src="https://res.cloudinary.com/mirakul1/image/upload/v1570750951/iau2jvhrp3ww4uppx3yf.svg" alt=""></a>
+                    </li>
+                    <li class="nav-item">
+                            <a class="nav-link" href="#"><img src="https://res.cloudinary.com/mirakul1/image/upload/v1570751264/z0yhs8mzqf991m3u0c3i.svg" alt=""></a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link user-avatar" href="#">AU</a>
+                    </li>
+
+                
+                  </ul>
+                </div>
+              </nav>
+
+              <h3 class="companyHeader">Company</h3>
+      
+              <div class="form-container">
+
+              <div id="form-wrapper">
+                <div id="logoDiv"><img id="logo" alt="logo" src="https://res.cloudinary.com/mirakul1/image/upload/v1570751878/rbquu6xlv2w4muswlryv.svg"></div>
+              <form id="form">
+                <h4 id="companyInfoH4">Company Information</h4>
+          
+                <div class="innerWrapper"><label for="companyName">Company Name</label><input id="companyName" type="text" name="companyName" placeholder="Foodie"></div>
+          
+                <div class="innerWrapper"><label for="businessType">Business Type</label><input id="businessType" type="text" name="businessType" placeholder="Private"></div>
+          
+                <div class="twoColumns innerWrapper">
+                  <div id="stateDiv">
+                    <label for="state">State</label>
+                    <select name="state" id="state">
+                                  <option value="">Lagos</option>
+                                  <option value="">Abuja</option>
+                              </select>
+                  </div>
+          
+                  <div id="countryDiv">
+                    <label for="country">Country</label>
+                    <select name="country" id="country">
+                                  <option value="">Nigeria</option>
+                                  <option value="">Kenya</option>
+                              </select>
+                  </div>
+                </div>
+          
+                <div class="twoColumns innerWrapper">
+                  <div id="companyPhoneNumberDiv">
+                    <label for="companyPhoneNumber">Company's Phone Number</label>
+                    <input id="companyPhoneNumber"  type="tel" name="companyPhoneNumber" placeholder="+23479089000000">
+                  </div>
+          
+                  <div id="companyEmailDiv">
+                    <label for="companyEmail">Company Email</label>
+                    <input id="companyEmail" type="email" name="companyEmail" placeholder="foodie@gmail.com">
+                  </div>
+                </div>
+          
+                <h4>Personal Information</h4>
+                  <div class="personal_info">
+                  <div id="contactPersonDiv " class="innerWrapper">
+                    <label for="contactPerson">Contact Person</label>
+                    <input id="contactPerson" type="text" name="contactPerson" placeholder="Simbi Emmanuel">
+                  </div>
+          
+                  <div class="twoColumns innerWrapper">
+                    <div id="designationDiv">
+                      <label for="designation">Designation</label>
+                      <input type="text" name="designation" id="designation" placeholder="Project Manager">
+                    </div>
+                    <div id="personCountryDiv">
+                      <label for="personCountry">Contact Phone Number</label>
+                      <input id="personCountry" type="tel" name="personCountry" placeholder="+23470389000000">
+                    </div>
+                  </div>
+                </div>
+                  <div class="twoColumns innerWrapper">
+                    <div class="innerWrap">
+                      <label for="designation2Div">Designation</label>
+                      <div id="designation2Div">
+                          <i class="fa fa-clone"></i>
+                          <input id="productRequirement" type="text" name="productRequirement"  placeholder="Product Requirement" i>
+                          <i class="fa fa-times"></i>
+                      </div>
+                    </div>
+                    <div class="innerWrap">
+                        <label for="newContact" style="visibility: hidden">New Contact</label>
+                        <div id="newContactDiv">
+                            <i class="fa fa-plus"></i>
+                          <button class="btn newContactbtn"> Add New Contact</button>                        
+                      </div>
+                    </div>
+                  </div>
+             
+                      
+              </form>
+            </div>
+            </div>
+            </div>  
+            <!-- /#page-content-wrapper -->
+      
+          </div>
+
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+
+    <!-- Menu Toggle Script -->
+    <script>
+      $("#menu-toggle").click(function(e) {
+        e.preventDefault();
+        $("#wrapper").toggleClass("toggled");
+      });
+
+
+
+
+        $(document).on('click','.newContactbtn', function(e){
+          e.preventDefault();
+          $('.personal_info').append(`
+          <div class="addNewContact">
+          <button class="btn removeDesignation" style="float:right"><i class="fa fa-times"></i></button>
+          <div id="contactPersonDiv " class="innerWrapper">
+                    <label for="contactPerson">Contact Person</label>
+                    <input id="contactPerson" type="text" name="contactPerson" placeholder="Simbi Emmanuel">
+                  </div>
+          
+                  <div class="twoColumns innerWrapper">
+                    <div id="designationDiv">
+                      <label for="designation">Designation</label>
+                      <input type="text" name="designation" id="designation" placeholder="Project Manager">
+                    </div>
+                    <div id="personCountryDiv">
+                      <label for="personCountry">Country</label>
+                      <input id="personCountry" type="text" name="personCountry" placeholder="+23470389000000">
+                    </div>
+                  </div>
+                </div>
+          `)
+
+
+      }) ;
+
+      $(document).on('click','.removeDesignation', function(e){
+          e.preventDefault();
+          $(this).parent().remove()
+  
+
+
+      }) ;
+
+
+
+
+    </script>
+
+</body>
+
+</html>
