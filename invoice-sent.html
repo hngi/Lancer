@@ -58,7 +58,7 @@
             color: #FFFFFF;
             border: 0;
             width: 332px;
-            height: 98px;
+            height: 5rem;
             font-size: 28px;
         }
 
@@ -76,6 +76,7 @@
             .invBtn {
                 width: 10em;
                 font-size: 20px;
+                height: 4rem;
             }
 
             .clear {
@@ -107,6 +108,12 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
+
+        <script>
+        document.querySelector('.invBtn').addEventListener('click', () => {
+            location.href = "invoice-view.html"
+        })
+        </script>
 
 </body>
 
