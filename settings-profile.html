@@ -30,15 +30,20 @@
 
         .form-container{
             width: 70%;
-            margin-left: 250px;
+            margin-left: 200px;
         }
         
-        .profile_form {
+        .profile_form, .company-details-form {
             border: thin #c4c4c4 solid;
             border-radius: 1% 1% 1% 1%;
         }
 
-        .names, .title_text, .newpassword{
+        .names, 
+        .title_text, 
+        .newpassword 
+        .coy-details,
+        .coy-details-2,
+        .coy-contact{
             width: 100%;
             overflow: hidden;
         }
@@ -48,19 +53,33 @@
         .title,
         .email,
         .newPass,
-        .conPass {
+        .conPass,
+        .coy-details-name,
+        .coy-details-email,
+        .coy-currency,
+        .coy-contact-state,
+        .coy-contact-country,
+        .coy-time-zone{
             width: 49%;
         }
         
         .firstname, 
         .title,
-        .newPass {
+        .newPass,
+        .coy-details-name,
+        .coy-currency,
+        .coy-contact-country,
+        .caret-angles {
             float: left;
         }
         
         .lastname,
         .email,
-        .conPass {
+        .conPass,
+        .coy-details-email,
+        .coy-contact-state,
+        .coy-time-zone,
+        .caret-title {
             float: right;
         }
         
@@ -68,9 +87,18 @@
             display: block;
         }
 
+        .company-details-form{
+            margin-bottom: 100px;
+        }
+
         .form_title{
             text-transform: uppercase;
             margin-left: 470px;
+        }
+
+        .caret h6{
+            font-weight: bold;
+            padding: 15px;
         }
 
         a {
@@ -92,8 +120,9 @@
             border: thin #0ABAB5 solid;
         }
 
-        .mybtn{
+        .mybtn, .btn-company-details{
             margin-left: 200px;
+            margin-top: 10px;
         }
         
         form#loginform button {
@@ -115,6 +144,16 @@
             padding: 5px 5px;
         }
 
+        .password-section {
+            display: none;   
+            transform: scale(1.0);
+            transition: visibility 0s linear 0s, opacity 0.25s 0s, transform 0.25s;
+        }
+
+        .show-angle-down{
+            display: none;
+        }
+
         
         @media (max-width: 616px) {
 
@@ -127,20 +166,25 @@
                 margin: 0 auto;
             }
 
-             .mybtn{
+             .mybtn, 
+             .btn-company-details{
             margin-left: 0px;
         }
 
         .firstname, 
         .title,
-        .newPass {
-            float: none;
-            width: 100%;
-        }
-        
+        .newPass,
         .lastname,
         .email,
-        .conPass {
+        .conPass,
+        .coy-details-email,
+        .coy-contact-state,
+        .coy-time-zone,
+        .caret-titl,
+        .coy-details-name,
+        .coy-currency,
+        .coy-contact-country,
+        .caret-angles {
             float: none;
             width: 100%;
         }
@@ -202,11 +246,17 @@
                         </div>
                         <!-- <span id="emessage"></span> -->
                     </div>
-                    <div class="form-group">
+                    <div class="caret">
+                        <h6> <i class="fas fa-angle-down show-angle-down"></i><i class="fas fa-angle-up show-angle-up"></i> &nbsp Change Password</h6>
+                    </div>
+                    <div class="form-group show-password-section">
+                            <!-- <div class="form-group show-password-section password-section"> -->
+                        <p>
                         <div>
                             <label for="my-password">Password</label>
                             <input id="password" class="form-control" type="password" name="my-password" placeholder="Current password">
                         </div>
+                        </p>
                         <div class="newpassword">
                                 <div class="newPass">
                                     <label for="new_password">New Password</label>
@@ -224,6 +274,95 @@
                 </form>
             </div>
         </div>
+
+        <div class="row align-items-center mt-5 form-container">
+                
+               <div class="col-sm-8 offset-md-5 company-details-form mt-5 pl-5 pr-5 pt-4 pb-4">
+                    <form id="company-details">
+                            <label for="" class="msg"></label>
+                        <p>
+                        <div class="form-group">
+                            <div class="coy-details">
+                                <div class="coy-details-name">
+                                    <label for="firstName">Company Name</label>
+                                    <input id="coyName" class="form-control" type="text" name="" placeholder="Company Name">
+                                </div>
+                                <div class="coy-details-email">
+                                    <label for="lastName">Company Email</label>
+                                    <input id="coyEmail" class="form-control" type="text" name="" placeholder="Company Email">
+                                </div>
+                            </div>
+                                <!-- <span id="name_message"></span> -->
+                        </div>
+                    </p>
+                        <!-- <p>
+                            <div class="caretCompany">
+                                <h6> <i class="fas fa-angle-down show-angle-down"></i><i class="fas fa-angle-up show-angle-up"></i> &nbsp Address Setting</h6>
+                            </div>
+                        </p> -->
+                  
+                        <div class="form-group">  
+                            <p>
+                            <div>
+                                <label for="my-password">Company Address</label>
+                                <input id="coyaddress" class="form-control" type="password" name="my-password" placeholder="Company Address">
+                            </div>
+                        </p> 
+                            <div class="coy-contact">
+                                    <div class="coy-contact-country">
+                                        <label for="state">Country</label>
+                                        <select class="form-control">
+                                                <option>Country</option>
+                                                <option>Nigeria</option>
+                                                <option>United States</option>
+                                                <option>Japan</option>
+                                                <option>Brazil</option>
+                                        </select>
+                                    </div>
+                                    <div class="coy-contact-state">
+                                        <label for="country">State</label>
+                                        <select class="form-control" id="country">
+                                                <option>State</option>
+                                                <option>Lagos</option>
+                                                <option>Ogun</option>
+                                                <option>Ondo</option>
+                                                <option>Oyo</option>
+                                        </select>
+                                    </div>
+                            </div>
+                       
+                        </div>
+                            <div class="form-group">
+                                    <div class="coy-details-2">
+                                            <div class="coy-currency">
+                                                <label for="currency">Currency</label>
+                                                <select class="form-control" id="country">
+                                                        <option>Currency</option>
+                                                        <option>Naira</option>
+                                                        <option>Dollar</option>
+                                                        <option>Pounds</option>
+                                                        <option>Euro</option>
+                                                </select>
+                                            </div>
+                                            <div class="coy-time-zone">
+                                                <label for="time-zone">Time Zone</label>
+                                                <select class="form-control" id="country">
+                                                        <option>Time Zone</option>
+                                                        <option>GMT</option>
+                                                        <option>GMT +1</option>
+                                                        <option>Don't know</option>
+                                                        <option>Don't care</option>
+                                                </select>
+                                            </div>
+                                    </div>
+                                    <!-- <span id="emessage"></span> -->
+                            <!-- <span id="pmessage"></span> -->
+                        </div>
+                      
+                        <button type="submit" class="btn btn-success col-sm-5 pt-2 pb-2 mt-2 mb-2 btn-company-details">Update</button>
+                    </form>
+                </div>
+            </div>
  
 
 
@@ -242,19 +381,44 @@
     const password = document.querySelector("#password");
     const newPassword = document.querySelector("#npassword");
     const conPassword = document.querySelector("#cpassword");
+    const companyName = document.querySelector("#coyname");
+    const companyEmail = document.querySelector("#coyemail");
+    const companyAddress = document.querySelector("#coyaddress");
     const msg = document.querySelector(".msg");
     const submitButton = document.querySelector(".mybtn");
+    const companyDetailsButton = document.querySelector(".btn-company-details");
     const form =  document.querySelector("#profileForm");
-
+    const divCaret =  document.querySelector(".caret");
+    const passwordSection =  document.querySelector(".show-password-section");
+    const showCaret =  document.querySelector(".show-angle-down");
 
     
+
+   
+
+    const caretClick = (event) => {
+        if (event.target === divCaret) {
+            passwordSection.classList.remove("password-section");
+            showCaret.style.display = 'block';
+        }else{
+            passwordSection.classList.add("password-section");
+        }
+    }
+
+    divCaret.addEventListener('click', caretClick()); 
+      
+
+    const showPasswordSection = () => {
+        caret.classList.remove("password-section");
+    }
+  
+    divCaret.addEventListener("click", toggleCaret);
 
     submitButton.addEventListener('click', (e) => {
         e.preventDefault();
         msg.textContent = " ";
         if(firstName.value == ' ' || lastName.value === ' ' || email.value === ' ' || title.value === ' '  || password.value === ' ' || newPassword.value === ' ' || conPassword.value === ' '){
             msg.textContent = "Please, fill all required fields";
-            //msg.style.color = "red";
             return false;
          }
     });
@@ -264,7 +428,6 @@
         const validator = /^[a-zA-Z]+(([',. -][a-zA-Z ])?[a-zA-Z]*)*$/g;
         if (!validator.test(firstName.value)) {
             msg.textContent = "Please, enter valid first name & not numbers";
-            //error.style.color = "red";
             return false;
         } 
     });
@@ -274,7 +437,6 @@
         const validator = /^[a-zA-Z]+(([',. -][a-zA-Z ])?[a-zA-Z]*)*$/g;
         if (!validator.test(lastName.value)) {
             msg.textContent = "Please, enter valid last name & not numbers";
-            //msg.style.color = "red";
             return false;
         } 
     });
@@ -284,7 +446,6 @@
         const validator = /^[a-zA-Z]+(([',. -][a-zA-Z ])?[a-zA-Z]*)*$/g;
         if (!validator.test(title.value)) {
             msg.textContent = "Please, enter valid job title";
-           // msg.style.color = "red";
             return false;
         } 
     });
@@ -295,7 +456,6 @@
         const validator = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
         if (!validator.test(email.value)) {
             msg.textContent = "Please, enter valid email address";
-            //msg.style.color = "red";
             return false;
         } 
     });
@@ -306,7 +466,6 @@
         
         if (!validator.test(password.value)) {
             msg.textContent = "Password must contain 1 lower and 1 uppercase alphabet, must contain a special character and must not be less than 8 character length";
-            //msg.style.color = "red";
             return false;
         } 
     });
@@ -318,7 +477,6 @@
         
         if (!validator.test(newPassword.value)) {
             msg.textContent = "Password must contain 1 lower and 1 uppercase alphabet, must contain a special character and must not be less than 8 character length";
-            //msg.style.color = "red";
             return false;
         } 
     });
@@ -327,9 +485,27 @@
         msg.textContent = " ";
         if(newPassword.value !== conPassword.value){
             msg.textContent = "Passwords do not match";
-            //msg.style.color = "red";
             return false;
         }
+    });
+
+    companyDetailsButton.addEventListener('click', (e) => {
+        e.preventDefault();
+        msg.textContent = " ";
+        if(companyName.value == ' ' || companyEmail.value === ' ' || companyAddress.value === ' '){ 
+            msg.textContent = "Please, fill all required fields";
+            return false;
+         }
+    });
+
+     
+    companyEmail.addEventListener('input', (e) => {
+        msg.textContent = " ";
+        const validator = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+        if (!validator.test(companyEmail.value)) {
+            msg.textContent = "Please, enter valid email address";
+            return false;
+        } 
     });
     
     
