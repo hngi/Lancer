@@ -165,10 +165,6 @@ img{
 
 @media only screen and (max-width: 779px) {
     .nav-left{display:none;}
-    .nav-main{
-            border-bottom: 2px solid #E5E5E5;
-            height:100px;
-}
     .image{
         
         text-align:right;
@@ -205,8 +201,34 @@ img{
         
     }
     .toggle-show{
-        display: block;
+        /*display:block;
         line-height:50px;
+       
+     float:right;*/
+       text-align:right;
+        margin-top:90px;
+        padding:50px;
+        display: block;  
+        position:absolute;
+        top:0px;
+        right:1%;
+        margin-left:250px;
+        padding-left:0;
+        float:right;
+    }
+    .add{
+    position: fixed;
+    margun-right:300px;
+    left:20%;
+    bottom: 5%;
+    width:40px;
+    height: 40px;
+}
+    .phone{
+    	display:none;
+    }
+    .content{
+    	width:40%;
     }
     .icon{
     width:20px;
@@ -241,12 +263,13 @@ img{
     
 }@media only screen and (max-width: 970px){
     .content{
-        display:none;
-        /* width:50%;
+       /* display:none;*/
+        width:50%;
         margin-top:5%;
         font-size:14px;
-        margin-right:2%; */
+        margin-right:2%; 
     }
+  
     .card{
         height: 100%;
         width: 100%;
@@ -327,11 +350,11 @@ img{
                         <p class="content">      
                                 It is a long established fact that a reader will be distracted by the    readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' willuncover many web sites still in their infancy.
                                 <p class="toggle-show" >
-                                        Product Deigner <br>
-                                        Completed: <b>120 Projects</b><br>
-                                        Phone Number: +23470380000000<br>
-                                        Email: davidspeedo@gmail.com<br>
-                                        website: www.designguru.com <br>
+                                        Product Designer </br>
+                                        Completed: <b>120 Projects</b></br>
+                                        <span class="phone">Phone Number:</br> +23470380000000
+                                        Email: davidspeedo@gmail.com</br>
+                                    website: www.designguru.com</br> </span>
                                         <a href="#"> <i class="fa fa-instagram"  aria-hidden="true"></i></a>&nbsp;&nbsp;&nbsp;
                                         <a href="#"> <i class="fa fa-facebook"    aria-hidden="true"></i></a>&nbsp;&nbsp;&nbsp;
                                         <a href="#"><i class="fa fa-twitter" aria-hidden="true" ></i></a>&nbsp;&nbsp;&nbsp;
