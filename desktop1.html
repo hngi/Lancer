@@ -161,6 +161,133 @@
         border-bottom: 1px solid #fff;
         transition: 1s;
    }
+
+   * {
+            font-family: Ubuntu;
+        }
+        .collab {
+            position: absolute;
+            width: 142px;
+            height: 25px;
+            left: 290px;
+            top: 153px;
+
+            font-style: normal;
+            font-weight: bold;
+            font-size: 18px;
+            line-height: 25px;
+            /* identical to box height */
+            text-align: center;
+
+            color: #000000;
+        }
+        .profile-nav{
+            position: absolute;
+            width: 1083px;
+            height: 40px;
+            left: 290px;
+            top: 217px;
+            /* Primary Blue */
+            background: #009FFF;
+        }
+        .profile-nav a {
+            width: 10%;
+            height: 19px;
+            left: 306px;
+            top: 233px;
+            text-align: center;
+            display: inline-block;
+            padding: 14px 19px;
+
+            font-style: normal;
+            font-weight: 60;
+            font-size: 14px;
+            line-height: 19px;
+            /* identical to box height */
+            color: #FFFFFF;
+
+            text-decoration: none;
+        }
+        .table {
+           
+            display: grid;
+             width: 1083px;
+            height: 60px;
+            left: 290px;
+            top: 297px;
+
+            font-style: normal;
+            font-size: 18px;
+            line-height: 25px;
+            /* identical to box height */
+            text-align: center;
+
+            color: #000000;
+
+        }
+        .table{
+            position: absolute;
+            display: grid;
+            grid-template-rows: 24px 72px;
+            width: 80%;
+        }
+        .heading {
+            width: 1083px;
+            display: grid;
+            grid-column-gap: 20px;
+            grid-template-rows: auto;
+            padding: 14x 19px;
+        }
+        .body {
+            
+            width: 1083px;
+            left: 290px;
+            background: #FFFFFF;
+            
+        }
+        .row {
+            grid-column-gap: 20px;
+            grid-template-rows: auto auto auto auto;
+            left: 0%;
+            right: 0%;
+            top: 0%;
+            bottom: 0%;
+            border: 1px solid #C4C4C4;
+            box-sizing: border-box;
+            padding: 14px 19px;
+            text-align: left;
+        }
+        .body, .heading, .row {
+            grid-template-columns: auto auto auto minmax(150px, 25%);
+            line-height: 24px; 
+        }
+        .heading div {
+            text-align: center;
+            font-weight: bold;
+        }
+        .picture {
+            width: 4px;
+            height: 16px;
+            padding: 14x 19px;
+            text-align-last: left;
+
+        }
+        .round-button {
+            align-self: left;
+        }
+        .container{
+            width: 1083px;
+            display: grid;
+            grid-column-gap: 20px;
+            grid-template-rows: auto;
+            padding: 14x 19px;
+        }
+        .add{
+            height:48px;
+        }
+        .col-sm-2{
+            align-items: left;
+        }
 </style>
 <div class="d-flex" id="wrapper">
         <!-- Sidebar -->
@@ -218,7 +345,73 @@
                     </ul> 
                 </div>
             </nav>
-        </div>     
+        </div>
+
+        <div class = "collab">
+        <h3>COLLABORATORS</h3>
+    </div>
+    <div class = "profile-nav">
+        <a href = "#Overview">Overview</a>
+        <a href = "#Collaborators" class = "active">Collaborators</a>
+        <a href = "#Task">Task</a>
+        <a href = "#Documents">Documents</a>
+    </div>
+
+    <div class="table">
+
+    <div class="heading">
+        <div class = "col-sm-3"></div>
+        <div class = "col-sm-3">Name</div>
+        <div class = "col-sm-3">Role</div>
+        <div class = "col-sm-3">Progress</div>
+    </div>
+    
+    <div class="container">
+        <div class = "row">
+            <div class = "col-sm-3"></div>
+            <div class = "col-sm-3">David Speedo</div>
+            <div class = "col-sm-3">Product Designer</div>
+            <div class = "col-sm-3">58%<img class = "picture" src="https://res.cloudinary.com/shollythegreat/image/upload/v1570737203/Lancer/Path_hgnhhu.png"></div>
+        </div>
+    </div>
+    
+   <div class="container">
+        <div class = "row">
+            <div class = "col-sm-3"></div>
+            <div class = "col-sm-3">David Speedo</div>
+            <div class = "col-sm-3">Product Designer</div>
+            <div class = "col-sm-3">58%<img class = "picture" src="https://res.cloudinary.com/shollythegreat/image/upload/v1570737203/Lancer/Path_hgnhhu.png"></div>
+        </div>
+    </div>
+    
+    <div class="container">
+        <div class = "row">
+            <div class = "col-sm-3"></div>
+            <div class = "col-sm-3">David Speedo</div>
+            <div class = "col-sm-3">Product Designer</div>
+            <div class = "col-sm-3">58%<img class = "picture" src="https://res.cloudinary.com/shollythegreat/image/upload/v1570737203/Lancer/Path_hgnhhu.png"></div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class = "row">
+            <div class = "col-sm-3"></div>
+            <div class = "col-sm-3">David Speedo</div>
+            <div class = "col-sm-3">Product Designer</div>
+            <div class = "col-sm-3">58%<img class = "picture" src="https://res.cloudinary.com/shollythegreat/image/upload/v1570737203/Lancer/Path_hgnhhu.png"></div>
+        </div>
+    </div>
+
+    <div class = "container">
+        
+
+            <div class= "col-sm-2">
+                <img class = "add" src="https://res.cloudinary.com/shollythegreat/image/upload/v1570739112/Lancer/plus_b3dcfl.png">
+            </div>
+        
+    </div>
+
+</div>     
 <body>
 <script>
     $("#menu-toggle").click(function(e) {
