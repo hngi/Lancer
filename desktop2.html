@@ -8,7 +8,7 @@
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
         <link href="https://fonts.googleapis.com/css?family=Pacifico|Ubuntu&display=swap" rel="stylesheet">
         <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-
+        
 <style>
 *{
     margin:0;
@@ -164,6 +164,7 @@ img{
 }
 
 @media only screen and (max-width: 779px) {
+    body{width:90vw; zoom:90%}
     .nav-left{display:none;}
     .image{
         
@@ -201,8 +202,34 @@ img{
         
     }
     .toggle-show{
-        display: block;
+        /*display:block;
         line-height:50px;
+       
+     float:right;*/
+       text-align:right;
+        margin-top:90px;
+        padding:50px;
+        display: block;  
+        position:absolute;
+        top:0px;
+        right:1%;
+        margin-left:250px;
+        padding-left:0;
+        float:right;
+    }
+    .add{
+    position: fixed;
+    margin-right:300px;
+    left:20%;
+    bottom: 5%;
+    width:40px;
+    height: 40px;
+}
+    .phone{
+    	display:none;
+    }
+    .content{
+    	width:40%;
     }
     .icon{
     width:20px;
@@ -231,18 +258,22 @@ img{
 }
     .menu{
         display: block;
-        margin-top:5px;
+        margin-top:30px;
         margin-left:5px;
     }
     
 }@media only screen and (max-width: 970px){
+    /* .nav-left-toggle{
+        display:block;
+    } */
     .content{
-        display:none;
-        /* width:50%;
+       /* display:none;*/
+        width:50%;
         margin-top:5%;
         font-size:14px;
-        margin-right:2%; */
+        margin-right:2%; 
     }
+  
     .card{
         height: 100%;
         width: 100%;
@@ -262,31 +293,31 @@ img{
     <div class="container-fluid">
         
         <div class="row">
-            <div class="col-md-2  nav-left">
-                <aside class="d-flex flex-column justify-content-around text-center"> 
-                    <p class="nav-lancer">Lancers</p>
-                    <p><i class="fa fa-home" aria-hidden="true"></i>Dashboard</p>
-                    <p><i class="fa fa-users" aria-hidden="true"> </i>Client</p>
-                    <p><i class="fa fa-lightbulb-o" aria-hidden="true"></i>Project</p>
-                    <div class="under-project">
-                            <p>Status</p>
-                            <p>Overview</p>
-                            <p>Collaborators</p>
-                            <p>Task</p>
-                            <p>Documents</p>
-                    </div>
-                    <p><i class="fa fa-file-text-o" aria-hidden="true"></i></i>Invoice</p>
-                    <p><i class="fa fa-handshake-o"></i>Contract</p>
-             
-            <p> <i class="fa fa-area-chart" aria-hidden="true"></i> Proposals</p>
-                </aside>
+            <div class="col-md-2  nav-left nav-left-toggle">
+                    <aside class="d-flex flex-column justify-content-around text-center"> 
+                            <p class="nav-lancer">Lancers</p>
+                            <p><i class="fa fa-home" aria-hidden="true"></i>Dashboard</p>
+                            <p><i class="fa fa-users" aria-hidden="true"> </i>Client</p>
+                            <p><i class="fa fa-lightbulb-o" aria-hidden="true"></i>Project</p>
+                            <div class="under-project">
+                                    <p>Status</p>
+                                    <p>Overview</p>
+                                    <p>Collaborators</p>
+                                    <p>Task</p>
+                                    <p>Documents</p>
+                            </div>
+                            <p><i class="fa fa-file-text-o" aria-hidden="true"></i></i>Invoice</p>
+                            <p><i class="fa fa-handshake-o"></i>Contract</p>
+                     
+                    <p> <i class="fa fa-area-chart" aria-hidden="true"></i> Proposals</p>
+                        </aside>
             </div>
             <div class="col-md" style="margin:0px;padding:0px;">
                 <div class="d-flex justify-contect-around nav-main">
                         <div class="menu">
                                 <i class="fa fa-bars"></i>
                         </div>
-                    <div class="search-container">
+                    <div class="search-container search-adjust">
                         <input type="search" name="search" id="search" placeholder ="Search" class="fal fa-search search">
                     </div>
                     <div>
@@ -324,11 +355,11 @@ img{
                         <p class="content">      
                                 It is a long established fact that a reader will be distracted by the    readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' willuncover many web sites still in their infancy.
                                 <p class="toggle-show" >
-                                        Product Deigner <br>
-                                        Completed: <b>120 Projects</b><br>
-                                        Phone Number: +23470380000000<br>
-                                        Email: davidspeedo@gmail.com<br>
-                                        website: www.designguru.com <br>
+                                        Product Designer </br>
+                                        Completed: <b>120 Projects</b></br>
+                                        <span class="phone">Phone Number:</br> +23470380000000
+                                        Email: davidspeedo@gmail.com</br>
+                                    website: www.designguru.com</br> </span>
                                         <a href="#"> <i class="fa fa-instagram"  aria-hidden="true"></i></a>&nbsp;&nbsp;&nbsp;
                                         <a href="#"> <i class="fa fa-facebook"    aria-hidden="true"></i></a>&nbsp;&nbsp;&nbsp;
                                         <a href="#"><i class="fa fa-twitter" aria-hidden="true" ></i></a>&nbsp;&nbsp;&nbsp;
@@ -350,6 +381,33 @@ img{
             
         </div>
     </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('.fa-bars').click(function(){
+                $('.nav-lancer').toggle();
+                $('.search-adjust').css({
+                    'margin-left':'20px'
+                });
+                $(this).css({
+                    'position':'fixed',
+                    'top':'35px',
+                    'left':'10px'
+                });
+                $('.nav-left-toggle').css({
+                    'position':'fixed',
+                    'top':'50px',
+                    'left':'0',
+                    'z-index':'100',
+                    'background-color':'rgba(0,0,0,0.7)',
+                    'font-size':'14px',
+                    'height':'80%',
+                    'width':'30%',
+                });
+                $('.nav-left-toggle').toggle();
+            });
+        });
+    </script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
     <!-- Popper JS -->
