@@ -40,11 +40,18 @@
          font-size: 3.0rem;
      }
      .header_content button {
+         width: 100%;
          height: 100%;
          background-color: white;
          border: 1px solid #E5E5E5;
          font-weight: lighter;
          color: #E5E5E5;
+     }
+
+     .header_control button {
+         width: 50%;
+         padding: 0;
+         font-size: .8em;
      }
 
      .client {
@@ -148,7 +155,7 @@
 <body>
     <div class="container-fluid">
     <header class="header ">
-        <div class="header_content col-xs-2"> <button class="col-xs-6">&times;</button>
+        <div class="header_content col-xs-2 header_control"> <button class="col-xs-6">&times;</button>
            <button class="col-xs-6">&lt;</button></div>
         <div class="header_content client col-xs-8"><article class="text-center">Client</article></div>
         <div class="header_content col-xs-2"><button class="next">Next</button></div>
