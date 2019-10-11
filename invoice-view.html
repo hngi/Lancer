@@ -392,8 +392,16 @@ tbody, .bold {
     }
 }
 @media (max-width: 576px) {
-    .invoice-body.ml-4 {
-        display: none;
+    .invoice-body.ml-4 div {
+        /* display: none; */
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .invoice-body.ml-4 button {
+      display: block !important;
+      margin: 0.3rem auto;
+      width: 100%;
     }
     #sidebar-wrapper {
     width: 15vh;
