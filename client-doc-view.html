@@ -10,7 +10,8 @@
           * { margin: 0; padding: 0; box-sizing: border-box;
  }
 
- html, body { font-family: 'Ubuntu', 'san-serif'; 
+ html, body { font-family: 'Ubuntu', 'san-serif';
+ overflow-x: hidden; 
 }
 
  header {
@@ -24,6 +25,8 @@
                     width: 82%; 
                     box-shadow: 0px 4px 2px rgba(0, 0, 0, 0.1);
                     padding: 2.5rem 4.5rem 2.5rem 6.5rem; 
+										/* width: 100% !important; */
+										/* z-index: 1; */
 } 
 
  .invoice { width: 100%;
@@ -181,10 +184,11 @@ section.billing-data-table { margin-top: 3em;
 								color: white;			
 								background-color: #a6a6a6;			
 								padding: 10px 15px;			
-								border: none;		
+								border: none;	
+								/* z-index: 2;	 */
 						}				
 					.openbtn:hover{
-								background-color: #fff;		
+								background-color: #cecece;		
 						}
 					#main{
 								transition: margin-left 0.5s;			
@@ -196,13 +200,49 @@ section.billing-data-table { margin-top: 3em;
 					.sidenav a {font-size: 18px;
 					}
 					
-		}@media screen and (min-width: 600px) { 		
+		}
+		/* @media screen and (min-width: 600px) { 		
 		.Move{ 			padding-left: 0px; 		}
 		}@media screen and (min-width: 1000px) { 
 		.Move{ 			padding-left: 230px; 
 					margin-top: 0;
 			 		}		
+					
+	} */
+	@media screen and (max-width: 900px) {
+	.Move {padding-left: 0;}
+
 	}
+	 @media screen and (max-width: 650px) {
+						 header {
+							 width: 100% !important;
+							 left: 15%;
+						 }
+						 .closebtn {margin-left: 0 !important}
+						 .lanclient-buttons{flex-direction: column; align-items: center; height: 7rem;}
+					 }
+					 @media screen and (max-width: 600px) {
+						 .main-lanclient {
+							 margin: 3rem auto;
+							 padding: 0 1.5rem;
+						 }
+						 .lanclient-invoice-logo {
+							     flex-direction: column;
+    justify-content: center;
+    align-items: center;
+						 }
+						 .lanclient-billing {
+							 flex-direction: column;
+							 text-align: center;
+						 }
+						 .lanclient-billing > div {
+							 margin-bottom: 1.4rem;
+						 }
+						 .top-last-bill-details #hourly-rateN {text-align: center;}
+						 .billing-data-table table {width: 80%;}
+						 .billing-data-table table tbody {font-size: 9px !important;}
+					 }
+					 
 </style>
 </head>
 <body>
