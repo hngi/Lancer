@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Client Information</title>
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+
+    <style>
+     * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Ubuntu;
+         }
+
+     .container-fluid {
+         margin: 0;
+         padding: 0;
+     }
+
+     button:hover{
+         opacity: .5;
+     }
+     .header {
+         width: 100%;
+         padding: 0;
+         margin: 0;
+         border: none;
+         border-bottom: 2px solid #E5E5E5;
+     }
+
+     .header_content {
+         background-color: white;
+        height: 60px;
+         float: left;
+         padding: 0;
+         font-size: 3.0rem;
+     }
+     .header_content button {
+         width: 100%;
+         height: 100%;
+         background-color: white;
+         border: 1px solid #E5E5E5;
+         font-weight: lighter;
+         color: #E5E5E5;
+     }
+
+     .header_control button {
+         width: 50%;
+         padding: 0;
+         font-size: .8em;
+     }
+
+     .client {
+         font-weight: bold;
+         padding-top: 10px;
+         color: black;
+         border: 1px solid #E5E5E5;
+     }
+
+     .next{
+         color: white;
+         background-color: #E5E5E5;
+         width: 100%;
+         font-family: ubuntu;
+         font-size: 2rem;
+     }
+
+
+     main {
+         clear: both;
+         width: 80%;
+         margin: 0 auto;
+         padding: 25px 0;
+     }
+
+     main .content {
+         border: 1px solid #E5E5E5;
+         padding: 20px;
+     }
+
+     main .content h4 {
+         font-weight: bold;
+     }
+
+     .content h5 {
+         font-weight: bolder;
+     }
+
+     .content h2, h4, h5 {
+         margin-bottom: 20px;
+     }
+
+    .content .form-group {
+         display: grid;
+         grid-template-columns: 1fr 2fr;
+         box-sizing: border-box;
+     }
+
+     
+     .content .form-group span {
+         display: grid;
+         grid-template-columns: 1fr 1fr;
+     }
+
+     .form-group label {
+         font-weight: lighter;
+     }
+
+     .form-group span input {
+         width: 80%;
+     }
+
+     .form-group input {
+         margin-bottom: 15px;
+         width: 90%;
+         padding: 0 10px;
+     }
+
+     main section:last-child{
+         width: 200px;
+         margin: 0 auto;         
+         margin-top: 30px;        
+         font-size: 2rem;
+     }
+
+
+     main  section > button {
+         border: none;
+         width: 100%;
+        padding: 10px 20px;
+        margin: 0 auto;
+         background-color: #E5E5E5;
+         color: white;
+     }
+    
+
+     @media screen and (min-width: 900px){
+
+         main {
+             width: 60%;
+         }
+        .content .form-group {
+        grid-template-columns: 1fr 3fr;
+        }
+     }
+    
+     
+     </style>
+</head>
+
+<body>
+    <div class="container-fluid">
+    <header class="header ">
+        <div class="header_content col-xs-2 header_control"> <button class="col-xs-6">&times;</button>
+           <button class="col-xs-6">&lt;</button></div>
+        <div class="header_content client col-xs-8"><article class="text-center">Client</article></div>
+        <div class="header_content col-xs-2"><button class="next">Next</button></div>
+    </header>
+
+    <main>
+        <h2>Client Information</h2>
+        <section class="content">
+            <h4>Business Information</h4>
+            <div class="form-group">
+                <label for="company_name">Company name</label>
+                <input type="text" name="company_name" id="Cname" placeholder="e.g Sunshine Studio">
+            </div>
+
+
+            <h5>Business Address</h5>
+            <div>
+            <div class="form-group">
+                <label for="Str_Num">Street & Number</label>
+                <span>
+                <input type="text" name="street" id="street" placeholder="Street">
+                <input type="number" name="number" id="number" placeholder="Number">
+                </span>
+                <label for="city_Zcode">City & Zip Code</label>
+                <span>
+                <input type="text" name="city" id="city" placeholder="City">
+                <input type="number" name="Zcode" id="Zcode" placeholder="Zip code">
+                </span>
+
+                <label for="Country_state">Country & State</label>
+                <span>
+                <input type="text" name="country" id="country" placeholder="Country">
+                <input type="text" name="state" id="state" placeholder="State">
+            </span>
+            </div>
+
+            <h5>Contact Information</h5>
+            <div class="form-group">
+                <label for="company_name">Contact name</label>
+                <input type="text" name="contact_name" id="Contact-name" placeholder="e.g Ben Davies">
+                <label for="company_name">Contact email</label>
+                <input type="email" name="email" id="email" placeholder="e.g email@domain.com">
+                <label for="company_name">Contact name</label>
+                <input type="text" name="contact_name" id="Contact-name" placeholder="e.g Ben Davies">
+                <label for="company_name">Contact email</label>
+                <input type="email" name="email" id="email" placeholder="e.g email@domain.com">
+            </div>
+            <h5>Add other contacts &nbsp; +</h5>
+        </section>
+        <section>
+        <button>Next</button>
+        </section>
+    </main>
+    </div>
+</body>
+</html>
