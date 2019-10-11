@@ -8,7 +8,7 @@
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
         <link href="https://fonts.googleapis.com/css?family=Pacifico|Ubuntu&display=swap" rel="stylesheet">
         <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-
+        
 <style>
 *{
     margin:0;
@@ -164,6 +164,7 @@ img{
 }
 
 @media only screen and (max-width: 779px) {
+    body{width:80vw}
     .nav-left{display:none;}
     .image{
         
@@ -218,7 +219,7 @@ img{
     }
     .add{
     position: fixed;
-    margun-right:300px;
+    margin-right:300px;
     left:20%;
     bottom: 5%;
     width:40px;
@@ -289,7 +290,7 @@ img{
     <div class="container-fluid">
         
         <div class="row">
-            <div class="col-md-2  nav-left">
+            <div class="col-md-2  nav-left nav-left-toggle">
                 <aside class="d-flex flex-column justify-content-around text-center"> 
                     <p class="nav-lancer">Lancers</p>
                     <p>Dashboard</p>
@@ -376,6 +377,30 @@ img{
             
         </div>
     </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('.fa-bars').click(function(){
+                $('.nav-lancer').toggle();
+                $(this).css({
+                    'position':'fixed',
+                    'top':'35px',
+                    'left':'10px'
+                });
+                $('.nav-left-toggle').css({
+                    'position':'fixed',
+                    'top':'50px',
+                    'left':'0',
+                    'z-index':'100',
+                    'background-color':'rgba(0,0,0,0.7)',
+                    'font-size':'14px',
+                    'height':'80%',
+                    'width':'30%',
+                });
+                $('.nav-left-toggle').toggle();
+            });
+        });
+    </script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
     <!-- Popper JS -->
