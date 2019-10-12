@@ -1,0 +1,689 @@
+<!DOCTYPE html>
+<html>
+    <head>
+            <meta charset="utf-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <link href="https://fonts.googleapis.com/css?family=Red+Hat+Text&display=swap" rel="stylesheet">
+            <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
+            <link  href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
+        <title>
+        Client Information
+        </title>
+<style>
+    body {
+	 #E5E5E5;	
+}
+
+aside {
+	left: 0%;
+	right: 0%;
+	top: 0%;
+	bottom: 0%;
+	float: left;
+	position: absolute;
+	background: #091429;
+	height: 700px;
+	width: 150px;
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+#lancers {
+	position: absolute;
+	left: 10.77%;
+	right: 24.62%;
+	top: 4.93%;
+	bottom: 90.04%;
+	color: #FFFFFF;
+}
+
+a {
+	cursor: pointer;
+}
+
+.title {
+	font-family: Open Sans;
+font-style: normal;
+font-weight: bold;
+font-size: 15px;
+line-height: 25px;
+text-align: center;
+}
+
+#group1 {
+	position: absolute;
+left: 10.77%;
+right: 11.03%;
+top: 17.09%;
+bottom: 5.43%;
+}
+
+#dash {
+	position: absolute;
+left: 30.15%;
+right: 19.15%;
+top: 17.09%;
+bottom: 80.47%;
+color: #FFFFFF;
+}
+
+#group2 {
+	position: absolute;
+left: 10.77%;
+right: 41.66%;
+top: 26.56%;
+bottom: 66.66%;
+}
+
+#client {
+	position: absolute;
+left: 30.15%;
+right: 38.46%;
+top: 26.56%;
+bottom: 71%;
+color: #FFFFFF;
+}
+
+#group3 {
+	position: absolute;
+left: 10.77%;
+right: 79.17%;
+top: 36.04%;
+bottom: 67.9%;
+}
+
+#project {
+	position: absolute;
+left: 30.15%;
+right: 34.23%;
+top: 36.04%;
+bottom: 61.52%;
+color: #FFFFFF;
+}
+
+#group4 {
+	position: absolute;
+	left: 10.77%;
+right: 50.73%;
+top: 45.51%;
+bottom: 40.42%;
+}
+
+#invoice{
+	position: absolute;
+left: 30.15%;
+right: 33.85%;
+top: 45.51%;
+bottom: 52.05%;
+color: #FFFFFF;
+}
+
+#group5 {
+	position: absolute;
+	left: 10.77%;
+right: 30.97%;
+top: 54.98%;
+bottom: 34.21%;
+}
+
+#contract{
+	position: absolute;
+	left: 30.15%;
+right: 28.46%;
+top: 54.98%;
+bottom: 42.58%;
+color: #FFFFFF;
+}
+
+#group6 {
+	position: absolute;
+	left: 10.77%;
+right: 50.92%;
+top: 64.45%;
+bottom: 77%;
+}
+
+#proposal{
+	position: absolute;
+	left: 30.15%;
+right: 25%;
+top: 64.45%;
+bottom: 33.11%;
+color: #FFFFFF;
+}
+
+.header-con {
+	position: absolute;
+	left: 0%;
+top: 0%;
+bottom: 91.9%;
+background: #FFFFFF;
+}
+
+.link {
+	font-family: Ubuntu;
+font-style: normal;
+font-weight: bold;
+font-size: 20px;
+line-height: 34px;
+color: #000000;
+opacity: 0.8;
+}
+
+#pro {
+	position: absolute;
+width: 164px;
+height: 34px;
+left: 325px;
+top: 44px;
+}
+
+#cli {
+	position: absolute;
+width: 147px;
+height: 34px;
+left: 539px;
+top: 44px;
+}
+
+#set {
+	position: absolute;
+width: 116px;
+height: 34px;
+left: 741px;
+top: 44px;
+}
+
+#tools {
+	position: absolute;
+width: 252px;
+height: 34px;
+left: 912px;
+top: 44px;
+}
+
+.box1 {
+	position: absolute;
+width: 78px;
+height: 35px;
+left: 970px;
+top: 140px;
+box-sizing: border-box;
+}
+
+#edit {
+	position: absolute;
+width: 60px;
+height: 28px;
+left: 5px;
+top: 3px;
+font-family: Ubuntu;
+font-style: normal;
+font-weight: bold;
+font-size: 18px;
+line-height: 28px;
+color: #546067;
+}
+
+button {
+	border: 3px solid #546067;
+    border-radius: 10px;
+    padding: 20px;
+    background-color: white;
+    cursor: pointer;
+}
+
+.box2 {
+	position: absolute;
+width: 83px;
+height: 45px;
+left: 1060px;
+top: 140px;
+box-sizing: border-box;
+border-radius: 10px;
+}
+
+#delete {
+	position: absolute;
+width: 78px;
+height: 28px;
+left: 3px;
+top: 3px;
+font-family: Ubuntu;
+font-style: normal;
+font-weight: bold;
+font-size: 18px;
+line-height: 28px;
+color: #546067;
+}
+
+.client-info {
+	position: absolute;
+width: 953px;
+height: 781px;
+left: 300px;
+top: 200px;
+}
+
+#contact {
+	position: absolute;
+width: 176px;
+height: 55px;
+left: 25px;
+top: 20px;
+font-family: Ubuntu;
+font-style: normal;
+font-weight: bold;
+font-size: 25px;
+line-height: 50px;
+color: #000000;
+}
+
+.name {
+	position: absolute;
+width: 130px;
+height: 85px;
+left: 20px;
+top: 50px;
+font-family: Ubuntu;
+font-style: normal;
+font-weight: 500;
+font-size: 18px;
+}
+
+#nme {
+	position: absolute;
+width: 81px;
+height: 34px;
+left: 8px;
+top: 20px;
+line-height: 34px;
+color: #A6A6A6;
+}
+
+#john {
+	position: absolute;
+width: 130px;
+height: 35px;
+left: 8px;
+top: 55px;
+line-height: 35px;
+color: #000000;
+}
+
+#add {
+	font-family: Ubuntu;
+font-style: normal;
+font-weight: normal;
+font-size: 18px;
+}
+
+#mail {
+	position: absolute;
+width: 192px;
+height: 34px;
+left: 300px;
+top: 20px;
+line-height: 34px;
+color: #A6A6A6;
+}
+
+#gmail {
+	position: absolute;
+width: 287px;
+height: 35px;
+left: 300px;
+top: 55px;
+line-height: 35px;
+color: #000000;
+}
+
+#numb {
+	font-family: Ubuntu;
+font-style: normal;
+font-weight: normal;
+font-size: 18px;
+}
+
+#phone {
+	position: absolute;
+width: 205px;
+height: 34px;
+left: 700px;
+top: 20px;
+line-height: 34px;
+color: #A6A6A6;
+}
+
+#number {
+	position: absolute;
+width: 238px;
+height: 35px;
+left: 680px;
+top: 55px;
+line-height: 35px;
+color: #000000;
+}
+
+#billing {
+	position: absolute;
+width: 250px;
+height: 55px;
+left: 25px;
+top: 190px;
+font-family: Ubuntu;
+font-style: normal;
+font-weight: bold;
+font-size: 25px;
+line-height: 55px;
+color: #000000;
+}
+
+.curr {
+	position: absolute;
+width: 122px;
+height: 85px;
+left: 20px;
+top: 220px;
+font-family: Ubuntu;
+font-style: normal;
+font-size: 18px;
+}
+
+#currency {
+	position: absolute;
+width: 122px;
+height: 34px;
+left: 8px;
+top: 20px;
+line-height: 34px;
+color: #A6A6A6;
+font-weight: normal;
+}
+
+#ngn {
+	position: absolute;
+width: 64px;
+height: 35px;
+left: 8px;
+top: 55px;
+line-height: 35px;
+color: #000000;
+font-weight: bold;
+}
+
+#home {
+	font-family: Ubuntu;
+font-style: normal;
+font-size: 18px;
+}
+
+#address {
+	position: absolute;
+width: 192px;
+height: 34px;
+left: 300px;
+top: 20px;
+line-height: 34px;
+color: #A6A6A6;
+font-weight: normal;
+}
+
+#lorem {
+	position: absolute;
+width: 287px;
+height: 35px;
+left: 300px;
+top: 55px;
+line-height: 35px;
+color: #000000;
+font-weight: bold;
+}
+
+#place {
+	font-family: Ubuntu;
+font-style: normal;
+font-size: 18px;
+}
+
+#city {
+	position: absolute;
+width: 205px;
+height: 34px;
+left: 790px;
+top: 20px;
+line-height: 34px;
+color: #A6A6A6;
+font-weight: normal;
+}
+
+#abuja {
+	position: absolute;
+width: 238px;
+height: 35px;
+left: 780px;
+top: 55px;
+line-height: 35px;
+color: #000000;
+font-weight: bold;
+}
+
+.cde {
+	position: absolute;
+width: 120px;
+height: 85px;
+left: 20px;
+top: 310px;
+font-family: Ubuntu;
+font-style: normal;
+font-size: 18px;
+}
+
+#zip {
+	position: absolute;
+width: 120px;
+height: 34px;
+left: 8px;
+top: 20px;
+font-weight: normal;
+line-height: 34px;
+color: #A6A6A6;
+}
+
+#code {
+	position: absolute;
+	width: 51px;
+height: 35px;
+left: 8px;
+top: 55px;
+font-weight: bold;
+line-height: 35px;
+color: #000000;
+}
+
+#count {
+	font-family: Ubuntu;
+font-style: normal;
+font-size: 18px;
+}
+
+#country {
+	position: absolute;
+width: 110px;
+height: 34px;
+left: 300px;
+top: 20px;
+line-height: 34px;
+color: #A6A6A6;
+font-weight: normal;
+}
+
+#nigeria {
+	position: absolute;
+width: 99px;
+height: 35px;
+left: 300px;
+top: 55px;
+font-weight: bold;
+line-height: 35px;
+color: #000000;
+}
+
+#st {
+	font-family: Ubuntu;
+font-style: normal;
+font-size: 18px;
+}
+
+#state {
+	position: absolute;
+width: 73px;
+height: 34px;
+left: 785px;
+top: 20px;
+font-weight: normal;
+line-height: 34px;
+color: #A6A6A6;
+}
+
+#abj {
+	position: absolute;
+width: 79px;
+height: 35px;
+left: 780px;
+top: 55px;
+font-weight: bold;
+line-height: 35px;
+color: #000000;
+}
+
+#more {
+	position: absolute;
+width: 118px;
+height: 55px;
+left: 25px;
+top: 450px;
+font-family: Ubuntu;
+font-style: normal;
+font-weight: bold;
+font-size: 25px;
+line-height: 55px;
+color: #000000;
+}
+
+#na {
+	position: absolute;
+width: 52px;
+height: 34px;
+left: 25px;
+top: 500px;
+font-family: Ubuntu;
+font-style: normal;
+font-weight: normal;
+font-size: 18px;
+line-height: 34px;
+color: #A6A6A6;
+}
+</style>
+
+    </head>
+
+    <body>
+    <aside>
+            <img src="lancers.png" id="lancers">
+            <div class="title">
+            <a href="#"><img src="Group 1.png" id="group1"><div id="dash">Dashboard</div></a>
+            <a href="#"><img src="Group 2.png" id="group2"><div id="client">Client</div></a>
+            <a href="#"><img src="Group 3.png" id="group3"><div id="project">Project</div><a>
+            <a href="#"><img src="Group 4.png" id="group4"><div id="invoice">Invoice</div></a>
+            <a href="#"><img src="Group 5.png" id="group5"><div id="contract">Contract</div></a>
+            <a href="#"><img src="Group 6.png" id="group6"><div id="proposal">Proposals</div></a>
+            </div>
+    </aside>
+
+<section>
+    <header>
+            <div class="navigation">
+                <nav class="header-con">
+                    <a href="#" class="link">
+                       <div id="pro"> Project Info</div>
+                    </a>
+                
+                    <a href="#" class="link">
+                        <div id="cli">Client Info</div>
+                    </a>
+                    <a href="#" class="link">
+                        <div id="set">Settings</div>
+                    </a> 
+                    <a href="#" class="link">
+                        <div id="tools">Tools & Resources</div>
+                    </a>         
+                </nav>
+            </div>
+        </header>
+
+    <button class="box1">
+    <div id="edit">Edit</div>
+    </button>
+    <button class= "box2">
+    <div id="delete">Delete</div>
+    </button>
+</section>
+
+<section class="client-info">
+        <div id="contact">Contact</div>
+
+    <div class="name">
+        <div id="nme">Name</div>
+        <div id="john">John Doe</div>
+        
+        <div id= "add">
+        <div id="mail">Email Address</div>
+        <div id="gmail">Johndoe@gmail.com</div>
+        </div>
+        
+        <div id="numb">
+        <div id="phone">Phone Number</div>
+        <div id="number">+2348064528518</div>
+        </div>
+    </div>
+
+        <div id="billing">Billing Information</div>
+    
+    <div class="curr">
+        <div id="currency">Currency</div>
+        <div id="ngn">NGN</div>
+        
+        <div id= "home">
+        <div id="address">Address</div>
+        <div id="lorem">Lorem Ipsum Dolor Set</div>
+        </div>
+        
+        <div id="place">
+        <div id="city">City</div>
+        <div id="abuja">Abuja</div>
+        </div>
+    </div>
+
+    <div class="cde">
+        <div id="zip">Zip Code</div>
+        <div id="code">234</div>
+        
+        <div id= "count">
+        <div id="country">Country</div>
+        <div id="nigeria">Nigeria</div>
+        </div>
+        
+        <div id="st">
+        <div id="state">State</div>
+        <div id="abj">Abuja</div>
+        </div>
+    </div>
+
+    <div id="more">More</div>
+    <div id="na">N/A</div>
+</section>
+	
+	
+    </body>
+    
+</html>
