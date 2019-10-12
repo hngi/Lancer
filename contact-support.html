@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Contact Support</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu&display=swap" rel="stylesheet">
+    <style>
+    body {
+      padding: 0;
+      margin: 0;
+    }
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+    
+    .main-cont {
+      font-family: 'Ubuntu', sans-serif;
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      grid-template-rows: 85px auto;
+      height: 100vh;
+    }
+    
+    /*sidebar*/
+    .sidebar {
+      grid-column: 1 / 2;
+      grid-row: 1 / -1;
+      background-color: #091429;
+      color: #ffffff;
+      height: 100%;
+    }
+    .sidebar-content {
+      margin: 55px 10px;
+    }
+    .logo-img {
+      height: 30px;
+      margin-left: 15px;      
+    }
+    .nav-table {
+      margin: 50px 0px;
+      border-spacing: 15px;
+    }
+    .table-row {
+      margin: 30px 0;
+    }
+    .icon {
+      height: 21px;
+      margin-right: -5px;
+    }
+    .nav-txt {
+      font-size: 0.9rem;
+      font-weight: bold;
+    }
+    
+    /*header*/
+    .header {
+      grid-column: 2 / -1;
+      display: flex;
+      flex-flow: row nowrap;
+      align-items: center;
+      justify-content: space-between;
+      background-color: #ffffff;
+      box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.25);
+    }
+    .header>h3 { 
+      margin: 0px 40px;
+      font-size: 28px;
+    }
+    .header p { 
+      margin: 0 7px;
+      align-self: center;
+      font-weight: bold;
+      font-size: 15px;
+    }
+    .header-items {
+      display: flex;
+      flex-flow: row nowrap;
+      align-items: center;
+    }
+    .header-items>div {
+      margin: 0 13px;
+      display: flex;
+      flex-flow: row nowrap;
+      align-items: center;
+    }
+    .header-icon {
+      height: 25px;
+    }
+    .avatar-sm {
+      border-radius: 50%;
+      height: 45px;
+    }
+    .dropdown {
+      display: block;
+      position: relative;
+    }
+    .dropdown-menu {
+      opacity: 0;
+      visibility: hidden;
+      position: absolute;
+      z-index: 1;
+      width: auto;
+      background-color: #091429;
+      border-radius: 5px;
+      color: #ffffff;
+      margin-top: 100px;
+      transition: opacity ease-in 500ms;
+    }
+    .dropdown-menu.active {
+      visibility: visible;
+      opacity: 1;
+    }
+    .menu-item {
+      margin: 10px;
+      display: block;
+      text-align: center;
+      border: none;
+      border-bottom: 2px solid #091429;
+      transition: border-bottom ease-in 400ms;
+    }
+    .menu-item:hover {
+      border: none;
+      border-bottom: 2px solid #ffffff;
+    }
+    .caret-down {
+      align-self: center;
+      cursor: pointer;
+    }
+    
+    /*main body content*/
+    .content {
+      grid-column: 2 / -1;
+      text-align: center;
+    }
+    .hero-img {
+      margin-top: 40px;
+      height: 80vh;
+      width: 48vw;
+      align-self: center;
+    }
+    .content>h4 {
+      font-weight: bold;
+      font-size: 24px;
+      color: #262626;
+      margin-top: -10px;
+    }
+    .contact-form {
+      display: flex;
+      flex-flow: column nowrap;
+      margin: 60px 15vw;
+      font-family: inherit;
+    }
+    .form-label{
+      font-size: 0.8rem;
+      align-self: flex-start;
+      color: #262626;
+    }
+    .inpt {
+      height: 40px;
+      margin: 10px 0 40px 0;
+      font-size: 18px;
+      border: 1px solid #B1B1B1;
+    }
+    .txt-area {
+      margin: 10px 0 40px 0;
+      font-size: 18px;
+      font-family: 'Ubuntu', sans-serif;
+      border: 1px solid #B1B1B1;
+    }
+    .contact-form-btn {
+      width: 195px;
+      padding: 10px 20px;
+      font-size: 22px;
+      font-weight: bold;
+      align-self: center;
+      color: #ffffff;
+      background-color: #091429;
+      border: 1px solid #091429;
+      font-family: inherit;
+    }
+    .contact-form-btn:hover {
+      background-color: #032566;
+      border: 1px solid #032566;
+      cursor: pointer;
+      font-family: inherit;
+    }
+    
+    /*media query*/
+    @media(max-width: 600px){
+      .main-cont {
+        grid-template-columns: 1fr;
+      }
+      .sidebar {
+        display: none;
+      }
+      .header {
+        grid-column: 1 / -1;
+      }
+      .content {
+        grid-column: 1 / -1;
+      }
+      .header>h3 {
+        margin: 13px;
+      }
+      .hero-img {
+        width: 90vw;
+      }
+      .inpt, .txt-area {
+        margin: 10px 0 40px 0;
+      }
+      .mobile-sidebar {
+        position: absolute;
+        display: flex;
+        height: auto;
+        top: 85px;
+        left: -60vw;
+        z-index: 1;
+        transition: left ease-in 500ms;
+      }
+      .mobile-sidebar.active {
+        left: 0;
+      }
+      .mobile-nav-btn {
+        width: 50px;
+      }
+      .nav-span {
+        display: block;
+        height: 5px;
+        margin: 4px;
+        border-radius: 10px;
+        background-color: #091429;
+      }
+      .mobile-nav-btn.active {
+        transform: rotate(90deg);
+      }
+    }
+  </style>
+  </head>
+
+  <body>
+    <div class="main-cont">
+      <div class="header">
+        <div class="mobile-nav-btn" onclick="bars()" id="nav-btn">
+          <span class="nav-span"></span>
+          <span class="nav-span"></span>
+          <span class="nav-span"></span>
+        </div>
+        <h3>Contact Support</h3>
+        <div class="header-items">
+          <div>
+            <a href="#"><img src="https://res.cloudinary.com/slarin/image/upload/v1570685957/contact-support/help_pvv3ie.svg" class="header-icon"></a>
+            <a href="#"><p>Support</p></a>
+          </div>
+          <div>
+            <a href="#"><img src="https://res.cloudinary.com/slarin/image/upload/v1570685957/contact-support/notification_1_ddc0vh.svg" class="header-icon"></a>
+          </div>
+          <div class="dropdown">
+            <a href="#"><img src="https://res.cloudinary.com/slarin/image/upload/v1570685959/contact-support/avatar_ofgo0e.svg" class="avatar-sm"></a>
+            <p>Juliet</p>
+            <img src="https://res.cloudinary.com/slarin/image/upload/v1570685957/contact-support/Vectordown-caret_fla9dn.svg" class="caret-down" onclick="drop()"></i>
+            <div class="dropdown-menu" id="dd-menu">
+              <a href="#" class="menu-item">Action</a>
+              <a href="#" class="menu-item">Another action</a>
+              <a href="#" class="menu-item">Something else here</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="sidebar mobile-sidebar" id="sidebar">
+        <div class="sidebar-content">
+          <img class="logo-img" src="https://res.cloudinary.com/slarin/image/upload/v1570685957/contact-support/lancers_zump2v.svg">
+          <table class="nav-table">
+            <tr class="table-row">
+              <td><img src="https://res.cloudinary.com/slarin/image/upload/v1570714691/contact-support/home_groayn.svg" class="icon"></td><td class="nav-txt"><a href="#">Dashboard</a></td>
+            </tr>
+            <tr>
+              <td><img src="https://res.cloudinary.com/slarin/image/upload/v1570714691/contact-support/customer_tejc46.svg" class="icon"></td><td class="nav-txt"><a href="#">Clients</a></td>
+            </tr>
+            <tr>
+              <td><img src="https://res.cloudinary.com/slarin/image/upload/v1570714691/contact-support/budget_1_lpc6t6.svg" class="icon"></td><td class="nav-txt"><a href="#">Estimates</a></td>
+            </tr>
+            <tr>
+              <td><img src="https://res.cloudinary.com/slarin/image/upload/v1570714691/contact-support/Group_bpvzya.svg" class="icon"></td><td class="nav-txt"><a href="#">Projects</a></td>
+            </tr>
+            <tr>
+              <td><img src="https://res.cloudinary.com/slarin/image/upload/v1570714691/contact-support/Group-invoices_vqj8ez.svg" class="icon"></td><td class="nav-txt"><a href="#">Invoices</a></td>
+            </tr>
+            <tr>
+              <td><img src="https://res.cloudinary.com/slarin/image/upload/v1570714691/contact-support/policy_qtves1.svg" class="icon"></td><td class="nav-txt"><a href="#">Contract</a></td>
+            </tr>
+            <tr>
+              <td><img src="https://res.cloudinary.com/slarin/image/upload/v1570714693/contact-support/approval_hxwihs.svg" class="icon"></td><td class="nav-txt"><a href="#">Proposals</a></td>
+            </tr>
+          </table>
+        </div>
+      </div>
+
+      <div class="content">
+        <img src="https://res.cloudinary.com/slarin/image/upload/v1570685956/contact-support/Contact_us_1_rm3q98.png" alt="contact help" class="hero-img">
+        <h4>Read the Frequently asked questions<br>or send us a message</h4>
+
+        <form class="contact-form">
+          <label for="subject" class="form-label">Subject</label>
+          <input type="text" class="inpt">
+          <label for="message" class="form-label">Message</label>
+          <textarea rows="15" class="txt-area"></textarea>
+          <button class="contact-form-btn">Send</button>
+        </form>
+      </div>
+
+    </div>
+
+    <script>
+      function drop() {
+        let x = document.getElementById('dd-menu');
+        x.classList.toggle('active');
+      }
+      function bars() {
+        let y = document.getElementById('sidebar');
+        let z = document.getElementById('nav-btn');
+        y.classList.toggle('active');
+        z.classList.toggle('active');
+      }
+    </script>
+  </body>
+
+</html>
