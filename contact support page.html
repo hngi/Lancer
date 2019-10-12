@@ -190,19 +190,50 @@
     /*media query*/
     @media(max-width: 600px){
       .main-cont {
-         grid-template-columns: repeat(4, 1fr);
+        grid-template-columns: 1fr;
+      }
+      .sidebar {
+        display: none;
       }
       .header {
-        grid-column: auto;
+        grid-column: 1 / -1;
       }
-      .header>h4 {
-        margin: 0 10px;
+      .content {
+        grid-column: 1 / -1;
+      }
+      .header>h3 {
+        margin: 13px;
       }
       .hero-img {
         width: 90vw;
       }
       .inpt, .txt-area {
         margin: 10px 0 40px 0;
+      }
+      .mobile-sidebar {
+        position: absolute;
+        display: flex;
+        height: auto;
+        top: 85px;
+        left: -60vw;
+        z-index: 1;
+        transition: left ease-in 500ms;
+      }
+      .mobile-sidebar.active {
+        left: 0;
+      }
+      .mobile-nav-btn {
+        width: 50px;
+      }
+      .nav-span {
+        display: block;
+        height: 5px;
+        margin: 4px;
+        border-radius: 10px;
+        background-color: #091429;
+      }
+      .mobile-nav-btn.active {
+        transform: rotate(90deg);
       }
     }
   </style>
@@ -211,6 +242,11 @@
   <body>
     <div class="main-cont">
       <div class="header">
+        <div class="mobile-nav-btn" onclick="bars()" id="nav-btn">
+          <span class="nav-span"></span>
+          <span class="nav-span"></span>
+          <span class="nav-span"></span>
+        </div>
         <h3>Contact Support</h3>
         <div class="header-items">
           <div>
@@ -233,7 +269,7 @@
         </div>
       </div>
 
-      <div class="sidebar">
+      <div class="sidebar mobile-sidebar" id="sidebar">
         <div class="sidebar-content">
           <img class="logo-img" src="https://res.cloudinary.com/slarin/image/upload/v1570685957/contact-support/lancers_zump2v.svg">
           <table class="nav-table">
@@ -281,6 +317,12 @@
       function drop() {
         let x = document.getElementById('dd-menu');
         x.classList.toggle('active');
+      }
+      function bars() {
+        let y = document.getElementById('sidebar');
+        let z = document.getElementById('nav-btn');
+        y.classList.toggle('active');
+        z.classList.toggle('active');
       }
     </script>
   </body>
