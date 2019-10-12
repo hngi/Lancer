@@ -1,780 +1,383 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
 
-<head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Contact Support</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0-11/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css?family=Ubuntu:300,400&display=swap" rel="stylesheet">
-    <style>
-        *,
-        *::after,
-        *::before {
-            margin: 0;
-            padding: 0;
-            box-sizing: inherit;
+    <title>Lancers</title>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+     
+
+    <!-- Bootstrap core CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"/>
+
+    <!-- Google imported font for pacifico & open sans -->
+    <link href="https://fonts.googleapis.com/css?family=Pacifico&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet"> 
+
+    <!-- Font awesome icon -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- Custom styles for lancer -->
+
+<style>
+    *{
+        font-family: "Open Sans", sans-serif;
+        box-sizing: border-box;
+    }
+    ul,li{
+        margin-left: 0;
+        padding-left: 0;
+        list-style: none;
+    }
+    body {
+        overflow-x: hidden;
+    }
+    #sidebar-wrapper {
+        min-height: 100vh;
+        margin-left: -15rem;
+        -webkit-transition: margin 0.25s ease-out;
+        -moz-transition: margin 0.25s ease-out;
+        -o-transition: margin 0.25s ease-out;
+        transition: margin 0.25s ease-out;
+        background-color: #091429 !important;
+    }
+
+    i {
+        margin-right: 14px !important;
+    }
+    .nav-fa{
+        color: #000;
+        font-size:26px;
+        margin-top: 10px;
+    }
+    #sidebar-wrapper .sidebar-heading {
+        padding: 0.875rem 1.25rem;
+    }
+    .sidebar-heading {
+        font-size: 36px;
+        font-family: "Pacifico", cursive;
+        color: azure;
+        font-size: normal;
+        font-weight: normal;
+        line-height: 63px;
+    }
+    #sidebar-wrapper .sideMenu {
+        width: 15rem;
+    }
+
+    #page-content-wrapper {
+        min-width: 100vw;
+    }
+
+    #wrapper.toggled #sidebar-wrapper {
+        margin-left: 0;
+    }
+
+    .sideMenu a{
+        margin-top: 1rem;
+        background-color: #091429 !important;
+        color: azure;
+        font-style: normal;
+        font-size: 18px;
+        line-height: 25px;
+        font-family: "Open Sans", sans-serif;
+    }
+  
+    @media (min-width: 768px) {
+        #sidebar-wrapper {
+            margin-left: 0;
         }
 
-        html,
-        body {
-            font-family: 'Ubuntu', sans-serif;
-            overflow-x: hidden;
+        #page-content-wrapper {
+            min-width: 0;
+            width: 100%;
         }
 
-        .main-body {
-            position: relative;
+        #wrapper.toggled #sidebar-wrapper {
+            margin-left: -15rem;
         }
+    }
 
-        ul {
-            list-style: none;
+    nav{
+        background-color:#ffffff;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    }
+    .br{
+        border-right: 1px solid #B1B1B1;
+    }
+    .page_nav{
+        display: flex;
+    }
+    .searchDiv input{
+        width: 100%;
+        border-radius: 4px;
+        border: 1px solid #b1b1b1;
+        height: 40px;
+        margin-top: 30px;
+        margin-bottom: 30px;
+        font-size: 16px;
+        outline: none;
+        text-indent: 32px;
+    }
+    
+    .searchDiv{
+        position: relative; 
+        left: 150px;
+    }
+    .fa-search{
+        position: absolute;
+        top: 40px;
+        left: 10px;
+    }
+    .circle {
+        height: 100%;
+        width: 100%;
+        padding: 10px;
+        display: table-cell;
+        text-align: center;
+        vertical-align: middle;
+        border-radius: 50%;
+        border: 1px solid #000;
+    }
+    @media only screen and (max-width: 991px) {
+        .searchDiv{
+            left: 0 !important;
         }
-
-        a {
-            color: inherit;
-            text-decoration: none;
-
+        .fa-search{
+            top: 10px !important;
+            left: 10px;
         }
-
-        a:hover {
-            color: inherit;
-            text-decoration: none;
+        .br{
+            border-right: none !important;
         }
+    }
+   a.dropdown-item:hover{
+        border-bottom: 1px solid #fff;
+        transition: 1s;
+   }
 
-        .header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            box-shadow: 0px 4px 2px rgba(0, 0, 0, 0.1);
-            padding: 1rem 3rem 1rem 0rem !important;
-            position: fixed;
-            top: 0;
-            left: 14rem;
-            width: calc(100% - 14rem);
-            z-index: 998;
-            background-color: white;
-            backface-visibility: hidden;
+   .content-nav{
+        /* Primary Blue */
+        background: #009FFF;
+        padding: 15px;
+        width: 100%;
+    }
+    .content-nav a {
+        font-weight: 60;
+        font-size: 14px;
+        line-height: 19px;
+        /* identical to box height */
+        color: #FFFFFF;
+
+        text-decoration: none;
+    }
+    @media only screen and (max-width: 580px) {
+        .content-nav{
+            display: none !important;
         }
-
-        .main-heading {
-            margin-left: 3rem;
-            font-size: 2rem;
-            font-weight: bold;
-        }
-
-        .hamburger {
-            display: none;
-        }
-
-        .header-lists {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            margin-right: 7rem !important;
-            margin-left: 4rem !important;
-            position: relative;
-            margin: 0;
-
-        }
-
-        .header-lists li {
-            display: inline-block;
-            padding-right: 1.6rem;
-
-        }
-
-        header .header_menu {
-            padding: 0 1rem;
-            border-right: 1px solid #B1B1B1;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-
-        }
-
-        header .header-panel_nav-item {
-            height: 4vw;
-            width: 2.5rem;
-            display: flex;
-            align-items: center;
-
-        }
-
-        .header-panel_nav-item a {
-            text-decoration: none;
-            color: #262626;
-
-        }
-
-        header .header-panel_nav-item a img {
-            width: 1.7vw;
-            height: ;
-
-        }
-
-        .user-image {
-            margin: 0 1.5vw;
-            width: 4vw;
-            height: 4vw;
-            border-radius: 50%;
-            text-align: center;
-            border: 0.2vw solid #091429;
-            font-size: 2vw;
-        }
-
-        .user-image p {
-            position: relative;
-            top: 12%
-        }
-
-        .searchContainer {
-            padding: 0.1rem 1.7;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            width: 25vw;
-            height: 3vw;
-            border: 1px solid #B1B1B1;
-            box-sizing: ;
-            border-radius: 4px;
-            overflow: hidden;
-
-        }
-
-        .searchContainer input {
-            width: 20vw
-        }
-
-        .searchIcon {
-            position: relative;
-            padding: 0 1vw;
-            color: #000;
-            opacity: 0.54;
-        }
-
-        .searchBox {
-            border: none;
-            height: 2vw;
-            padding: 0.5rem 0.5rem 0.5rem 0;
-            flex: 1;
-        }
-
-        .searchContainer input::placeholder {
-            color: #000;
-            font-weight: 500;
-            font-size: 18px;
-            line-height: 25px;
-
-        }
-
-        main {
-            margin-top: 8rem;
-            margin-left: 20%;
-            margin-bottom: 20%;
-        }
-
-
-        aside {
-            position: fixed;
-            top: 0;
-            left: 0;
-            background: #091429;
-            height: 100vh !important;
-            z-index: 999;
-            width: 14rem;
-            color: white;
-            padding-top: 3rem;
-            padding-left: 1rem;
-
-        }
-
-        aside img {
-            color: white;
-            height: 26px;
-            width: auto;
-            display: inline-block;
-            padding-right: 1rem;
-        }
-
-        aside ul {
-            margin-top: 3rem;
-        }
-
-        aside ul li {
-            margin-bottom: 1.7rem;
-        }
-
-        .aside-logo {
-            transform: scale(1.4);
-            padding-left: 1.3rem;
-            display: inline-block;
-
-        }
-
-        aside ul li a:hover {
-            color: #0ABAB5;
-            text-decoration: none;
-        }
-
-        .mainnavul ul {
-            display: none;
-            margin-top: 0;
-            margin-left: 2.7rem;
-
-        }
-
-        .mainnavul li:hover ul {
-            display: block;
-        }
-
-        .mainnavul ul li {
-            margin-bottom: 1rem;
-        }
-
-        main .collaborators {
-            font-weight: bold;
-            font-size: 2vw;
-            line-height: 25px;
-            color: #000000;
-        }
-
-        main .collaborators_submenu {
-            width: 95%;
-            display: flex;
-            height: 3.3vw;
-            background-color: #091429;
-        }
-
-        main .collaborators_submenu a {
-            color: #fff;
-            font-size: 1.34vw;
-            padding: 1.3vw;
-        }
-
-        main .collaborators_submenu a:nth-child(2) {
-            color: #0ABAB5;
-        }
-
-        .collaborate_table_head {
-            width: 95%;
-        }
-
-        .collaborate_table_head th {
-            width: 20%;
-            text-align: center;
-            padding: 2vw;
-            font-weight: bold;
-            font-size: 1.3vw;
-            line-height: 2vw;
-
-        }
-
-        .colaborate_table {
-
-            width: 95%;
-            border-collapse: separate;
-            border-spacing: 0 1vw;
-        }
-
-        .colaborate_table td {
-            width: 20%;
-            height: 4vw;
-            text-align: center;
-            padding: 5px;
-            font-weight: normal;
-            font-size: 1vw;
-            line-height: 1.2vw;
-            border-bottom: 1px solid #C4C4C4;
-            border-top: 1px solid #C4C4C4;
-        }
-
-        .more_action {
-            text-align: end !important;
-            border-right: 1px solid #C4C4C4;
-        }
-
-        .user_avatar_link {
-            text-align: start;
-        }
-
-        .user_avatar_box {
-            border-left: 1px solid #C4C4C4;
-            padding-left: 2vw !important;
-        }
-
-        .user_avatar {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            width: 3vw;
-            height: 3vw;
-            border: 2px solid #091429;
-            border-radius: 50%;
-            font-size: 1.4vw;
-            color: #000;
-        }
-
-        .add_colaborator {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            font-size: 2vw;
-            width: 4vw;
-            height: 4vw;
-            color: background: #FFFFFF;
-            border-radius: 50%;
-            opacity: 0.54;
-            position: fixed;
-            top: 85%;
-
-
-            background: #0ABAB5;
-            box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.24), 0px 0px 8px rgba(0, 0, 0, 0.12);
-        }
-
-        @media(max-width: 1100px) {
-            .main-heading {
-                font-size: 1.8rem;
-            }
-
-
-            .profile-photo {
-                height: 30px;
-                width: auto;
-            }
-
-            .support-icon {
-                height: 20px;
-                width: auto;
-            }
-
-            .notification-icon {
-                height: 19.4px;
-                width: auto;
-            }
-
-            .support-list {
-                grid-column-gap: 0
-            }
-        }
-
-        @media(max-width: 1240px) {}
-
-        @media(max-width: 960px) {
-            .header {
-                padding: 0.7rem 3rem 0.7rem 0rem !important;
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-            }
-            main{
-                margin-left: 30vw
-            }
-
-            .header-lists  {
-            margin-top: 1vw;
-            padding-left: 3rem;
-
-        }
-
-            .main-heading {
-                font-size: 1.6rem;
-            }
-
-            .searchContainer {
-                margin-bottom: 1vw;
-                padding: 2vw 1vw;
-                border: 1px solid #B1B1B1;
-                box-sizing: border-box;
-            }
-
-        }
-
-        @media(max-width: 850px) {
-            aside {
-                display: none;
-            }
-
-            .profile-list {
-                margin-right: 3rem;
-            }
-
-            .hamburger {
-                position: relative;
-                /* z-index: 1; */
-                right: 0;
-                top: 1px;
-                height: 20px;
-                width: 28px;
-                cursor: pointer;
-                margin-right: 1.6rem;
-                padding-right: 0 !important;
-            }
-
-            .hamburger-btn {
-                /* margin-left: 4rem; */
-                display: block;
-                /* width: 7px;
-          height: 2px; */
-                background: black;
-                position: absolute;
-                right: 0rem;
-                top: 12px;
-                width: 25px;
-                height: 3px;
-                transition: 0.5s all ease;
-                /* cursor: pointer; */
-            }
-
-            .hamburger-btn::before {
-                content: '';
-                position: absolute;
-                top: -8px;
-                width: 25px;
-                height: 3px;
-                background: black;
-                transition: 0.5s all ease;
-                /* background: set-text-color($primary-color);
-      @include transition-ease; */
-            }
-
-            .hamburger-btn::after {
-                content: '';
-                position: absolute;
-                top: 8px;
-                width: 25px;
-                height: 3px;
-                background: black;
-                /* background: set-text-color($primary-color);
-      @include transition-ease; */
-                transition: 0.5s all ease;
-            }
-
-            .open-menu {
-                display: block !important;
-            }
-
-            .cross-hamburger {
-                transform: rotate(360deg);
-                background: transparent;
-            }
-
-            .cross-hamburger::before {
-                transform: rotate(45deg) translate(5px, 8px);
-            }
-
-            .cross-hamburger::after {
-                transform: rotate(-45deg) translate(3px, -7px);
-            }
-
-            .header {
-                width: 100% !important;
-                left: 0;
-            
-            }
-            .header-lists{
-                padding: 2vw 0;
-            }
-
-            main {
-                margin-left: 0 !important;
-
-            }
-
-           header .header-panel_nav-item a img {
-            width: 3vw;
-            height: ;
-
-        }
-
-        .user-image {
-            margin: 0 1.5vw;
-            width: 6vw;
-            height: 6vw;
-            border-radius: 50%;
-            text-align: center;
-            border: 0.3vw solid #091429;
-            font-size: 3vw;
-        }
-            .searchContainer{
-                width: 50vw;
-                height: 6vw;
-                
-            }
-        }
-
-        @media(max-width: 750px) {
-            .main-container {
-                width: auto !important;
-            }
-
-
-        }
-
-        @media(max-width: 670px) {
-            .main-heading {
-                font-size: 1.5rem;
-                margin-left: 15px;
-            }
-
-            .support-list img {
-                height: 15px;
-                width: auto;
-            }
-
-            .support-list span {
-                font-size: 14px;
-            }
-
-            .notification-icon {
-                height: 16px;
-                width: auto;
-            }
-
-            .profile-photo {
-                height: 20px;
-            }
-
-            .profile-list span {
-                font-size: 14px;
-            }
-
-            .header-lists {
-                margin-right: 0 !important;
-                margin-left: 0 !important;
-            }
-
-            .header-lists li {
-                padding-right: 1rem;
-            }
-
-            .hamburger-btn {
-                top: 11px;
-                height: 2px;
-            }
-
-            .hamburger-btn::before {
-                top: -6px;
-                height: 2px;
-            }
-
-            .hamburger-btn::after {
-                top: 6px;
-                height: 2px;
-            }
-
-            .cross-hamburger::before {
-                transform: rotate(45deg) translate(4px, 6px);
-            }
-
-            .cross-hamburger::after {
-                transform: rotate(-45deg) translate(2px, -5px);
-            }
-        }
-
-        @media(max-width: 500px) {
-            .header {
-                display: grid;
-                justify-content: center;
-                align-items: center;
-                grid-row-gap: 0.5rem;
-            }
-        }
-    </style>
-</head>
-<!--header-lists support-list header-panel-->
-
+    }
+    .in-circle{
+        border: 1px solid black;
+        border-radius: 50%;
+        text-align: center;
+        line-height: 0;
+        padding: 10px;
+    }
+    .vert-dots:after {
+        content: '\2807';
+    }
+    tbody tr{
+        border: 1px solid #dee2e6;
+    }
+    
+    .btn-circle { 
+        width: 30px; 
+        height: 30px; 
+        text-align: center;
+        color:#fff;
+        padding: 6px 0;
+        font-size: 20px;
+        line-height: 1.428571429;
+        border-radius: 15px;
+        font-style: normal;
+        background-color: #009FFF;
+        cursor: pointer;
+    }
+    .btn-circle.btn-lg {
+        width: 50px;
+        height: 50px;
+        padding: 10px 16px;
+        font-size: 18px;
+        line-height:1.33;
+        border-radius: 25px;
+    }
+    .plus-btn{
+        position: relative;
+        left: 50px;
+    }
+    table{
+        width: 100%;
+    }
+   
+    td{
+        border:1px solid #dee2e6; 
+        padding:20px;
+    }
+    .bo-r-none{
+        border-right: none;
+    } 
+    .bo-l-none{
+        border-left: none;
+    } 
+    .table{ 
+        border-collapse:separate; 
+        border-spacing:0 15px; 
+    } 
+    .table thead th{
+        border-bottom: none;
+    }
+   
+</style>
+    <div class="d-flex" id="wrapper">
+        <!-- Sidebar -->
+        <div class="bg-dark border-right bar" id="sidebar-wrapper">
+          <div class="sidebar-heading">Lan<span style="color:#00F9FF">c</span>ers</div>
+          <ul class="sideMenu">
+            <li><a href="#" class="list-group-item list-group-item-action bg-light"> <i class="fa fa-home" aria-hidden="true"></i> Dashboard</a></li>
+            <li><a href="#" class="list-group-item list-group-item-action bg-light"> <i class="fa fa-users" aria-hidden="true"> </i> Clients</a></li>
+            <li><a href="#" class="list-group-item list-group-item-action bg-light"> <i class="fa fa-calculator" aria-hidden="true"> </i> Estimates</a></li>
+
+            <li>
+                <a href="#subMenu" data-toggle="collapse" aria-expanded="false" class="list-group-item list-group-item-action bg-light dropdown-toggle"><i class="fa fa-lightbulb-o" aria-hidden="true"></i> Projects</a>
+                <ul class="collapse list-unstyled" id="subMenu">
+                    <li>
+                        <a class="dropdown-item" style="color: azure;" href="#">Status</a>
+                    </li>
+                    <li>
+                        <a class="dropdown-item" style="color: azure;" href="#">Overview</a>
+                    </li>
+                    <li>
+                        <a class="dropdown-item" style="color: azure;" href="#">Collaborators</a>
+                    </li>
+                    <li>
+                        <a class="dropdown-item" style="color: azure;" href="#">Task</a>
+                    </li>
+                    <li>
+                        <a class="dropdown-item" style="color: azure;" href="#">Documents</a>
+                    </li>
+                </ul> 
+            </li>
+  
+            <li><a href="#invoice-toggle" class="list-group-item list-group-item-action bg-light"><i class="fa fa-file-text-o" aria-hidden="true"></i></i> Invoice</a></li>
+            <li><a href="#" class="list-group-item list-group-item-action bg-light"><i class="fa fa-handshake-o"></i> Contract</a></li>
+            <li><a href="#" class="list-group-item list-group-item-action bg-light"> <i class="fa fa-area-chart" aria-hidden="true"></i> Proposals</a></li>
+          </ul>
+        </div>
+        <!-- end of sidebar-wrapper -->
+
+        <div id="page-content-wrapper" class="mb-5">
+            <nav class="navbar navbar-expand-lg navbar-light navbar-fixed-top border-bottom">
+                <button class="btn btn-dark" id="menu-toggle">Toggle Menu</button>
+                <button class="navbar-toggler"type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    
+                    <div class="searchDiv">
+                        <i class="fa fa-search"></i>
+                        <input class="form-control" type="search" placeholder="Search">
+                    </div>
+
+                    <ul class="nav navbar-nav ml-auto mt-2 mt-lg-0">
+                        <li class="nav-item nav br" ><a class="nav-link" href="#"> <i class="fa fa-comments nav-fa" aria-hidden="true"></i></a></li>
+                        <li class="nav-item nav br" ><img class="nav-link img-responsive" src="https://res.cloudinary.com/laplace/image/upload/v1570738202/s1zgdvui4w4h6dnfeyk9.svg"></li>
+                        <li class="nav-item nav br" ><a class="nav-link" href="#"> <i class="fa fa-bell nav-fa" aria-hidden="true"></i></a></li>
+                        <li class="nav-item nav" ><a class="nav-link" href="#"><i class="circle"><strong style="color: #000; font-style: normal;">AU</strong></i></a></li>
+                    </ul> 
+                </div>
+            </nav>
+
+            <div class="container mt-5">
+                <h4 class="text-uppercase text-bold mb-5">Collaborators</h4>
+                <div class = "content-nav mb-5 d-flex">
+                    <a href = "#Overview" class="mr-5">Overview</a>
+                    <a href = "#Collaborators" class = "active mr-5">Collaborators</a>
+                    <a href = "#Task" class="mr-5">Task</a>
+                    <a href = "#Documents">Documents</a>
+                </div>
+
+                <div class="table-responsive">
+                    <table class="table">
+                        <thead class="table-borderless">
+                            <tr>
+                                <th></th>
+                                <th>Name</th>
+                                <th>Role</th>
+                                <th>Progress</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="mb-3">
+                                <td class="bo-r-none"><i class="in-circle">FD</i></td>
+                                <td class="bo-r-none bo-l-none">David Speedo</td>
+                                <td class="bo-r-none bo-l-none">Product Designer</td>
+                                <td class="bo-r-none bo-l-none">58%</td>
+                                <td class="bo-l-none">
+                                    <div class="vert-dots"></div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="bo-r-none"><i class="in-circle">FD</i></td>
+                                <td class="bo-r-none bo-l-none">David Speedo</td>
+                                <td class="bo-r-none bo-l-none">Product Designer</td>
+                                <td class="bo-r-none bo-l-none">58%</td>
+                                <td class="bo-l-none">
+                                    <div class="vert-dots"></div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="bo-r-none"><i class="in-circle">FD</i></td>
+                                <td class="bo-r-none bo-l-none">David Speedo</td>
+                                <td class="bo-r-none bo-l-none">Product Designer</td>
+                                <td class="bo-r-none bo-l-none">58%</td>
+                                <td class="bo-l-none">
+                                    <div class="vert-dots"></div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="bo-r-none"><i class="in-circle">FD</i></td>
+                                <td class="bo-r-none bo-l-none">David Speedo</td>
+                                <td class="bo-r-none bo-l-none">Product Designer</td>
+                                <td class="bo-r-none bo-l-none">58%</td>
+                                <td class="bo-l-none">
+                                    <div class="vert-dots"></div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="plus-btn mt-5">
+               <i class="btn-circle btn-lg">+</i>
+            </div>
+        </div>
+        <!-- end of page-content-wrapper -->   
+    </div> 
+<!-- end of wrapper -->    
 <body>
-    <div class="main-body">
-        <header class="header">
-            <!-- Header -->
-            <div class="d-flex mx-auto justify-content-center l_search">
-                <div class="searchContainer">
-                    <i class="fa fa-search searchIcon"></i>
-                    <input class="searchBox" type="search" name="search" placeholder="Search">
-                </div>
-            </div>
-            <div>
-                <ul class="header-lists">
-                    <li class="header-panel_nav-item header_menu">
-                        <a href=""><img src="images/svg/help.svg" alt="" /></a>
-                    </li>
-                    <li class="header-panel_nav-item header_menu">
-                        <a href=""><img src="images/svg/alarm_clock.svg" alt="" /></a>
-                    </li>
-                    <li class="header-panel_nav-item header_menu">
-                        <a href=""><img src="images/svg/notification.svg" alt="" /></a>
-                    </li>
-                    <li class="header-panel_nav-item">
-                        <a href="">
-
-                            <div class="user-image">
-                                <p>AU</p>
-                            </div>
-                        </a>
-                    </li>
-                    <li class="hamburger" id="menuBtn">
-                        <span class="hamburger-btn"></span>
-                    </li>
-                </ul>
-            </div>
-
-        </header>
-        <aside id="aside">
-            <!-- aside -->
-            <img class="aside-logo" src="https://res.cloudinary.com/slarin/image/upload/v1570685957/contact-support/lancers_zump2v.svg" alt="Logo">
-            <ul class="mainnavul">
-                <li>
-                    <a href=""><img src="https://res.cloudinary.com/slarin/image/upload/v1570685957/contact-support/home_ytnlm7.svg" alt="" /> Dashboard</a>
-                </li>
-                <li>
-                    <a href=""><img src="https://res.cloudinary.com/slarin/image/upload/v1570685955/contact-support/customer_bpnu4k.svg" alt="" /> Clients</a>
-                </li>
-
-                <li>
-                    <a href=""><img src="https://res.cloudinary.com/slarin/image/upload/v1570685955/contact-support/Group_khqbxt.svg" alt="" />
-                        Projects <i class="fas fa-angle-down ml-2"></i></a>
-                    <ul>
-                        <li><a href="#">
-                        <li>Status</li></a>
-                </li>
-                <li><a href="#">
-                <li>Overview</li></a></li>
-                <li><a href="#">
-                <li>Collabrators</li></a></li>
-                <li><a href="#">
-                <li>Task</li></a></li>
-                <li><a href="#">
-                <li>Documents</li></a></li>
-            </ul>
-            </li>
-            <li>
-                <a href=""><img src="https://res.cloudinary.com/slarin/image/upload/v1570685955/contact-support/Group-invoices_i80pqb.svg" alt="" /> Invoices</a>
-            </li>
-            <li>
-                <a href=""><img src="https://res.cloudinary.com/slarin/image/upload/v1570685957/contact-support/policy_jn93r8.svg" alt="" /> Contract</a>
-            </li>
-            <li>
-                <a href=""><img src="https://res.cloudinary.com/slarin/image/upload/v1570685958/contact-support/approval_ylo1xp.svg" alt="" /> Proposals</a>
-            </li>
-            </ul>
-        </aside>
-        <main>
-            <!-- Main body -->
-            <div class="container main-container">
-                <div class="collaborators">
-                    <p>COLLABRATORS</p>
-                </div>
-                <div class="collaborators_submenu">
-                    <a href="#">Over View</a>
-                    <a href="#">Collabrators</a>
-                    <a href="#">Task</a>
-                    <a href="#">Documents</a>
-                </div>
-                <div>
-                    <table class="collaborate_table_head">
-                        <tr>
-                            <th></th>
-                            <th>Name</th>
-                            <th>Role</th>
-                            <th>Progress</th>
-                            <th></th>
-                        </tr>
-                    </table>
-                    <table class="colaborate_table">
-                        <tr class="collaborator_row">
-                            <td class="user_avatar_box"><span class="user_avatar_link" href="">
-
-                                    <div class="user_avatar">
-                                        FD
-                                    </div>
-                                </span></td>
-                            <td>
-                                David Speedo
-                            </td>
-                            <td>Product Designer</td>
-                            <td>58%</td>
-                            <td class="more_action"><img src="images/svg/more_vert-24px.svg" alt=""></td>
-                        </tr>
-                        <tr>
-                            <td class="user_avatar_box"><span class="user_avatar_link" href="">
-
-                                    <div class="user_avatar">
-                                        FD
-                                    </div>
-                                </span></td>
-                            <td>
-                                David Speedo
-                            </td>
-                            <td>Product Designer</td>
-                            <td>58%</td>
-                            <td class="more_action"><img src="images/svg/more_vert-24px.svg" alt=""></td>
-                        </tr>
-                        <tr>
-                            <td class="user_avatar_box"><span class="user_avatar_link" href="">
-
-                                    <div class="user_avatar">
-                                        FD
-                                    </div>
-                                </span></td>
-                            <td>
-                                David Speedo
-                            </td>
-                            <td>Product Designer</td>
-                            <td>58%</td>
-                            <td class="more_action"><img src="images/svg/more_vert-24px.svg" alt=""></td>
-                        </tr>
-
-                        <tr>
-                            <td class="user_avatar_box"><span class="user_avatar_link" href="">
-
-                                    <div class="user_avatar">
-                                        FD
-                                    </div>
-                                </span></td>
-                            <td>
-                                David Speedo
-                            </td>
-                            <td>Product Designer</td>
-                            <td>58%</td>
-                            <td class="more_action"><img src="images/svg/more_vert-24px.svg" alt=""></td>
-                        </tr>
-                    </table>
-                </div>
-
-            </div>
-            <div class="add_colaborator">
-                <span>+</span>
-            </div>
-
-
-
-
-        </main>
-    </div>
-</body>
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 <script>
-    const menuBtn = document.getElementById("menuBtn")
-    const aside = document.getElementById("aside")
-    let showMenu = false
-    menuBtn.addEventListener("click", () => {
-        if (!showMenu) {
-            aside.classList.add("open-menu")
-            document.querySelector(".hamburger-btn").classList.add("cross-hamburger")
-
-            showMenu = true;
-        } else {
-            aside.classList.remove("open-menu")
-            document.querySelector(".hamburger-btn").classList.remove("cross-hamburger")
-            showMenu = false;
-        }
-    })
-</script></html>
-
-<!-- Blue: #091429 -->
-<!-- Button:  -->
+    $("#menu-toggle").click(function(e) {
+      e.preventDefault();
+      $("#wrapper").toggleClass("toggled");
+    });
+</script>
+</body>
+</html>
