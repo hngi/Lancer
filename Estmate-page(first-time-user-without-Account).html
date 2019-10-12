@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Estimates</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0-11/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Ubuntu:300,400&display=swap" rel="stylesheet">
+  <style>
+    *,
+    *::after,
+    *::before {
+      margin: 0;
+      padding: 0;
+      box-sizing: inherit;
+    }
+
+    html,
+    body {
+      font-family: 'Ubuntu', sans-serif;
+  
+  
+    }
+
+    
+
+    .main-body {
+      position: relative;
+    }
+
+    ul {
+      list-style: none;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+
+    }
+
+    a:hover {
+      color: inherit;
+      text-decoration: none;
+    
+    }
+
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0px 4px 2px rgba(0, 0, 0, 0.1);
+      padding: 1rem 13.9rem 1rem 0rem !important;
+    
+      top: 0;
+      left: 14rem;
+      width: calc(100% - 14rem);
+      z-index: 998;
+      background-color: white;
+      backface-visibility: hidden;
+    }
+
+    .main-heading {
+      margin-left: 15rem;
+      font-size: 2rem;
+      font-weight: bold;
+    }
+
+    .hamburger {
+      display: none;
+    }
+
+    .header-lists {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-right: 1rem !important;
+      margin-left: 4rem !important;
+      position: relative;
+      margin: 0;
+      left: 270px;
+    }
+
+    .header-lists li {
+      display: inline-block;
+      padding-right: 1.6rem;
+    }
+
+    .profile-photo {
+      border-radius: 50%;
+    }
+
+    .support-icon {
+      height: 30px;
+      width: auto;
+    }
+
+    .notification-icon {
+      height: 24.4px;
+      width: auto;
+    }
+
+    .profile-photo {
+      height: 40px;
+      width: auto;
+    }
+
+    .support-list {
+      display: inline-grid !important;
+      grid-template-columns: 1fr 2fr;
+      grid-column-gap: 0.4rem;
+      align-items: center;
+    }
+
+    main {
+      margin-top: 4rem;
+      margin-left: 14rem;
+    }
+
+    .main-image-container {
+      margin-top: 10rem;
+      margin-bottom: 5rem;
+    }
+
+    .main-image {
+      display: block;
+      margin: 0 auto;
+      width: 60%;
+      height: auto;
+      /* margin-left: 18rem; */
+    }
+
+    .second-heading {
+      width: 50%;
+      text-align: center;
+      margin: 0 auto;
+      margin-bottom: 5rem;
+    }
+
+    .label,
+    input[type=text],
+    textarea {
+      display: block;
+      padding: 0.5rem 1rem;
+      width: 100%;
+    }
+
+    input[type=submit] {
+      text-align: center;
+      display: block;
+      margin: 0.5rem auto;
+      padding: 0.5rem 3rem;
+      border-radius: 0 !important;
+      color: white;
+      background: #091429 !important;
+    }
+
+    input[type=submit]:hover {
+      color: white !important;
+      background: #162646 !important;
+    }
+
+    .main-form {
+      width: 60%;
+      margin: 0 auto;
+      margin-bottom: 5rem;
+    }
+
+    aside {
+      display: none;
+      top: 0;
+      left: 0;
+      background: #091429;
+      height: 100vh !important;
+      z-index: 999;
+      width: 14rem;
+      color: white;
+      padding-top: 3rem;
+      padding-left: 1rem;
+
+    }
+
+    aside img {
+      color: white;
+      height: 26px;
+      width: auto;
+      display: inline-block;
+      padding-right: 1rem;
+    }
+
+    aside ul {
+      margin-top: 3rem;
+    }
+
+    aside ul li {
+      margin-bottom: 1.7rem;
+    }
+
+    .aside-logo {
+      transform: scale(1.4);
+      padding-left: 1.3rem;
+      display: inline-block;
+
+    }
+
+    @media(max-width: 1100px) {
+      .main-heading {
+        font-size: 1.8rem;
+      }
+
+      .second-heading {
+        font-size: 1.7rem;
+        margin-bottom: 4rem;
+      }
+
+      .profile-photo {
+        height: 30px;
+        width: auto;
+      }
+
+      .support-icon {
+        height: 20px;
+        width: auto;
+      }
+
+      .notification-icon {
+        height: 19.4px;
+        width: auto;
+      }
+
+      .support-list {
+        grid-column-gap: 0
+      }
+    }
+
+    @media(max-width: 1010px) {
+      .second-heading {
+        width: 65%;
+      }
+    }
+
+    @media(max-width: 950px) {
+      .header {
+        padding: 0.7rem 3rem 0.7rem 0rem !important;
+      }
+
+      .main-heading {
+        font-size: 1.6rem;
+      }
+
+      .second-heading {
+        font-size: 1.5rem;
+        width: 75%;
+      }
+    }
+
+    @media(max-width: 850px) {
+      aside {
+        display: none;
+      }
+
+      .profile-list {
+        margin-right: 3rem;
+      }
+
+     
+
+
+      .header {
+        width: 100% !important;
+        left: 0;
+        
+      }
+
+      main {
+        margin-left: 0 !important;
+        margin-top: 2.5rem;
+      }
+
+      .main-image {
+        width: 75%;
+      }
+
+      .second-heading {
+        width: 70%;
+      }
+
+      .main-form {
+        width: 70%;
+      }
+    }
+
+    
+
+    div .action {
+      display: flex; 
+      align-items: center;
+      justify-content: center;
+      background: #12c7a9;
+      color: #fff;
+      height: 40px;
+      width: 120px;
+      font-size: 13px;
+    }
+
+    div .estimates {
+      
+      margin-top: 10%;
+      margin-left: 4%;
+    }
+
+    .est {
+      /* Create Estimate */
+
+position: absolute;
+
+font-family: Ubuntu;
+font-style: normal;
+font-weight: bold;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #12c7a9;
+      color: #fff;
+      left: 240px;
+      top: 100px;
+      height: 40px;
+      width: 130px;
+      margin-bottom: 25px;
+      font-weight: bold;
+    }
+
+    .est-details {
+      /* Estimates helps you place value to your work and time! */
+
+position: absolute;
+left: 240px;
+
+top: 90%;
+bottom: 10.49%;
+/* Estimates helps you place value to your work and time! */
+
+position: absolute;
+left: 17.50%;
+right: 27.29%;
+top: 90%;
+bottom: 73.49%;
+
+
+
+font-family: Ubuntu;
+font-style: normal;
+font-weight: 500;
+font-size: 100px;
+line-height: 32px;
+
+/* Text color */
+
+
+    }
+    .info-signup{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #12c7a9;
+      color: #fff;
+      height: 40px;
+      width: 110px;
+      margin-bottom: 0px;
+      font-weight: bold;
+    }
+    h5{
+/* Estimates helps you place value to your work and time! */
+margin-top: 100px;
+
+position: absolute;
+
+font-family: Ubuntu;
+font-style: normal;
+font-weight: 500;
+font-size: 28px;
+
+
+/* Text color */
+color: #262626;
+
+    }
+
+    .convert-estimate {
+    /* Create an estimate and easily convert it to an invoice and send to your client. */
+
+position: absolute;
+margin-left:0%;
+margin-top: 80px;
+
+font-family: Ubuntu;
+font-style: normal;
+font-weight: normal;
+font-size: 18px;
+line-height: 21px;
+
+color: #091429;
+
+
+    }
+
+    @media(max-width: 750px) {
+      .main-container {
+        width: auto !important;
+      }
+
+      .main-form,
+      .second-heading,
+      label,
+      input[type=text],
+      textarea {
+        width: 85%;
+      }
+
+      .main-image {
+        width: 80%;
+      }
+    }
+
+    @media(max-width: 670px) {
+      .main-heading {
+        font-size: 1.5rem;
+        margin-left: 15px;
+      }
+
+      .support-list img {
+        height: 15px;
+        width: auto;
+      }
+
+      .support-list span {
+        font-size: 14px;
+      }
+
+      .notification-icon {
+        height: 16px;
+        width: auto;
+      }
+
+      .profile-photo {
+        height: 20px;
+      }
+
+      .profile-list span {
+        font-size: 14px;
+    
+
+
+
+
+      }
+
+      .header-lists {
+        margin-right: 0 !important;
+        margin-left: 0 !important;
+      }
+
+      .header-lists li {
+        padding-right: 1rem;
+      }
+
+    
+    }
+
+    @media(max-width: 767x) {
+      .header {
+        display: grid;
+        justify-content: center;
+        align-items: center;
+        grid-row-gap: 0.5rem;
+      }
+      .header {
+    display: block;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0px 4px 2px rgba(0, 0, 0, 0.1);
+    top: 0;
+    left: 14rem;
+    width: calc(100% - 14rem);
+    z-index: 998;
+    background-color: white;
+    backface-visibility: hidden;
+}
+     
+    }
+    @media screen and (max-width: 600px) {
+       .est {
+        margin-top: 0px;
+        margin-left: -220px;
+        width: 205px;
+      }
+      .est-details{
+        margin-left: -60px;
+        width: 100%;
+      font-size: 28px;
+      }
+      .convert-estimate{
+        left: 30px;
+      top: 150px;
+     text-align: left;
+     font-size: 18px;
+      }
+      .header-lists {
+        left: 40px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="main-body">
+    <header class="header">
+      <!-- Header -->
+      <div>
+        <h1 class="main-heading">Estimates</h1>
+        
+
+      </div>
+      <div>
+        <ul class="header-lists">
+          <li>
+             <a href="signin.html"> <span>Login</span></a>
+          </li>
+          <li class="profile-list">
+              <a href="signup.html" class="info-signup"> <span> Sign Up</span> </a>
+          </li>
+          <li class="hamburger" id="menuBtn">
+          
+          </li>
+        </ul>
+      </div>
+
+    </header>
+  
+    <main>
+      <!-- Main body -->
+      <div class="container main-container">
+        <div class="estimates">
+          <a href="#"><p class="est">Create Estimate</p></a>
+        </div>
+        <div class="est-details">
+          <h5>Estimates helps you place value to your work and time!</h5>
+        </div>
+        <div class="convert-estimate">
+          <p>Create an estimate and easily convert it to an invoice and send to your client.</p>
+        </div>
+      </div>
+    </main>
+  </div>
+</body>
+
+</html>
