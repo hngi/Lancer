@@ -11,16 +11,19 @@
     <title>Log In</title>
 
     <style>
+        *{
+            font-family: 'Ubuntu'
+        }
         body {
             font-family: 'Ubuntu', sans-serif;
-            font-weight: 200;
- 
+            margin: 0;
+            padding: 0;
         }
         
         h1 {
             font-family: 'Ubuntu', sans-serif;
             font-weight: 300;
-            font-size: 72px;
+            font-size: 10vmin;
         }
         
         h4 {
@@ -33,7 +36,28 @@
             border: thin #c4c4c4 solid;
             border-radius: 1% 1% 1% 1%;
         }
-        
+        @media screen and (min-width: 600px){
+            .signinform{
+                padding: 2% 4% ;
+            }
+        }
+        @media screen and (max-width: 600px){
+            .signinform{
+                margin: 5px 0 2%;
+                padding: 1% 2%; 
+                border: none;
+            }
+            h1 {
+                text-align: center;
+            }
+            .register{
+                margin-top: 0px;
+                text-align: center;                
+            }
+            .register li {
+                text-align: initial;
+            }
+        }
         a {
             color: #000;
         }
@@ -71,31 +95,6 @@
         a:hover {
             color: #c4c4c4;
         }
-
-        @media only screen and (max-width: 770px) {
-            .register{
-                margin-top: 0px;
-                text-align: center;                
-            }
-            .register li {
-                text-align: initial;
-            }
-            h2{
-                font-size: 2px larger;
-            }
-            h5{
-                font-size: larger;
-            }
-            .float-left{
-                text-align: center;
-                margin-left: 100px;
-            }
-            .signinform {
-                width: 85%;
-                margin-left: 8%;
-            }
-        }
-
     </style>
 </head>
 
@@ -106,14 +105,13 @@
                 <a href="index.html" class="navbar-brand"><img src="https://res.cloudinary.com/sgnolebagabriel/image/upload/v1570531368/Lancers_evgrmc.png" alt="logo"></a>
             </div>
             <div class="float-right">
-
             </div>
         </div>
         <div class="row align-items-center mt-5">
-            <div class="col-md-6">
+            <div class="col-md-5 ">
                 <h1>Welcome Back!</h1>
             </div>
-            <div class="col-md-5 offset-md-1 signinform mt-5 pl-5 pr-5 pt-4 pb-4">
+            <div class="col-md-6 offset-md-1 offset-0 signinform mt-5">
                 <h4 class="text-center">Sign In</h4>
                 <form id="loginform">
                     <div class="form-group">
