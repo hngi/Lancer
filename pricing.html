@@ -204,6 +204,14 @@
             ul {
                 padding: 0% !important;
             }
+            
+            #btn-sub:hover {
+                background-color: rgb(9, 155, 150);
+            }
+            
+            #navbarNavAltMarkup a:hover {
+                color: #0ABAB5 !important;
+            }
 
             span.avoidwrap { display:inline-block; }
 
@@ -347,50 +355,61 @@
                 <button type="button" class="btn button" onclick="contact-support.html" style="border-width: 2px">Contact Sales</button>
             </div>
         </article>
-            <footer>
-                <div class="container">
-                    <div class="row">
-                        <div class="col-sm-2">
-
-                                <h6 id="lancer">Lan<span style="color: aqua">c</span>ers</h6>
-                                <a href="pricing.html" class="link">Pricing</a>
-                                <br>
-                                <a href="/signin.html" class="link">Sign in</a>
-                                <br>
-                                <a href="signup.html" class="link">Sign Up</a>
-
-
-                        </div>
-                        <div class="col-sm-2">
-
-                                <h6 >Useful links</h6>
-
-                                <a href="documents.html" class="link">Dashboard</a>
-                                <br>
-                                <a href="project.html" class="link">Projects</a>
-                                <br>
-                                <a href="Invoice-new-user.html" class="link">Invoices</a>
-                                <br>
-                                <a href="Invoice-new-user.html" class="link">Create a Project</a>
-
-                        </div>
-                        <div class="col-sm-4">
-
-                                <h6>Reach us</h6>
-                                <p> 52b Charity Lane, off Magboso Highway, Ikate,<br> London, Nigeria</p>                
-                                <i class="fab fa-facebook-square fa-2x"></i>
-                                <i class="fab fa-twitter-square fa-2x"></i>
-                        </div>
-                        <div class="col-sm-4" id="col4">
-                                <h6>Stay up to date</h6>
-                                <p>Get emails about our newest features and events <br> you can visit, we promise not to spam</p>
-                                <input type="text" placeholder="Email Address" id="email-input" style="margin-top: 10px">
-                                <button id="btn-sub" style="margin-top: 10px">Subscribe</button>
-                        </div>
-                    </div>
-                </div>
-            </footer>
         
+        <footer class="bg-white pt-4">
+			<div class="container">
+				<div class="row">
+					<div class="col-xs-12 col-sm-6 col-md-2">
+						<img src="https://lancers.app/images/svg/logo-dark.svg" alt="" class="img img-responsive mb-2" height="30" width="auto">
+						<ul class="list-unstyled">
+							<li><a class="text-dark" href="#">Pricing</a></li>
+							<li><a class="text-dark" href="#">Sign in</a></li>
+							<li><a class="text-dark" href="#">Sign up</a></li>
+						</ul>
+					</div>
+					<div class="col-xs-12 col-sm-6 col-md-2">
+						<h5>Features</h5>
+						<ul class="list-unstyled">
+							<li><a class="text-dark" href="#">Dashboard</a></li>
+							<li><a class="text-dark" href="#">Projects</a></li>
+							<li><a class="text-dark" href="#">Invoices</a></li>
+							<li><a class="text-dark" href="#">Create a Project</a></li>
+						</ul>
+					</div>
+					<div class="col-xs-12 col-sm-6 col-md-4">
+						<h5>Reach us</h5>
+						<p class="text-dark small">
+							52b, Charity Lane, off Magboso Highway, Ikate, London, Nigeria
+						</p>
+						<h5 class="">
+							<a href="#" class="text-dark mr-2"><i class="fab fa-facebook-square"></i></a> 
+							<a href="#" class="text-dark"><i class="fab fa-twitter-square"></i></a>
+						</h5>
+					</div>
+					<div class="col-xs-12 col-sm-6 col-md-4">
+						<h5>Stay up to date</h5>
+						<p class="text-dark small">
+							Get emails about our newest features and events you can visit. We promise not to spam.
+						</p>
+						<form class="form-inline">
+							<div class="form-group mb-2 mr-2">
+								<label for="staticEmail2" class="sr-only">Email</label>
+								<input type="email" class="form-control" id="staticEmail2" value="" placeholder="Email Address" required>
+							</div>
+							<button type="submit" class="btn btn-secondary mb-2" id="btn-sub">Subscribe</button>
+						</form>
+					</div>
+				</div>
+			</div>
+			<div class="bg-white text-left py-2 mt-0">
+				<div class="container">
+					<p class="float-right">
+			    	<a href="#">Back to top</a>
+				    </p>
+				    <p>&copy; Lancer 2019.</p>
+				</div>
+			</div>
+		</footer>
             <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
             <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
             
