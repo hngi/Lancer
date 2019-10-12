@@ -14,6 +14,7 @@
         body {
             font-family: 'Ubuntu', sans-serif;
             font-weight: 200;
+ 
         }
         
         h1 {
@@ -28,9 +29,9 @@
             font-size: 32px;
         }
         
-        .pass-changed {
+        .signinform {
             border: thin #c4c4c4 solid;
-            border-radius: 6px 6px 6px 6px;
+            border-radius: 1% 1% 1% 1%;
         }
         
         a {
@@ -41,6 +42,7 @@
             text-decoration: none;
             color: #000;
         }
+
         
         .btn-success {
             background-color: #0ABAB5;
@@ -51,9 +53,49 @@
             background-color: #0ABAB5;
             border: thin #0ABAB5 solid;
         }
-        .p-last {
-            line-height: 0.5px;
+
+
+        form#loginform button{
+            background:#0ABAB5;
+            border:0px
         }
+
+         div.floatright a, div.floatright p{
+             font-size: 16px;
+         }
+
+        .error{
+            background-color: red;
+        }
+        
+        a:hover {
+            color: #c4c4c4;
+        }
+
+        @media only screen and (max-width: 770px) {
+            .register{
+                margin-top: 0px;
+                text-align: center;                
+            }
+            .register li {
+                text-align: initial;
+            }
+            h2{
+                font-size: 2px larger;
+            }
+            h5{
+                font-size: larger;
+            }
+            .float-left{
+                text-align: center;
+                margin-left: 100px;
+            }
+            .signinform {
+                width: 85%;
+                margin-left: 8%;
+            }
+        }
+
     </style>
 </head>
 
@@ -61,26 +103,52 @@
     <div class="container">
         <div class="clearfix mt-3">
             <div class="float-left">
-                <a href="" class="navbar-brand"><img src="https://res.cloudinary.com/sgnolebagabriel/image/upload/v1570531368/Lancers_evgrmc.png" alt="logo"></a>
+                <a href="index.html" class="navbar-brand"><img src="https://res.cloudinary.com/sgnolebagabriel/image/upload/v1570531368/Lancers_evgrmc.png" alt="logo"></a>
             </div>
             <div class="float-right">
 
             </div>
         </div>
+        <div class="row align-items-center mt-5">
+            <div class="col-md-6">
+                <h1>Welcome Back!</h1>
+            </div>
+            <div class="col-md-5 offset-md-1 signinform mt-5 pl-5 pr-5 pt-4 pb-4">
+                <h4 class="text-center">Sign In</h4>
+                <form id="loginform">
+                    <div class="form-group">
+                        <label for="my-email">Email Address</label>
+                        <input id="email" class="form-control" type="email" name="" placeholder="eg. johndoe@example.com">
+                        <span  id="emessage"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="my-password">Password</label>
+                        <input id="password" class="form-control" type="password" name="my-password" placeholder=""> 
+                        <span id="pmessage" "></span>
+                    </div>
+                    <div class="clearfix">
+                        <div class="float-left">
 
-        <div class="col-md-6 offset-md-3 text-center pass-changed mt-5 pt-3 pb-3">
-            <h4><b>Password successfully reset!</b></h4>
-            <p>You will now be redirected to your dashboard</p>
-            <p>Click <a href="#">here</a> if you haven't been redirected in the next</p>
-            <p class="p-last">few seconds.</p>
+                        </div>
+                        <div class="float-right">
+                            <a href="">Forgot Password?</a>
+                        </div>
+                    </div>
+                    <button type="submit" class="btn btn-success col-md-12 pt-2 pb-2 mt-2 mb-2">Login</button>
+                    <div class="clearfix">
+                        <div class="float-left">
 
+                        </div>
+                        <div class="float-right">
+                            <p>Don't have an account? <a href="signup.html">Sign Up</a></p>
+                        </div>
+                    </div>
+                </form>
+            </div>
         </div>
-
     </div>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.slim.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.15.0/umd/popper.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
 </body>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.slim.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.15.0/umd/popper.min.js"></script>
@@ -144,5 +212,4 @@ let validateEmail = function(){
     });
    
 </script>
-</html>
 </html>

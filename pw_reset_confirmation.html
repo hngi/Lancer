@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Password reset confirmation</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet" type="text/css">
+    <style>
+        .pwreset_logo{
+            left:4.44%;
+            right:86.6%;
+            top:1.27%;
+            bottom:91.7%;
+            font-family:Pacifico;
+            font-style:normal;
+            font-weight:normal;
+            font-size: 36px;
+            line-height:63px;
+            color:#262626;
+        }
+        #forc{
+            color:#0ABAB5
+        }
+        .reset_body{
+            width:41.5%;
+            height:39%;
+            left:31%;
+            top:203px;
+            background:#FFFFFF;
+            border:1px solid #c4c4c4;
+            box-sizing: border-box;
+            border-radius: 6px;
+        }
+        #check_mail{
+            width:60%;
+            left:119px;
+            top:20%;
+            padding-left:15%;
+            padding-right:10%;
+            font-family: Ubuntu, sans-serif;
+            font-style: normal;
+            font-weight: normal;
+            font-size:32px;
+            line-height:37px;
+            text-align:center;
+            color:#000000
+        }
+        #email_sent{
+            width:80%;
+            left:90px;
+            top:25%;
+            padding-left:15%;
+            padding-right:10%;
+            font-family: Ubuntu, sans-serif;
+            font-style: normal;
+            font-weight: normal;
+            font-size:18px;
+            line-height:21px;
+            color:#262626;
+        }
+        #resend_instruction{
+            width:60%;
+            left:150px;
+            top:80%;
+            padding-left:25%;
+            padding-right:10%;
+            font-family: Ubuntu, sans-serif;
+            font-style: normal;
+            font-weight: normal;
+            font-size:16px;
+            line-height:18px;
+            text-align:center;
+            color:#091429;
+        }
+        .align-left {
+            text-align: left;
+        }
+
+        .left-pad-4 {
+            margin-left: .4em;
+        }
+
+        .centered-div {
+            margin: auto;
+            margin-top: 13%;
+        }
+        a:link{
+            color:#091429;
+        }
+        a:visited{
+            color:#091429;
+        }
+        a:hover{
+            color:darksalmon;
+        }
+        @media screen and (max-width: 1080px){
+            .reset_body{
+                width:75%;
+            }
+            #check_mail{
+                font-size:16px;
+                width:80%;
+                padding-left:9%;
+            }
+            #email_sent{
+                font-size:12px;
+                padding-left:12.5%;
+                line-height:21px;
+            }
+            #resend_instruction{
+                font-size:12px;
+                line-height:18px;
+                width:80%;
+                padding-left:20%;
+            }
+
+            }
+    </style>
+</head>
+<body>
+    <div>
+        <span class="pwreset_logo align-left left-pad-4">Lan<span id="forc">c</span>ers</span>
+    </div>
+    <div class="reset_body centered-div">
+        <h3 id="check_mail">Please Check your mail</h3>
+        <p id="email_sent">An email has been sent to you with password reset instructions. Be sure to check your spam folder if you don't see it within five minutes</p>
+        <p id="resend_instruction"><a href="#" style="text-decoration:none">Resend Instructions?</a></p>
+    </div>
+</body>
+</html>
