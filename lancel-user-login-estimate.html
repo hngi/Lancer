@@ -4,10 +4,14 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Lancer - User Estimate</title>
+    <title>Mentor Setup Page | 2</title>
     <meta name="description" content="mentors">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans|Ubuntu|Pacifico&display=swap" rel="stylesheet">
+    <!-- <link rel="stylesheet" type="text/css" href="mentorPage2.css"> -->
+    <!-- <link rel="stylesheet" type="text/css"
+        href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> -->
     <script src="https://use.fontawesome.com/185cfd0ddc.js"></script>
     <style>
         /*body style*/
@@ -17,6 +21,7 @@
             font-family: 'Ubuntu';
             margin: 0%;
             padding: 0%;
+            overflow: hidden;
         }
 
         * {
@@ -42,6 +47,7 @@
         .kc-logo {
             width: 200px;
             display: flex;
+            align-items: center;
             background: #091429;
             color: #ffffff;
             padding: 1rem;
@@ -52,7 +58,7 @@
         #kc-side-btn {
             width: 30px;
             height: 30px;
-            margin-right: 10px;
+            margin: 4px 0px 0px 5px;
         }
 
         #kc-aside {
@@ -67,11 +73,10 @@
             transition: .5s ease-in-out;
             
         }
-        .display__flex {
-            display: flex;
-        }
+
         .kc-side-nav {
             width: 100%;
+            display: flex;
             flex-direction: column;
         }
 
@@ -88,6 +93,7 @@
             width: 15px;
             height: 15px;
             margin-right: 10px;
+            
         }
 
         .margin-left {
@@ -110,6 +116,10 @@
                 grid-row: 2/3;
                 margin: 2rem;
             }
+            .header{
+                display: grid !important;
+                grid-template-columns: 65px auto !important;
+            }
             a{
                 font-size: .85em;
             }
@@ -119,28 +129,28 @@
             }
             .kc-logo{
                 width: auto;
+                grid-column: 1/2;
             }
-            .lancer-logo{
+            #lancer-logo{
                 display: none;
             }
-            /* #kc-aside {
-                display: none;
-            } */
-            .est{
-                display: none;
+            #kc-aside {
+                display: none
             }
-            
-            .display__hidden {display: none !important;}
-            .display__block {
-                display: block !important;
-                position: fixed;
-                top: 65px;
-                left: 0;
+            .navbar{
+                grid-column: 2/3;
+            }
+            #est{
+                display: none;
             }
         }
 
         /* -------------------------------- */
-        .header, .main-cont{
+        .header{
+            display: grid;
+            grid-template-columns: 200px auto;
+        }
+        .main-cont{
             width: 100%;
             display: flex;
         }
@@ -153,14 +163,12 @@
             }
             .navbar {
                 height: 65px;
-                width: 80.5%;
                 display: flex;
                 justify-content: space-between;
                 align-items: center;
                 box-shadow:  #8898AA 0px 3px 5px;
                 color: #000000;
                 grid-column: 2/3;
-                grid-row: 1/2;
                 padding: .5rem 1rem;
             }
             i {
@@ -198,22 +206,25 @@
                 font-weight: bold;
                 font-size: 1.3em;
             }
-            
+            .flex{
+                display: flex;
+                align-items: center;
+            }
         </style>
     </head>
     <body>
     
            <!--Side bar by lavidegeorge -->
     <div class="header">
-        <div class="kc-logo display__flex">
-            <img src="https://res.cloudinary.com/laviedegeorge/image/upload/v1570744697/startng/hng/img/Lancers_k3r04r.png" class="lancer-logo" alt="Lancer-Logo">
+        <div class="kc-logo" id="kc-logo">
+            <img src="https://res.cloudinary.com/laviedegeorge/image/upload/v1570744697/startng/hng/img/Lancers_k3r04r.png" id="lancer-logo" alt="Lancer-Logo">
             <a href="javascript:void(0);"><i class="fa fa-bars none" id="kc-side-btn" onclick="showNav()"></i></a>
         </div>
             <nav class=" navbar">
                <!--  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button> -->
-                <a class="est" href="#">Estimates</a>
+                <a id="est" href="#">Estimates</a>
                 
                 <div>
                     <ul class="top-nav">
@@ -226,8 +237,8 @@
                     <li class="nav-item ">
                         <a href=""><i class="fa fa-user"></i></a>
                     </li>
-                    <li >
-                        <a  href="#">Juliet</a>
+                    <li class="flex">
+                        <a  href="#" >Juliet</a>
                         <img src="https://res.cloudinary.com/laviedegeorge/image/upload/v1570744696/startng/hng/img/expand_t3obz5.png" class="kc-icon margin-left" alt="">
                     </li>
                     </ul>
@@ -237,9 +248,9 @@
         
 
    <div class="main-cont">
-    <aside id="kc-aside" class="display__hidden">
+    <aside id="kc-aside">
 
-        <div class="kc-side-nav display__hidden display__block" id="kc-side-nav">
+        <div class="kc-side-nav">
             <ul>
                 <li>
                     <img src="https://res.cloudinary.com/laviedegeorge/image/upload/v1570744696/startng/hng/img/home_n13gmd.png" class="kc-icon" alt="">
@@ -289,21 +300,23 @@
 
 
         <script>
-            const showNav = () => {
-            const sideNav = document.getElementById('kc-aside');
-            // if (sideNav.style.display === 'block') {
-            //     sideNav.style.display = 'none';
-            // } else {
-            //     sideNav.style.position = 'absolute';
-            //     sideNav.style.display = 'block';
-            //     sideNav.style.zIndex = '10';
-            
-            // }
-            // sideNav.classList.toggle('display__hidden');
-            sideNav.classList.toggle('display__block');
-            document.getElementById('kc-side-nav').classList.toggle('display__flex');
-
-            }
+                        const showNav = () => {
+                        const sideNav = document.getElementById('kc-aside');
+                        const logo = document.getElementById('lancer-logo');
+                        const logoCont = document.getElementById('kc-logo');
+                        if (sideNav.style.display === 'flex') {
+                            sideNav.style.display = 'none';
+                            logo.style.display = 'none';
+                            logoCont.style.width = 'auto';
+                        } else {
+                            sideNav.style.position = 'absolute';
+                            sideNav.style.display = 'flex';
+                            sideNav.style.zIndex = '10';
+                            logo.style.display = 'block';
+                            logoCont.style.position = 'absolute';
+                            logoCont.style.width = '200px';
+                        }
+                }
         </script>
             
         <!-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
