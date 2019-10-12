@@ -102,10 +102,10 @@
             font-size: 0.9rem;
         }
         @media (max-width: 575.98px) {
-            h2{
+            h2 {
                 font-size: 1.5rem;
             }
-            h4{
+            h4 {
                 font-size: 1.1rem;
             }
             .input {
@@ -116,21 +116,22 @@
             }
             .column-1 {
                 width: 15%;
-                padding: 0.7em;
+                padding: 0;
             }
             .column-2 {
                 width: 75%;
-                padding: 0.7em;
-                font-size: 1.5em;
+                padding-top: 0.6em;
+                font-size: 0.9em;
             }
             .column-3 {
                 width: 25%;
-                padding: 1em;
+                padding-top: 0.7em;
                 font-size: 0.8em;
             }
             img {
-                height: 10px;
-                width: 5px;
+                height: 20px;
+                width: 10px;
+                padding-top: 0.6em;
             }
         }
         @media (min-width: 576px) and (max-width: 767px) {
@@ -152,10 +153,16 @@
         <header style="border-bottom: 2px solid rgb(223, 223, 223);">
             <nav style="display: flex; ">
                 <a href="#" class="column-1">
-                    <div style="font-size: 1.5em;;">&times;</div>
+                    <img
+                        src="https://res.cloudinary.com/mide358/image/upload/v1570621469/clear_24px_rasbwc.png"
+                        alt="navIcon"
+                    />
                 </a>
                 <a href="#" class="column-1">
-                        <div style="font-size: 1.5em;;">&lt;</div>
+                    <img
+                        src="https://res.cloudinary.com/mide358/image/upload/c_scale,h_27,w_13/v1570621434/Vector_ag4hnv.png"
+                        alt="navIcon"
+                    />
                 </a>
                 <div class="column-2">client</div>
                 <a href="#" class="column-3">NEXT</a>
@@ -165,81 +172,104 @@
             <h2 style="font-weight: 700;">Client Information</h2>
             <form>
                 <fieldset
-                    style="border: 1px solid rgb(179, 176, 176);border-top: 2px solid rgb(179, 176, 176);border-bottom: 2px solid rgb(179, 176, 176);" class="p-4 mb-1"
+                    style="border: 1px solid rgb(179, 176, 176);border-top: 2px solid rgb(179, 176, 176);border-bottom: 2px solid rgb(179, 176, 176);"
+                    class="p-4 mb-1"
                 >
                     <h4 style="font-weight:700">Business Information</h4>
-                    <label for="companyName" class="input-group-append">
-                        Company name
+                    <div  class="input-group-append">
+                        <label for="companyName">
+                            Company name
+                           
+                        </label>
                         <input
-                        
-                            type="text"
-                            placeholder="e.g Sunshine studio"
-                            id="companyName"
-                            class="company-input"
-                            required
-                            style="border:1px solid rgb(223, 223, 223); border-right:0;font-size: .7rem;"
-                        />
-                        <span
-                            class="input-group-text mb-0 pb-0"
-                            id="basic-addon2"
-                            style="background-color: white;padding: 0;margin: 0;border-radius: 0;border:1px solid rgb(223, 223, 223); border-left: 0;font-size: .5rem;padding-top: 1.8em; padding-right:.3em;color: #00F9FF;"
-                            >Required</span
-                        >
-                        <div class="invalid-feedback">
-                            Enter a company name with at least 2 letters
-                        </div>
-                    </label>
+                        type="text"
+                        placeholder="e.g Sunshine studio"
+                        id="companyName"
+                        class="company-input"
+                        required
+                        style="border:1px solid rgb(223, 223, 223); border-right:0;font-size: .7rem;"
+                    />
+                    <span
+                        class="input-group-text mb-0 pb-0"
+                        id="basic-addon2"
+                        style="background-color: white;padding: 0;margin: 0;border-radius: 0;border:1px solid rgb(223, 223, 223); border-left: 0;font-size: .5rem;padding-top: 1.8em; padding-right:.3em;color: #00F9FF;"
+                        >Required</span
+                    >
+                    </div>
+                    <div class="invalid-feedback">
+                        Enter a company name with at least 2 letters
+                    </div>
+                    
                     <p style="padding: 1em;font-weight: bold; font-size: .8em">
-                        Add Address <a href="client-information-inactive-2.html" style="font-size: 1.5em;"> +</a>
+                        Add Address
+                        <a
+                            href="client-information-inactive-2.html"
+                            style="font-size: 1.5em;color: black"
+                        >
+                            +</a
+                        >
                     </p>
                     <h4 style="font-weight:700">Contact Information</h4>
                     <div class="name">
-                        <label for="contactName" class="input-group-append">
-                            Contact name
-                            <input
-                                type="text"
-                                placeholder="e.g Ben Davies"
-                                id="contactName"
-                                class="input"
-                                style="border:1px solid rgb(223, 223, 223); border-right:0;font-size: .7rem;"
-                            />
-                            <span
-                            class="input-group-text mb-0 pb-0"
-                            id="basic-addon2"
-                            style="background-color: white;padding: 0;margin: 0;border-radius: 0;border:1px solid rgb(223, 223, 223); border-left: 0;font-size: .5rem;padding-top: 1.8em; padding-right:.3em;color: white"
-                            >Required</span
-                        >
-                            <div class="invalid-feedback">
+                        <div class="input-group-append">
+                                <label for="contactName" >
+                                        Contact name
+                                        
+                                    </label>
+                                    <input
+                                            type="text"
+                                            placeholder="e.g Ben Davies"
+                                            id="contactName"
+                                            class="input"
+                                            style="border:1px solid rgb(223, 223, 223); border-right:0;font-size: .7rem;"
+                                        />
+                                        <span
+                                            class="input-group-text mb-0 pb-0"
+                                            id="basic-addon2"
+                                            style="background-color: white;padding: 0;margin: 0;border-radius: 0;border:1px solid rgb(223, 223, 223); border-left: 0;font-size: .5rem;padding-top: 1.8em; padding-right:.3em;color: white"
+                                            >Required</span
+                                        >
+                                        
+                        </div>
+                        <div class="invalid-feedback">
                                 Enter a name with at least 5 letters
                             </div>
-                        </label>
                     </div>
                     <div style="padding-top:1em;" class="email">
-                        <label for="contactEmail" class="input-group-append">
-                            Contact email
-                            <input
-                                type="text"
-                                placeholder="e.g email@domain.com"
-                                id="contactEmail"
-                                class="input"
-                                required
-                                style="border:1px solid rgb(223, 223, 223); border-right:0;font-size: .7rem;"
-                            />
-                            <span
-                            class="input-group-text mb-0 pb-0"
-                            id="basic-addon2"
-                            style="background-color: white;padding: 0;margin: 0;border-radius: 0;border:1px solid rgb(223, 223, 223); border-left: 0;font-size: .5rem;padding-top: 1.8em; padding-right:.3em;color: #00F9FF;"
-                            >Required</span
-                        >
-                            <div class="invalid-feedback">
+                        <div  class="input-group-append">
+                                <label for="contactEmail">
+                                        Contact email
+                                       
+                                    </label>
+                                    <input
+                                    type="text"
+                                    placeholder="e.g email@domain.com"
+                                    id="contactEmail"
+                                    class="input"
+                                    required
+                                    style="border:1px solid rgb(223, 223, 223); border-right:0;font-size: .7rem;"
+                                />
+                                <span
+                                    class="input-group-text mb-0 pb-0"
+                                    id="basic-addon2"
+                                    style="background-color: white;padding: 0;margin: 0;border-radius: 0;border:1px solid rgb(223, 223, 223); border-left: 0;font-size: .5rem;padding-top: 1.8em; padding-right:.3em;color: #00F9FF;"
+                                    >Required</span
+                                >
+                                
+                        </div>
+                        <div class="invalid-feedback">
                                 Enter a valid email
                             </div>
-                        </label>
                     </div>
                     <p
                         style="padding: 1em; font-weight: bold; font-size: .8em;margin-bottom: 5em;"
                     >
-                        Add other contacts <img src="./icons/plus.svg" alt="" />
+                        Add other contacts <a
+                        href="#"
+                        style="font-size: 1.5em;color: black"
+                    >
+                        +</a
+                    >
                     </p>
                 </fieldset>
                 <p style=" display: block;text-align: center;">

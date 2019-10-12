@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link href="https://fonts.googleapis.com/css?family=Ubuntu&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+    integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+  <title>Lancer</title>
+  <style>
+    .navbar-brand {
+      background: #091429;
+      height: 10vh;
+    }
+
+    .nav-1 {
+      min-height: 10vh;
+      font-family: 'Ubuntu', sans-serif;
+      border-bottom: 1px solid lightgrey;
+      box-shadow: 0 2px 16px 0 rgba(0, 0, 0, 0.2);
+    }
+
+    .nav-2 {
+      min-height: 10vh;
+      font-family: 'Ubuntu', sans-serif;
+      border-bottom: 1px solid lightgrey;
+      box-shadow: 0 2px 16px 0 rgba(0, 0, 0, 0.2);
+    }
+
+    .navbar-brand img {
+      height: 4.5vh;
+    }
+
+    .nav-page-header {
+      height: 10vh;
+    }
+
+    .nav-page-header p {
+      font-weight: bold;
+      font-size: 14px;
+    }
+
+    .support-link img {
+      height: 20px;
+    }
+
+    .support-link span {
+      font-size: 14px;
+    }
+
+    .notif-link img {
+      height: 20px;
+    }
+
+    .user-nav img {
+      height: 30px;
+      width: 30px;
+      border-radius: 50%;
+    }
+
+    .user-nav .user-name {
+      font-size: 14px;
+    }
+
+    .nav-item .nav-link {
+      color: black !important;
+    }
+
+    .nav-item .nav-link:hover {
+      color: #091429 !important;
+    }
+
+    .nav-search {
+      height: 10vh;
+    }
+
+    .user-initials {
+      height: 40px;
+      width: 40px;
+      border: 1px solid black;
+      border-radius: 50%;
+    }
+
+    .user-initials span {
+      font-size: 20px;
+      font-weight: bold;
+    }
+
+    @media only screen and (max-width: 992px) {
+      .navbar-collapse {
+        flex-direction: row;
+      }
+      .nav-search input{
+        margin-left: 20px !important;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container-fluid">
+    <div class="row">
+      <nav class="navbar navbar-expand-lg navbar-light nav-1 col-12 row mx-0 p-0">
+        <a class="navbar-brand col-12 col-lg-2 mx-0 border-right text-center" href="#">
+          <img class="mt-2" src="images/Lancers.png" alt="">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="col-12 col-lg-5 nav-page-header">
+          <p class="mb-0 mt-3 ml-4">Page name here</p>
+        </div>
+        <div class="collapse navbar-collapse col-12 col-lg-5" id="navbarSupportedContent">
+          <ul class="navbar-nav ml-auto mr-5">
+            <li class="nav-item">
+              <a class="nav-link support-link" href="#">
+                <img src="images/help.png" alt="">
+                <span>Support</span>
+              </a>
+            </li>
+
+            <li class="nav-item ml-2">
+              <a class="nav-link notif-link" href="#">
+                <img src="images/notification.png" alt="">
+              </a>
+            </li>
+            <li class="nav-item ml-2 user-nav dropdown">
+              <a class="nav-link" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
+                aria-expanded="false">
+                <img src="images/0.jpg" alt="">
+                <span class="user-name">Juliet</span>
+                <i class="fa fa-angle-down"></i>
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="#">Settings</a>
+                <a class="dropdown-item" href="#">Profile</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="#">Logout</a>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </nav>
+
+      <!-- Remove mt-5 class from this second nav to remove the margin-top -->
+      <nav class="navbar navbar-expand-lg navbar-light border-top nav-2 mt-5 col-12 row mx-0 p-0">
+        <a class="navbar-brand col-12 col-lg-2 mx-0 border-right text-center" href="#">
+          <img class="mt-2" src="images/Lancers.png" alt="">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="col-12 col-lg-5 nav-search">
+          <div class="form-group mb-0">
+            <input type="email" class="form-control col-10 mx-auto mt-2" id="" aria-describedby="" placeholder="
+              Search
+              ">
+          </div>
+        </div>
+        <div class="collapse navbar-collapse col-12 col-lg-5" id="navbarSupportedContent">
+          <ul class="navbar-nav ml-auto mr-5">
+            <li class="nav-item mx-2">
+              <a class="nav-link border-right mt-2 support-link" href="#">
+                <img src="images/help.png" alt="">
+              </a>
+            </li>
+
+            <li class="nav-item mx-2">
+              <a class="nav-link border-right mt-2 notif-link" href="#">
+                <img src="images/alarm-clock.png" alt="">
+              </a>
+            </li>
+            <li class="nav-item mx-2">
+              <a class="nav-link border-right mt-2 notif-link" href="#">
+                <img src="images/notification.png" alt="">
+              </a>
+            </li>
+            <li class="nav-item mx-2 user-nav dropdown">
+              <a class="nav-link" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
+                aria-expanded="false">
+                <div class="user-initials pt-1">
+                  <span class="ml-1">AU</span>
+                </div>
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="#">Settings</a>
+                <a class="dropdown-item" href="#">Profile</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="#">Logout</a>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+  </div>
+</body>
+
+
+
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+  integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous">
+  </script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+  integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous">
+  </script>
+
+</html>
