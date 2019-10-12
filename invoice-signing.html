@@ -16,8 +16,9 @@
 	}
 	 html, body { font-family: 'Ubuntu', 'san-serif';}
 	.sidenav{
-		width: 0;			
+		width: 250px;			
 		height: 900px;			
+		/* display: block; */
 		background-color: #091429;			
 		overflow-x: hidden;			
 		z-index: 1;			
@@ -37,18 +38,39 @@
 		float: left;			
 		padding-left: 70px;			
 		transition: 0.3s;		
-	}		
+	}	
+		
 	.sidenav a:hover{
 		color: white;		
+	}
+	li .active{
+		color: #333333;
 	}		
 	.sidenav .closebtn{
+		display: none;
+	}
+	.openbtn{
+		display: none;
+	}
+	@media (max-width: 767px) { 
+		.sidenav {width: 0px;padding-top: 15px;}
+		.sidenav a {font-size: 18px;}
+		.sidenav .closebtn{
+		display: block;
 		position: absolute;			
 		top: 0;			
 		right:25px;			
 		font-size: 20px;			
 		margin-left: 50px;		
-	}		
+	}	
+	.main-lanclient .content{
+	    padding: 0;
+	}	
 	.openbtn{
+		position: absolute;
+		top:0;
+		left: 10px;
+		display: block;
 		cursor: pointer;			
 		font-size: 20px;			
 		color: white;			
@@ -63,16 +85,14 @@
 		transition: margin-left 0.5s;			
 		padding: 16px;		
 		}		
-	@media screen and (max-height: 450px) { 
-		.sidenav {padding-top: 15px;}
-		.sidenav a {font-size: 18px;}
+		
 	}
 	@media screen and (min-width: 600px) { 		
 		.Move{padding-left: 0px;}
 	}
 	@media screen and (min-width: 1000px) { 
 		.Move{
-			padding-left: 230px; 
+			padding-left: 190px; 
 			margin-top: 0;
 		}		
 	}
@@ -84,8 +104,9 @@
 	    box-shadow: 0px 4px 2px rgba(0, 0, 0, 0.1);
 	    font-family: 'Ubuntu', sans-serif;
 	    align-items: center;
-	    padding: 0 0 0 ;
-	    margin-top: -5%;
+	    padding: 0 0 0 50px;
+	    margin-top: 0;
+		height: 98px;
 	    margin-left: 5%;
 	    margin-bottom: 50px;
 	}
@@ -124,7 +145,7 @@
 	}
 	/*=========================Content Body Area ==================================*/
 	.content{
-	    padding: 10px;
+	    padding: 10px 10px 10px 63px;
 	}
 	.createInvoice{
 	    background: #0ABAB5;
@@ -217,7 +238,7 @@
 				<br></br>
 				 <li> <a href="" ><img src="https://res.cloudinary.com/dcoqt2wpo/image/upload/v1570556428/lightbulb_wemwzq.png" alt="" srcset="" /> Project</a > </li> 
 				<br></br>
-				<li> <a href="" ><img src="https://res.cloudinary.com/dcoqt2wpo/image/upload/v1570556428/approve-invoice_efuypp.png" alt="" srcset="" /> Invoice</a > </li>
+				<li> <a href="" class="active"><img src="https://res.cloudinary.com/lissacinta/image/upload/v1570859813/Group_iiaxwg.png" alt="" srcset="" /> Invoice</a > </li>
 				<br></br>
 				<li> <a href="" ><img src="https://res.cloudinary.com/dcoqt2wpo/image/upload/v1570556428/approval_xfiucq.png" alt="" srcset="" /> Contract</a > </li> 
 				<br></br>
@@ -225,7 +246,7 @@
  			</ul> 			
 		</div>			
 	</div>
-    <div class="Move"> <div class = "invoice"><div class="main-lanclient">	 <div class="lanclient-view">
+    <div class="Move"> <div class = "invoice"><div class="main-lanclient">	 <div class="lanclient-view"></div>
     <header class="contentHeader">
     	<h2>Invoices</h2>
         <ul>
@@ -337,7 +358,7 @@
 
     <script>		
 		function openNav() { 		document.getElementById("mySidenav").style.width = "250px"; 
-		document.getElementById("main").style.marginLeft = "250px";	
+		document.getElementById("main").style.marginLeft = "150px";	
 		}
 		function closeNav() { 		document.getElementById("mySidenav").style.width = "0";
 		document.getElementById("main").style.marginLeft= "0";		}
