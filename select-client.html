@@ -6,12 +6,15 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Document</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link
+  href="https://fonts.googleapis.com/css?family=Ubuntu:400,700&display=swap"
+  rel="stylesheet"
+/>
   <style>
     body {
-      background-color: #E5E5E5;
       box-sizing: border-box;
       margin: 0px;
-      font-family: Roboto;
+      font-family: ubuntu;
     }
 
     .con-div {
@@ -52,13 +55,13 @@
       padding: 0.5em;
       font-weight: 500;
       font-size: 28px;
-      background-color: #FFFFFF
+      background-color: #FFFFFF;
     }
 
     .send-div {
       width: 32%;
       text-align: center;
-      border: 1px solid #919191
+      border: 1px solid #919191;
     }
 
     #send-btn {
@@ -120,6 +123,35 @@
     .txt {
       margin: 2em 0;
     }
+    .column-1 {
+            width: 5%;
+            border-right: 2px solid rgb(223, 223, 223);
+            padding: 1em;
+            text-align: center;
+            color: black;
+            text-decoration: none;
+        }
+        .column-2 {
+            width: 75%;
+            text-align: center;
+            align-items: center;
+            padding: 0.8em;
+            color: black;
+            text-decoration: none;
+            font-size: 1.5em;
+            font-weight: bold;
+        }
+        .column-3 {
+            width: 15%;
+            border-left: 2px solid rgb(223, 223, 223);
+            padding: 0.8em;
+            text-align: center;
+            background-color: rgba(196, 196, 196, 0.4);
+            color: white;
+            text-decoration: none;
+            font-size: 1.5em;
+            font-weight: bold;
+        }
 
     @media screen and (max-width: 500px) {
       .cli-box {
@@ -139,35 +171,74 @@
         font-size: 1.3em;
       }
     }
+    @media (max-width: 575.98px) {
+            .column-1 {
+                width: 15%;
+                padding: 0;
+            }
+            .column-2 {
+                width: 75%;
+                padding-top: 0.6em;
+                font-size: 0.9em;
+            }
+            .column-3 {
+                width: 25%;
+                padding-top: 0.7em;
+                font-size: 0.8em;
+            }
+            img {
+                height: 20px;
+                width: 10px;
+                padding-top: 0.6em;
+            }
+        }
+        @media (min-width: 576px) and (max-width: 767px) {
+            .column-1 {
+                width: 10%;
+            }
+            img {
+                height: 15px;
+                width: 10px;
+            }
+        }
+        @media (min-width: 768px) and (max-width: 991.98px) {
+            .column-1 {
+                width: 9%;
+            }
+        }
   </style>
 </head>
 <body>
   <div class="con-div">
     <div class="max-con">
-      <div class="top-divs">
-        <div class="close ctrl-div">
-            <button class="ctrl-btn"><i class="fa fa-times fa-2x my-icon" aria-hidden="true"></i></button>
-        </div>
-        <div class="left-arrow ctrl-div">
-          <button class="ctrl-btn"><i class="fa fa-chevron-left fa-2x my-icon"></i></button>
-        </div>
-        <div class="inv-div">
-          <input type="submit" name="" id="inv-btn" value="Client">
-        </div>
-        <div class="send-div">
-          <input type="submit" name="" id="send-btn" value="NEXT">
-        </div>
-      </div>
+      <header style="border-bottom: 2px solid rgb(223, 223, 223);">
+        <nav style="display: flex; ">
+            <a href="#" class="column-1">
+                <img
+                    src="https://res.cloudinary.com/mide358/image/upload/v1570621469/clear_24px_rasbwc.png"
+                    alt="navIcon"
+                />
+            </a>
+            <a href="#" class="column-1">
+                <img
+                    src="https://res.cloudinary.com/mide358/image/upload/c_scale,h_27,w_13/v1570621434/Vector_ag4hnv.png"
+                    alt="navIcon"
+                />
+            </a>
+            <div class="column-2">client</div>
+            <a href="#" class="column-3">NEXT</a>
+        </nav>
+    </header>
 
       <div class="cli-info">
         <div>
           <p class="what-cli">What Client is it for?</p>
         </div>
 
-        <div class="cli-box">
+        <div class="cli-box" style="color: #919191">
           <div class="sub-box">
             <p class="txt">An already existing Client</p>
-            <select name="" class="select-project">
+            <select name="" class="select-project" style="color: #919191">
               <option value="">Select Project</option>
               <option value="">Demo</option>
             </select>
