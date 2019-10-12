@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.11.2/css/all.css"
+    />
+
+    <title>Lancer - Review Invoice</title>
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Ubuntu;
+      }
+
+      body {
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        background: #f2f3f3;
+      }
+
+      /*nav bar styles*/
+
+      ul {
+        display: flex;
+        background: white;
+        box-shadow: 0px 4px 2px rgba(0, 0, 0, 0.1);
+      }
+
+      li {
+        cursor: pointer;
+        color: #262626;
+        list-style: none;
+        font-weight: 600;
+        border-right: 2px solid #c4c4c4;
+        display: flex;
+        justify-content: center;
+        padding: 0.5rem;
+        font-size: 1.2rem;
+      }
+
+      li:first-child,
+      li:nth-child(2) {
+        color: #c4c4c4;
+      }
+
+      li:nth-child(3):hover {
+        color: #fff;
+        background: #0abab5;
+        transition: background-color 0.3s;
+      }
+
+      li:nth-child(4) {
+        cursor: default;
+        flex-grow: 12;
+      }
+
+      li:last-child {
+        color: white;
+        background: #0abab5;
+        text-transform: uppercase;
+      }
+
+      li:nth-child(3),
+      li:nth-child(5) {
+        flex-grow: 2;
+      }
+
+      /*main invoice styles*/
+      main {
+        width: 95%;
+        background: white;
+        margin-top: 3.5rem;
+        align-self: center;
+        padding: 1rem 1rem;
+
+        border: 5px solid #0abab5;
+      }
+
+      .invoice-container {
+        margin: 12rem auto 0;
+        width: 90%;
+      }
+      /*invoice navbar menu styles*/
+      .invoice-navbar {
+        width: 97%;
+        margin: 0 auto;
+        display: flex;
+        margin-bottom: 2rem;
+        justify-content: space-between;
+      }
+
+      .invoice-navbar button {
+        border: none;
+        padding: 0.6rem;
+        font-size: 1rem;
+        cursor: pointer;
+      }
+
+      .invoice-navbar button i.fas {
+        margin-right: 0.6rem;
+      }
+
+      .invoice-navbar .edit-invoice {
+        color: black;
+        background: #00ffa3;
+        text-transform: uppercase;
+        font-weight: 600;
+        width: 170px;
+        font-size: 18px;
+      }
+
+      .invoice-navbar .edit-settings {
+        color: #b1b1b1;
+        background: none;
+        text-transform: capitalize;
+        font-size: 20px;
+        font-weight: 600;
+      }
+
+      .invoice-top {
+        width: 97%;
+        margin: 0 auto;
+        display: flex;
+        font-size: 1.2rem;
+        flex-direction: column;
+        justify-content: space-between;
+      }
+
+      /*adress & amount section styles*/
+      .invoice-top address {
+        font-style: normal;
+        font-size: 1.2rem;
+        margin-bottom: 2rem;
+        margin-top: -2.2rem;
+      }
+
+      address h3 {
+        margin-bottom: 0.5rem;
+      }
+
+      .invoice-amount h1 {
+        font-size: 2rem;
+        display: flex;
+        margin: 1rem 0;
+      }
+
+      .invoice-amount h1 span {
+        text-transform: uppercase;
+        font-size: 1rem;
+        align-self: flex-end;
+      }
+
+      .invoice-amount p:first-child,
+      .issue-date p:first-child,
+      .due-date p:first-child {
+        color: #b1b1b1;
+        font-size: 1rem;
+      }
+
+      .date p:nth-child(2) {
+        font-size: 1.1rem;
+        font-weight: 600;
+      }
+
+      .issue-date p:first-child,
+      .due-date p:first-child {
+        text-transform: capitalize;
+      }
+
+      .date {
+        margin-bottom: 1.3rem;
+      }
+
+      .date:first-child {
+        margin-top: 1.3rem;
+      }
+
+      .due-date p:last-child {
+        text-transform: capitalize;
+      }
+
+      .invoice-amount button {
+        color: white;
+        background: #0abab5;
+        padding: 0.5rem;
+        border: none;
+        width: 100%;
+        font-size: 1.2rem;
+        cursor: pointer;
+      }
+
+      /*invoice table styles*/
+      .invoice-name {
+        font-size: 1rem;
+        margin-top: 2rem;
+      }
+
+      .invoice-name h2 {
+        margin-bottom: 0.5rem;
+      }
+
+      .invoice-name h2 span {
+        color: #b1b1b1;
+      }
+
+      .invoice-name p {
+        font-weight: 600;
+      }
+
+      table {
+        width: 100%;
+        margin: 2rem auto 10rem;
+        border-collapse: collapse;
+      }
+
+      thead th,
+      tbody tr:first-child td {
+        padding: 1rem 1rem 1rem 0;
+      }
+
+      tbody tr:not(:first-child) td,
+      tbody tr:not(:first-child) th {
+        padding: 0.3rem 0;
+      }
+
+      table thead th,
+      table .bordered td {
+        border-bottom: 1px solid #b1b1b1;
+      }
+
+      table tr {
+        text-align: left;
+        font-size: 1rem;
+      }
+
+      /*footer styles*/
+      footer {
+        padding: 1rem;
+        font-size: 1rem;
+        border-top: 1px solid #b1b1b1;
+      }
+      /*media queries*/
+
+      @media screen and (min-width: 250px) and (max-width: 500px) {
+        table {
+          font-size: 1rem;
+          margin-left: -0.5rem;
+        }
+      }
+
+      @media screen and (min-width: 700px) {
+        ul li {
+          padding: 1rem;
+          /*  */
+        }
+        main {
+          width: 85%;
+          margin-top: 8rem;
+        }
+
+        .invoice-top {
+          width: 100%;
+          flex-direction: row;
+        }
+
+        .invoice-name {
+          margin-top: rem;
+        }
+
+        address h3 {
+          margin-bottom: 0.3rem;
+        }
+
+        .invoice-date {
+          display: flex;
+          justify-content: center;
+          margin: 1rem 0;
+        }
+
+        .invoice-date .date {
+          margin: 0 1rem 0 0;
+        }
+
+        table tr {
+          font-size: 1rem;
+        }
+
+        footer {
+          font-size: 1.1rem;
+        }
+      }
+
+      @media screen and (min-width: 1100px) {
+        main {
+          width: 50%;
+          margin-top: 8rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <ul>
+        <li><i class="material-icons">close</i></li>
+        <li><i class="material-icons">arrow_back_ios</i></li>
+        <li>Save & Close</li>
+        <li>Invoice</li>
+        <li class="nav-btn">send invoice</li>
+      </ul>
+    </nav>
+
+    <main>
+      <nav class="invoice-navbar">
+        <button class="edit-invoice">
+          <i class="fas fa-pen"></i>edit invoice
+        </button>
+        <button class="edit-settings">
+          <i class="fas fa-cog"></i>invoice settings
+        </button>
+      </nav>
+
+      <!--top part of invoice-->
+      <div class="invoice-container">
+        <div class="invoice-top">
+          <div class="address">
+            <address>
+              <h3 class="invoice-name">Glacier Inc.</h3>
+              <p>Abuja, FCT</p>
+              <p>Nigeria</p>
+            </address>
+          </div>
+          <div class="invoice-amount">
+            <p>Amount Due</p>
+            <h1>US$8,800 <span>usd</span></h1>
+            <div class="invoice-date">
+              <div class="issue-date date">
+                <p>issued</p>
+                <p>02/10/2019</p>
+              </div>
+              <div class="due-date date">
+                <p>due</p>
+                <p>upon completion</p>
+              </div>
+            </div>
+            <button>Pay Now</button>
+          </div>
+        </div>
+
+        <!--bottom part of invoice-->
+        <div class="invoice-bottom">
+          <div class="invoice-name">
+            <h2>Invoice <span>No. 1</span></h2>
+            <p>Glacier Fintech App</p>
+          </div>
+
+          <table>
+            <thead>
+              <tr>
+                <th>Description</th>
+                <th>Qty</th>
+                <th>Price</th>
+                <th>Amount</th>
+              </tr>
+            </thead>
+
+            <tbody>
+              <tr>
+                <td>Mobile App UI</td>
+                <td>1</td>
+                <td>US$8,800</td>
+                <td>US$8,800</td>
+              </tr>
+              <tr>
+                <td>&nbsp</td>
+                <td>&nbsp</td>
+                <th>Subtotal</th>
+                <td>US$8,800</td>
+              </tr>
+              <tr>
+                <td>&nbsp</td>
+                <td>&nbsp</td>
+                <th>Total</th>
+                <td>US$8,800</td>
+              </tr>
+              <tr>
+                <td>&nbsp</td>
+                <td>&nbsp</td>
+                <th>Amount Due</th>
+                <td>US$8,800</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <footer>
+          <p>Juliet Asim</p>
+        </footer>
+      </div>
+    </main>
+  </body>
+</html>

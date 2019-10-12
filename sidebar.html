@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        
+            <style>
+                @import url("https://fonts.googleapis.com/css?family=Open+Sans:400,700|Pacifico|Ubuntu:400,500,700&display=swap");
+                
+                .sidebar {
+                height: 100%;
+                width: 18vw;
+                position: fixed;
+                z-index: 1;
+                top: 0;
+                left: 0;
+                background-color: #091429;
+                
+                overflow-x: hidden;
+                padding-top: 16px;
+            }
+            
+            /* Style sidebar links */
+            .sidebar a {
+            text-decoration: none;
+            font-size: 18px;
+            margin: 1.5rem;
+            color: #FFF;
+            display: block;
+            font-family: 'Ubuntu';
+            font-weight: bold;
+            }
+            
+            /* Style links on mouse-over */
+            .sidebar a:hover {
+            color: #333;
+            }
+            
+            /* Style the main content */
+            .main {
+            margin-left: 260px; /* Same as the width of the sidenav */
+            padding: 0px 10px;
+            }
+            
+            .logo {
+            font-family: "Pacifico", cursive;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 36px;         
+            color: white;         
+            padding: 32px 32px;
+            }
+
+            .logo span {
+            color: #00f9ff;
+            }
+
+            a img {
+            width: 1rem;
+            height: 1rem;
+            margin-right: 0.5rem;
+            }
+
+            #invoice {
+                color: #333;
+            }
+            /* Add media queries for small screens (when the height of the screen is less than 450px, add a smaller padding and
+            font-size) */
+           /*  @media screen and (min-width: 480px) {
+            .logo {
+                font-size: 12px;
+            }
+            .sidebar a {font-size: 10px;}
+
+            } */
+            </style>
+    </head>
+    <body>
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+        <div class="sidebar">
+            <h1 class="logo">Lan<span>c</span>ers</h1>
+            <a href=""><img src="images/svg/home.svg"/> Dashboard</a>
+            <a href=""><img src="images/svg/customer.svg"/> Clients</a>
+            <a href=""><img src="images/svg/approve-invoice.svg"/> Estimates</a>
+            <a href=""><img src="images/svg/lightbulb.svg"/> Projects</a>
+            <a href="" id="invoice"><img src="images/svg/notification.svg"/> Invoices</a>
+            <a href=""><img src="images/svg/policy.svg"/> Contract</a>
+            <a href=""><img src="images/svg/approval.svg"/> Proposals</a>
+        </div>
+        <script src=""></script>
+    </body>
+</html>

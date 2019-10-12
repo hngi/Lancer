@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Lancer Invoice Signing</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link href="https://fonts.googleapis.com/css?family=Ubuntu&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="index.css">
+    <style type="text/css">
+    	* { 
+	margin: 0; 
+	padding: 0; 
+	box-sizing: border-box;
+	}
+	 html, body { font-family: 'Ubuntu', 'san-serif';}
+	.sidenav{
+		width: 250px;			
+		height: 900px;			
+		/* display: block; */
+		background-color: #091429;			
+		overflow-x: hidden;			
+		z-index: 1;			
+		align-items: flex-start;			
+		position: fixed;			
+		align-items: left;			
+		transition: 0.5s;			
+		top: 0px;			
+		left: 0px;		
+	}		
+	.sidenav a{
+		padding: 8px 8px 8px 32px;			
+		color: white;			
+		text-decoration: none;			
+		display: block;			
+		font-size: 18px;			
+		float: left;			
+		padding-left: 70px;			
+		transition: 0.3s;		
+	}	
+		
+	.sidenav a:hover{
+		color: white;		
+	}
+	li .active{
+		color: #333333;
+	}		
+	.sidenav .closebtn{
+		display: none;
+	}
+	.openbtn{
+		display: none;
+	}
+	@media (max-width: 767px) { 
+		.sidenav {width: 0px;padding-top: 15px;}
+		.sidenav a {font-size: 18px;}
+		.sidenav .closebtn{
+		display: block;
+		position: absolute;			
+		top: 0;			
+		right:25px;			
+		font-size: 20px;			
+		margin-left: 50px;		
+	}	
+	.main-lanclient .content{
+	    padding: 0;
+	}	
+	.openbtn{
+		position: absolute;
+		top:0;
+		left: 10px;
+		display: block;
+		cursor: pointer;			
+		font-size: 20px;			
+		color: white;			
+		background-color: #a6a6a6;			
+		padding: 10px 15px;			
+		border: none;		
+		}				
+	.openbtn:hover{
+		background-color: #fff;		
+		}
+	#main{
+		transition: margin-left 0.5s;			
+		padding: 16px;		
+		}		
+		
+	}
+	@media screen and (min-width: 600px) { 		
+		.Move{padding-left: 0px;}
+	}
+	@media screen and (min-width: 1000px) { 
+		.Move{
+			padding-left: 190px; 
+			margin-top: 0;
+		}		
+	}
+
+	/*=========================Content Area ==================================*/
+
+	.contentHeader{
+	    display: flex;
+	    box-shadow: 0px 4px 2px rgba(0, 0, 0, 0.1);
+	    font-family: 'Ubuntu', sans-serif;
+	    align-items: center;
+	    padding: 0 0 0 50px;
+	    margin-top: 0;
+		height: 98px;
+	    margin-left: 5%;
+	    margin-bottom: 50px;
+	}
+	.contentHeader ul{
+	    display: flex;
+	    align-items: center;
+	    list-style-type: none;
+	}
+	h2{
+	    color: #262626;
+	    font-weight: bold;
+	    font-size: 28px;
+	    line-height: 32px;
+	}
+	.contentHeader ul{
+	    margin-left: auto;
+	    display: flex;
+	    align-items: center;
+	}
+	.list li{
+	    margin-right: 2em;
+	}
+	.list a{
+	    color: #262626;
+	    font-weight: 500;
+	    font-size: 16px;
+	    line-height: 21px;
+	    text-decoration: none;
+	}
+	.list img{
+	    margin-bottom: -10px;
+	    margin-right: .5em;
+	}
+	#user-drop{
+	    margin-left: -2em
+	}
+	/*=========================Content Body Area ==================================*/
+	.content{
+	    padding: 10px 10px 10px 63px;
+	}
+	.createInvoice{
+	    background: #0ABAB5;
+	    border: 1px solid #999999;
+	    box-sizing: border-box;
+	    font-size: 1.5em;
+	    font-weight: bold;
+	    font-family: 'Ubuntu', sans-serif;
+	    text-decoration: none;
+	    padding: 15px 15px;
+	    color: white;
+	    margin-left: 4%;
+	}
+	h3{
+	    font-family: 'Open Sans', sans-serif;
+	    font-weight: bold;
+	    font-size: 1.2em;
+	    margin-left: 4%;
+	    margin-top: 80px;
+	}
+	.all {
+	    margin-top: 30px;
+	    margin-bottom: 30px;
+	    margin-left: 4%;
+	}
+	.all select option {
+	    padding-top: 10px;
+	    font-size: 14px;
+	    line-height: 19px;
+	}
+	.allInvoiceList {
+	    width: 20%;
+	    padding: 10px;
+	    border: 1px solid #C4C4C4;
+	    font-size: 14px;
+	    line-height: 19px;
+	}
+	.table{
+	    width: 95%;
+	    margin-top: ;
+	    border-collapse: collapse;
+	    margin-left: 4%;
+	}
+	.thead {
+	    font-weight: bold;
+	    font-size: 1.1em;
+	    line-height: 25px;
+	}
+	tr.border {
+	    border: 1px solid #C4C4C4
+	}
+	.border td {
+	    padding: 10px 0px;
+	    font-size: 14px;
+	    line-height: 16px;
+	}
+	.statuspaid {
+	    width: 38%;
+	    padding: 5px 5px;
+	    border-radius: 4px;
+	    background-color:rgba(23, 150, 21, 0.1);
+	    color: #179615;
+	    font-weight: bold;
+	    text-align: center;
+	}
+	.statussent {
+	    width: 38%;
+	    padding: 5px 5px;
+	    background: rgba(0, 159, 255, 0.1);
+	    border-radius: 4px;
+	    color: #091429;
+	    font-weight: bold;
+	    text-align: center;
+	}
+    </style>
+</head>
+<body>
+	<div id="main"> 
+		 <button class="openbtn" onclick="openNav()">☰</button> 
+	</div> 
+	<div id="mySidenav" class="sidenav" align="center">	
+		<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+		<br><br><br>
+		<img align="center" class="Lancers" src="https://res.cloudinary.com/dcoqt2wpo/image/upload/v1570557507/Lancers_c8dpbb.png"><br><br><br><br><br><br> 
+		<div class="Inner">
+			<ul>
+				<li> <a href="documents.html" ><img src="https://res.cloudinary.com/dcoqt2wpo/image/upload/v1570556428/home_lbx6eq.png" alt="" srcset="" /> Dashboard</a > </li> 
+				<br></br>
+				<li> <a href="" ><img src="https://res.cloudinary.com/dcoqt2wpo/image/upload/v1570556428/Vector_envenf.png" alt="" srcset="" /> Client</a > </li>
+				<br></br>
+				 <li> <a href="" ><img src="https://res.cloudinary.com/dcoqt2wpo/image/upload/v1570556428/lightbulb_wemwzq.png" alt="" srcset="" /> Project</a > </li> 
+				<br></br>
+				<li> <a href="" class="active"><img src="https://res.cloudinary.com/lissacinta/image/upload/v1570859813/Group_iiaxwg.png" alt="" srcset="" /> Invoice</a > </li>
+				<br></br>
+				<li> <a href="" ><img src="https://res.cloudinary.com/dcoqt2wpo/image/upload/v1570556428/approval_xfiucq.png" alt="" srcset="" /> Contract</a > </li> 
+				<br></br>
+				<li> <a href="" ><img src="https://res.cloudinary.com/dcoqt2wpo/image/upload/v1570556428/approval_xfiucq.png" alt=""  srcset="" /> Proposals</a > </li>
+ 			</ul> 			
+		</div>			
+	</div>
+    <div class="Move"> <div class = "invoice"><div class="main-lanclient">	 <div class="lanclient-view"></div>
+    <header class="contentHeader">
+    	<h2>Invoices</h2>
+        <ul>
+            <li>
+                <a href=""><i class="fa fa-comments" style="padding: 5px;"></i></a>
+            </li>
+            <li>
+            	Support
+            </li>
+            <li>
+                <a href=""><i class="fa fa-bell" style="padding: 15px;"></i></a>
+            </li>
+            <li>
+                <a href=""><img src="https://res.cloudinary.com/siyfa/image/upload/v1570745084/lgwyhmwvbgvrkmrttenm.png" alt="users image"></a>
+            </li>
+            <li>
+            	Janet
+            </li>
+            <li><a href=""><i class="fa fa-chevron-down" style="padding: 15px;"></i></a></li>
+        </ul>
+    </header>
+    <div class="content">
+    	<!---------Body Content------------>
+        <a href="/invoice-view.html" class="createInvoice">Create Invoice</a>
+        <h3>INVOICE</h3>
+        <p class="all">
+            <label for="allInvoiceList"></label>
+            <select name="invoiceList" class="allInvoiceList" id="invoiceList">
+                <option value="1">All</option>
+                <option value="2">NULL</option>
+                <option value="3">NULL</option>
+                <option value="4">NULL</option>
+                <option value="5">NULL</option>
+            </select>
+        </p>
+        <table class="table">
+            <tr align="left" class="thead">
+                <th>Invoices</th>
+                <th>Client</th>
+                <th>Project</th>
+                <th>Issued</th>
+                <th>Status</th>
+                <th>Status</th>
+            </tr>
+            <tr class="border">
+                <td>
+                    <p style="margin-left:10px;">1</p>
+                </td>
+
+                <td>
+                    <p>Grande Agency</p>
+                </td>
+
+                <td>
+                    <p>Branding</p>
+                </td>
+
+                <td>
+                    <p>01/10/2019</p>
+                </td>
+
+                <td>
+                    <p class="statuspaid">Paid</p>
+                </td>
+
+                <td>
+                    <p>US$4,200.00</p>
+                </td>
+                <td>
+                    <a href="">
+                        <i class="fa fa-ellipsis-v"></i>
+                    </a>
+                </td>
+            </tr>
+
+            <tr class="border">
+                <td>
+                    <p style="margin-left:10px;">2</p>
+                </td>
+
+                <td>
+                    <p>Glacier Inc</p>
+                </td>
+
+                <td>
+                    <p>Glacier Fintech App</p>
+                </td>
+
+                <td>
+                    <p>02/10/2019</p>
+                </td>
+
+                <td>
+                    <p class="statussent">Sent</p>
+                </td>
+
+                <td>
+                    <p>US$8,800.00</p>
+                </td>
+                <td>
+                    <a href="">
+                        <i class="fa fa-ellipsis-v"></i>
+                    </a>
+                </td>
+            </tr>
+
+        </table>
+    </div>
+
+    <script>		
+		function openNav() { 		document.getElementById("mySidenav").style.width = "250px"; 
+		document.getElementById("main").style.marginLeft = "150px";	
+		}
+		function closeNav() { 		document.getElementById("mySidenav").style.width = "0";
+		document.getElementById("main").style.marginLeft= "0";		}
+	</script>
+</body>
+</html>
