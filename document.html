@@ -12,17 +12,7 @@
       rel="stylesheet"/>
 
       <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-
-
-
-
-
-
-
-
-
-
-    
+ 
  </head>
 
 <!DOCTYPE html>
@@ -287,6 +277,75 @@
           opacity: 1;
           margin: 5px auto;
         }
+        section h1{
+            font-family: 'Open Sans';
+            font-style: normal;
+            font-weight: bolder;
+            font-size: 16px;
+            color: #000;
+            padding: 20px;
+            padding-left: 0;
+            margin-top: 40px;
+        }
+
+        .list >li{
+        padding: 0 25px 0 10px;
+      }
+        section h5, h2{
+            font-family: Open Sans;
+            font-style: normal;
+            font-weight: 600;
+            font-size: 12px;
+            line-height: 19px;
+            text-align: center;
+            color: #000000;
+            margin: 30px;
+        }
+        section h2{
+            font-size: 14px;
+            text-transform: uppercase;
+        }
+        #box1, #box2, #box3 {
+        background: #FFFFFF;
+        border: 1px solid #C4C4C4;
+        box-sizing: border-box;
+        padding: 40px 10px;
+        margin: 0;
+      }
+       
+      .btn-create1, .btn-create2, .btn-create3 {
+        background: #FFFFFF;
+        border: 1px solid #0ABAB5;
+        box-sizing: border-box;
+        border-radius: 4px;
+        padding: 10px 20px;
+        color: #0ABAB5;
+        }
+        .btn-create1{
+          background: #0ABAB5;
+          color: #fff;
+        }
+        .plus{
+        padding-right: 10px;
+        mix-blend-mode: normal;
+        opacity: 0.54;
+        }
+        .btn-plus-bottom{
+        mix-blend-mode: normal;
+        margin-top: 150px;
+        margin-left: 100px;
+        margin-bottom: 50px;
+        border-radius: 40px;
+        width: 60px;
+        height: 60px;
+        font-size: 18px;
+        padding:20px;
+        text-align: center;
+        background: #0ABAB5; 
+        color: #fff;
+        z-index: 0;
+        }
+        
         /* ---------------------------------------------------
             MEDIAQUERIES
         ----------------------------------------------------- */
@@ -318,14 +377,18 @@
           #sidebarCollapse.active span:last-of-type {
             transform: rotate(-45deg) translate(1px, -1px);
           }
+
+        #nav-doc{
+          display: none;
         }
-
-
-       img {
-
+        .btn-plus-bottom{
           margin-left: 15px;
-  
         }
+
+
+
+        }
+      
         
         </style>
 
@@ -368,7 +431,7 @@
                             <a href="#" class="pl-4"><i class="fas fa-dot-circle"></i> Task</a>
                         </li>
                         <li>
-                            <a href="#" class="pl-4"><i class="fas fa-dot-circle"></i> Documents</a>
+                            <a href="#" class="pl-4 text-success active"><i class="fas fa-dot-circle"></i> Documents</a>
                         </li>
                         
                     </ul>
@@ -436,9 +499,69 @@
             </nav>
 
 
-            <h4 style="color:black; margin-left:15px">TEMPLATE</h4>
-
-            <img src="template.png" class="img-fluid" ></img>
+          
+            <section>
+                <div class="container-fluid">
+                        <h1>DOCUMENTS</h1>
+                    <nav class="navbar navbar-expand-lg justify-content-between bg-dark" id="nav-doc">
+            
+                        <div class="" id="collapsibleNavbar">
+                            <ul class="navbar-nav mb-0 text-justify list">
+                         
+                                <li class="nav-item">
+                                    <a class="nav-link p-2 text-white" href="">Overview</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link p-2 text-white" href="">Collaborators</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link p-2 text-white" href="">Task</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link p-2 text-success active" href="">Documents</a>
+                                </li> 
+                            </ul>
+                        </div>  
+                    </nav>
+                </div>
+                
+        </section>
+    
+    
+        <section>
+    
+                <div class="container">
+    
+                        <div class="row text-center gutters mr-auto ml-auto mt-4">
+    
+                                <div class="col-lg-4 col-sm-12 col-md-12 center" id="box1" >
+                                       <h2>Contract</h2>
+                                       <a href=""><h5>View a Contract</h5></a>
+                                       <a href=""><h5>Edit Contract</h5></a>
+                                       <button class="btn-create1"><h6><span class="plus">+</span>Create New Contract</h6></button>
+    
+                                </div>
+                                <div class="col-lg-4 col-sm-12 col-md-12 center" id="box2" >
+                                       <h2>Invoice</h2>
+                                       <a href=""><h5>View an Invoice</h5></a>
+                                       <a href=""><h5>Edit Invoice</h5></a>
+                                       <button class="btn-create2"><h6><span class="plus">+</span>Create New Invoice</h6></button>
+                                </div>
+                                <div class="col-lg-4 col-sm-12 col-md-12 center" id="box1" >
+                                       <h2>Proposal</h2>
+                                       <a href=""><h5>View a Proposal</h5></a>
+                                       <a href=""><h5>Edit Proposal</h5></a>
+                                       <button class="btn-create3"><h6><span class="plus">+</span>Create New Proposal</h6></button>
+                                </div>
+    
+                        </div>
+    
+                </div>
+                
+        </section>
+                  <div class="btn-plus-bottom">
+                    <a href=""><span>+</span></a> 
+                  </div>
           </div>
 
 
