@@ -46,7 +46,7 @@
         
         .navbar-nav {
         
-          align-items: last baseline;
+          align-items: flex-end;
         }
         
         .nav-item:not(:last-child) {
@@ -373,7 +373,8 @@
           margin-bottom: 81px; */
           border: 1px solid #c4c4c4;
           padding: 20px;
-        
+          position: relative;
+  
         }
         
         h4 {
@@ -571,7 +572,36 @@
         opacity: 1;
         }
 
+        .plusSubmit{
 
+            position: absolute;
+            left: -110px;
+            top: 550px;
+
+        }
+
+
+
+
+@media (max-width: 1024px) {
+  .plusSubmit {
+  position: absolute;
+  left: -110px;
+  top: 929px;
+}
+
+        }
+
+
+        @media (max-width: 768px) {
+      
+
+        .plusSubmit {
+  position: absolute;
+  left: -50px;
+  top: 929px;
+}
+        }
 
         @media (min-width: 768px) {
           #sidebar-wrapper {
@@ -586,6 +616,7 @@
           #wrapper.toggled #sidebar-wrapper {
             margin-left: -15rem;
           }
+          
         }
 
         @media screen and (max-width: 1280px) {
@@ -709,6 +740,15 @@
           #menu-toggle{
             display: block;
           }
+          .nav-item{
+            border: none;
+          
+          }
+
+          .nav-item:not(:last-child) {
+            border-right: none;
+            padding: 10px;
+            }
         }
         
         
@@ -890,7 +930,7 @@
                         </select>
                         </div>
                     </div>-->
-
+                    <button class="btn plusSubmit"><img src="https://res.cloudinary.com/mirakul1/image/upload/v1570751265/zvfjnodvgmuozolncy3q.png" alt="" srcset=""></button>
               </form>
             </div>
             </div>
@@ -919,7 +959,7 @@
           $('.personal_info').append(`
           <div class="addNewContact">
           <button class="btn removeDesignation" style="float:right"><i class="fa fa-times"></i></button>
-          <div id="contactPersonDiv " class="innerWrapper">
+                 <div id="contactPersonDiv " class="innerWrapper">
                     <label for="contactPerson">Contact Person</label>
                     <input id="contactPerson" type="text" name="contactPerson" placeholder="Simbi Emmanuel">
                   </div>
@@ -927,11 +967,14 @@
                   <div class="twoColumns innerWrapper">
                     <div id="designationDiv">
                       <label for="designation">Designation</label>
-                      <input type="text" name="designation" id="designation" placeholder="Project Manager">
+                      <select name="designation" id="designation">
+                        <option>Project Manager</option>
+                        <option>Supervisor</option>
+                      </select>
                     </div>
                     <div id="personCountryDiv">
-                      <label for="personCountry">Country</label>
-                      <input id="personCountry" type="text" name="personCountry" placeholder="+23470389000000">
+                      <label for="personCountry">Contact Phone Number</label>
+                      <input id="personCountry" type="tel" name="personCountry" placeholder="+23470389000000">
                     </div>
                   </div>
                 </div>
