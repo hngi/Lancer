@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-    <title>Collapsible sidebar using Bootstrap 4</title>
+    <title>Collabrator</title>
 
     <!-- Bootstrap CSS CDN -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
@@ -15,8 +15,7 @@
     <style type="text/css">
         /*Main page style by message*/
 
-        @import url(http://fonts.googleapis.com/css?family=Open+Sans);
-
+        @import url('https://fonts.googleapis.com/css?family=Ubuntu&display=swap');
         :root{
             --primary-color: #091429;
             --secondary-color: #0ABAB5;
@@ -29,7 +28,9 @@
           /*------- main styles ------*/
          /****************************/
 
-
+        body{
+            font-family: 'Ubuntu', sans-serif;
+        }
         .text-primary{
             color: var(--primary-color) !important;
         }
@@ -234,6 +235,33 @@
         /* ---------------------------------------------------
             CONTENT STYLE
         ----------------------------------------------------- */
+        .collaborators_submenu {
+            width: ;
+            display: flex;
+            align-items: center;
+            height: 50px;
+            background-color: #091429;
+        }
+
+        .collaborators_submenu a {
+            color: #fff;
+            font-size: ;
+            padding: 1.3vw;
+        }
+
+        .collaborators_submenu a:nth-child(2) {
+            color: #0ABAB5;
+        }
+        .user_avatar {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 40px;
+            height: 40px;
+            border: 2px solid #091429;
+            border-radius: 50%;
+            color: #000;
+        }
         #content {
           width: 100%;
           min-height: 100vh;
@@ -267,20 +295,6 @@
           transform: none;
           opacity: 1;
           margin: 5px auto;
-        }
-
-        .alert.alert-primary.py-0.px-2.small.m-0.pending{
-            color: #F67A06;
-            font-weight: bold;
-            background-color: rgba(201, 133, 70,0.3);
-            border-color: rgba(201, 133, 70,0.3);
-        }
-
-        .alert.alert-primary.py-0.px-2.small.m-0.active{
-            color: #179615;
-            font-weight: bold;
-            background-color: #76D874;
-            border-color:  #76D874;
         }
         /* ---------------------------------------------------
             MEDIAQUERIES
@@ -318,20 +332,17 @@
         /* ---------------------------------------------------
             Table
         ----------------------------------------------------- */
-        table.project-table{
+        
+        table.colaborate_table{
           border-collapse:separate; 
           border-spacing: 0 1em;
         }
 
-        table.project-table tbody tr{
+        table.colaborate_table tbody tr{
           padding-bottom: 10px !important;
         }
 
-        table.project-table tbody tr td span.text-small{
-          font-size: 8px;
-        } 
-
-        table.project-table tbody tr td, table.project-table thead tr th {
+        table.colaborate_table tbody tr td, table.colaborate_table thead tr th {
             max-width: 200px;
             overflow: hidden;
             text-overflow: ellipsis;
@@ -344,9 +355,11 @@
 
         /*------------floating button---------*/
         #add-something{
+            width: 70px;
+            height: 70px;
           position: fixed;
           bottom: 20px;
-          right: 20px;
+          right: 2%;
           z-index: 12;
         }
     </style>
@@ -376,35 +389,35 @@
                     <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><img src="https://lancer-app.000webhostapp.com/images/svg/lightbulb.svg" height="20" width="auto"> <span> Projects</span></a>
                     <ul class="collapse list-unstyled" id="homeSubmenu">
                         <li>
-                            <a href="#" class="pl-4"><i class="fas fa-dot-circle"></i> Status</a>
+                            <a href="/eval_estimation.html" class="pl-4"><i class="fas fa-dot-circle"></i> Status</a>
                         </li>
                         <li>
-                            <a href="#" class="pl-4"><i class="fas fa-dot-circle"></i> Overview</a>
+                            <a href="/index.html" class="pl-4"><i class="fas fa-dot-circle"></i> Overview</a>
                         </li>
                         <li>
-                            <a href="#" class="pl-4 "><i class="fas fa-dot-circle"></i> Collabrators</a>
+                            <a href="/Collaborators.html" class="pl-4 "><i class="fas fa-dot-circle"></i> Collabrators</a>
                         </li>
                         <li>
-                            <a href="#" class="pl-4"><i class="fas fa-dot-circle"></i> Task</a>
+                            <a href="/task.html" class="pl-4"><i class="fas fa-dot-circle"></i> Task</a>
                         </li>
                         <li>
-                            <a href="#" class="pl-4"><i class="fas fa-dot-circle"></i> Documents</a>
+                            <a href="/documents.html" class="pl-4"><i class="fas fa-dot-circle"></i> Documents</a>
                         </li>
                         
                     </ul>
                 </li>
                 <li>
-                    <a href="#">
+                    <a href="/invoice-signing.html">
                         <img src="https://lancer-app.000webhostapp.com/images/svg/approve-invoice.svg" height="20" width="auto"> <span> Invoice</span>
                     </a>
                 </li>
                 <li>
-                    <a href="#">
+                    <a href="/pricing.html">
                         <img src="https://lancer-app.000webhostapp.com/images/svg/policy.svg" height="20" width="auto"> <span> Contract</span>
                     </a>
                 </li>
                 <li>
-                    <a href="#">
+                    <a href="/">
                         <img src="https://lancer-app.000webhostapp.com/images/svg/approval.svg" height="20" width="auto"> <span> Proposals</span>
                     </a>
                 </li>
@@ -425,7 +438,7 @@
                             <div class="input-group-prepend">
                                 <span class="input-group-text border-right-0 bg-white" id="basic-addon1"><i class="fas fa-search"></i></span>
                             </div>
-                            <input class="form-control border border-left-0 searchBox" type="text" placeholder="Search" aria-label="Search" aria-describedby="basic-addon1">
+                            <input class="form-control border border-left-0" type="text" placeholder="Search" aria-label="Search" aria-describedby="basic-addon1">
                         </div>
                     </form>
                     <button class="btn btn-dark d-inline-block d-lg-none ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -453,47 +466,45 @@
             
             <section class="">
                 <div class="container-fluid">
-                    <h4 class="mt-0 text-primary">PROJECTS</h4>
+                    <h4 class="mt-0 text-primary">COLLABORATORS</h4>
                     <div class="">
                         <div class="">
-                            <form class="form-inline">
-                                <select class="form-control status">
-                                    <option value="All">All</option>
-                                    <option value="Completed">Completed</option>
-                                    <option value="Pending">Pending</option>
-                                    <option value="Active">Active</option>
-                                </select>
-                            </form>
+                            <div class="collaborators_submenu">
+                    <a href="#">Over View</a>
+                    <a href="#">Collabrators</a>
+                    <a href="#">Task</a>
+                    <a href="#">Documents</a>
+                    </div>
                         </div>
                         <div class="table-responsive">
-                            <table class="table project-table table-borderless">
+                            <table class="table colaborate_table table-borderless">
                                 <thead>
                                     <tr>
-                                        <th scope="col">Date</th>
-                                        <th scope="col">Title</th>
-                                        <th scope="col">Start Date</th>
-                                        <th class="text-right" scope="col">Paid</th>
-                                        <th class="text-right" scope="col">Due</th>
-                                        <th scope="col">Status</th>
-                                        <th scope="col"> </th>
+                                        <th scope="col"></th>
+                                        <th class="text-center"  scope="col">Name</th>
+                                        <th class="text-center"  scope="col">Role</th>
+                                        <th class="text-center" scope="col">Progress</th>
+                                        <th class="text-right" scope="col"></th>
+                                 
                                     </tr>
                                 </thead>
                                 <tbody>
                                     <tr class="py-2">
                                         <td scope="row" class="rounded-left border border-right-0">
-                                            <span class="text-small text-muted mr-2">
-                                                <i class="fas fa-circle"></i>
-                                            </span> 
-                                            <span class="">Mar. 10, 2019</span>
+                                            <span class="user_avatar_link" href="">
+
+                                    <div class="user_avatar">
+                                        FD
+                                    </div>
+                                </span>
                                         </td>
-                                        <td class="border-top border-bottom titles">Online Music Shop</td>
-                                        <td class="border-top border-bottom">Aug. 10, 2019</td>
-                                        <td class="border-top border-bottom text-right">₦200,000</td>
-                                        <td class="border-top border-bottom text-right">₦200,000</td>
-                                        <td class="border-top border-bottom">
-                                            <span class="alert alert-primary py-0 px-2 small m-0 pending">Pending</span>
+                                        <td class="border-top border-bottom text-center">David Speedo</td>
+                                        <td class="border-top border-bottom text-center">Product Designer</td>
+                                        
+                                        <td class="border-top border-bottom text-center">
+                                            58%
                                         </td>
-                                        <td class="rounded-right border border-left-0">
+                                        <td class="rounded-right border border-left-0 text-right">
                                             <div class="dropdown dropleft">
                                                 <a class="btn btn-white btn-sm dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                                     <i class="fas fa-ellipsis-v"></i>
@@ -508,19 +519,20 @@
                                     </tr>
                                     <tr class="py-2">
                                         <td scope="row" class="rounded-left border border-right-0">
-                                            <span class="text-small text-muted mr-2">
-                                                <i class="fas fa-circle"></i>
-                                            </span> 
-                                            <span class="">Mar. 10, 2019</span>
+                                            <span class="user_avatar_link" href="">
+
+                                    <div class="user_avatar">
+                                        FD
+                                    </div>
+                                </span>
                                         </td>
-                                        <td class="border-top border-bottom titles">GateGuard</td>
-                                        <td class="border-top border-bottom">Aug. 10, 2019</td>
-                                        <td class="border-top border-bottom text-right">₦200,000</td>
-                                        <td class="border-top border-bottom text-right">₦200,000</td>
-                                        <td class="border-top border-bottom">
-                                            <span class="alert alert-primary py-0 px-2 small m-0">Completed</span>
+                                        <td class="border-top border-bottom text-center">David Speedo</td>
+                                        <td class="border-top border-bottom text-center">Product Designer</td>
+                                        
+                                        <td class="border-top border-bottom text-center">
+                                            58%
                                         </td>
-                                        <td class="rounded-right border border-left-0">
+                                        <td class="rounded-right border border-left-0 text-right">
                                             <div class="dropdown dropleft">
                                                 <a class="btn btn-white btn-sm dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                                     <i class="fas fa-ellipsis-v"></i>
@@ -535,19 +547,20 @@
                                     </tr>
                                     <tr class="py-2">
                                         <td scope="row" class="rounded-left border border-right-0">
-                                            <span class="text-small text-muted mr-2">
-                                                <i class="fas fa-circle"></i>
-                                            </span> 
-                                            <span class="">Mar. 10, 2019</span>
+                                            
+
+                                    <div class="user_avatar">
+                                        FD
+                                    </div>
+                                
                                         </td>
-                                        <td class="border-top border-bottom titles">HNG 6.0 Site</td>
-                                        <td class="border-top border-bottom">Aug. 10, 2019</td>
-                                        <td class="border-top border-bottom text-right">₦200,000</td>
-                                        <td class="border-top border-bottom text-right">₦200,000</td>
-                                        <td class="border-top border-bottom">
-                                            <span class="alert alert-primary py-0 px-2 small m-0">Completed</span>
+                                        <td class="border-top border-bottom text-center">David Speedo</td>
+                                        <td class="border-top border-bottom text-center">Product Designer</td>
+                                        
+                                        <td class="border-top border-bottom text-center">
+                                            58%
                                         </td>
-                                        <td class="rounded-right border border-left-0">
+                                        <td class="rounded-right border border-left-0 text-right">
                                             <div class="dropdown dropleft">
                                                 <a class="btn btn-white btn-sm dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                                     <i class="fas fa-ellipsis-v"></i>
@@ -562,19 +575,20 @@
                                     </tr>
                                     <tr class="py-2">
                                         <td scope="row" class="rounded-left border border-right-0">
-                                            <span class="text-small text-muted mr-2">
-                                                <i class="fas fa-circle"></i>
-                                            </span> 
-                                            <span class="">Mar. 10, 2019</span>
+                                            <span class="user_avatar_link" href="">
+
+                                    <div class="user_avatar">
+                                        FD
+                                    </div>
+                                </span>
                                         </td>
-                                        <td class="border-top border-bottom titles">Shopping Cart</td>
-                                        <td class="border-top border-bottom">Aug. 10, 2019</td>
-                                        <td class="border-top border-bottom text-right">₦200,000</td>
-                                        <td class="border-top border-bottom text-right">₦200,000</td>
-                                        <td class="border-top border-bottom">
-                                            <span class="alert alert-primary py-0 px-2 small m-0 active">Active</span>
+                                        <td class="border-top border-bottom text-center">David Speedo</td>
+                                        <td class="border-top border-bottom text-center">Product Designer</td>
+                                        
+                                        <td class="border-top border-bottom text-center">
+                                            58%
                                         </td>
-                                        <td class="rounded-right border border-left-0">
+                                        <td class="rounded-right border border-left-0 text-right">
                                             <div class="dropdown dropleft">
                                                 <a class="btn btn-white btn-sm dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                                     <i class="fas fa-ellipsis-v"></i>
@@ -589,19 +603,20 @@
                                     </tr>
                                     <tr class="py-2">
                                         <td scope="row" class="rounded-left border border-right-0">
-                                            <span class="text-small text-muted mr-2">
-                                                <i class="fas fa-circle"></i>
-                                            </span> 
-                                            <span class="">Mar. 10, 2019</span>
+                                            
+
+                                    <div class="user_avatar">
+                                        FD
+                                    </div>
+                               
                                         </td>
-                                        <td class="border-top border-bottom titles">School Management</td>
-                                        <td class="border-top border-bottom">Aug. 10, 2019</td>
-                                        <td class="border-top border-bottom text-right">₦200,000</td>
-                                        <td class="border-top border-bottom text-right">₦200,000</td>
-                                        <td class="border-top border-bottom">
-                                            <span class="alert alert-primary py-0 px-2 small m-0 active">Active</span>
+                                        <td class="border-top border-bottom text-center">David Speedo</td>
+                                        <td class="border-top border-bottom text-center">Product Designer</td>
+                                        
+                                        <td class="border-top border-bottom text-center">
+                                            58%
                                         </td>
-                                        <td class="rounded-right border border-left-0">
+                                        <td class="rounded-right border border-left-0 text-right">
                                             <div class="dropdown dropleft">
                                                 <a class="btn btn-white btn-sm dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                                     <i class="fas fa-ellipsis-v"></i>
@@ -614,33 +629,7 @@
                                             </div>
                                         </td>
                                     </tr>
-                                    <tr class="py-2">
-                                        <td scope="row" class="rounded-left border border-right-0">
-                                            <span class="text-small text-muted mr-2">
-                                                <i class="fas fa-circle"></i>
-                                            </span> 
-                                            <span class="">Mar. 10, 2019</span>
-                                        </td>
-                                        <td class="border-top border-bottom titles">CBT Mobile App</td>
-                                        <td class="border-top border-bottom">Aug. 10, 2019</td>
-                                        <td class="border-top border-bottom text-right">₦200,000</td>
-                                        <td class="border-top border-bottom text-right">₦200,000</td>
-                                        <td class="border-top border-bottom">
-                                            <span class="alert alert-primary py-0 px-2 small m-0">Completed</span>
-                                        </td>
-                                        <td class="rounded-right border border-left-0">
-                                            <div class="dropdown dropleft">
-                                                <a class="btn btn-white btn-sm dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                                    <i class="fas fa-ellipsis-v"></i>
-                                                </a>
-                                                <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                                                    <a class="dropdown-item text-success" href="#"><i class="fas fa-binoculars"></i> View</a>
-                                                    <a class="dropdown-item text-secondary" href="#"><i class="fas fa-edit"></i> Edit</a>
-                                                    <a class="dropdown-item text-danger" href="#"><i class="fas fa-trash-alt"></i> Delete</a>
-                                                </div>
-                                            </div>
-                                        </td>
-                                    </tr>
+                                    
                                 </tbody>
                             </table>
                         </div>
@@ -665,42 +654,6 @@
                 $('#sidebar').toggleClass('active');
                 $(this).toggleClass('active');
             });
-
-            const searchBox = document.querySelector('.searchBox');
-            const status = document.querySelector('.status');
-            const filterNames =()=>{
-                const titles = document.querySelectorAll('.titles');
-                const searchBoxValue = searchBox.value.toLowerCase();
-            
-                titles.forEach(title=>{
-                    if(!title.textContent.toLowerCase().includes(searchBoxValue)){
-                        title.parentElement.style.display = "none"
-                    }else{
-                        title.parentElement.style.display = "";
-                    }
-                })
-            }
-
-            const filterStatus =()=>{
-                const statusText = document.querySelectorAll('.alert-primary')
-                
-                statusText.forEach(text => {
-                    if(status.value !== 'All'){
-                        if(status.value === text.textContent){
-                            text.parentElement.parentElement.style.display = ""
-                        }else{
-                            text.parentElement.parentElement.style.display = "none"
-                        }
-                     }else{
-                        text.parentElement.parentElement.style.display = ""
-                     }
-                })  
-            }
-
-            searchBox.addEventListener('keyup', filterNames);
-
-            status.addEventListener('change', filterStatus);
-               
         });
     </script>
 </body>

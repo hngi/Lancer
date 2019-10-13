@@ -8,12 +8,13 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0-11/css/all.min.css">
     <link href="https://fonts.googleapis.com/css?family=Ubuntu:300,400&display=swap" rel="stylesheet">
-    <title>SignUp</title>
+    <title>Log In</title>
 
     <style>
         body {
             font-family: 'Ubuntu', sans-serif;
             font-weight: 200;
+ 
         }
         
         h1 {
@@ -31,8 +32,6 @@
         .signinform {
             border: thin #c4c4c4 solid;
             border-radius: 1% 1% 1% 1%;
-            margin-top: -30px;
-            margin-bottom: 30px;
         }
         
         a {
@@ -64,26 +63,13 @@
          div.floatright a, div.floatright p{
              font-size: 16px;
          }
-         .register{
-             margin-top:-85px;
-         }
-         li{
-             list-style-type: none;
-         }
-         .list{
-             margin: 30px 0 0 -30px;
-         }
+
         .error{
             background-color: red;
         }
-<<<<<<< HEAD
+        
         a:hover {
             color: #c4c4c4;
-=======
-        .float-right a {
-            color:#0ABAB5;
-            font-weight:bold;
->>>>>>> 06a60fba4a65e4f8dde6499a9029b1ec5a14aea2
         }
 
         @media only screen and (max-width: 770px) {
@@ -109,57 +95,71 @@
                 margin-left: 8%;
             }
         }
-
-        @media only screen and (max-width: 360px) {
-            .register{
-                margin-top: 0px;
-                text-align: center;                
-            }
-            .register li {
-                text-align: initial;
-            }
-            h2{
-                font-size: 1px larger;
-            }
-            h5{
-                font-size: large;
-            }
-            .float-left{
-                text-align: center;
-                margin-left: 100px;
-            }
-        }
+         .navbar-brand{
+    font-family: Pacifico;
+    color: white;
+    font-size: 500px;
+}
+.navbar-brand h3 span{
+    color: #0ABAB5
+}
+.navbar-brand :hover{
+    color: rgb(255, 255, 255);
+}
+.mykel-header{
+    background: #091429
+}
+.mykel-header .nav-link{
+   font-size: 15px;
+   color: aliceblue;
+}
+.navbar-collapse{
+    justify-content: flex-end
+}
+.pricing{
+    width: 100%;
+    padding: 70px;
+}
+.pricing .title-header{
+    text-align: center
+}
+.pricing .title-header h1{ 
+    font-size: 65px;
+    padding-left: 160px;
+    padding-right: 160px;
+}
 
     </style>
 </head>
+    <nav class="mykel-header navbar pl-5 pr-5 navbar-expand-lg ">
+                     <a href="index.html"><img src="https://res.cloudinary.com/dy18y8k1e/image/upload/v1570887865/Lancers_qmb6ec.png" alt="logo"></a>
+                    <button class="navbar-toggler navbar-light bg-light" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                      <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                      <div class="navbar-nav" >
+                        <a class="nav-item nav-link" href="index.html">Home </a>  
+                        <a class="nav-item nav-link" href="pricing.html">Pricing </a>
+                        <a class="nav-item nav-link" href="signup.html">Sign in  <span class="sr-only">(current)</span></a>
+                        <a class="nav-item nav-link" href="signup.html">Sign up</a>
+                      </div>
+                    </div>
+                  </nav>
 
 <body>
     <div class="container">
         <div class="clearfix mt-3">
-            <div class="float-left">
-                <a href="index.html" class="navbar-brand"><img src="https://res.cloudinary.com/sgnolebagabriel/image/upload/v1570531368/Lancers_evgrmc.png" alt="logo"></a>
-            </div>
             <div class="float-right">
 
             </div>
         </div>
         <div class="row align-items-center mt-5">
-            <div class="col-md-6 register">
-                <h2>Register to save your project and gain access to:</h2>
-                <ul class="list">
-                    <li><h5>- The document generator</h5></li>
-                    <li><h5>- Our project management features</h5></li>
-                    <li><h5>- Much more...</h5></li>
-                </ul>
+            <div class="col-md-6">
+                <h1>Welcome Back!</h1>
             </div>
             <div class="col-md-5 offset-md-1 signinform mt-5 pl-5 pr-5 pt-4 pb-4">
-                <h4 class="text-center">Sign up</h4>
+                <h4 class="text-center">Sign In</h4>
                 <form id="loginform">
-                        <div class="form-group">
-                                <label for="my-name">Full Name</label>
-                                <input id="name" class="form-control" type="text" name="" placeholder="eg. John Doe">
-                                <span  id="emessage"></span>
-                            </div>
                     <div class="form-group">
                         <label for="my-email">Email Address</label>
                         <input id="email" class="form-control" type="email" name="" placeholder="eg. johndoe@example.com">
@@ -168,26 +168,23 @@
                     <div class="form-group">
                         <label for="my-password">Password</label>
                         <input id="password" class="form-control" type="password" name="my-password" placeholder=""> 
-                        <span id="pmessage" ></span>
+                        <span id="pmessage" "></span>
                     </div>
-                    <div class="form-group">
-                            <label for="my-password">Password Confirmation</label>
-                            <input id="password" class="form-control" type="password" name="my-password" placeholder=""> 
-                            <span id="pmessage" ></span>
-                        </div>
-                    <div class="clearfix">
-                        <div class="float-left">
-
-                        </div>
-        
-                    </div>
-                    <button type="submit" class="btn btn-success col-md-12 pt-2 pb-2 mt-2 mb-2">Register</button>
                     <div class="clearfix">
                         <div class="float-left">
 
                         </div>
                         <div class="float-right">
-                            <p>Already have an account? <a href="signin.html">Sign In</a></p>
+                            <a href="forgotpassword.html">Forgot Password?</a>
+                        </div>
+                    </div>
+                    <button type="submit" class="btn btn-success col-md-12 pt-2 pb-2 mt-2 mb-2">Login</button>
+                    <div class="clearfix">
+                        <div class="float-left">
+
+                        </div>
+                        <div class="float-right">
+                            <p>Don't have an account? <a href="signup.html">Sign Up</a></p>
                         </div>
                     </div>
                 </form>
@@ -202,4 +199,61 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
 
 
+<script>
+    const login = document.querySelector("#loginform");
+    const password = document.querySelector("#password").value;
+    const email = document.querySelector("#email").value;
+    // const passwordMessage = document.querySelector("#pmessage");
+
+    login.addEventListener("submit", function(e) {
+        e.preventDefault();
+        // passReg = /(?=.*\d)(?=.*[a-z])(?=.*[A-Z])\w{6,}/;
+        emailReg = /^(([^<>()\[\]\.,;:\s@\"]+(\.[^<>()\[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
+        const passwordMessage = document.querySelector("#pmessage");
+        const emailMessage = document.querySelector("#emessage");
+
+let validatePassword =function(){
+
+
+    
+    passwordMessage.textContent = null;
+            passwordMessage.textContent = null;
+    let p = document.createElement(`p`);
+    p.classList.add("alert", "alert-warning");
+    p.textContent = "Please enter valid password. Letters and digits Only";
+    passwordMessage.appendChild(p);
+    console.log(p);
+
+    setTimeout(function () {
+        passwordMessage.remove();
+    }, 4000);
+        } 
+
+let validateEmail = function(){
+    emailMessage.textContent = null;
+    let p = document.createElement(`p`);
+    p.classList.add("alert", "alert-danger");
+    p.textContent = "Please enter a valid email";
+    emailMessage.appendChild(p);
+    console.log(p);
+
+    setTimeout(function () {
+        emailMessage.innerHTML = "";
+    }, 4000);
+}
+
+
+        
+        if (email === ""){
+           validateEmail()
+        }
+
+         if (password === "" ) {
+            validatePassword()
+        }
+
+       
+    });
+   
+</script>
 </html>

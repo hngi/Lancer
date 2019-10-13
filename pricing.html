@@ -7,11 +7,16 @@
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
         <meta name="viewport" content="width=device-width, initial-scale=1">
     </head>
+
             
-                 <style>
-                     .navbar-brand{
+<style>
+    body{
+				font-family: 'Open Sans', sans-serif;
+    }
+.navbar-brand{
     font-family: Pacifico;
-    color: white
+    color: white;
+    font-size: 500px;
 }
 .navbar-brand h3 span{
     color: #0ABAB5
@@ -50,7 +55,7 @@
 }
 .pricecol{
     height: 450px;
-    border: 1px solid rgb(197, 132, 132);
+    border: 1px solid #000000;
     position: relative;
 }
 .pricetext{
@@ -93,7 +98,7 @@
 }
 
 .pricenumber::before{
-    font-size: 17px;
+    font-size: 25px;
     content: '\0024';
     position: relative;
     left: -2px;
@@ -105,7 +110,7 @@
 }
 
 .pricenumber p{
-    font-size: 17px;
+    font-size: 25px;
     display: inline;
 }
 article {
@@ -142,6 +147,7 @@ font-size: 20px;
     background: #0ABAB5;
     border-radius: 4px;
     color: #FFFFFF;
+    border: none;
 }
 
 #email-input {
@@ -163,6 +169,12 @@ border-radius: 6px;
 .link {
     color: black;
 }
+h5,
+.h5 {
+	font-size: 1.2rem;
+	font-weight: 700 !important;
+	line-height: 150% !important;
+    }
 
 
 @media only screen and (max-width: 600px) {
@@ -191,10 +203,10 @@ border-radius: 6px;
                     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                       <div class="navbar-nav" >
                         <a class="nav-item nav-link" href="pricing.html">Pricing <span class="sr-only">(current)</span></a>
-                        <a class="nav-item nav-link" href="#">Generate an Invoice</a>
-                        <a class="nav-item nav-link" href="#">Track a Project</a>
-                        <a class="nav-item nav-link" href="#">Sign in</a>
-                        <a class="nav-item nav-link" href="#">Sign up</a>
+                        <a class="nav-item nav-link" href="invoice_loggedin_user.html">Generate an Invoice</a>
+                        <a class="nav-item nav-link" href="contact-support.html">Track a Project</a>
+                        <a class="nav-item nav-link" href="signin.html">Sign in</a>
+                        <a class="nav-item nav-link" href="signup.html">Sign up</a>
                       </div>
                     </div>
                   </nav>
@@ -234,7 +246,7 @@ border-radius: 6px;
                         </ul>
 
                         <div class="price-button p-3">
-                                <a href="#" class="btn btn-primary btn-block">Sign up for free</a>
+                                <a href="signup.html" class="btn btn-primary btn-block">Sign up for free</a>
                         </div>
                     </div>
                     </div>
@@ -267,7 +279,7 @@ border-radius: 6px;
                             </ul>
     
                             <div class="price-button p-3">
-                                    <a href="#" class="btn btn-primary btn-block">Sign up for free</a>
+                                    <a href="signup.html" class="btn btn-primary btn-block">Sign up for free</a>
                             </div>
                         </div>
                         </div>
@@ -303,7 +315,7 @@ border-radius: 6px;
                                 </ul>
         
                                 <div class="price-button p-3">
-                                        <a href="#" class="btn btn-primary btn-block">Sign up for free</a>
+                                        <a href="signup.html" class="btn btn-primary btn-block">Sign up for free</a>
                                 </div>
                             </div>
                             </div>
@@ -326,36 +338,36 @@ border-radius: 6px;
                 <div class="col-sm-2">
                     
                         <h6 id="lancer">Lan<span style="color: aqua">c</span>ers</span></h6>
-                        <a href="#" class="link">Pricing</a>
+                        <a href="pricing.html" class="link">Pricing</a>
                         <br>
-                        <a href="#" class="link">Sign in</a>
+                        <a href="signin.html" class="link">Sign in</a>
                         <br>
-                        <a href="#" class="link">Sign Up</a>
+                        <a href="signup.html" class="link">Sign Up</a>
                     
         
                 </div>
                 <div class="col-sm-2">
                     
-                        <h6 >Useful links</h6>
+                        <h5>Useful links</h5>
                         
-                        <a href="#" class="link">Dashboard</a>
+                        <a href="documents.html" class="link">Dashboard</a>
                         <br>
-                        <a href="#" class="link">Projects</a>
+                        <a href="project.html" class="link">Projects</a>
                         <br>
-                        <a href="#" class="link">Invoices</a>
+                        <a href="Invoice-new-user.html" class="link">Invoices</a>
                         <br>
-                        <a href="#" class="link">Create a Project</a></a>
+                        <a href="Invoice-new-user.html" class="link">Create a Project</a></a>
                     
                 </div>
                 <div class="col-sm-4">
                     
-                        <h6>Reach us</h6>
+                        <h5>Reach us</h5>
                         <p> 52b Charity Lane, off Magboso Highway, Ikate,<br> London, Nigeria</p>                
                         <i class="fab fa-facebook-square fa-2x"></i>
                         <i class="fab fa-twitter-square fa-2x"></i>
                 </div>
                 <div class="col-sm-4" id="col4">
-                        <h6>Stay up to date</h6>
+                        <h5>Stay up to date</h5>
                         <p>Get emails about our newest features and events <br> you can visit, we promise not to spam</p>
                         <input type="text" placeholder="Email Address" id="email-input">
                         <button id="btn-sub">Subscribe</button>
@@ -371,3 +383,4 @@ border-radius: 6px;
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 </html>
+

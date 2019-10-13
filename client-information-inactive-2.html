@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Client Page</title>
+    <title>Client Information</title>
     <link href="https://fonts.googleapis.com/css?family=Ubuntu&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
 
@@ -40,11 +40,18 @@
          font-size: 3.0rem;
      }
      .header_content button {
+         width: 100%;
          height: 100%;
          background-color: white;
          border: 1px solid #E5E5E5;
          font-weight: lighter;
          color: #E5E5E5;
+     }
+
+     .header_control button {
+         width: 50%;
+         padding: 0;
+         font-size: .8em;
      }
 
      .client {
@@ -112,6 +119,12 @@
          width: 90%;
          padding: 0 10px;
      }
+        
+     .country {
+		 height: 29px;
+	     overflow: hidden;
+	     width: 80%;
+	 } 
 
      main section:last-child{
          width: 200px;
@@ -139,6 +152,12 @@
         .content .form-group {
         grid-template-columns: 1fr 3fr;
         }
+         
+          .country {
+		 height: 29px;
+	     overflow: hidden;
+	     width: 80%;
+	  }
      }
     
      
@@ -148,7 +167,7 @@
 <body>
     <div class="container-fluid">
     <header class="header ">
-        <div class="header_content col-xs-2"> <button class="col-xs-6">&times;</button>
+        <div class="header_content col-xs-2 header_control"> <button class="col-xs-6">&times;</button>
            <button class="col-xs-6">&lt;</button></div>
         <div class="header_content client col-xs-8"><article class="text-center">Client</article></div>
         <div class="header_content col-xs-2"><button class="next">Next</button></div>
@@ -180,8 +199,40 @@
 
                 <label for="Country_state">Country & State</label>
                 <span>
-                <input type="text" name="country" id="country" placeholder="Country">
-                <input type="text" name="state" id="state" placeholder="State">
+               <select  class="country">
+					  <option value="Select" selected>Country</option>
+					  <option value="USA">USA</option>
+					  <option value="Nigeria">Nigeria</option>
+					  <option value="England">England</option>
+					  <option value="Canada">Canada</option>
+					  <option value="France">France</option>
+					  <option value="Itali">Itali</option>
+					  <option value="SOuth Africa">South Africa</option>
+					  <option value="Belgium">Belgium</option>
+					  <option value="Argentina">Argentina</option>
+					  <option value="Bulgaria">Bulgaria</option>
+					  <option value="Cyprus">Cyprus</option>
+					  <option value="Croatia">Croatia</option>
+					  <option value="Cote d'Ivoire">Cote d'Ivoire</option>
+					  <option value="Denmark">Denmark</option>
+					  <option value="Egypt">Egypt</option>
+					  <option value="Finland">Finland</option>
+					  <option value="Germany">Germany</option>
+					  <option value="Ghana">Ghana</option>
+					  <option value="Greece">Greece</option>
+					  <option value="Honduras">Honduras</option>
+					  <option value="Hungary">Hungary</option>
+					  <option value="Iceland">Iceland</option>
+					  <option value="India">India</option>
+					  <option value="Indonesia">Indonesia</option>
+					  <option value="Ireland">Ireland</option>
+					  <option value="Israel">Israel</option>
+					  <option value="Japan">Japan</option>
+					  <option value="Jamaica">Jamaica</option>
+					  <option value="Jordan">Jordan</option>
+					  <option value="Kenya">Kenya</option>
+				</select>
+				 <input type="text" name="state" id="state" placeholder="state">
             </span>
             </div>
 

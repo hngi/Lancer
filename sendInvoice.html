@@ -48,13 +48,15 @@
             font-size: 1rem;
         }
         .box-1{
-            
+            color: #C4C4C4;
             flex-flow: column wrap;
             flex-grow: 1;
+            color: #C4C4C4;
         }
         
         .container-a>.box-2{
             flex:1;
+            color: #C4C4C4;
             
         }
         
@@ -72,6 +74,7 @@
             transition: all 0.3s ease 0s;
             border-color: #0ABAB5;
             color: white;
+            cursor: pointer;
 
         }
         .container-a>.box-5{
@@ -190,8 +193,8 @@
             font-style: normal;
             font-weight: bold;
             font-size: 1em;
-            border: none;
-            border-radius: none;
+            border: 0px;
+            border-radius: 0px;
             line-height: 32px;
             text-align: center;
             background-color: #0ABAB5;
@@ -300,13 +303,13 @@
                             <i class="fa fa-chevron-left" aria-hidden="true"></i>
                         </div>
                 
-                        <div class="box-3">
+                        <div class="box-3" style="max-width: 150px">
                             Save and Close
                         </div>
                         <div class="box-4">
                             Invoice
                         </div>
-                        <div class="box-5">
+                        <div class="box-5" style="max-width: 150px">
                             <a href="#"><button class="sendInvoice">SEND INVOICE</button></a>
                         </div>
 
@@ -357,7 +360,7 @@
                         <div class="card payment ml-auto">
                             <div style="font-size: 0.8em; color: #B1B1B1">Amount Due</div>
 
-                            <div class="Amount" style="font-size: 2em; font-weight: bold">US$8,800 <span style="font-size: 0.5em">USD</span></div>
+                            <div class="Amount" style="font-size: 2em; font-weight: bold">US$8,800.00 <span style="font-size: 0.5em">USD</span></div>
 
                             <div>
                                 <div class="issueDate float-left">
@@ -378,7 +381,7 @@
                 <section class="invoiceDetails row">
                     <div class=" table-card" style="margin-top: 10px">
                         <div class="">
-                            Invoice <span style="font-weight: normal; font-size: 0.6em">No. 1</span> <p class="serviceRendered" style="margin-top: 10px">Glacier Fintech App</p>
+                            Invoice <span style="font-weight: bold; font-size: 0.6em; color: #B1B1B1">No. 1</span> <p class="serviceRendered" style="margin-top: 10px">Glacier Fintech App</p>
                         </div>
                         <div class="tableSection" style="font-size: 0.8em; width: 100%; overflow-x: scroll">
                             <table class="table">
@@ -392,24 +395,24 @@
                               </thead>
                               <tbody>
                                 <tr scope="row">
-                                  <td>Mobile App UI</td>
-                                  <td>1</td>
-                                  <td>US$8,800.00</td>
-                                  <td>US$8,800.00</td>
+                                  <td style="font-weight:normal">Mobile App UI</td>
+                                  <td style="font-weight:normal">1</td>
+                                  <td style="font-weight:normal">US$8,800.00</td>
+                                  <td style="font-weight:normal">US$8,800.00</td>
                                 </tr>
                                 <tr scope="row">
                                     <td></td>
                                     <td></td>
                                     <td style="font-weight:bold">Subtotal<br>Total<br>Amount Due
                                     </td>
-                                    <td>US$8,800.00<br>US$8,800.00<br>US$8,800.00</td>
+                                    <td style="font-weight:normal">US$8,800.00<br>US$8,800.00<br>US$8,800.00</td>
                                 </tr>
                               </tbody>
                             </table>
                             <div style="min-height: 50px"></div>
                         </div>
                         <hr>
-                        Juliet Asim
+                        <span style="font-size: 0.8em;">Juliet Asim</span>
                         <div style="margin-bottom: 40px"></div>
                     </div>
                 </section>
