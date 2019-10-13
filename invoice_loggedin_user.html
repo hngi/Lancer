@@ -1,6 +1,3 @@
-
-
-
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -159,6 +156,11 @@ box-shadow: 0px 4px 2px rgba(0, 0, 0, 0.1);
 
 }
 
+ul li a.pl-4, .px-4 {
+    padding-left: 3rem!important;
+    color: azure;
+}
+
 input {
     width: 500px !important;
     border-radius: 5px;
@@ -221,35 +223,48 @@ font-weight: bold;
       <div class="bg-dark border-right bar" id="sidebar-wrapper">
         <div class="sidebar-heading">Lan<span style="color:#00F9FF">c</span>ers</div>
         <ul class="list-group list-group-flush">
-          <a href="documents.html" class="list-group-item list-group-item-action bg-light"
-            > <i class="fa fa-home" aria-hidden="true"></i> Dashboard</a>
+                <a href="#" class="list-group-item list-group-item-action bg-light"
+                > <img src="https://lancer-app.000webhostapp.com/images/svg/home.svg" height="20" width="auto" style="margin-right: 3%;"><span>Dashboard</span> </a
+              >
           
-          <a href="client-information-active.html" class="list-group-item list-group-item-action bg-light"
-            > <i class="fa fa-users" aria-hidden="true"> </i> Clients</a
+            <a href="#" class="list-group-item list-group-item-action bg-light"
+            > <img src="https://lancer-app.000webhostapp.com/images/svg/customer.svg" height="20" width="auto" style="margin-right: 3%;"><span> Clients</span> </a
           >
-          <a href="ecal_estimation.html" class="list-group-item list-group-item-action bg-light"
-            > <i class="fa fa-calculator" aria-hidden="true"> </i> Estimates</a
+
+          <a href="#" class="list-group-item list-group-item-action bg-light"
+            > <img src="https://invoiceloggedinuser.000webhostapp.com/images/budget.png" height="20" width="auto" style="margin-right: 3%;"><span> Estimates</span> </a
           >
 
           <div>
-            <a href="#" class="list-group-item list-group-item-action bg-light  dropdown-toggle" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            <i class="fa fa-lightbulb-o" aria-hidden="true">  </i> Projects</span></a>
-            <ul class="dropdown-menu projectdropdown" aria-labelledby="dropdownMenuButton" style="background-color: #091429" >
-                <a class="dropdown-item" style="color: azure;" href="#">Status</a>
-                <a class="dropdown-item" style="color: azure;" href="#">Overview</a>
-                <a class="dropdown-item" style="color: azure;" href="#">Colaborators</a>
-                <a class="dropdown-item" style="color: azure;" href="#">Task</a>
-            </ul>
+                <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle list-group-item list-group-item-action bg-light"><img src="https://lancer-app.000webhostapp.com/images/svg/lightbulb.svg" height="20" width="auto"style="margin-right: 3%;"> <span>  Projects</span></a>
+                    <ul class="collapse list-unstyled list-group" id="homeSubmenu" >
+                        <li>
+                            <a href="#" class="pl-4">Status</a>
+                        </li>
+                        <li>
+                            <a href="#" class="pl-4">Overview</a>
+                        </li>
+                        <li>
+                            <a href="#" class="pl-4 ">Collabrators</a>
+                        </li>
+                        <li>
+                            <a href="#" class="pl-4">Task</a>
+                        </li>
+                        <li>
+                            <a href="#" class="pl-4">Documents</a>
+                        </li>
+                        
+                    </ul>
           </div>
 
-          <a href="#invoice-toggle" class="list-group-item list-group-item-action bg-light"
-            ><i class="fa fa-file-text-o" aria-hidden="true"></i></i> Invoices</a
+          <a href="#" class="list-group-item list-group-item-action bg-light"
+            > <img src="https://lancer-app.000webhostapp.com/images/svg/approve-invoice.svg" height="20" width="auto" style="margin-right: 3%;"><span>  Invoices</span></a>
+
+          <a href="#" class="list-group-item list-group-item-action bg-light"
+            > <img src="https://lancer-app.000webhostapp.com/images/svg/policy.svg" height="20" width="auto" style="margin-right: 3%;"><span>  Contract</span> </a
           >
           <a href="#" class="list-group-item list-group-item-action bg-light"
-            > <i class="fa fa-handshake-o"></i> Contract</a
-          >
-          <a href="#" class="list-group-item list-group-item-action bg-light"
-            > <i class="fa fa-area-chart" aria-hidden="true"></i> Proposals</a
+            > <img src="https://lancer-app.000webhostapp.com/images/svg/approval.svg" height="20" width="auto" style="margin-right: 3%;"><span>  Proposals</span> </a
           >
         </ul>
       </div>
@@ -263,8 +278,8 @@ font-weight: bold;
             <button class="navbar-toggler"type="button" data-toggle="collapse" data-target="#navbarSupportedContent"aria-controls="navbarSupportedContent"aria-expanded="false"aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class=" nav navbar-nav ml-auto mt-2 mt-lg-0">
-                    <li  class="nav-item nav text-center"> <a class=" nav-link ml-3" href="#"><i class="fa fa-comments fa-2x" aria-hidden="true"></i>Support</a></li>
-                    <li class="nav-item nav" ><a class="nav-link ml-3" href="#"> <i class="fa fa-bell fa-2x" aria-hidden="true"></i></a></li>
+                    <li  class="nav-item nav text-center"> <a class=" nav-link ml-3" href="#"> <img src="https://invoiceloggedinuser.000webhostapp.com/images/question.png" height="30" width="auto"> Support</a> </li>
+                    <li class="nav-item nav"  ><a class="nav-link ml-3" href="#"><img src="https://invoiceloggedinuser.000webhostapp.com/images/notification.png" height="30" width="auto"></a></li>
               </ul> 
               <ul >    
                 <!-- Profile image drop down -->
@@ -272,7 +287,7 @@ font-weight: bold;
                       <a class="nav-link  dropdown-toggle" id="ProfileDropDownMenu" data-toggle="dropdown"
                       aria-haspopup="true" aria-expanded="true">
                       <img src="https://i.ibb.co/mvHrj8n/avatar.jpg" boarder="0"class="rounded-circle z-depth-0 avatar"
-                        alt="profile image"> Juliet
+                        alt="profile image">Juliet
                     </a>
                             <div class="dropdown-menu dropdown-menu-md-left dropdown-secondary"
                               aria-labelledby="ProfileDropdownMenu">
@@ -286,7 +301,7 @@ font-weight: bold;
         </nav>        
          <div class="container createInvoice" id="invoice-toggle">
             <div class=" container-fluid invoiceContentInner">
-                    <div class="container"><button class="btn btn-success btn-bg inBut">Create Invoice</button>
+                    <div class="container"><button class="btn btn-success btn-bg inBut"        >Create Invoice</button>
                     </div>
                     
                     <div class="container">
