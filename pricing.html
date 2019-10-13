@@ -3,254 +3,286 @@
     <head>
             
         <link href="https://fonts.googleapis.com/css?family=Pacifico&display=swap" rel="stylesheet">
+        
         <script src="https://kit.fontawesome.com/d4f2148171.js" crossorigin="anonymous"></script>       
+        
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        
         <meta name="viewport" content="width=device-width, initial-scale=1">
-    </head>
-
             
-<style>
-    body{
-				font-family: 'Open Sans', sans-serif;
-    }
-.navbar-brand{
-    font-family: Pacifico;
-    color: white;
-    font-size: 500px;
-}
-.navbar-brand h3 span{
-    color: #0ABAB5
-}
-.navbar-brand :hover{
-    color: rgb(255, 255, 255);
-}
+        <style>
+            .navbar-brand{
+                font-family: Pacifico;
+                color: white
+                }
+            .navbar-brand h3 span{
+                color: #0ABAB5
+            }
+            .navbar-brand :hover{
+                color: rgb(255, 255, 255);
+            }
 
-.pricing-header{
-    background: #091429
-}
+            .pricing-header{
+                background: #091429
+            }
 
-.pricing-header .nav-link{
-   font-size: 15px;
-   color: aliceblue;
-}
+            .pricing-header .nav-link{
+            font-size: 15px;
+            color: aliceblue;
+            }
 
-.navbar-collapse{
-    justify-content: flex-end
-}
+            .navbar-collapse{
+                justify-content: flex-end
+            }
 
-.pricing{
-    width: 100%;
-    padding: 70px;
-}
-
-
-.pricing .title-header{
-    text-align: center
-}
-
-.pricing .title-header h1{ 
-    font-size: 65px;
-    padding-left: 160px;
-    padding-right: 160px;
-}
-.pricecol{
-    height: 450px;
-    border: 1px solid #000000;
-    position: relative;
-}
-.pricetext{
-    text-align: center;
-    font-size: 30px;
-
-}
-.pricenumber{
-    text-align: center;
-    font-size: 48px;
-    
-}
-
-.price-button{
-    width: 100%;
-    position: absolute;
-    bottom: 2%;
-    left:0;
-}
-
-.pricelist{
-    list-style: none;
-}
-.pricelist li{
-    margin: 5px auto
-}
-.pricelist li span{
-    margin: auto 5px
-}
-
-.price-button a{
-    background: #0ABAB5;
-    color: #fff;
-    border: none
-}
+            .pricing{
+                width: 100%;
+                padding-top: 70px;
+                padding-left: 20px;
+                padding-right: 20px;
+                padding: auto;
+            }
 
 
-.price-button a:hover{
-    background: rgb(9, 155, 150);
-}
+            .pricing .title-header{
+                text-align: center
+            }
 
-.pricenumber::before{
-    font-size: 25px;
-    content: '\0024';
-    position: relative;
-    left: -2px;
-    top: -25px
-}
+            .pricing .title-header h1{ 
+                font-size: 65px;
+                padding-left: 160px;
+                padding-right: 160px;
+            }
+            .pricecol{
+                padding-left: 20px !important;
+                padding-right: 20px !important;
+                margin-top: 20px;
+                height: 450px;
+                border: 1px solid #000000;
+                box-sizing: border-box;
+                border-radius: 6px;
+                position: relative;
+                margin-bottom: 40px;
+                width: 95%;
+                margin-left: auto;
+                margin-right: auto;
 
-.pricenumber{
-    position: relative;
-}
+            }
+            .pricetext{
+                text-align: center;
+                font-size: 30px;
 
-.pricenumber p{
-    font-size: 25px;
-    display: inline;
-}
-article {
-    background-color:#091429;
-    padding: 25px;
-}
+            }
+            .pricenumber{
+                text-align: center;
+                font-size: 48px;
+                
+            }
 
-footer {
-    background-color: white;
-    padding: 25px;
-}
+            .price-button{
+                width: 100%;
+                position: absolute;
+                bottom: 2%;
+                left:0;
+                padding-left: 28px !important;
+                padding-right: 28px !important;
+            }
 
-.enter-div {
-    text-align: center;
-    color: white;
-    font-weight: normal;
-    font-style: normal;
-    
-}
+            .pricelist{
+                list-style: none;
+            }
+            .pricelist li{
+                margin: 5px auto
+            }
+            .pricelist li span{
+                margin: auto 5px
+            }
 
-#enter-line {
-    line-height: 65px;
-}
+            .button:hover {
+                color: white;
+            }
 
-#lancer {
+            .price-button a{
+                color: #fff;
+                border: none
+            }
 
-font-style: normal;
-font-weight: normal;
-font-family: 'Pacifico', cursive;
-font-size: 20px;
-}
+            .price-button a{
+                background-color: #0ABAB5 ;
+            }
 
-#btn-sub {
-    background: #0ABAB5;
-    border-radius: 4px;
-    color: #FFFFFF;
-    border: none;
-}
+            .price-button a:hover{
+                background: rgb(9, 155, 150);
+            }
 
-#email-input {
-background: #FFFFFF;
-border: 1px solid #C4C4C4;
-box-sizing: border-box;
-border-radius: 2px;
-color: black;
-}
+            .pricenumber::before{
+                font-size: 17px;
+                content: '\0024';
+                position: relative;
+                left: -2px;
+                top: -25px
+            }
 
-.btn {
-background: #091429;
-border: 1px solid #0ABAB5 ;
-color: #0ABAB5;
-box-sizing: border-box;
-border-radius: 6px;
-}
+            .pricenumber{
+                position: relative;
+            }
 
-.link {
-    color: black;
-}
-h5,
-.h5 {
-	font-size: 1.2rem;
-	font-weight: 700 !important;
-	line-height: 150% !important;
-    }
+            .pricenumber p{
+                font-size: 17px;
+                display: inline;
+            }
+            article {
+                background-color:#091429;
+                padding: 25px;
+            }
+
+            footer {
+                background-color: white;
+                padding: 25px;
+            }
+
+            .enter-div {
+                text-align: center;
+                color: white;
+                font-weight: normal;
+                font-style: normal;
+            }
+
+            .enter-div > h6 {
+                font-weight: normal;
+            }
+
+            #enter-line {
+                line-height: 65px;
+            }
+
+            #lancer {
+
+            font-style: normal;
+            font-weight: normal;
+            font-family: 'Pacifico', cursive;
+            font-size: 20px;
+            }
+
+            #btn-sub {
+                background: #0ABAB5;
+                border-radius: 4px;
+                border-width: 0px;
+                color: #FFFFFF;
+            }
+
+            #email-input {
+                background: #FFFFFF;
+                border: 1px solid #C4C4C4;
+                box-sizing: border-box;
+                border-radius: 2px;
+                color: black;
+                font-size: 0.8em;
+                padding: 5px;
+                }
+
+            .btn {
+                border: 1px solid #0ABAB5 ;
+                color: #0ABAB5;
+                box-sizing: border-box;
+                border-radius: 6px;
+                }
+
+            .link {
+                color: black;
+            }
+
+            .card {
+                background: #FFFFFF;
+                border: none;
+                width: 350px !important;
+                max-width: 350px !important;
+                margin-right: auto;
+                margin-left: auto;
+            }
+
+            ul {
+                padding: 0% !important;
+            }
+            
+            #btn-sub:hover {
+                background-color: rgb(9, 155, 150);
+            }
+            
+            #navbarNavAltMarkup a:hover {
+                color: #0ABAB5 !important;
+            }
+
+            span.avoidwrap { display:inline-block; }
+
+            @media only screen and (max-width: 600px) {
+                .pricing .title-header h1{
+                    font-size: 35px
+                }
+
+                .pricecol{
+                    margin: 20px auto
+                }
+
+            }
+        </style>
 
 
-@media only screen and (max-width: 600px) {
-    .pricing .title-header h1{
-        padding: 0;
-        font-size: 35px
-    }
-    .pricing{
-        padding: 20px;
-    }
+        <nav class="pricing-header navbar pl-5 pr-5 navbar-expand-lg ">
+            <a class="navbar-brand" href="index.html"> <h3>Lan<span>c</span>er</h3> </a>
+            <button class="navbar-toggler navbar-light bg-light" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav" >
+                <a class="nav-item nav-link" href="pricing.html">Pricing <span class="sr-only">(current)</span></a>
+                <a class="nav-item nav-link" href="invoice_loggedin_user.html">Generate an Invoice</a>
+                <a class="nav-item nav-link" href="contact-support.html">Track a Project</a>
+                <a class="nav-item nav-link" href="signin.html">Sign in</a>
+                <a class="nav-item nav-link" href="signup.html">Sign up</a>
+                </div>
+            </div>
+        </nav>
 
-    
-
-    .pricecol{
-        margin: 20px auto
-    }
-  }
-                 </style>
-            </head>
-
-            <nav class="pricing-header navbar pl-5 pr-5 navbar-expand-lg ">
-                    <a class="navbar-brand" href="pricing.html"> <h3>Lan<span>c</span>er</h3> </a>
-                    <button class="navbar-toggler navbar-light bg-light" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-                      <span class="navbar-toggler-icon"></span>
-                    </button>
-                    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-                      <div class="navbar-nav" >
-                        <a class="nav-item nav-link" href="pricing.html">Pricing <span class="sr-only">(current)</span></a>
-                        <a class="nav-item nav-link" href="invoice_loggedin_user.html">Generate an Invoice</a>
-                        <a class="nav-item nav-link" href="contact-support.html">Track a Project</a>
-                        <a class="nav-item nav-link" href="signin.html">Sign in</a>
-                        <a class="nav-item nav-link" href="signup.html">Sign up</a>
-                      </div>
-                    </div>
-                  </nav>
+    </head>
                   
     <body>
         <section class="pricing">
             <div class="container">
-                <div class="title-header">
-                    <h1>Choose a plan that works for you</h1>
+                <div style="margin-left: auto; margin-right: auto;text-align: center; max-width: 465px;">
+                    <h1><span class="avoidwrap">Choose a plan</span> that works for you</h1>
                 </div>
-                <div class="row mt-5 pt-5">
-                    <div class="col-lg-4 col-md-6 col-sm-6">
+                <div class="row mt-5 pt-1">
+                    <div class="card" style="margin-bottom: 10px; float: left;">
                         <div class="pricecol p-2 pt-4">
-                        <p class="pricetext">Starter</p>
-                        <div class="price">
-                                <h5 class="pricenumber">0.00<p>/mo</p></h5>
+                            <p class="pricetext">Starter</p>
+                            <div class="price">
+                                    <h5 class="pricenumber">0.00<p>/mo</p></h5>
+                                </div>
+                                
+                            <ul class="pricelist pt-3">
+                                    <li><div style="float: left;"><svg width="16" height="16" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M21 10.0857V11.0057C20.9988 13.1621 20.3005 15.2604 19.0093 16.9875C17.7182 18.7147 15.9033 19.9782 13.8354 20.5896C11.7674 21.201 9.55726 21.1276 7.53447 20.3803C5.51168 19.633 3.78465 18.2518 2.61096 16.4428C1.43727 14.6338 0.879791 12.4938 1.02168 10.342C1.16356 8.19029 1.99721 6.14205 3.39828 4.5028C4.79935 2.86354 6.69279 1.72111 8.79619 1.24587C10.8996 0.770634 13.1003 0.988061 15.07 1.86572" stroke="#091429" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <path d="M21 3.00574L11 13.0157L8 10.0157" stroke="#091429" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg></div> <div class="mr-auto ml-4"> Three active projects</div></li>
+                                    <li><div style="float: left;"><svg width="16" height="16" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M21 10.0857V11.0057C20.9988 13.1621 20.3005 15.2604 19.0093 16.9875C17.7182 18.7147 15.9033 19.9782 13.8354 20.5896C11.7674 21.201 9.55726 21.1276 7.53447 20.3803C5.51168 19.633 3.78465 18.2518 2.61096 16.4428C1.43727 14.6338 0.879791 12.4938 1.02168 10.342C1.16356 8.19029 1.99721 6.14205 3.39828 4.5028C4.79935 2.86354 6.69279 1.72111 8.79619 1.24587C10.8996 0.770634 13.1003 0.988061 15.07 1.86572" stroke="#091429" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <path d="M21 3.00574L11 13.0157L8 10.0157" stroke="#091429" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg></div> <div class="mr-auto ml-4"> Two collaborators per project</div></li>
+                                    <li><div style="float: left;"><svg width="16" height="16" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M21 10.0857V11.0057C20.9988 13.1621 20.3005 15.2604 19.0093 16.9875C17.7182 18.7147 15.9033 19.9782 13.8354 20.5896C11.7674 21.201 9.55726 21.1276 7.53447 20.3803C5.51168 19.633 3.78465 18.2518 2.61096 16.4428C1.43727 14.6338 0.879791 12.4938 1.02168 10.342C1.16356 8.19029 1.99721 6.14205 3.39828 4.5028C4.79935 2.86354 6.69279 1.72111 8.79619 1.24587C10.8996 0.770634 13.1003 0.988061 15.07 1.86572" stroke="#091429" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <path d="M21 3.00574L11 13.0157L8 10.0157" stroke="#091429" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg></div> <div class="mr-auto ml-4"> One of each generatable document</div></li>
+                            </ul>
+
+                            <div class="price-button p-3">
+                                    <a href="/signup.html" class="btn btn-primary btn-block">Sign up for free</a>
                             </div>
                             
-                        <ul class="pricelist pt-3">
-                            <li>
-                                <span><svg width="16" height="16" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M21 10.0857V11.0057C20.9988 13.1621 20.3005 15.2604 19.0093 16.9875C17.7182 18.7147 15.9033 19.9782 13.8354 20.5896C11.7674 21.201 9.55726 21.1276 7.53447 20.3803C5.51168 19.633 3.78465 18.2518 2.61096 16.4428C1.43727 14.6338 0.879791 12.4938 1.02168 10.342C1.16356 8.19029 1.99721 6.14205 3.39828 4.5028C4.79935 2.86354 6.69279 1.72111 8.79619 1.24587C10.8996 0.770634 13.1003 0.988061 15.07 1.86572" stroke="#091429" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                <path d="M21 3.00574L11 13.0157L8 10.0157" stroke="#091429" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                </svg></span>Active projects</li>
-                            <li><span><svg width="16" height="16" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M21 10.0857V11.0057C20.9988 13.1621 20.3005 15.2604 19.0093 16.9875C17.7182 18.7147 15.9033 19.9782 13.8354 20.5896C11.7674 21.201 9.55726 21.1276 7.53447 20.3803C5.51168 19.633 3.78465 18.2518 2.61096 16.4428C1.43727 14.6338 0.879791 12.4938 1.02168 10.342C1.16356 8.19029 1.99721 6.14205 3.39828 4.5028C4.79935 2.86354 6.69279 1.72111 8.79619 1.24587C10.8996 0.770634 13.1003 0.988061 15.07 1.86572" stroke="#091429" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                <path d="M21 3.00574L11 13.0157L8 10.0157" stroke="#091429" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                </svg></span>  Three active projects</li>
-                            <li><span><svg width="16" height="16" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M21 10.0857V11.0057C20.9988 13.1621 20.3005 15.2604 19.0093 16.9875C17.7182 18.7147 15.9033 19.9782 13.8354 20.5896C11.7674 21.201 9.55726 21.1276 7.53447 20.3803C5.51168 19.633 3.78465 18.2518 2.61096 16.4428C1.43727 14.6338 0.879791 12.4938 1.02168 10.342C1.16356 8.19029 1.99721 6.14205 3.39828 4.5028C4.79935 2.86354 6.69279 1.72111 8.79619 1.24587C10.8996 0.770634 13.1003 0.988061 15.07 1.86572" stroke="#091429" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                <path d="M21 3.00574L11 13.0157L8 10.0157" stroke="#091429" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                </svg></span>  Two collaborators per project</li>
-                            <li><span><svg width="16" height="16" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M21 10.0857V11.0057C20.9988 13.1621 20.3005 15.2604 19.0093 16.9875C17.7182 18.7147 15.9033 19.9782 13.8354 20.5896C11.7674 21.201 9.55726 21.1276 7.53447 20.3803C5.51168 19.633 3.78465 18.2518 2.61096 16.4428C1.43727 14.6338 0.879791 12.4938 1.02168 10.342C1.16356 8.19029 1.99721 6.14205 3.39828 4.5028C4.79935 2.86354 6.69279 1.72111 8.79619 1.24587C10.8996 0.770634 13.1003 0.988061 15.07 1.86572" stroke="#091429" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                <path d="M21 3.00574L11 13.0157L8 10.0157" stroke="#091429" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                </svg></span>  One of each generatable document</li>
-                        </ul>
-
-                        <div class="price-button p-3">
-                                <a href="signup.html" class="btn btn-primary btn-block">Sign up for free</a>
                         </div>
                     </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 col-sm-6">
+                    
+                    <div class="card" style="margin-left: auto; margin-right: auto; margin-bottom: 10px; float: left;">
                             <div class="pricecol p-2 pt-4">
                             <p class="pricetext">Pro</p>
                             <div class="price">
@@ -258,129 +290,134 @@ h5,
                                 </div>
                                     
                             <ul class="pricelist pt-3">
-                                    <p class="m-0" style="font-size: 12px">All Stater features and</p>
-                                <li>
-                                    <span><svg width="16" height="16" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <p class="m-0" style="font-size: 12px">All Starter features and</p>
+                                    <li><div style="float: left;"><svg width="16" height="16" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M21 10.0857V11.0057C20.9988 13.1621 20.3005 15.2604 19.0093 16.9875C17.7182 18.7147 15.9033 19.9782 13.8354 20.5896C11.7674 21.201 9.55726 21.1276 7.53447 20.3803C5.51168 19.633 3.78465 18.2518 2.61096 16.4428C1.43727 14.6338 0.879791 12.4938 1.02168 10.342C1.16356 8.19029 1.99721 6.14205 3.39828 4.5028C4.79935 2.86354 6.69279 1.72111 8.79619 1.24587C10.8996 0.770634 13.1003 0.988061 15.07 1.86572" stroke="#091429" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <path d="M21 3.00574L11 13.0157L8 10.0157" stroke="#091429" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg></div> <div class="mr-auto ml-4"> Unlimited active projects</div></li>
+                                    <li><div style="float: left;"><svg width="16" height="16" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M21 10.0857V11.0057C20.9988 13.1621 20.3005 15.2604 19.0093 16.9875C17.7182 18.7147 15.9033 19.9782 13.8354 20.5896C11.7674 21.201 9.55726 21.1276 7.53447 20.3803C5.51168 19.633 3.78465 18.2518 2.61096 16.4428C1.43727 14.6338 0.879791 12.4938 1.02168 10.342C1.16356 8.19029 1.99721 6.14205 3.39828 4.5028C4.79935 2.86354 6.69279 1.72111 8.79619 1.24587C10.8996 0.770634 13.1003 0.988061 15.07 1.86572" stroke="#091429" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <path d="M21 3.00574L11 13.0157L8 10.0157" stroke="#091429" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg></div> <div class="mr-auto ml-4"> Five collaborators per project</div></li>
+                                <li><div style="float: left;"><svg width="16" height="16" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M21 10.0857V11.0057C20.9988 13.1621 20.3005 15.2604 19.0093 16.9875C17.7182 18.7147 15.9033 19.9782 13.8354 20.5896C11.7674 21.201 9.55726 21.1276 7.53447 20.3803C5.51168 19.633 3.78465 18.2518 2.61096 16.4428C1.43727 14.6338 0.879791 12.4938 1.02168 10.342C1.16356 8.19029 1.99721 6.14205 3.39828 4.5028C4.79935 2.86354 6.69279 1.72111 8.79619 1.24587C10.8996 0.770634 13.1003 0.988061 15.07 1.86572" stroke="#091429" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                                     <path d="M21 3.00574L11 13.0157L8 10.0157" stroke="#091429" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                    </svg></span>Active projects</li>
-                                <li><span><svg width="16" height="16" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M21 10.0857V11.0057C20.9988 13.1621 20.3005 15.2604 19.0093 16.9875C17.7182 18.7147 15.9033 19.9782 13.8354 20.5896C11.7674 21.201 9.55726 21.1276 7.53447 20.3803C5.51168 19.633 3.78465 18.2518 2.61096 16.4428C1.43727 14.6338 0.879791 12.4938 1.02168 10.342C1.16356 8.19029 1.99721 6.14205 3.39828 4.5028C4.79935 2.86354 6.69279 1.72111 8.79619 1.24587C10.8996 0.770634 13.1003 0.988061 15.07 1.86572" stroke="#091429" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                    <path d="M21 3.00574L11 13.0157L8 10.0157" stroke="#091429" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                    </svg></span>  Three active projects</li>
-                                <li><span><svg width="16" height="16" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M21 10.0857V11.0057C20.9988 13.1621 20.3005 15.2604 19.0093 16.9875C17.7182 18.7147 15.9033 19.9782 13.8354 20.5896C11.7674 21.201 9.55726 21.1276 7.53447 20.3803C5.51168 19.633 3.78465 18.2518 2.61096 16.4428C1.43727 14.6338 0.879791 12.4938 1.02168 10.342C1.16356 8.19029 1.99721 6.14205 3.39828 4.5028C4.79935 2.86354 6.69279 1.72111 8.79619 1.24587C10.8996 0.770634 13.1003 0.988061 15.07 1.86572" stroke="#091429" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                    <path d="M21 3.00574L11 13.0157L8 10.0157" stroke="#091429" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                    </svg></span>  Two collaborators per project</li>
-                                <li><span><svg width="16" height="16" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M21 10.0857V11.0057C20.9988 13.1621 20.3005 15.2604 19.0093 16.9875C17.7182 18.7147 15.9033 19.9782 13.8354 20.5896C11.7674 21.201 9.55726 21.1276 7.53447 20.3803C5.51168 19.633 3.78465 18.2518 2.61096 16.4428C1.43727 14.6338 0.879791 12.4938 1.02168 10.342C1.16356 8.19029 1.99721 6.14205 3.39828 4.5028C4.79935 2.86354 6.69279 1.72111 8.79619 1.24587C10.8996 0.770634 13.1003 0.988061 15.07 1.86572" stroke="#091429" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                    <path d="M21 3.00574L11 13.0157L8 10.0157" stroke="#091429" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                    </svg></span>  One of each generatable document</li>
+                                    </svg></div> <div class="mr-auto ml-4"> Three of each generatable document</div></li>
                             </ul>
     
                             <div class="price-button p-3">
-                                    <a href="signup.html" class="btn btn-primary btn-block">Sign up for free</a>
+                                    <a href="/signup.html" class="btn btn-primary btn-block">Purchase</a>
                             </div>
                         </div>
+                    </div>
+
+                    <div class="card" style="margin-bottom: 10px; float: left;">
+                            <div class="pricecol p-2 pt-4">
+                            <p class="pricetext">Pro Plus</p>
+                            <div class="price">
+                                <h5 class="pricenumber">79.99<p>/mo</p></h5>
+                            </div>
+                            
+    
+                            <ul class="pricelist pt-3">
+                                    <p class="m-0" style="font-size: 12px">All Starter and Pro features and</p>
+                                    <li><div style="float: left;"><svg width="16" height="16" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M21 10.0857V11.0057C20.9988 13.1621 20.3005 15.2604 19.0093 16.9875C17.7182 18.7147 15.9033 19.9782 13.8354 20.5896C11.7674 21.201 9.55726 21.1276 7.53447 20.3803C5.51168 19.633 3.78465 18.2518 2.61096 16.4428C1.43727 14.6338 0.879791 12.4938 1.02168 10.342C1.16356 8.19029 1.99721 6.14205 3.39828 4.5028C4.79935 2.86354 6.69279 1.72111 8.79619 1.24587C10.8996 0.770634 13.1003 0.988061 15.07 1.86572" stroke="#091429" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <path d="M21 3.00574L11 13.0157L8 10.0157" stroke="#091429" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg></div> <div class="mr-auto ml-4"> Unlimited collaborators</div></li>
+                                    <li><div style="float: left;"><svg width="16" height="16" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M21 10.0857V11.0057C20.9988 13.1621 20.3005 15.2604 19.0093 16.9875C17.7182 18.7147 15.9033 19.9782 13.8354 20.5896C11.7674 21.201 9.55726 21.1276 7.53447 20.3803C5.51168 19.633 3.78465 18.2518 2.61096 16.4428C1.43727 14.6338 0.879791 12.4938 1.02168 10.342C1.16356 8.19029 1.99721 6.14205 3.39828 4.5028C4.79935 2.86354 6.69279 1.72111 8.79619 1.24587C10.8996 0.770634 13.1003 0.988061 15.07 1.86572" stroke="#091429" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <path d="M21 3.00574L11 13.0157L8 10.0157" stroke="#091429" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg></div> <div class="mr-auto ml-4"> Unlimited document generation</div></li>
+                                <li><div style="float: left;"><svg width="16" height="16" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M21 10.0857V11.0057C20.9988 13.1621 20.3005 15.2604 19.0093 16.9875C17.7182 18.7147 15.9033 19.9782 13.8354 20.5896C11.7674 21.201 9.55726 21.1276 7.53447 20.3803C5.51168 19.633 3.78465 18.2518 2.61096 16.4428C1.43727 14.6338 0.879791 12.4938 1.02168 10.342C1.16356 8.19029 1.99721 6.14205 3.39828 4.5028C4.79935 2.86354 6.69279 1.72111 8.79619 1.24587C10.8996 0.770634 13.1003 0.988061 15.07 1.86572" stroke="#091429" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M21 3.00574L11 13.0157L8 10.0157" stroke="#091429" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg></div> <div class="mr-auto ml-4"> Dedicated support</div></li>
+                                    <li><div style="float: left;"><svg width="16" height="16" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M21 10.0857V11.0057C20.9988 13.1621 20.3005 15.2604 19.0093 16.9875C17.7182 18.7147 15.9033 19.9782 13.8354 20.5896C11.7674 21.201 9.55726 21.1276 7.53447 20.3803C5.51168 19.633 3.78465 18.2518 2.61096 16.4428C1.43727 14.6338 0.879791 12.4938 1.02168 10.342C1.16356 8.19029 1.99721 6.14205 3.39828 4.5028C4.79935 2.86354 6.69279 1.72111 8.79619 1.24587C10.8996 0.770634 13.1003 0.988061 15.07 1.86572" stroke="#091429" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <path d="M21 3.00574L11 13.0157L8 10.0157" stroke="#091429" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg></div> <div class="mr-auto ml-4"> Beta access to test new features</div></li>
+                            </ul>
+    
+                            <div class="price-button p-3">
+                                    <a href="/signup.html" class="btn btn-primary btn-block">Purchase</a>
+                            </div>
                         </div>
-
-                        <div class="col-lg-4 col-md-6 col-sm-6">
-                                <div class="pricecol p-2 pt-4">
-                                <p class="pricetext">Pro Plus</p>
-                                <div class="price">
-                                    <h5 class="pricenumber">79.99<p>/mo</p></h5>
-                                </div>
-                                
-        
-                                <ul class="pricelist pt-3">
-                                <p class="m-0" style="font-size: 12px">All Stater and Pro features and</p>
-
-                                    <li>
-                                        <span><svg width="16" height="16" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M21 10.0857V11.0057C20.9988 13.1621 20.3005 15.2604 19.0093 16.9875C17.7182 18.7147 15.9033 19.9782 13.8354 20.5896C11.7674 21.201 9.55726 21.1276 7.53447 20.3803C5.51168 19.633 3.78465 18.2518 2.61096 16.4428C1.43727 14.6338 0.879791 12.4938 1.02168 10.342C1.16356 8.19029 1.99721 6.14205 3.39828 4.5028C4.79935 2.86354 6.69279 1.72111 8.79619 1.24587C10.8996 0.770634 13.1003 0.988061 15.07 1.86572" stroke="#091429" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                        <path d="M21 3.00574L11 13.0157L8 10.0157" stroke="#091429" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                        </svg></span>Active projects</li>
-                                    <li><span><svg width="16" height="16" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M21 10.0857V11.0057C20.9988 13.1621 20.3005 15.2604 19.0093 16.9875C17.7182 18.7147 15.9033 19.9782 13.8354 20.5896C11.7674 21.201 9.55726 21.1276 7.53447 20.3803C5.51168 19.633 3.78465 18.2518 2.61096 16.4428C1.43727 14.6338 0.879791 12.4938 1.02168 10.342C1.16356 8.19029 1.99721 6.14205 3.39828 4.5028C4.79935 2.86354 6.69279 1.72111 8.79619 1.24587C10.8996 0.770634 13.1003 0.988061 15.07 1.86572" stroke="#091429" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                        <path d="M21 3.00574L11 13.0157L8 10.0157" stroke="#091429" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                        </svg></span>  Three active projects</li>
-                                    <li><span><svg width="16" height="16" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M21 10.0857V11.0057C20.9988 13.1621 20.3005 15.2604 19.0093 16.9875C17.7182 18.7147 15.9033 19.9782 13.8354 20.5896C11.7674 21.201 9.55726 21.1276 7.53447 20.3803C5.51168 19.633 3.78465 18.2518 2.61096 16.4428C1.43727 14.6338 0.879791 12.4938 1.02168 10.342C1.16356 8.19029 1.99721 6.14205 3.39828 4.5028C4.79935 2.86354 6.69279 1.72111 8.79619 1.24587C10.8996 0.770634 13.1003 0.988061 15.07 1.86572" stroke="#091429" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                        <path d="M21 3.00574L11 13.0157L8 10.0157" stroke="#091429" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                        </svg></span>  Two collaborators per project</li>
-                                    <li><span><svg width="16" height="16" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M21 10.0857V11.0057C20.9988 13.1621 20.3005 15.2604 19.0093 16.9875C17.7182 18.7147 15.9033 19.9782 13.8354 20.5896C11.7674 21.201 9.55726 21.1276 7.53447 20.3803C5.51168 19.633 3.78465 18.2518 2.61096 16.4428C1.43727 14.6338 0.879791 12.4938 1.02168 10.342C1.16356 8.19029 1.99721 6.14205 3.39828 4.5028C4.79935 2.86354 6.69279 1.72111 8.79619 1.24587C10.8996 0.770634 13.1003 0.988061 15.07 1.86572" stroke="#091429" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                        <path d="M21 3.00574L11 13.0157L8 10.0157" stroke="#091429" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                        </svg></span>  One of each generatable document</li>
-                                </ul>
-        
-                                <div class="price-button p-3">
-                                        <a href="signup.html" class="btn btn-primary btn-block">Sign up for free</a>
-                                </div>
-                            </div>
-                            </div>
-            
+                    </div>
                 </div>
             </div>
         </section>
         <article>
-                <div class="enter-div">
-                    <h4 id="enter-line">Enterprise ready tools</h4>
-                    <h6>with dedicated support and quick and consistent deolverance of new features, you can trust your<br>
-                    process in our able hands</h6>
-                    <br>
-                    <button type="button" class="btn" >Contact Sales</button>
-                </div>
-            </article>
-            <footer>
-                <div class="container">
-                <div class="row">
-                <div class="col-sm-2">
-                    
-                        <h6 id="lancer">Lan<span style="color: aqua">c</span>ers</span></h6>
-                        <a href="pricing.html" class="link">Pricing</a>
-                        <br>
-                        <a href="signin.html" class="link">Sign in</a>
-                        <br>
-                        <a href="signup.html" class="link">Sign Up</a>
-                    
-        
-                </div>
-                <div class="col-sm-2">
-                    
-                        <h5>Useful links</h5>
-                        
-                        <a href="documents.html" class="link">Dashboard</a>
-                        <br>
-                        <a href="project.html" class="link">Projects</a>
-                        <br>
-                        <a href="Invoice-new-user.html" class="link">Invoices</a>
-                        <br>
-                        <a href="Invoice-new-user.html" class="link">Create a Project</a></a>
-                    
-                </div>
-                <div class="col-sm-4">
-                    
-                        <h5>Reach us</h5>
-                        <p> 52b Charity Lane, off Magboso Highway, Ikate,<br> London, Nigeria</p>                
-                        <i class="fab fa-facebook-square fa-2x"></i>
-                        <i class="fab fa-twitter-square fa-2x"></i>
-                </div>
-                <div class="col-sm-4" id="col4">
-                        <h5>Stay up to date</h5>
-                        <p>Get emails about our newest features and events <br> you can visit, we promise not to spam</p>
-                        <input type="text" placeholder="Email Address" id="email-input">
-                        <button id="btn-sub">Subscribe</button>
-                </div>
-                </div>
+            <div class="enter-div">
+                <h4 id="enter-line">Enterprise ready tools</h4>
+                <h6>With dedicated support and quick and consistent delivery of new features, you can trust your process in our able hands</h6>
+                <br>
+                <button type="button" class="btn button" onclick="contact-support.html" style="border-width: 2px">Contact Sales</button>
             </div>
-            </footer>
+        </article>
         
+        <footer class="bg-white pt-4">
+			<div class="container">
+				<div class="row">
+					<div class="col-xs-12 col-sm-6 col-md-2">
+						<img src="https://lancers.app/images/svg/logo-dark.svg" alt="" class="img img-responsive mb-2" height="30" width="auto">
+						<ul class="list-unstyled">
+							<li><a class="text-dark" href="#">Pricing</a></li>
+							<li><a class="text-dark" href="#">Sign in</a></li>
+							<li><a class="text-dark" href="#">Sign up</a></li>
+						</ul>
+					</div>
+					<div class="col-xs-12 col-sm-6 col-md-2">
+						<h5>Features</h5>
+						<ul class="list-unstyled">
+							<li><a class="text-dark" href="#">Dashboard</a></li>
+							<li><a class="text-dark" href="#">Projects</a></li>
+							<li><a class="text-dark" href="#">Invoices</a></li>
+							<li><a class="text-dark" href="#">Create a Project</a></li>
+						</ul>
+					</div>
+					<div class="col-xs-12 col-sm-6 col-md-4">
+						<h5>Reach us</h5>
+						<p class="text-dark small">
+							52b, Charity Lane, off Magboso Highway, Ikate, London, Nigeria
+						</p>
+						<h5 class="">
+							<a href="#" class="text-dark mr-2"><i class="fab fa-facebook-square"></i></a> 
+							<a href="#" class="text-dark"><i class="fab fa-twitter-square"></i></a>
+						</h5>
+					</div>
+					<div class="col-xs-12 col-sm-6 col-md-4">
+						<h5>Stay up to date</h5>
+						<p class="text-dark small">
+							Get emails about our newest features and events you can visit. We promise not to spam.
+						</p>
+						<form class="form-inline">
+							<div class="form-group mb-2 mr-2">
+								<label for="staticEmail2" class="sr-only">Email</label>
+								<input type="email" class="form-control" id="staticEmail2" value="" placeholder="Email Address" required>
+							</div>
+							<button type="submit" class="btn btn-secondary mb-2" id="btn-sub">Subscribe</button>
+						</form>
+					</div>
+				</div>
+			</div>
+			<div class="bg-white text-left py-2 mt-0">
+				<div class="container">
+					<p class="float-right">
+			    	<a href="#">Back to top</a>
+				    </p>
+				    <p>&copy; Lancer 2019.</p>
+				</div>
+			</div>
+		</footer>
+            <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+            <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+            
 
-
-       
+            <script>
+                document.querySelector('.button').addEventListener('click', () => {
+                            location.href = "contact-support.html"
+                        })
+                </script>
     </body>
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 </html>
-
