@@ -30,13 +30,15 @@
         }
 
         button {
-            float: left;
+           /* float: left;*/
             width: 80px;
             background: #ffffff;
             border: none;
             height: 100%;
-            border-right: 2px solid rgba(196, 196, 196, 0.4);
+           /* border-right: 2px solid rgba(196, 196, 196, 0.4);*/
         }
+
+        
         header {
             padding-right: 0px !important;
             padding-top: 0px !important;
@@ -76,6 +78,16 @@
             padding-left: 47px;
             color: white;
 }
+        div > #ext{
+            background: rgba(207, 204, 204, 0.4);
+            font-size: 24px;
+            font-weight: bold;
+            justify-content: center;
+            border: none;
+            color: white;
+            width: 100%;
+            height: 50px;
+        }
         .cree {
             width: 80%;
             float: left;
@@ -84,10 +96,13 @@
             min-height: 300px;
             padding: 30px;
         }
-
+        
         .cree:focus,
         .cree:focus-within {
             border: 4px solid #999999;
+        }
+        #creefocu, #cree:focus-within{
+            border: 4px solid #0ABAB5;
         }
 
         section {
@@ -118,7 +133,7 @@
         .lists {
             width: fit-content;
         }
-        .dropbtn, .project {
+       .dropbtn, .project {
             /* margin-top: 37px; */
             width: 100%;
             height: 75px;
@@ -206,6 +221,52 @@
         .box {
             min-height: 180px;
         }
+        
+        #container {
+            display: grid;
+            grid-template-columns: 1fr 8fr 2fr;
+
+        }
+
+        #container div {
+            border: 1px solid black;
+            height: 50px;
+        }
+
+        #container p {
+            justify-content: center;
+            margin-top: 15px;
+            font-style: normal;
+            font-weight: bold;
+
+
+            color: #323A43;
+        }
+        option, select{
+            font-size: 20px;
+            background: rgba(207, 204, 204, 0.4);
+        }
+        #clear{
+            padding: auto;
+        }
+        
+        
+        
+       /* #ext {
+            justify-content: center;
+            border: none;
+            background: #091429 !important;
+            color: white;
+            width: 100%;
+            height: 50px;
+        }*/
+
+
+       
+
+        #cnc {
+            cursor: pointer;
+        }
 
     @media screen and (min-width: 600px) {
         section {
@@ -226,11 +287,13 @@
         .shift {
             margin-left: 18% !important;
         }
+        
 }
+        
     </style>
 </head>
-<body>
-    <div id="estimate">
+<body class="container">
+   <!-- <div id="estimate">
         <header>
             <span class = "c-estimate shift">Estimates</span>
             <ul>
@@ -243,23 +306,34 @@
             <div>
                 <a class="btn est" id="est_content" href="#">Create Estimate</a> <br>
                 <h2><p class = "pad">Estimates helps you place value to your work and time!</p></h2>
-                <p class = "pad"><h5 class = "pad">Create and estimate and easily convert it to your invoice and send to your client</h5></p>
+                <p class = "pad"><h5 class = "pad">Craeate and estimate and easily convert it to your invoice and send to your client</h5></p>
             </div>
         </section>
-    </div>
+    </div>_-->
+    
+    <!-- FOR ACTUAL INPT-->
+   <!-- <div id="Create_estimate" class="hidden">-->
+        <div id="container">
+
+                <div>
+                    
+                    <button class="close"  id="close"><img id="clear" src="https://res.cloudinary.com/celx/image/upload/v1570718446/vhmdnd4sf3f5w3burj4m.svg" alt=""></button>
+                </div>
+                <div>
+                    <p class="nav c-estimate" id="cre">Create Estimate</p>
+                </div>
+                <div>
+                   <input class="nav disabled" id="ext" type="button" value="NEXT">
+                    
+                </div>
+
+            </div>
+    
 
 
-
-
-    <div id="Create_estimate" class="hidden">
-        <header>
-            <button class="close"  id="close"><img  src="https://res.cloudinary.com/celx/image/upload/v1570718446/vhmdnd4sf3f5w3burj4m.svg" alt=""></button></li>
-            <h4 class="c-estimate" >Create Estimate</h4>
-           <!-- <ul class="heading-container"> -->
-               <a class="next disabled" href="#" >NEXT</a>
-       </header>
+    
        <section>
-           <h1>What project are you estimating</h1>
+           <h1>What project are you estimating?</h1>
            <div class="cree">
                <div class="lists">
                    <div class="box">
@@ -275,14 +349,14 @@
                                <option>Glacier Fintech App</option>
                                <option> AB Technology Solutions Branding</option>
                            </select>  
-                           <!-- <i class="fa fa-caret-down"></i> -->
+                           <i class="fa fa-caret-down"></i>
                            
                    </div>
                </div>
            </div>
    
    
-           <div class="cree">
+           <div id="cree"  class="cree">
                    <div class="lists glacier">
                        <div class="box">
                             <h3 class="first-head">A new project</h3>
@@ -300,6 +374,7 @@
                </div>
                <button class="a-next disabled"><a href="#">NEXT</a></button>
        </section>
+    </div>
     </div>
 
     <script>

@@ -6,222 +6,240 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Ubuntu&display=swap" rel="stylesheet">
-      <style>
-          * {
-              padding: 0;
-              margin: 0;
-              box-sizing: border-box;
-          }
-          body{
-              font-family: Ubuntu;
-          }
-          .container {
-              width: 96%;
-              margin: 0 auto;
-          }
-
-          .error{
-              color: red;
-          }
-
-          .header-container {
-              width: 100%;
-              display: flex;
-              flex-direction: row;
-              margin: 0 auto;
-              height: 8vh;
-          }
-
-          .header-container * {
-              border: 1px solid #C4C4C4;
-
-          }
-          .header-container h4 {
-              flex: 2;
-              text-align: center;
-              padding-top: 2.4vh;
-          }
-          .back-close {
-              display: flex;
-              margin: 0;
-              padding: 0;
-          }
-          .back-close button {
-              width: 3em;
-          }
-          .header-container img {
-              border: 0;
-          }
-          .header-container button:hover {
-              transition: border 1s;
-              border: none;
-          }
-          #create, #bottom-create {
-              width: 8rem;
-              background-color: #0ABAB5;
-              color: #fff;
-          }
-          .form {
-              position: relative;
-              top: 6vh;
-              width: 90%;
-              margin: 0 auto;
-              left: 1.2em;
-          }
-          h1, h3, h4 {
-              font-family: "Ubuntu";
-              padding-bottom: 0.3em;
-          }
-          h3, h4 {
-              text-align: center;
-          }
-          h1 {
-              position: relative;
-          }
-          form {
-              border: 1px solid #C4C4C4;
-              width: 90%;
-              padding: 1em;
-          }
-          #bottom-create {
-              position: relative;
-              top: 4em;
-              height: 6vh;
-              border: none;
-              width: 70%;
-              margin-bottom: 2em;
-          }
-          #bottom-create:hover {
-              font-weight: bolder;
-              transition: font-weight 1s, background-color 1s;
-          }
-          footer {
-              width: 30%;
-              margin-top: 2em;
-              margin-bottom: 2em;
-              padding-bottom: 2em;
-              margin-left: calc(50%);
-              transform: translateX(-50%);
-          }
-          label, input, select {
-              display: block;
-              width: 70%;
-              margin: 0 auto 0.2em auto;
-          }
-          label{
-              font-size: 16px;
-              color: #262626;
-          }
-          input {
-              padding: 0.2em;
-              margin-bottom: 0.5em;
-          }
-          input{
-              border: 1px solid #919191;
-          }
-          input::placeholder{
-              color: #B1B1B1;
-          }
-          select{
-              padding: 0.2em;
-              margin-bottom: 0.5em;
-              background-color: #ffffff;
-          }
-          #close{
-              background-color: #ffffff;
-              border:1px solid #C4C4C4 ;
-          }
-          #back{
-              background-color: #ffffff;
-              border:1px solid #C4C4C4 ;
-          }
-          #addcontact {
-              width: 40%;
-              background-color: #fff;
-              border: 0;
-              font-weight: bolder;
-              margin-top: 1em;
-              margin-bottom: 1em;
-              margin-left: calc(25%);
-
-          }
-          h3:last-of-type {
-              padding-top: 2em;
-          }
-          @media screen and (min-width: 700px) {
-
-              input, select {
-                  display: inline-block;
-                  width: 40%;
-                  padding: 0.5em;
-              }
-              label {
-                  margin-left: 0.2em;
-              }
-              #addcontact {
-
-                  margin-left: 0;
-                  text-align: left;
-              }
-              footer {
-
-                  margin-left: calc(50% + 4rem);
-                  transform: translateX(-50%);
-              }
-          }
-          @media screen and (min-width: 900px) {
-              body {
-                  max-width: 1020px;
-                  margin: 0 auto;
-              }
-              label {
-                  display: inline-block;
-                  margin-right: 10px;
-                  width: 20%;
-              }
-
-              form h3, form h4 {
-                  text-align: left;
-                  margin-bottom: 1em;
-              }
-              input, select {
-                  margin-left: 1.5em;
-                  width: 30%;
-              }
-          }
-      </style>
-
+      
     </head>
+    
+<style>
+    * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+    }
+    body{
+        font-family: Ubuntu;
+    }
+    .container {
+        width: 96%;
+        margin: 0 auto;
+    }
 
-    <body>
+    .error{
+        color: red;
+    }
+
+    .header-container {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        margin: 0 auto;
+        height: 8vh;
+    }
+    .header-container h4 {
+        flex: 2;
+        text-align: center;
+        padding-top: 2.4vh;
+        border-bottom: 1px solid #C4C4C4;
+    }
+    .back-close {
+        display: flex;
+        margin: 0;
+        padding: 0;
+    }
+    .back-close button {
+        color: #C4C4C4;
+        border: none;
+    }
+    .header-container img {
+        border: 0;
+    }
+    .header-container button:hover {
+        transition: border 1s;
+        border: none;
+    }
+    #create, #bottom-create {
+        width: 12em;
+        background-color: #091429;
+        font-size: 14px;
+        color: #fff;
+    }
+    #create {
+        border: none;
+    }
+    .form {
+        position: relative;
+        top: 6vh;
+        width: 90%;
+        margin: 0 auto;
+        left: 1.2em;
+    }
+    h1, h3, h4 {
+        font-family: "Ubuntu";
+        padding-bottom: 0.3em;
+    }
+    h3, h4 {
+        text-align: center;
+    }
+    h1 {
+        position: relative;
+    }
+    form {
+        border: 1px solid #C4C4C4;
+        width: 90%;
+        padding: 1em;
+        padding-bottom: 10em;
+    }
+    #bottom-create {
+        position: relative;
+        top: 4em;
+        height: 8vh;
+        border: none;
+        width: 70%;
+        margin-bottom: 2em;
+    }
+    #bottom-create:hover {
+        font-weight: bolder;
+        transition: font-weight 1s, background-color 1s;
+    }
+    footer {
+        width: 30%;
+        margin-top: 2em;
+        margin-bottom: 2em;
+        padding-bottom: 2em;
+        margin-left: calc(50%);
+        transform: translateX(-50%);
+    }
+    label, input, select {
+        display: block;
+        width: 70%;
+        margin: 0 auto 0.2em auto;
+    }
+    label{
+        font-size: 16px;
+        color: #262626;
+    }
+    input {
+        padding: 0.2em;
+        margin-bottom: 0.5em;
+    }
+    input{
+        border: 1px solid #919191;
+    }
+    input::placeholder{
+        color: #B1B1B1;
+    }
+    select{
+        padding: 0.2em;
+        margin-bottom: 0.5em;
+        background-color: #ffffff;
+    }
+    #close{
+        background-color: #ffffff;
+        border:1px solid #C4C4C4 ;
+        border-top: none;
+        font-size: 30px;
+        width: 2em;
+    }
+    #back{
+        background-color: #ffffff;
+        border:1px solid #C4C4C4 ;
+        border-left: none;
+        border-top: none;
+        font-size: 30px;
+        width: 2em;
+    }
+    #back i {
+        margin-right: -10px;
+    }
+    #addcontact {
+        width: 40%;
+        background-color: #fff;
+        border: 0;
+        font-weight: bolder;
+        margin-top: 1em;
+        margin-bottom: 1em;
+        margin-left: calc(25%);
+    }
+    #add-other-contacts i {
+        vertical-align: middle;
+        font-size: 20px;
+        color: inherit;
+    }
+    h3:last-of-type {
+        padding-top: 2em;
+    }
+    @media screen and (min-width: 700px) {
+
+        input, select {
+            display: inline-block;
+            width: 40%;
+            padding: 0.5em;
+        }
+        label {
+            margin-left: 0.2em;
+        }
+        #addcontact {
+
+            margin-left: 0;
+            text-align: left;
+        }
+        footer {
+
+            margin-left: calc(50% + 4rem);
+            transform: translateX(-50%);
+        }
+    }
+    @media screen and (min-width: 900px) {
+        body {
+            max-width: 1020px;
+            margin: 0 auto;
+        }
+        label {
+            display: inline-block;
+            margin-right: 10px;
+            width: 20%;
+        }
+
+        form h3, form h4 {
+            text-align: left;
+            margin-bottom: 1em;
+        }
+        input, select {
+            margin-left: 1.5em;
+            width: 30%;
+        }
+    }
+</style>
+<body>
     <nav>
         <div class="header-container">
             <div class="back-close">
-                <button id="close"><img src="https://res.cloudinary.com/mide358/image/upload/v1570621469/clear_24px_rasbwc.png" alt="back"></button>
-                <button id="back"><img src="https://res.cloudinary.com/mide358/image/upload/c_scale,h_27,w_13/v1570621434/Vector_ag4hnv.png" alt="back"></button>
+                <button id="close"><i class="material-icons">clear</i></button>
+                <button id="back"><i class="material-icons">arrow_back_ios</i></button>
             </div>
 
             <h4>Client</h4>
             <button id="create">Create Invoice</button>
         </div>
     </nav>
-        <div class="container">
 
-       <div class="form">
-           <h1>Client Information</h1>
-           <form autocomplete="on" action="" method="post" onsubmit="return checkForm()">
+    <div class="container">
+        <div class="form">
+            <h1>Client Information</h1>
+            <form autocomplete="on" action="" method="post" onsubmit="return checkForm()">
             <div>
                     <p class="error" id="errorMsg">All Fields Required</p>
             <h3> Business Information</h3>
 
-               <label for="company-name">Company name</label>
-               <input type="text" id="companyname" name="company" placeholder="e.g Sunshine Studio">
-               <br><br>
-               <h4>Business Address</h4>
+                <label for="company-name">Company name</label>
+                <input type="text" id="companyname" name="company" placeholder="e.g. Sunshine Studio">
+                <br><br>
+                <h4>Business Address</h4>
                 <label for="Street">Street & Number</label>
                 <input type="text" id="streetname" name="streetname" placeholder="Street">
-                <input type="number" id="strnumber" name="strnumber" placeholder="number">
+                <input type="number" id="strnumber" name="strnumber" placeholder="Number">
                 <br>
 
                 <label for="city">City & ZIP Code</label>
@@ -477,135 +495,137 @@
                     <option value="Zaire">Zaire</option>
                     <option value="Zambia">Zambia</option>
                     <option value="Zimbabwe">Zimbabwe</option>
-                 </select>
-                 <input type="text" id="state" name="state" placeholder="State">
+                    </select>
+                    <input type="text" id="state" name="state" placeholder="State">
             </div>
-              <div>
-                  <h3>Contact Information</h3>
-                  <label for="contact-name">Contact name</label>
-                <input type="text" id="contactname" name="contactname" placeholder="e.g Ben Davies">
+            <div>
+                <h3>Contact Information</h3>
+                <label for="contact-name">Contact name</label>
+                <input type="text" id="contactname" name="contactname" placeholder="e.g. Ben Davies">
                 <br>
                 <label for="contact-email">Contact email</label>
-                <input type="email" id="contactemail" name="contactemail" placeholder="e.g email@domain.com">
+                <input type="email" id="contactemail" name="contactemail" placeholder="e.g. email@domain.com">
                 <br>
                 <p class="error" id="errorEmail"></p>
                 <br>
-                <h4>Add other contacts</h4>
-              </div>
+                <div id="add-other-contacts">
+                    <h4>Add other contacts <i class="material-icons">add</i></h4>
+                </div>
+            </div>
 
 
-           </form>
+            </form>
 
-       </div>
         </div>
+    </div>
 
-        <footer> <button id="bottom-create" type="submit">Create Invoice</button></footer>
-       
+    <footer> 
+        <button id="bottom-create" type="submit">Create Invoice</button>
+    </footer>
+</body>
+    
+<script>
 
+    var companyname = document.getElementById("companyname");
+    var streetname = document.getElementById("streetname");
+    var strnumber = document.getElementById("strnumber");
+    var city = document.getElementById("city");
+    var postalcode = document.getElementById("postalcode");
+    var country = document.getElementById("country");
+    var state = document.getElementById("state");
+    var contactme = document.getElementById("contactname");
+    var contactemail = document.getElementById("contactemail");
+    
+    // check if any input is empty.
+    function checkForm() {
+        if((companyname.value == 0 && streetname.value == 0 &&
+            strnumber.value == 0 && city.value == 0 &&
+            postalcode.value == 0 && state.value == 0
+            && contactme.value == 0 && contactemail.value == 0)){
 
-           </body>
-  <script>
+            document.getElementById("errorMsg").style.display ="block";
+        }
+        else {
+            document.getElementById("errorMsg").style.display ="none";
+        }
+    }
+    
+    function removeNameErrorWhenCorrecting() {
 
-      var companyname = document.getElementById("companyname");
-      var streetname = document.getElementById("streetname");
-      var strnumber = document.getElementById("strnumber");
-      var city = document.getElementById("city");
-      var postalcode = document.getElementById("postalcode");
-      var country = document.getElementById("country");
-      var state = document.getElementById("state");
-      var contactme = document.getElementById("contactname");
-      var contactemail = document.getElementById("contactemail");
-      
-      // check if any input is empty.
-      function checkForm() {
-          if((companyname.value == 0 && streetname.value == 0 &&
-              strnumber.value == 0 && city.value == 0 &&
-              postalcode.value == 0 && state.value == 0
-              && contactme.value == 0 && contactemail.value == 0)){
-
-              document.getElementById("errorMsg").style.display ="block";
-          }
-          else {
-              document.getElementById("errorMsg").style.display ="none";
-          }
-      }
-      
-      function removeNameErrorWhenCorrecting() {
-
-          document.getElementById("errorMsg").style.display = "none";
-      }
-      if (companyname.addEventListener) {
-          companyname.addEventListener('blur', checkForm, false);
-          companyname.addEventListener('focus', removeNameErrorWhenCorrecting, false);
-      }
-      else if (streetname.addEventListener) {
-          streetname.addEventListener('blur', checkForm, false);
-          streetname.addEventListener('focus', removeNameErrorWhenCorrecting, false);
-      }
-      else if (strnumber.addEventListener) {
-          strnumber.addEventListener('blur', checkForm, false);
-          strnumber.addEventListener('focus', removeNameErrorWhenCorrecting, false);
-      }
-      else if (city.addEventListener) {
-          city.addEventListener('blur', checkForm, false);
-          city.addEventListener('focus', removeNameErrorWhenCorrecting, false);
-      }
-      else if (postalcode.addEventListener) {
-          postalcode.addEventListener('blur', checkForm, false);
-          postalcode.addEventListener('focus', removeNameErrorWhenCorrecting, false);
-      }
-      else if (country.addEventListener) {
-          country.addEventListener('blur', checkForm, false);
-          country.addEventListener('focus', removeNameErrorWhenCorrecting, false);
-      }
-      else if (state.addEventListener) {
-          state.addEventListener('blur', checkForm, false);
-          state.addEventListener('focus', removeNameErrorWhenCorrecting, false);
-      }
-      else if (contactme.addEventListener) {
-          contactme.addEventListener('blur', checkForm, false);
-          contactme.addEventListener('focus', removeNameErrorWhenCorrecting, false);
-      }
-      else if (contactemail.addEventListener) {
-          contactemail.addEventListener('blur', checkForm, false);
-          contactemail.addEventListener('focus', removeNameErrorWhenCorrecting, false);
-      }
-
-
-      // If email is the right format
-      function checkEmailField() {
-          // format for email validation
-          var mailFormat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
-          if (contactemail.value.indexOf("@", 0) < 0) {
-              document.getElementById("errorEmail").style.display = "block";
-              document.getElementById("errorEmail").textContent = "Your email address does not have an '@' symbol!";
+        document.getElementById("errorMsg").style.display = "none";
+    }
+    if (companyname.addEventListener) {
+        companyname.addEventListener('blur', checkForm, false);
+        companyname.addEventListener('focus', removeNameErrorWhenCorrecting, false);
+    }
+    else if (streetname.addEventListener) {
+        streetname.addEventListener('blur', checkForm, false);
+        streetname.addEventListener('focus', removeNameErrorWhenCorrecting, false);
+    }
+    else if (strnumber.addEventListener) {
+        strnumber.addEventListener('blur', checkForm, false);
+        strnumber.addEventListener('focus', removeNameErrorWhenCorrecting, false);
+    }
+    else if (city.addEventListener) {
+        city.addEventListener('blur', checkForm, false);
+        city.addEventListener('focus', removeNameErrorWhenCorrecting, false);
+    }
+    else if (postalcode.addEventListener) {
+        postalcode.addEventListener('blur', checkForm, false);
+        postalcode.addEventListener('focus', removeNameErrorWhenCorrecting, false);
+    }
+    else if (country.addEventListener) {
+        country.addEventListener('blur', checkForm, false);
+        country.addEventListener('focus', removeNameErrorWhenCorrecting, false);
+    }
+    else if (state.addEventListener) {
+        state.addEventListener('blur', checkForm, false);
+        state.addEventListener('focus', removeNameErrorWhenCorrecting, false);
+    }
+    else if (contactme.addEventListener) {
+        contactme.addEventListener('blur', checkForm, false);
+        contactme.addEventListener('focus', removeNameErrorWhenCorrecting, false);
+    }
+    else if (contactemail.addEventListener) {
+        contactemail.addEventListener('blur', checkForm, false);
+        contactemail.addEventListener('focus', removeNameErrorWhenCorrecting, false);
+    }
 
 
-          }
-          else if (contactemail.value.indexOf(".", 0) < 0) {
-              document.getElementById("errorEmail").style.display = "block";
-              document.getElementById("errorEmail").textContent = "A '.' symbol is missing in your email address, please check!";
+    // If email is the right format
+    function checkEmailField() {
+        // format for email validation
+        var mailFormat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+        if (contactemail.value.indexOf("@", 0) < 0) {
+            document.getElementById("errorEmail").style.display = "block";
+            document.getElementById("errorEmail").textContent = "Your email address does not have an '@' symbol!";
 
-          }
-          else if (mailFormat.test(contactemail.value) == false) {
-              document.getElementById("errorEmail").style.display = "block";
-              document.getElementById("errorEmail").textContent = "Wrong email format, please try again!";
 
-          }
-          else {
-              document.getElementById("errorEmail").style.display = "none";
-              country.removeAttribute('disabled');
-              contactemail.removeAttribute('disabled');
-          }
-      }
-      function removeEmailErrorWhenCorrecting() {
-          document.getElementById("errorEmail").style.display = "none";
-      }
-      if (contactemail.addEventListener) {
-          contactemail.addEventListener('blur', checkEmailField, false);
-          contactemail.addEventListener('focus', removeEmailErrorWhenCorrecting, false);
-      }
+        }
+        else if (contactemail.value.indexOf(".", 0) < 0) {
+            document.getElementById("errorEmail").style.display = "block";
+            document.getElementById("errorEmail").textContent = "A '.' symbol is missing in your email address, please check!";
 
-  </script>
+        }
+        else if (mailFormat.test(contactemail.value) == false) {
+            document.getElementById("errorEmail").style.display = "block";
+            document.getElementById("errorEmail").textContent = "Wrong email format, please try again!";
 
-    </html>
+        }
+        else {
+            document.getElementById("errorEmail").style.display = "none";
+            country.removeAttribute('disabled');
+            contactemail.removeAttribute('disabled');
+        }
+    }
+    function removeEmailErrorWhenCorrecting() {
+        document.getElementById("errorEmail").style.display = "none";
+    }
+    if (contactemail.addEventListener) {
+        contactemail.addEventListener('blur', checkEmailField, false);
+        contactemail.addEventListener('focus', removeEmailErrorWhenCorrecting, false);
+    }
+
+</script>
+
+</html>
